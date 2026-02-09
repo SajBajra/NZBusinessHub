@@ -30,9 +30,10 @@ define( 'DIRECTORY_FREE_MAX_IMAGES_PER_LISTING', 1 );
 function directory_get_free_allowed_fields() {
 	/**
 	 * For FREE users we only allow:
-	 * - post_title   (Place title)
-	 * - address      (single address line shown on the card – advanced
-	 *                 address/map bits are visually hidden via CSS)
+	 * - post_title     (Place title)
+	 * - post_category  (Business category)
+	 * - address        (single address line shown on the card – advanced
+	 *                   address/map bits are visually hidden via CSS)
 	 *
 	 * No description (post_content), no images field and no separate country / region / city / zip / map /
 	 * latitude / longitude inputs on the form – those are effectively
@@ -40,6 +41,7 @@ function directory_get_free_allowed_fields() {
 	 */
 	$default = array(
 		'post_title',
+		'post_category',
 		'address',
 	);
 	return apply_filters( 'directory_free_allowed_fields', $default );
