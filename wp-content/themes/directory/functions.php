@@ -126,6 +126,17 @@ function directory_strip_post_author_block( $block_content, $block ) {
 add_filter( 'render_block', 'directory_strip_post_author_block', 12, 2 );
 
 /**
+ * Always show the GeoDirectory claim listing button, even for already claimed
+ * listings or owner views. The underlying claim plugin will still handle any
+ * permission/validation, but the UI trigger is always visible.
+ */
+function directory_always_show_claim_link( $show, $post_id ) {
+	// Force the "claim" button/link to display on all listings.
+	return true;
+}
+add_filter( 'geodir_claim_show_claim_link', 'directory_always_show_claim_link', 20, 2 );
+
+/**
  * Enqueue child-theme assets.
  */
 function directory_theme_enqueue_assets() {
