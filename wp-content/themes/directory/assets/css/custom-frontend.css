@@ -825,8 +825,13 @@ body.custom-frontend .fp__cat-circle-img {
 }
 body.custom-frontend .fp__cat-circle-icon {
 	font-size: 2rem;
-	color: #6b7280;
+	color: #2563eb;
 	line-height: 1;
+	transition: color 0.3s ease, transform 0.3s ease;
+}
+body.custom-frontend .fp__cat-circle:hover .fp__cat-circle-icon {
+	color: #1d4ed8;
+	transform: scale(1.1);
 }
 body.custom-frontend .fp__cat-circle-name {
 	font-size: 0.9375rem;

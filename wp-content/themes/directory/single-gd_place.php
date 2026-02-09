@@ -80,6 +80,9 @@ while ( have_posts() ) :
 		<div class="cf-single-place-layout">
 			<div class="cf-single-place-main">
 				<?php
+				// Initialize reviews content variable for sidebar
+				$reviews_content = '';
+				
 				// Get all GeoDirectory tabs and output their content sequentially
 				if ( class_exists( 'GeoDir_Widget_Single_Tabs' ) && function_exists( 'get_post_type' ) ) {
 					$post_type = get_post_type( $pid );
@@ -101,6 +104,13 @@ while ( have_posts() ) :
 						}
 						
 						$tab_key = $tab->tab_key;
+						
+						// Skip reviews tab - we'll add it to sidebar instead
+						if ( $tab_key === 'reviews' ) {
+							$reviews_content = $tabs_widget->tab_content( $tab );
+							continue;
+						}
+						
 						$tab_name = ! empty( $tab->tab_name ) ? $tab->tab_name : ucfirst( str_replace( '_', ' ', $tab_key ) );
 						$tab_content = $tabs_widget->tab_content( $tab );
 						
@@ -125,9 +135,6 @@ while ( have_posts() ) :
 						} elseif ( $tab_key === 'post_map' ) {
 							$tab_name = __( 'Map', 'directory' );
 							$section_class .= ' cf-single-place-map';
-						} elseif ( $tab_key === 'reviews' ) {
-							$tab_name = __( 'Reviews', 'directory' );
-							$section_class .= ' cf-single-place-reviews';
 						}
 						?>
 						<section class="<?php echo esc_attr( $section_class ); ?>" aria-labelledby="<?php echo esc_attr( $section_id ); ?>">
@@ -151,6 +158,11 @@ while ( have_posts() ) :
 							<?php endif; ?>
 						</section>
 						<?php
+					}
+					
+					// Store reviews content in a variable for sidebar
+					if ( empty( $reviews_content ) && function_exists( 'do_shortcode' ) ) {
+						$reviews_content = do_shortcode( '[gd_single_reviews title="" template="clean"]' );
 					}
 				} else {
 					// Fallback: output sections manually if tabs system not available
@@ -180,14 +192,14 @@ while ( have_posts() ) :
 						</section>
 					<?php endif; ?>
 
-					<section class="cf-single-place-section cf-single-place-reviews" aria-labelledby="cf-reviews-heading">
-						<h2 id="cf-reviews-heading" class="cf-single-place-section-title"><?php esc_html_e( 'Reviews', 'directory' ); ?></h2>
-						<div class="cf-single-place-review-form">
-							<?php if ( function_exists( 'do_shortcode' ) ) : ?>
-								<?php echo do_shortcode( '[gd_single_reviews title="" template="clean"]' ); ?>
-							<?php endif; ?>
-						</div>
-					</section>
+					<?php
+					// Store reviews content for sidebar
+					if ( function_exists( 'do_shortcode' ) ) {
+						$reviews_content = do_shortcode( '[gd_single_reviews title="" template="clean"]' );
+					} else {
+						$reviews_content = '';
+					}
+					?>
 					<?php
 				}
 				?>
@@ -229,6 +241,42 @@ while ( have_posts() ) :
 								<?php echo do_shortcode( '[gd_post_meta key="address" show="value"]' ); ?>
 							</div>
 						<?php endif; ?>
+					</div>
+				</section>
+
+				<section class="cf-single-place-reviews" aria-labelledby="cf-review-heading">
+					<h2 id="cf-review-heading" class="cf-single-place-sidebar-title"><?php esc_html_e( 'Review', 'directory' ); ?></h2>
+					<div class="cf-single-place-review-form">
+						<?php
+						// Set the review template to 'clean' for styling (used by GeoDirectory)
+						global $gd_review_template;
+						$gd_review_template = 'clean';
+						
+						$review_output = '';
+						
+						// Use the GeoDirectory reviews widget/shortcode to output the review form
+						// This ensures all hooks and filters are properly applied
+						if ( class_exists( 'GeoDir_Widget_Single_Reviews' ) ) {
+							$reviews_widget = new GeoDir_Widget_Single_Reviews();
+							$review_output = $reviews_widget->output( array( 'template' => 'clean' ) );
+							if ( ! empty( trim( $review_output ) ) ) {
+								echo $review_output; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+							}
+						}
+						
+						// Fallback: use shortcode if widget class doesn't work or output was empty
+						if ( empty( trim( $review_output ) ) && function_exists( 'do_shortcode' ) ) {
+							$shortcode_output = do_shortcode( '[gd_single_reviews title="" template="clean"]' );
+							if ( ! empty( trim( $shortcode_output ) ) ) {
+								echo $shortcode_output; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+							}
+						}
+						
+						// Final fallback: call comments_template directly
+						if ( empty( trim( $review_output ) ) && empty( trim( $shortcode_output ?? '' ) ) && function_exists( 'comments_template' ) ) {
+							comments_template();
+						}
+						?>
 					</div>
 				</section>
 			</aside>
