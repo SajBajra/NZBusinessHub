@@ -616,6 +616,186 @@ body.custom-frontend .cf-blog-pagination-nav .next {
 	font-size: 0.8125rem;
 }
 
+/* ----- Single blog post – custom layout ----- */
+body.custom-frontend .cf-blog-single-main {
+	background: #f3f4f6;
+}
+
+body.custom-frontend .cf-blog-single-hero {
+	position: relative;
+	padding: 3rem 1.5rem 6rem;
+	background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.15), transparent 55%), radial-gradient(circle at top right, rgba(96, 165, 250, 0.18), transparent 55%), #0f172a;
+	color: #e5e7eb;
+}
+
+body.custom-frontend .cf-blog-single-hero-inner {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+body.custom-frontend .cf-blog-single-breadcrumb {
+	font-size: 0.8125rem;
+	color: #9ca3af;
+	margin-bottom: 1.25rem;
+	letter-spacing: 0.03em;
+}
+
+body.custom-frontend .cf-blog-single-breadcrumb a {
+	color: #cbd5f5;
+	text-decoration: none;
+}
+
+body.custom-frontend .cf-blog-single-breadcrumb a:hover {
+	color: #fff;
+}
+
+body.custom-frontend .cf-blog-single-breadcrumb-sep {
+	margin: 0 0.35rem;
+	opacity: 0.75;
+}
+
+body.custom-frontend .cf-blog-single-breadcrumb-current {
+	color: #e5e7eb;
+	font-weight: 500;
+}
+
+body.custom-frontend .cf-blog-single-cats {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4rem;
+	margin-bottom: 0.75rem;
+}
+
+body.custom-frontend .cf-blog-single-cat {
+	padding: 0.15rem 0.7rem;
+	border-radius: 999px;
+	background: rgba(15, 23, 42, 0.7);
+	border: 1px solid rgba(148, 163, 184, 0.6);
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+body.custom-frontend .cf-blog-single-title {
+	margin: 0 0 0.75rem;
+	font-size: clamp(1.9rem, 4vw, 2.6rem);
+	font-weight: 700;
+	color: #f9fafb;
+	letter-spacing: -0.03em;
+	line-height: 1.2;
+	max-width: 32rem;
+}
+
+body.custom-frontend .cf-blog-single-meta {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.45rem;
+	align-items: center;
+	font-size: 0.9rem;
+	color: #cbd5f5;
+}
+
+body.custom-frontend .cf-blog-single-meta-sep {
+	opacity: 0.5;
+}
+
+body.custom-frontend .cf-blog-single-hero-image {
+	position: absolute;
+	right: 6%;
+	bottom: -4rem;
+	width: min(40%, 480px);
+	max-width: 480px;
+	border-radius: 24px;
+	overflow: hidden;
+	box-shadow: 0 24px 60px rgba(15, 23, 42, 0.65);
+	display: none;
+}
+
+@media (min-width: 1024px) {
+	body.custom-frontend .cf-blog-single-hero-image {
+		display: block;
+	}
+}
+
+body.custom-frontend .cf-blog-single-hero-img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+body.custom-frontend .cf-blog-single-body {
+	max-width: 900px;
+	margin: -4rem auto 4rem;
+	padding: 0 1.5rem 0;
+	box-sizing: border-box;
+}
+
+body.custom-frontend .cf-blog-single-article {
+	background: #ffffff;
+	border-radius: 18px;
+	box-shadow: 0 18px 50px rgba(15, 23, 42, 0.12);
+	padding: 2.25rem 2.1rem 2.5rem;
+}
+
+@media (max-width: 640px) {
+	body.custom-frontend .cf-blog-single-article {
+		padding: 1.75rem 1.4rem 2rem;
+	}
+}
+
+body.custom-frontend .cf-blog-single-content {
+	font-size: 1.05rem;
+	line-height: 1.75;
+	color: #111827;
+}
+
+/* Reuse existing typography rules for .cf-single-content */
+body.custom-frontend .cf-blog-single-content p {
+	margin: 0 0 1.25rem;
+}
+
+body.custom-frontend .cf-blog-single-content h2,
+body.custom-frontend .cf-blog-single-content h3,
+body.custom-frontend .cf-blog-single-content h4 {
+	margin-top: 2rem;
+	margin-bottom: 0.75rem;
+	font-weight: 600;
+	color: #0f172a;
+}
+
+body.custom-frontend .cf-blog-single-content h2 { font-size: 1.6rem; }
+body.custom-frontend .cf-blog-single-content h3 { font-size: 1.3rem; }
+body.custom-frontend .cf-blog-single-content h4 { font-size: 1.1rem; }
+
+body.custom-frontend .cf-blog-single-content ul,
+body.custom-frontend .cf-blog-single-content ol {
+	margin: 0 0 1.4rem 1.4rem;
+	padding: 0;
+}
+
+body.custom-frontend .cf-blog-single-content li {
+	margin: 0 0 0.4rem;
+}
+
+body.custom-frontend .cf-blog-single-content a {
+	color: #2563eb;
+	text-decoration: none;
+	border-bottom: 1px solid rgba(37, 99, 235, 0.3);
+}
+
+body.custom-frontend .cf-blog-single-content a:hover {
+	color: #1d4ed8;
+	border-bottom-color: rgba(37, 99, 235, 0.7);
+}
+
+body.custom-frontend .cf-blog-single-footer {
+	margin-top: 2rem;
+	border-top: 1px solid #e5e7eb;
+	padding-top: 1.5rem;
+}
+
 /* ----- Front page (custom layout) ----- */
 body.custom-frontend .fp {
 	padding: 0;
