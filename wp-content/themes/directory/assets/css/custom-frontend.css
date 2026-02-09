@@ -2708,6 +2708,25 @@ body.custom-frontend .cf-single-place-review-form {
 	margin-top: 1rem;
 }
 
+/* Claim listing button section in single business sidebar */
+body.custom-frontend .cf-single-place-claim {
+	margin-top: 2rem;
+	padding-top: 1.5rem;
+	border-top: 1px solid #e5e7eb;
+}
+
+body.custom-frontend .cf-single-place-claim-btn .geodir-post-claim {
+	margin: 0;
+}
+
+body.custom-frontend .cf-single-place-claim-btn .geodir-post-claim a.btn,
+body.custom-frontend .cf-single-place-claim-btn .geodir-post-claim .btn {
+	width: 100%;
+	justify-content: center;
+	font-weight: 600;
+	border-radius: 999px;
+}
+
 /* Hide GeoDirectory tab navigation on single business pages - we show all content sequentially */
 body.custom-frontend .cf-single-place .geodir-tabs,
 body.custom-frontend .cf-single-place .geodir-tab-head,

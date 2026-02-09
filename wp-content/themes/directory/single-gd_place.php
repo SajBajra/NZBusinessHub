@@ -279,6 +279,28 @@ while ( have_posts() ) :
 						?>
 					</div>
 				</section>
+
+				<?php if ( class_exists( 'GeoDir_Claim_Widget_Post_Claim' ) && function_exists( 'geodir_claim_show_claim_link' ) && geodir_claim_show_claim_link( $pid ) ) : ?>
+					<section class="cf-single-place-claim" aria-labelledby="cf-claim-heading">
+						<h2 id="cf-claim-heading" class="cf-single-place-sidebar-title"><?php esc_html_e( 'Own this business?', 'directory' ); ?></h2>
+						<div class="cf-single-place-claim-btn">
+							<?php
+							the_widget(
+								'GeoDir_Claim_Widget_Post_Claim',
+								array(
+									'title' => '',
+									'text'  => __( 'Claim this listing', 'directory' ),
+									'output' => 'button',
+								),
+								array(
+									'before_widget' => '',
+									'after_widget'  => '',
+								)
+							);
+							?>
+						</div>
+					</section>
+				<?php endif; ?>
 			</aside>
 		</div>
 
