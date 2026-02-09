@@ -62,6 +62,31 @@ while ( have_posts() ) :
 						<div class="cf-single-place-rating"><?php echo geodir_get_rating_stars( $post_rating, $pid ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 					<?php endif; ?>
 				<?php endif; ?>
+
+				<?php if ( class_exists( 'GeoDir_Claim_Widget_Post_Claim' ) && function_exists( 'geodir_claim_show_claim_link' ) && geodir_claim_show_claim_link( $pid ) ) : ?>
+					<div class="cf-single-place-claim-inline">
+						<?php if ( ! is_user_logged_in() ) : ?>
+							<a href="#" class="cf-claim-login-btn uwp-login-link" data-gd-claim="1">
+								<?php esc_html_e( 'Claim this listing', 'directory' ); ?>
+							</a>
+						<?php else : ?>
+							<?php
+							the_widget(
+								'GeoDir_Claim_Widget_Post_Claim',
+								array(
+									'title'  => '',
+									'text'   => __( 'Claim this listing', 'directory' ),
+									'output' => 'button',
+								),
+								array(
+									'before_widget' => '',
+									'after_widget'  => '',
+								)
+							);
+							?>
+						<?php endif; ?>
+					</div>
+				<?php endif; ?>
 			</div>
 			<div class="cf-single-place-gallery">
 				<?php if ( function_exists( 'do_shortcode' ) ) : ?>
@@ -279,35 +304,6 @@ while ( have_posts() ) :
 						?>
 					</div>
 				</section>
-
-				<?php if ( class_exists( 'GeoDir_Claim_Widget_Post_Claim' ) && function_exists( 'geodir_claim_show_claim_link' ) && geodir_claim_show_claim_link( $pid ) ) : ?>
-					<section class="cf-single-place-claim" aria-labelledby="cf-claim-heading">
-						<h2 id="cf-claim-heading" class="cf-single-place-sidebar-title"><?php esc_html_e( 'Own this business?', 'directory' ); ?></h2>
-						<div class="cf-single-place-claim-btn">
-							<?php if ( ! is_user_logged_in() ) : ?>
-								<a href="#" class="cf-claim-login-btn uwp-login-link" data-gd-claim="1">
-									<?php esc_html_e( 'Claim this listing', 'directory' ); ?>
-								</a>
-							<?php else : ?>
-								<?php
-								// Logged-in users: show the GeoDirectory claim lightbox button.
-								the_widget(
-									'GeoDir_Claim_Widget_Post_Claim',
-									array(
-										'title'  => '',
-										'text'   => __( 'Claim this listing', 'directory' ),
-										'output' => 'button',
-									),
-									array(
-										'before_widget' => '',
-										'after_widget'  => '',
-									)
-								);
-								?>
-							<?php endif; ?>
-						</div>
-					</section>
-				<?php endif; ?>
 			</aside>
 		</div>
 

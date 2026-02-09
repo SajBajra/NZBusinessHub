@@ -2247,6 +2247,38 @@ body.custom-frontend .cf-single-place-rating .fa-star {
 	color: #f59e0b;
 }
 
+/* Inline claim button under rating */
+body.custom-frontend .cf-single-place-claim-inline {
+	margin-top: 0.75rem;
+}
+
+body.custom-frontend .cf-single-place-claim-inline .geodir-post-claim .btn,
+body.custom-frontend .cf-single-place-claim-inline .geodir-post-claim a.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.6rem 1.4rem;
+	border-radius: 999px;
+	background: #2563eb;
+	border-color: #2563eb;
+	color: #fff;
+	font-weight: 600;
+	font-size: 0.9375rem;
+	text-decoration: none;
+	box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+	transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+body.custom-frontend .cf-single-place-claim-inline .geodir-post-claim .btn:hover,
+body.custom-frontend .cf-single-place-claim-inline .geodir-post-claim a.btn:hover {
+	background: #1d4ed8;
+	border-color: #1d4ed8;
+	color: #fff;
+	text-decoration: none;
+	transform: translateY(-1px);
+	box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
+}
+
 body.custom-frontend .cf-single-place-gallery {
 	border-radius: 16px;
 	overflow: hidden;
@@ -2727,11 +2759,10 @@ body.custom-frontend .cf-single-place-claim-btn .geodir-post-claim .btn {
 	border-radius: 999px;
 }
 
-body.custom-frontend .cf-single-place-claim-btn .cf-claim-login-btn {
+body.custom-frontend .cf-claim-login-btn {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	width: 100%;
 	padding: 0.65rem 1.4rem;
 	border-radius: 999px;
 	background: #2563eb;
@@ -2743,12 +2774,16 @@ body.custom-frontend .cf-single-place-claim-btn .cf-claim-login-btn {
 	transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
 }
 
-body.custom-frontend .cf-single-place-claim-btn .cf-claim-login-btn:hover {
+body.custom-frontend .cf-claim-login-btn:hover {
 	background: #1d4ed8;
 	color: #fff;
 	text-decoration: none;
 	transform: translateY(-1px);
 	box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
+}
+
+body.custom-frontend .cf-single-place-claim-btn .cf-claim-login-btn {
+	width: 100%;
 }
 
 /* Hide GeoDirectory tab navigation on single business pages - we show all content sequentially */
