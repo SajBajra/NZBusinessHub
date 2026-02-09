@@ -318,7 +318,6 @@ function directory_listing_plan_table_shortcode() {
 					<li><?php esc_html_e( 'Place title & category', 'directory' ); ?></li>
 					<li><?php esc_html_e( 'Single address line', 'directory' ); ?></li>
 					<li><?php esc_html_e( 'No description, map or gallery', 'directory' ); ?></li>
-					<li><?php esc_html_e( 'Unlimited free listings', 'directory' ); ?></li>
 				</ul>
 			</article>
 
