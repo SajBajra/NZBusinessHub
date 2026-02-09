@@ -2084,6 +2084,23 @@ body.custom-frontend .cf-single-place-map-wrap iframe {
 	min-height: 360px;
 }
 
+body.custom-frontend .cf-single-place-map-container {
+	margin-top: 0.5rem;
+	border-radius: 14px;
+	overflow: hidden;
+	border: 1px solid #e2e8f0;
+	background: #f8fafc;
+	box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+body.custom-frontend .cf-single-place-map-container .geodir-map-container,
+body.custom-frontend .cf-single-place-map-container iframe,
+body.custom-frontend .cf-single-place-map-container .geodir-map-wrap {
+	border-radius: 14px;
+	min-height: 400px;
+	width: 100%;
+}
+
 /* Similar places – mockup layout: image top, title (non-bold), bold lead, truncated excerpt, date */
 body.custom-frontend .cf-single-place-similar-inner {
 	display: grid;
@@ -2287,6 +2304,18 @@ body.custom-frontend .cf-single-place-detail-meta {
 }
 
 body.custom-frontend .cf-single-place-reviews {
+	padding: 0;
+	background: transparent;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+}
+
+body.custom-frontend .cf-single-place-main .cf-single-place-reviews {
+	padding: 0;
+}
+
+body.custom-frontend .cf-single-place-sidebar .cf-single-place-reviews {
 	padding: 1.5rem 1.5rem 1.75rem;
 	background: #fff;
 	border: 1px solid #e2e8f0;
@@ -2338,6 +2367,36 @@ body.custom-frontend .cf-single-place-reviews input[type="submit"] {
 body.custom-frontend .cf-single-place-reviews .btn-primary:hover,
 body.custom-frontend .cf-single-place-reviews input[type="submit"]:hover {
 	background: #1d4ed8;
+}
+
+body.custom-frontend .cf-single-place-tab-content {
+	margin-top: 1rem;
+}
+
+body.custom-frontend .cf-single-place-tab-content > *:first-child {
+	margin-top: 0;
+}
+
+body.custom-frontend .cf-single-place-review-form {
+	margin-top: 1rem;
+}
+
+/* Hide GeoDirectory tab navigation on single business pages - we show all content sequentially */
+body.custom-frontend .cf-single-place .geodir-tabs,
+body.custom-frontend .cf-single-place .geodir-tab-head,
+body.custom-frontend .cf-single-place .geodir-single-tabs-container,
+body.custom-frontend .cf-single-place #gd-tabs,
+body.custom-frontend .cf-single-place #gd-single-tabs,
+body.custom-frontend .cf-single-place .nav-tabs[role="tablist"] {
+	display: none !important;
+}
+
+/* Show all tab content panels */
+body.custom-frontend .cf-single-place .tab-content,
+body.custom-frontend .cf-single-place .tab-pane {
+	display: block !important;
+	opacity: 1 !important;
+	visibility: visible !important;
 }
 
 /* ----- Single post (blog) ----- */
