@@ -119,6 +119,7 @@ body.custom-frontend .cf-link-sign {
 
 body.custom-frontend .cf-link-sign:hover {
 	color: #2563eb;
+	text-decoration: none;
 }
 
 body.custom-frontend .cf-icon-user {
@@ -2590,5 +2591,83 @@ body.custom-frontend .cf-single-back {
 
 body.custom-frontend .cf-single-back:hover {
 	color: #1d4ed8;
+	text-decoration: none;
+}
+
+/* ----- Add Listing Page - Button Styles (remade) ----- */
+/* Base Add Listing buttons */
+body.custom-frontend .geodir-add-listing .btn,
+body.custom-frontend .geodir-add-listing .geodir_button,
+body.custom-frontend .geodir-add-listing a.btn,
+body.custom-frontend .geodir-add-listing button.btn,
+body.custom-frontend .geodir-add-listing input[type="submit"].btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 120px;
+	margin-top: 1rem;
+	margin-right: 0.75rem;
+	padding: 0.65rem 1.5rem;
+	font-weight: 600;
+	font-size: 0.9375rem;
+	border-radius: 999px;
+	text-decoration: none !important;
+	border-width: 2px;
+	transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+/* Primary buttons (Submit, main actions, etc.) */
+body.custom-frontend .geodir-add-listing .btn-primary,
+body.custom-frontend .geodir-add-listing .geodir_button.btn-primary,
+body.custom-frontend .geodir-add-listing button.btn-primary,
+body.custom-frontend .geodir-add-listing input[type="submit"].btn-primary,
+body.custom-frontend .geodir-add-listing .geodir_button:not(.btn-outline-primary) {
+	background: #2563eb;
+	color: #fff !important;
+	border-color: #2563eb;
+	box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+body.custom-frontend .geodir-add-listing .btn-primary:hover,
+body.custom-frontend .geodir-add-listing .geodir_button.btn-primary:hover,
+body.custom-frontend .geodir-add-listing button.btn-primary:hover,
+body.custom-frontend .geodir-add-listing input[type="submit"].btn-primary:hover,
+body.custom-frontend .geodir-add-listing .geodir_button:not(.btn-outline-primary):hover {
+	background: #1d4ed8;
+	border-color: #1d4ed8;
+	color: #fff !important;
+	transform: translateY(-1px);
+	box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
+}
+
+/* Secondary buttons – used for Login / Register on Add Listing */
+body.custom-frontend .geodir-add-listing .btn-outline-primary,
+body.custom-frontend .geodir-add-listing .geodir_preview_button.btn-outline-primary,
+body.custom-frontend .geodir-add-listing a.btn-outline-primary {
+	background: #3b82f6;
+	color: #fff !important;
+	border-color: #3b82f6;
+}
+
+body.custom-frontend .geodir-add-listing .btn-outline-primary:hover,
+body.custom-frontend .geodir-add-listing .geodir_preview_button.btn-outline-primary:hover,
+body.custom-frontend .geodir-add-listing a.btn-outline-primary:hover {
+	background: #1d4ed8;
+	border-color: #1d4ed8;
+	color: #fff !important;
+	text-decoration: none !important;
+}
+
+/* Add Listing – login/register links inside notices */
+body.custom-frontend .geodir-add-listing .alert a,
+body.custom-frontend .geodir-add-listing .gd-notification a {
+	color: #fff;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+body.custom-frontend .geodir-add-listing .alert a:hover,
+body.custom-frontend .geodir-add-listing .gd-notification a:hover {
+	color: #fff;
 	text-decoration: none;
 }

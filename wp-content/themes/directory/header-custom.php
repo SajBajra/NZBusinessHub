@@ -59,7 +59,7 @@ if ( $custom_logo_id ) {
 					<?php esc_html_e( 'Sign out', 'directory' ); ?>
 				</a>
 			<?php else : ?>
-				<a class="cf-link-sign" href="<?php echo esc_url( $custom_login_url ); ?>">
+				<a class="cf-link-sign uwp-login-link" href="<?php echo esc_url( $custom_login_url ); ?>">
 					<span class="cf-icon-user" aria-hidden="true">
 						<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
 					</span>
