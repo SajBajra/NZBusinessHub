@@ -284,20 +284,27 @@ while ( have_posts() ) :
 					<section class="cf-single-place-claim" aria-labelledby="cf-claim-heading">
 						<h2 id="cf-claim-heading" class="cf-single-place-sidebar-title"><?php esc_html_e( 'Own this business?', 'directory' ); ?></h2>
 						<div class="cf-single-place-claim-btn">
-							<?php
-							the_widget(
-								'GeoDir_Claim_Widget_Post_Claim',
-								array(
-									'title' => '',
-									'text'  => __( 'Claim this listing', 'directory' ),
-									'output' => 'button',
-								),
-								array(
-									'before_widget' => '',
-									'after_widget'  => '',
-								)
-							);
-							?>
+							<?php if ( ! is_user_logged_in() ) : ?>
+								<a href="#" class="cf-claim-login-btn uwp-login-link" data-gd-claim="1">
+									<?php esc_html_e( 'Claim this listing', 'directory' ); ?>
+								</a>
+							<?php else : ?>
+								<?php
+								// Logged-in users: show the GeoDirectory claim lightbox button.
+								the_widget(
+									'GeoDir_Claim_Widget_Post_Claim',
+									array(
+										'title'  => '',
+										'text'   => __( 'Claim this listing', 'directory' ),
+										'output' => 'button',
+									),
+									array(
+										'before_widget' => '',
+										'after_widget'  => '',
+									)
+								);
+								?>
+							<?php endif; ?>
 						</div>
 					</section>
 				<?php endif; ?>

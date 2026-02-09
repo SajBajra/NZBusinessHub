@@ -2727,6 +2727,30 @@ body.custom-frontend .cf-single-place-claim-btn .geodir-post-claim .btn {
 	border-radius: 999px;
 }
 
+body.custom-frontend .cf-single-place-claim-btn .cf-claim-login-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	padding: 0.65rem 1.4rem;
+	border-radius: 999px;
+	background: #2563eb;
+	color: #fff;
+	font-weight: 600;
+	font-size: 0.9375rem;
+	text-decoration: none;
+	box-shadow: 0 4px 12px rgba(37, 99, 235, 0.28);
+	transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+body.custom-frontend .cf-single-place-claim-btn .cf-claim-login-btn:hover {
+	background: #1d4ed8;
+	color: #fff;
+	text-decoration: none;
+	transform: translateY(-1px);
+	box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
+}
+
 /* Hide GeoDirectory tab navigation on single business pages - we show all content sequentially */
 body.custom-frontend .cf-single-place .geodir-tabs,
 body.custom-frontend .cf-single-place .geodir-tab-head,
