@@ -409,6 +409,7 @@ function directory_business_categories_page_content() {
 	if ( $add_listing_url && function_exists( 'directory_relative_url' ) ) {
 		$add_listing_url = directory_relative_url( $add_listing_url );
 	}
+	$bc_home_url = function_exists( 'directory_relative_url' ) ? directory_relative_url( home_url( '/' ) ) : home_url( '/' );
 
 	// Detect the main GeoDirectory category taxonomy for gd_place.
 	$post_type = 'gd_place';
@@ -469,17 +470,13 @@ function directory_business_categories_page_content() {
 	<div class="bc-page">
 		<section class="bc-hero bc-hero-with-bg" style="background-image: linear-gradient(135deg, rgba(37, 99, 235, 0.78), rgba(29, 78, 216, 0.82)), url('<?php echo $bc_hero_bg; ?>');">
 			<div class="bc-hero-inner">
-				<p class="bc-hero-label"><?php esc_html_e( 'Browse by category', 'directory' ); ?></p>
+				<nav class="bc-hero-breadcrumb" aria-label="<?php esc_attr_e( 'Breadcrumb', 'directory' ); ?>">
+					<a href="<?php echo esc_url( $bc_home_url ); ?>"><?php esc_html_e( 'Home', 'directory' ); ?></a>
+					<span class="bc-hero-breadcrumb-sep" aria-hidden="true">›</span>
+					<span class="bc-hero-breadcrumb-current"><?php esc_html_e( 'Business Categories', 'directory' ); ?></span>
+				</nav>
 				<h1 class="bc-hero-title"><?php esc_html_e( 'Business Categories', 'directory' ); ?></h1>
-				<p class="bc-hero-subtitle">
-					<?php
-					printf(
-						/* translators: %s: site name */
-						esc_html__( 'Discover businesses on %s and find what you need.', 'directory' ),
-						esc_html( $site_name )
-					);
-					?>
-				</p>
+				<p class="bc-hero-description"><?php esc_html_e( 'Explore businesses organized by category to find exactly what you need.', 'directory' ); ?></p>
 				<?php if ( ! empty( $add_listing_url ) ) : ?>
 					<a class="cf-btn-add bc-hero-cta" href="<?php echo esc_url( $add_listing_url ); ?>"><?php esc_html_e( 'Add your business', 'directory' ); ?></a>
 				<?php endif; ?>
