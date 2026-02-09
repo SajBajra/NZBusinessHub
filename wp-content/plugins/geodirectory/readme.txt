@@ -4,7 +4,7 @@ Donate link: https://wpgeodirectory.com
 Tags: business directory, listings, directory plugin, classifieds, directory
 Requires at least: 5.0
 Tested up to: 6.9
-Stable tag: 2.8.150
+Stable tag: 2.8.151
 Requires PHP: 5.6
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -318,6 +318,12 @@ We don't offer free trials, but we have a 30-day money-back guarantee if you are
 == Changelog ==
 
 __WARNING: GDv2 is a significant update over GDv1 and may require manual work, such as adding widgets to sidebars to recreate your current layout. As always, we recommend trying this on a staging site first. [Learn more](https://wpgeodirectory.com/documentation/article/how-tos/upgrading-from-gdv1-to-gdv2/)__
+
+= GeoDirectory v2.8.151 - 2026-01-29 =
+* Validation patten shows slash when pattern contains quote - FIXED
+* Default sorting is not applied on empty search when near parameter is not set in url - FIXED
+* Post title rendered incorrect on term archive page when term id and post id are same - FIXED
+* CPT > Tabs requires to reload page to add another shortcode tab - FIXED
 
 = GeoDirectory v2.8.150 - 2026-01-22 =
 * GD > Listings view all link should redirect to search page when country/region/city is set - CHANGED

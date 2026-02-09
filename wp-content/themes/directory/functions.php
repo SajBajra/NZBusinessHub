@@ -137,6 +137,21 @@ function directory_always_show_claim_link( $show, $post_id ) {
 add_filter( 'geodir_claim_show_claim_link', 'directory_always_show_claim_link', 20, 2 );
 
 /**
+ * Force GeoDirectory Claim Listings to allow claims for gd_place post type
+ * even if the "Is Claimed" custom field is not configured in the admin UI.
+ *
+ * This bypasses the plugin's internal check in GeoDir_Claim_Post::post_type_claim_allowed().
+ */
+function directory_force_gd_place_claim_allowed( $allow, $post_type ) {
+	if ( $post_type === 'gd_place' ) {
+		return true;
+	}
+
+	return $allow;
+}
+add_filter( 'geodir_claim_post_type_claim_allowed', 'directory_force_gd_place_claim_allowed', 10, 2 );
+
+/**
  * Enqueue child-theme assets.
  */
 function directory_theme_enqueue_assets() {
