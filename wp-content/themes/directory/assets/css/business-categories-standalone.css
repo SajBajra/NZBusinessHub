@@ -274,13 +274,22 @@ body.custom-frontend .standalone-bc-main .bc-panel-header {
 }
 
 body.custom-frontend .standalone-bc-main .bc-panel-header a {
-	display: inline-block;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
 	font-size: 1rem;
 	font-weight: 600;
 	color: #fff;
 	text-decoration: none;
 	letter-spacing: -0.01em;
 	transition: color 0.2s ease;
+}
+
+body.custom-frontend .standalone-bc-main .bc-panel-header-icon {
+	display: inline-block;
+	font-size: 1.1em;
+	opacity: 0.95;
 }
 
 body.custom-frontend .standalone-bc-main .bc-panel-header a:hover {
@@ -297,7 +306,6 @@ body.custom-frontend .standalone-bc-main .bc-panel-body {
 body.custom-frontend .standalone-bc-main .bc-chip {
 	display: inline-flex;
 	align-items: center;
-	gap: 0.4rem;
 	padding: 0.4rem 0.9rem;
 	font-size: 0.875rem;
 	color: #374151;
@@ -307,17 +315,6 @@ body.custom-frontend .standalone-bc-main .bc-chip {
 	border-radius: 999px;
 	white-space: nowrap;
 	transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
-}
-
-body.custom-frontend .standalone-bc-main .bc-chip-icon {
-	display: inline-block;
-	flex-shrink: 0;
-	font-size: 0.8em;
-	color: #6b7280;
-}
-
-body.custom-frontend .standalone-bc-main .bc-chip:hover .bc-chip-icon {
-	color: rgba(255, 255, 255, 0.95);
 }
 
 body.custom-frontend .standalone-bc-main .bc-chip:hover {

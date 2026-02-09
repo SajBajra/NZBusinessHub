@@ -559,10 +559,17 @@ function directory_business_categories_page_content() {
 							} else {
 								$parent_link = function_exists( 'directory_relative_url' ) ? directory_relative_url( $parent_link ) : $parent_link;
 							}
+							$parent_icon = get_term_meta( $parent_term->term_id, 'ct_cat_font_icon', true );
+							if ( empty( $parent_icon ) ) {
+								$parent_icon = 'fas fa-globe';
+							}
 							?>
 							<article class="bc-panel">
 								<header class="bc-panel-header">
-									<a href="<?php echo esc_url( $parent_link ); ?>"><?php echo esc_html( $parent_term->name ); ?></a>
+									<a href="<?php echo esc_url( $parent_link ); ?>">
+										<span class="bc-panel-header-icon <?php echo esc_attr( $parent_icon ); ?>" aria-hidden="true"></span>
+										<?php echo esc_html( $parent_term->name ); ?>
+									</a>
 								</header>
 								<div class="bc-panel-body">
 									<?php foreach ( $children as $child ) :
@@ -572,15 +579,8 @@ function directory_business_categories_page_content() {
 										} else {
 											$child_link = function_exists( 'directory_relative_url' ) ? directory_relative_url( $child_link ) : $child_link;
 										}
-										$child_icon = get_term_meta( $child->term_id, 'ct_cat_font_icon', true );
-										if ( empty( $child_icon ) ) {
-											$child_icon = 'fas fa-globe';
-										}
 										?>
-										<a class="bc-chip" href="<?php echo esc_url( $child_link ); ?>">
-											<span class="bc-chip-icon <?php echo esc_attr( $child_icon ); ?>" aria-hidden="true"></span>
-											<?php echo esc_html( $child->name ); ?>
-										</a>
+										<a class="bc-chip" href="<?php echo esc_url( $child_link ); ?>"><?php echo esc_html( $child->name ); ?></a>
 									<?php endforeach; ?>
 								</div>
 							</article>
