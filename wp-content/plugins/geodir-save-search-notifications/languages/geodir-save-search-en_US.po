@@ -1,0 +1,592 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoDirectory Save Search Notifications 2.1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-26 16:41+0530\n"
+"PO-Revision-Date: 2025-06-26 16:41+0530\n"
+"Last-Translator: \n"
+"Language-Team: AyeCode Ltd <contact@ayecode.io>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;__ngettext:1,2;__ngettext_noop:1,2;_c;_e;_ex:1,2c;"
+"_n:1,2;_n_noop:1,2;_nc:4c,1,2;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;gettext;"
+"gettext_noop\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: includes/admin/admin-functions.php:47
+msgid "Save Search Notifications"
+msgstr ""
+
+#: includes/admin/admin-functions.php:48
+msgid ""
+"Tick to completely remove all of its data when Save Search Notifications is "
+"deleted."
+msgstr ""
+
+#: includes/admin/admin-functions.php:64 includes/admin/admin-functions.php:70
+#: includes/admin/class-geodir-save-search-admin.php:255
+msgid "Saved Search"
+msgstr ""
+
+#: includes/admin/admin-functions.php:76
+msgid "Unique Users"
+msgstr ""
+
+#: includes/admin/admin-functions.php:82
+msgid "Emails Sent"
+msgstr ""
+
+#: includes/admin/admin-functions.php:88
+msgid "Emails Pending"
+msgstr ""
+
+#: includes/admin/class-geodir-save-search-admin.php:85
+#: includes/admin/class-geodir-save-search-admin.php:214
+msgid "Saved Search Notifications"
+msgstr ""
+
+#: includes/admin/class-geodir-save-search-admin.php:97
+msgid "Notifications Settings"
+msgstr ""
+
+#: includes/admin/class-geodir-save-search-admin.php:103
+msgid "How Often to Send"
+msgstr ""
+
+#: includes/admin/class-geodir-save-search-admin.php:104
+msgid "When you would like send email notifications to usres."
+msgstr ""
+
+#: includes/admin/class-geodir-save-search-admin.php:112
+msgid "Max Limit (Every X Hours)"
+msgstr ""
+
+#: includes/admin/class-geodir-save-search-admin.php:113
+msgid "Unlimited"
+msgstr ""
+
+#: includes/admin/class-geodir-save-search-admin.php:114
+msgid "How many emails to send per every X hours."
+msgstr ""
+
+#: includes/admin/class-geodir-save-search-admin.php:129
+msgid "New Listing"
+msgstr ""
+
+#: includes/admin/class-geodir-save-search-admin.php:135
+#: includes/admin/class-geodir-save-search-admin.php:172
+msgid "Enable Email"
+msgstr ""
+
+#: includes/admin/class-geodir-save-search-admin.php:136
+msgid ""
+"Send email notification to user when new listing with matching search will "
+"be published."
+msgstr ""
+
+#: includes/admin/class-geodir-save-search-admin.php:142
+#: includes/admin/class-geodir-save-search-admin.php:179
+msgid "Subject"
+msgstr ""
+
+#: includes/admin/class-geodir-save-search-admin.php:143
+#: includes/admin/class-geodir-save-search-admin.php:180
+msgid "The email subject."
+msgstr ""
+
+#: includes/admin/class-geodir-save-search-admin.php:151
+#: includes/admin/class-geodir-save-search-admin.php:188
+msgid "Body"
+msgstr ""
+
+#: includes/admin/class-geodir-save-search-admin.php:152
+#: includes/admin/class-geodir-save-search-admin.php:189
+msgid "The email body, this can be text or HTML."
+msgstr ""
+
+#: includes/admin/class-geodir-save-search-admin.php:154
+#: includes/admin/class-geodir-save-search-admin.php:191
+msgid "Available template tags:"
+msgstr ""
+
+#: includes/admin/class-geodir-save-search-admin.php:166
+msgid "Edit Listing"
+msgstr ""
+
+#: includes/admin/class-geodir-save-search-admin.php:173
+msgid ""
+"Send email notification to user when a listing with matching search will be "
+"updated."
+msgstr ""
+
+#: includes/admin/class-geodir-save-search-admin.php:220
+msgid "Show In Loop Actions"
+msgstr ""
+
+#: includes/admin/class-geodir-save-search-admin.php:221
+msgid "Tick to show Save this Search button in archive pages loop actions."
+msgstr ""
+
+#: includes/admin/class-geodir-save-search-admin.php:227
+msgid "Shortcode"
+msgstr ""
+
+#: includes/admin/class-geodir-save-search-admin.php:228
+msgid "Save Search Button shortcode to render in loop actions."
+msgstr ""
+
+#: includes/admin/class-geodir-save-search-admin.php:292
+#, php-format
+msgid "%s saved list by this author"
+msgid_plural "%s saved lists by this author"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/class-geodir-save-search-admin.php:328
+msgid "Saved Search Lists: #"
+msgstr ""
+
+#: includes/admin/class-geodir-save-search-admin.php:328
+msgid "Deleting"
+msgstr ""
+
+#: includes/class-geodir-save-search-ajax.php:60
+#: includes/class-geodir-save-search-ajax.php:100
+#: includes/class-geodir-save-search-ajax.php:123
+#: includes/class-geodir-save-search-ajax.php:151
+#: includes/class-geodir-save-search-ajax.php:176
+#: includes/class-geodir-save-search-ajax.php:186
+msgid "Invalid access!"
+msgstr ""
+
+#: includes/class-geodir-save-search-ajax.php:70
+msgid "You are not allowed to save this search."
+msgstr ""
+
+#: includes/class-geodir-save-search-ajax.php:147
+msgid "You need to login to save search."
+msgstr ""
+
+#: includes/class-geodir-save-search-ajax.php:161
+msgid "Something went wrong, please try again after some time."
+msgstr ""
+
+#: includes/class-geodir-save-search-ajax.php:182
+msgid "Invalid subscriber id!"
+msgstr ""
+
+#: includes/class-geodir-save-search-ajax.php:197
+msgid "Something went wrong, please try again later!"
+msgstr ""
+
+#: includes/class-geodir-save-search-email.php:34
+msgid "Immediately on Post Published / Updated"
+msgstr ""
+
+#: includes/class-geodir-save-search-email.php:38
+#, php-format
+msgid "Every %d Hours"
+msgstr ""
+
+#: includes/class-geodir-save-search-email.php:38
+#, php-format
+msgid "Every %d Hour"
+msgstr ""
+
+#: includes/class-geodir-save-search-email.php:45
+msgid "[[#site_name#]] New [#post_type_name#] matching with your saved search"
+msgstr ""
+
+#: includes/class-geodir-save-search-email.php:49
+msgid ""
+"Dear [#to_name#],\n"
+"\n"
+"New [#post_type_name#] are available matching with your saved search: "
+"<b>[#search_name#]</b>.\n"
+"\n"
+"[#listing_links#]\n"
+"\n"
+"Thank you for your contribution.\n"
+"\n"
+"[#unsubscribe_link#]"
+msgstr ""
+
+#: includes/class-geodir-save-search-email.php:62
+msgid "[[#site_name#]] [#post_type_name#] matching with your saved search"
+msgstr ""
+
+#: includes/class-geodir-save-search-email.php:66
+msgid ""
+"Dear [#to_name#],\n"
+"\n"
+"[#post_type_name#] are available matching with your saved search: "
+"<b>[#search_name#]</b>.\n"
+"\n"
+"[#listing_links#]\n"
+"\n"
+"Thank you for your contribution.\n"
+"\n"
+"[#unsubscribe_link#]"
+msgstr ""
+
+#: includes/class-geodir-save-search-email.php:205
+#: templates/bootstrap/save-search-unsubscribe.php:29
+#: templates/bootstrap/save-search-unsubscribe.php:33
+msgid "Unsubscribe"
+msgstr ""
+
+#: includes/class-geodir-save-search-post.php:125
+msgid ""
+"Login to save search and you will receive an email notification when new "
+"listings matching your search will be published."
+msgstr ""
+
+#: includes/class-geodir-save-search-post.php:159
+msgid "Invalid post type search."
+msgstr ""
+
+#: includes/class-geodir-save-search-post.php:175
+msgid "Try to search with atleast one filter to save search."
+msgstr ""
+
+#: includes/class-geodir-save-search-post.php:198
+msgid ""
+"Search has been saved. You will receive an email notification when new "
+"listings matching your search have been published."
+msgstr ""
+
+#: includes/class-geodir-save-search-post.php:785
+msgid "Something went wrong, try again later."
+msgstr ""
+
+#: includes/class-geodir-save-search-query.php:103
+msgid "Could not save search into the database."
+msgstr ""
+
+#: includes/class-geodir-save-search-query.php:160
+msgid "Could not save subscriber email data into the database."
+msgstr ""
+
+#: includes/class-geodir-save-search-query.php:190
+msgid "Could not save search field into the database."
+msgstr ""
+
+#: includes/class-geodir-save-search.php:171
+msgid ""
+"GeoDirectory plugin is required for the Save Search Notifications plugin to "
+"work properly."
+msgstr ""
+
+#: includes/class-geodir-save-search.php:173
+msgid ""
+"GeoDirectory Advanced Search Filters plugin is required for the Save Search "
+"Notifications plugin to work properly."
+msgstr ""
+
+#: includes/class-geodir-save-search.php:185
+msgid ""
+"Your version of PHP is below the minimum version of PHP required by "
+"GeoDirectory Save Search Notifications. Please contact your host and request "
+"that your version be upgraded to 5.6 or later."
+msgstr ""
+
+#: includes/functions.php:104
+msgid "Every x Hours"
+msgstr ""
+
+#: includes/functions.php:260
+msgid " to "
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-list.php:28
+msgid "GD > Saved Search List"
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-list.php:39
+msgid "Displays a button to users to view their saved search list."
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-list.php:46
+#: includes/widgets/class-geodir-save-search-widget-list.php:100
+#: includes/widgets/class-geodir-save-search-widget-save.php:46
+#: includes/widgets/class-geodir-save-search-widget-save.php:100
+msgid "Title"
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-list.php:47
+#: includes/widgets/class-geodir-save-search-widget-list.php:114
+#: includes/widgets/class-geodir-save-search-widget-list.php:125
+#: includes/widgets/class-geodir-save-search-widget-list.php:136
+#: includes/widgets/class-geodir-save-search-widget-save.php:47
+#: includes/widgets/class-geodir-save-search-widget-save.php:114
+#: includes/widgets/class-geodir-save-search-widget-save.php:125
+#: includes/widgets/class-geodir-save-search-widget-save.php:136
+msgid "Button Content"
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-list.php:50
+#: includes/widgets/class-geodir-save-search-widget-save.php:50
+msgid "Content"
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-list.php:59
+#: includes/widgets/class-geodir-save-search-widget-list.php:154
+#: includes/widgets/class-geodir-save-search-widget-list.php:169
+#: includes/widgets/class-geodir-save-search-widget-list.php:182
+#: includes/widgets/class-geodir-save-search-widget-save.php:59
+#: includes/widgets/class-geodir-save-search-widget-save.php:154
+#: includes/widgets/class-geodir-save-search-widget-save.php:169
+#: includes/widgets/class-geodir-save-search-widget-save.php:182
+msgid "Design"
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-list.php:62
+#: includes/widgets/class-geodir-save-search-widget-save.php:62
+msgid "Styles"
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-list.php:71
+#: includes/widgets/class-geodir-save-search-widget-list.php:191
+#: includes/widgets/class-geodir-save-search-widget-save.php:71
+#: includes/widgets/class-geodir-save-search-widget-save.php:191
+msgid "Wrapper Styles"
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-list.php:72
+#: includes/widgets/class-geodir-save-search-widget-list.php:75
+#: includes/widgets/class-geodir-save-search-widget-save.php:72
+#: includes/widgets/class-geodir-save-search-widget-save.php:75
+msgid "Advanced"
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-list.php:95
+#: includes/widgets/class-geodir-save-search-widget-save.php:95
+msgid "Title:"
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-list.php:96
+#: includes/widgets/class-geodir-save-search-widget-save.php:96
+msgid "The widget title."
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-list.php:104
+#: includes/widgets/class-geodir-save-search-widget-save.php:104
+msgid "Output Type:"
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-list.php:105
+msgid "Select saved search list button output type."
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-list.php:107
+#: includes/widgets/class-geodir-save-search-widget-save.php:107
+msgid "Default (icon + text)"
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-list.php:108
+#: includes/widgets/class-geodir-save-search-widget-save.php:108
+msgid "Icon"
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-list.php:109
+#: includes/widgets/class-geodir-save-search-widget-save.php:109
+msgid "Text"
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-list.php:118
+#: includes/widgets/class-geodir-save-search-widget-save.php:118
+msgid "Button Title:"
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-list.php:119
+msgid "Saved search list button title."
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-list.php:120
+#: includes/widgets/class-geodir-save-search-widget-list.php:273
+msgid "View Saved Search"
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-list.php:129
+#: includes/widgets/class-geodir-save-search-widget-save.php:129
+msgid "Button Icon Class (font-awesome)"
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-list.php:130
+#: includes/widgets/class-geodir-save-search-widget-save.php:130
+msgid "FontAwesome icon class to use."
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-list.php:142
+#: includes/widgets/class-geodir-save-search-widget-save.php:142
+msgid "Button Position:"
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-list.php:143
+#: includes/widgets/class-geodir-save-search-widget-save.php:143
+msgid "Button alignment."
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-list.php:145
+#: includes/widgets/class-geodir-save-search-widget-save.php:145
+msgid "Default"
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-list.php:146
+#: includes/widgets/class-geodir-save-search-widget-save.php:146
+msgid "Left"
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-list.php:147
+#: includes/widgets/class-geodir-save-search-widget-save.php:147
+msgid "Center"
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-list.php:148
+#: includes/widgets/class-geodir-save-search-widget-save.php:148
+msgid "Right"
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-list.php:149
+#: includes/widgets/class-geodir-save-search-widget-save.php:149
+msgid "Block"
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-list.php:159
+#: includes/widgets/class-geodir-save-search-widget-save.php:159
+msgid "Button Size:"
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-list.php:160
+#: includes/widgets/class-geodir-save-search-widget-save.php:160
+msgid "Select button size."
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-list.php:162
+#: includes/widgets/class-geodir-save-search-widget-save.php:162
+msgid "Default (medium)"
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-list.php:163
+#: includes/widgets/class-geodir-save-search-widget-save.php:163
+msgid "Small"
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-list.php:164
+#: includes/widgets/class-geodir-save-search-widget-save.php:164
+msgid "Large"
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-list.php:174
+#: includes/widgets/class-geodir-save-search-widget-save.php:174
+msgid "Button Color:"
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-list.php:175
+#: includes/widgets/class-geodir-save-search-widget-save.php:175
+msgid "Button color."
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-list.php:177
+#: includes/widgets/class-geodir-save-search-widget-save.php:177
+msgid "Default (primary)"
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-list.php:187
+#: includes/widgets/class-geodir-save-search-widget-save.php:187
+msgid "Remove widget main wrapping div"
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-save.php:28
+msgid "GD > Save Search"
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-save.php:39
+msgid "Displays a button to save search on search page."
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-save.php:105
+msgid "Select save search button output type."
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-save.php:119
+msgid "Save search button title."
+msgstr ""
+
+#: includes/widgets/class-geodir-save-search-widget-save.php:120
+#: includes/widgets/class-geodir-save-search-widget-save.php:274
+msgid "Save this Search"
+msgstr ""
+
+#: templates/bootstrap/save-search-popup/admin-list.php:25
+msgid "No saved search list found for this user!"
+msgstr ""
+
+#: templates/bootstrap/save-search-popup/admin-list.php:31
+#: templates/bootstrap/save-search-popup/list.php:31
+msgid "Name"
+msgstr ""
+
+#: templates/bootstrap/save-search-popup/admin-list.php:39
+msgid "Open search link"
+msgstr ""
+
+#: templates/bootstrap/save-search-popup/admin-list.php:39
+#: templates/bootstrap/save-search-popup/list.php:39
+msgid "Emails sent"
+msgstr ""
+
+#: templates/bootstrap/save-search-popup/admin-list.php:39
+#: templates/bootstrap/save-search-popup/list.php:39
+#, php-format
+msgid "%d emails sent"
+msgstr ""
+
+#: templates/bootstrap/save-search-popup/admin-list.php:39
+#: templates/bootstrap/save-search-popup/list.php:39
+#, php-format
+msgid "%d email sent"
+msgstr ""
+
+#: templates/bootstrap/save-search-popup/admin-list.php:40
+#: templates/bootstrap/save-search-popup/list.php:40
+msgid "Delete"
+msgstr ""
+
+#: templates/bootstrap/save-search-popup/form.php:40
+#: templates/bootstrap/save-search-popup/form.php:41
+msgid "Search Name"
+msgstr ""
+
+#: templates/bootstrap/save-search-popup/form.php:42
+msgid "Get emailed when a new listing is added that matches your search."
+msgstr ""
+
+#: templates/bootstrap/save-search-popup/form.php:62
+#: templates/bootstrap/save-search-popup/tabs.php:26
+msgid "Save"
+msgstr ""
+
+#: templates/bootstrap/save-search-popup/list.php:25
+msgid "No saved search found!"
+msgstr ""
+
+#: templates/bootstrap/save-search-popup/list.php:40
+msgid "Open link"
+msgstr ""
+
+#: templates/bootstrap/save-search-popup/tabs.php:29
+msgid "Your Saved List"
+msgstr ""
+
+#: templates/bootstrap/save-search-unsubscribe.php:35
+#, php-format
+msgid "You have been successfully unsubscribed from saved search: <b>%s</b>"
+msgstr ""

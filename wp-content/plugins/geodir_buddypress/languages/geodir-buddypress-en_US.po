@@ -1,0 +1,388 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoDirectory BuddyPress Integration 2.3.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-11 13:19+0530\n"
+"PO-Revision-Date: 2024-06-11 13:19+0530\n"
+"Last-Translator: \n"
+"Language-Team: AyeCode Ltd <contact@ayecode.io>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;__ngettext:1,2;__ngettext_noop:1,2;_c;_e;_ex:1,2c;"
+"_n:1,2;_n_noop:1,2;_nc:4c,1,2;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;gettext;"
+"gettext_noop\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 3.0\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin/settings/class-geodir-buddypress-settings.php:15
+msgid "Buddypress"
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:34
+msgid "General"
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:71
+msgid "Review Rating Settings"
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:77
+msgid "Redirect GD dashboard my listing link to BuddyPress profile"
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:78
+msgid ""
+"If this option is selected, the my listing link from GD dashboard will "
+"redirect to listings tab of BuddyPress profile."
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:84
+msgid "Redirect GD dashboard favorite link to BuddyPress profile"
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:85
+msgid ""
+"If this option is selected, the favorite link from GD dashboard will "
+"redirect to favorites tab of BuddyPress profile."
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:91
+msgid "Link blog author link to the BuddyPress profile link"
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:92
+msgid ""
+"If this option is selected, the blog author page links to the BuddyPress "
+"profile page."
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:98
+msgid "Show featured image in activity"
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:99
+msgid ""
+"If this option is selected, the featured image is displayed in activity for "
+"new listing submitted."
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:105
+msgid "Show listings in BuddyPress dashboard"
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:106
+msgid ""
+"Choose the post types to show listing type tab under listings tab in "
+"BuddyPress dashboard"
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:117
+msgid "Show reviews in BuddyPress dashboard"
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:118
+msgid ""
+"Choose the post types to show listing type tab under reviews tab in "
+"BuddyPress dashboard"
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:129
+msgid "Track new listing activity in BuddyPress"
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:130
+msgid ""
+"Choose the post types to track new listing submission in BuddyPress activity"
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:141
+msgid "Track new review activity in BuddyPress"
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:142
+msgid ""
+"Choose the post types to track new review submission in BuddyPress activity"
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:160
+msgid "Profile Listings"
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:167
+msgid "No. Of Listings"
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:168
+msgid ""
+"Enter number of listings to display in the member dashboard listings tab."
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:177
+msgid "Layout"
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:178
+msgid "How the listings should laid out by default."
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:191
+msgid "Listing Card Row Gap"
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:192
+msgid "This adjusts the spacing between the listing cards horizontally."
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:195
+#: admin/settings/class-geodir-buddypress-settings.php:214
+#: admin/settings/class-geodir-buddypress-settings.php:233
+msgid "Default"
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:210
+msgid "Listing Card Column Gap"
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:211
+msgid "This adjusts the spacing between the listing cards vertically."
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:229
+msgid "Listing Card Border"
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:230
+msgid "Set the border style for the listing card."
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:234
+#: admin/settings/class-geodir-buddypress-settings.php:248
+msgid "None"
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:244
+msgid "Listing Card Shadow"
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:245
+msgid "Set the listing card shadow style."
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:249
+msgid "Small"
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:250
+msgid "Medium"
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:251
+msgid "Large"
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:264
+msgid "Elementor Skin"
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:265
+msgid "Set the elementor skin to apply listings tab design."
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:276
+msgid "Skin Row Gap"
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:277
+msgid "The px value for the row gap."
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:286
+msgid "Skin Column Gap"
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:287
+msgid "The px value for the column gap."
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:308
+msgid "Buddypress Integration"
+msgstr ""
+
+#: admin/settings/class-geodir-buddypress-settings.php:309
+msgid ""
+"Check this box if you would like to completely remove all of its data when "
+"plugin is deleted."
+msgstr ""
+
+#: gd_update.php:16
+#, php-format
+msgid ""
+"The plugin %sWP Easy Updates%s is required to check for and update some "
+"installed plugins, please install it now."
+msgstr ""
+
+#: geodir_buddypress.php:46
+#, php-format
+msgid ""
+"GeoDirectory BuddyPress Integration plugin requires %sBuddyPress%s to be "
+"installed and activated."
+msgstr ""
+
+#: geodir_buddypress.php:59
+#, php-format
+msgid ""
+"GeoDirectory BuddyPress Integration plugin requires %sGeoDirectory%s to be "
+"installed and activated."
+msgstr ""
+
+#: includes/class-geodir-buddypress-template.php:46
+#: includes/class-geodir-buddypress-template.php:204
+msgid "listings"
+msgstr ""
+
+#: includes/class-geodir-buddypress-template.php:115
+#: includes/class-geodir-buddypress-template.php:277
+#, php-format
+msgid "There were no %s found."
+msgstr ""
+
+#: includes/class-geodir-buddypress-template.php:303
+msgid "Listing sort and view options"
+msgstr ""
+
+#: includes/class-geodir-buddypress-template.php:528
+msgid "Pingback:"
+msgstr ""
+
+#: includes/class-geodir-buddypress-template.php:528
+msgid "(Edit)"
+msgstr ""
+
+#: includes/class-geodir-buddypress-template.php:550
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: includes/class-geodir-buddypress-template.php:564
+#, php-format
+msgctxt "%s = human-readable time difference"
+msgid "%s ago"
+msgstr ""
+
+#: includes/class-geodir-buddypress-template.php:565
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: includes/class-geodir-buddypress-template.php:570
+msgid "Edit"
+msgstr ""
+
+#: includes/general-functions.php:398
+#, php-format
+msgid "Reviews on %s"
+msgstr ""
+
+#: includes/general-functions.php:557
+msgid "Previous"
+msgstr ""
+
+#: includes/general-functions.php:563
+msgid "Next"
+msgstr ""
+
+#: includes/general-functions.php:590
+msgid "First"
+msgstr ""
+
+#: includes/general-functions.php:628
+msgid "Last"
+msgstr ""
+
+#: public/class-geodir-buddypress-public.php:193
+msgid "Listings"
+msgstr ""
+
+#: public/class-geodir-buddypress-public.php:231
+#: public/class-geodir-buddypress-public.php:300
+#: public/class-geodir-buddypress-public.php:317
+#: public/class-geodir-buddypress-public.php:369
+#, php-format
+msgid "%s <span class=\"%s\">%s</span>"
+msgstr ""
+
+#: public/class-geodir-buddypress-public.php:246
+#, php-format
+msgid "Listings <span class=\"%s\">%s</span>"
+msgstr ""
+
+#: public/class-geodir-buddypress-public.php:279
+#: public/class-geodir-buddypress-public.php:315
+msgid "Favorites"
+msgstr ""
+
+#: public/class-geodir-buddypress-public.php:352
+msgid "Reviews"
+msgstr ""
+
+#: public/class-geodir-buddypress-public.php:384
+#, php-format
+msgid "Reviews <span class=\"%s\">%s</span>"
+msgstr ""
+
+#: public/class-geodir-buddypress-public.php:509
+#, php-format
+msgid "%1$s listed a new %2$s, %3$s, on the site %4$s"
+msgstr ""
+
+#: public/class-geodir-buddypress-public.php:511
+#, php-format
+msgid "%1$s listed a new %2$s, %3$s"
+msgstr ""
+
+#: public/class-geodir-buddypress-public.php:617
+#, php-format
+msgid "%1$s commented on the %2$s, %3$s, on the site %4$s"
+msgstr ""
+
+#: public/class-geodir-buddypress-public.php:619
+#, php-format
+msgid "%1$s commented on the %2$s, %3$s"
+msgstr ""
+
+#: public/class-geodir-buddypress-public.php:811
+msgid "You"
+msgstr ""
+
+#: public/class-geodir-buddypress-public.php:814
+#: public/class-geodir-buddypress-public.php:817
+#, php-format
+msgid "You have %1$d new reviews"
+msgstr ""
+
+#: public/class-geodir-buddypress-public.php:819
+#: public/class-geodir-buddypress-public.php:821
+#, php-format
+msgid "%s left a review on %s"
+msgstr ""
+
+#: templates/bootstrap/reviews.php:35 templates/reviews.php:34
+msgid "Review navigation"
+msgstr ""
+
+#: templates/bootstrap/reviews.php:37 templates/reviews.php:36
+msgid "&larr; Older Reviews"
+msgstr ""
+
+#: templates/bootstrap/reviews.php:38 templates/reviews.php:37
+msgid "Newer Reviews &rarr;"
+msgstr ""
+
+#: templates/bootstrap/reviews.php:47 templates/reviews.php:46
+msgid "Reviews are closed."
+msgstr ""

@@ -1,0 +1,106 @@
+.geodir-booking-progress {
+	position: relative;
+	height: 28px;
+	background-color: white;
+	border: 1px solid #4297d7;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.geodir-booking-progress .geodir-booking-progress__bar {
+	display: block;
+	width: 0%;
+	height: 100%;
+	background-size: 28px 30px;
+	background-image: repeating-linear-gradient(
+		45deg,
+		#6ea6d1,
+		#6ea6d1 10px,
+		#88b6d9 10px,
+		#88b6d9 20px
+	);
+	transition: width 0.3s ease;
+}
+
+.geodir-booking-progress.geodir-booking-wait .geodir-booking-progress__bar {
+	width: 100% !important;
+	opacity: 0.65;
+	animation: animate-geodir-booking--progress-bar 1.5s linear infinite;
+}
+
+.geodir-booking-progress .geodir-booking-progress__text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #222;
+	text-shadow: 1px 0px 1px rgba(255, 255, 255, 0.5);
+	font-size: 14px;
+	font-weight: bold;
+}
+
+@keyframes animate-geodir-booking--progress-bar {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 28px 0;
+	}
+}
+
+.geodir-booking-upload-import-details-wrapper .geodir-booking-logs .notice {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.geodir-booking-ical-sync-table {
+	margin-top: 1em;
+}
+
+.geodir-booking-ical-sync-table td {
+	vertical-align: middle;
+}
+
+.geodir-booking-ical-sync-table h4 {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.geodir-booking-ical-sync-table .column-status span {
+	font-size: 10px;
+	padding: 3px 8px;
+	text-transform: uppercase;
+	border-radius: 2px;
+	background-color: #708090;
+	color: white;
+}
+
+.geodir-booking-ical-sync-table .column-status span.geodir-booking-status-done,
+.geodir-booking-ical-sync-table
+	.column-status
+	span.geodir-booking-status-success {
+	background-color: #228b22;
+}
+
+.geodir-booking-ical-sync-table
+	.column-status
+	span.geodir-booking-status-in-progress,
+.geodir-booking-ical-sync-table .column-status span.geodir-booking-status-info {
+	background-color: #1e90ff;
+}
+
+.geodir-booking-ical-sync-table
+	.column-status
+	span.geodir-booking-status-warning {
+	background-color: #f56800;
+}
+
+.geodir-booking-ical-sync-table
+	.column-status
+	span.geodir-booking-status-error {
+	background-color: #f50000;
+}
+
+.geodir-booking-ical-sync-table.geodir-booking-sync-logs-table .column-status {
+	width: 10%;
+}

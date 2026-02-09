@@ -1,0 +1,4174 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Advertising 1.2.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-12 19:04+0530\n"
+"PO-Revision-Date: 2026-01-12 19:04+0530\n"
+"Last-Translator: \n"
+"Language-Team: English (United States)\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;__ngettext:1,2;__ngettext_noop:1,2;_c;_e;_ex:1,2c;"
+"_n:1,2;_n_noop:1,2;_nc:4c,1,2;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;gettext;"
+"gettext_noop\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: vendor/ayecode/wp-ayecode-ui/assets\n"
+"X-Poedit-SearchPathExcluded-1: vendor/ayecode/wp-ayecode-ui/assets-v5\n"
+
+#: includes/abstracts/class-adv-background-process.php:176
+#: includes/libraries/wp-background-process.php:420
+#, php-format
+msgid "Every %d minutes"
+msgstr ""
+
+#: includes/ad-functions.php:29
+msgid "Text Ad"
+msgstr ""
+
+#: includes/ad-functions.php:30
+msgid "HTML Ad"
+msgstr ""
+
+#: includes/ad-functions.php:31
+msgid "Image Ad"
+msgstr ""
+
+#: includes/ad-functions.php:36
+msgid "Listing Ad"
+msgstr ""
+
+#: includes/ad-functions.php:235
+msgid "Uknown"
+msgstr ""
+
+#: includes/ad-functions.php:248 includes/zone-functions.php:145
+#: includes/zone-functions.php:480
+msgid "Any size"
+msgstr ""
+
+#: includes/ad-functions.php:281
+msgid "No Zone"
+msgstr ""
+
+#: includes/ad-functions.php:431 includes/ad-functions.php:479
+msgid "Nonce verification has failed."
+msgstr ""
+
+#: includes/ad-functions.php:439 includes/ad-functions.php:487
+msgid "Ad not found."
+msgstr ""
+
+#: includes/ad-functions.php:445
+msgid "You are not allowed to delete this ad."
+msgstr ""
+
+#: includes/ad-functions.php:451
+msgid "Can not delete this ad."
+msgstr ""
+
+#: includes/ad-functions.php:460
+msgid "Error occurred in deleting ad."
+msgstr ""
+
+#: includes/ad-functions.php:493
+msgid "You are not allowed to renew this ad."
+msgstr ""
+
+#: includes/ad-functions.php:665
+msgid "Live"
+msgstr ""
+
+#: includes/ad-functions.php:665
+msgid "Pending"
+msgstr ""
+
+#: includes/ad-functions.php:673
+#: includes/carts/class-adv-cart-invoicing.php:124
+#: includes/carts/class-adv-cart-invoicing.php:167
+#: includes/carts/class-adv-cart-woocommerce.php:59
+#: includes/carts/class-adv-cart-woocommerce.php:97
+msgid "Expired"
+msgstr ""
+
+#: includes/ad-functions.php:693 includes/ad-functions.php:766
+#: includes/ad-functions.php:865 includes/ad-functions.php:876
+#: includes/ad-functions.php:896 includes/ad-functions.php:928
+#: vendor/ayecode/wp-super-duper/sd-functions.php:55
+#: vendor/ayecode/wp-super-duper/sd-functions.php:142
+#: vendor/ayecode/wp-super-duper/sd-functions.php:296
+#: vendor/ayecode/wp-super-duper/sd-functions.php:315
+#: vendor/ayecode/wp-super-duper/sd-functions.php:345
+#: vendor/ayecode/wp-super-duper/sd-functions.php:416
+#: vendor/ayecode/wp-super-duper/sd-functions.php:544
+#: vendor/ayecode/wp-super-duper/sd-functions.php:600
+#: vendor/ayecode/wp-super-duper/sd-functions.php:752
+msgid "None"
+msgstr ""
+
+#: includes/ad-functions.php:712 includes/ad-functions.php:721
+#: vendor/ayecode/wp-super-duper/sd-functions.php:89
+#: vendor/ayecode/wp-super-duper/sd-functions.php:98
+msgid "Margin top"
+msgstr ""
+
+#: includes/ad-functions.php:716 includes/ad-functions.php:781
+#: includes/ad-functions.php:838 includes/ad-functions.php:908
+#: includes/ad-functions.php:937
+#: vendor/ayecode/wp-super-duper/sd-functions.php:93
+#: vendor/ayecode/wp-super-duper/sd-functions.php:164
+#: vendor/ayecode/wp-super-duper/sd-functions.php:221
+#: vendor/ayecode/wp-super-duper/sd-functions.php:327
+#: vendor/ayecode/wp-super-duper/sd-functions.php:355
+#: vendor/ayecode/wp-super-duper/sd-functions.php:395
+#: vendor/ayecode/wp-super-duper/sd-functions.php:985
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1235
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1270
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1295
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1707
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1760
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1814
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1868
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1938
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1986
+#: vendor/ayecode/wp-super-duper/sd-functions.php:2016
+#: vendor/ayecode/wp-super-duper/sd-functions.php:2046
+#: vendor/ayecode/wp-super-duper/sd-functions.php:2069
+#: vendor/ayecode/wp-super-duper/sd-functions.php:2096
+#: vendor/ayecode/wp-super-duper/sd-functions.php:2179
+#: vendor/ayecode/wp-super-duper/sd-functions.php:2220
+msgid "Wrapper Styles"
+msgstr ""
+
+#: includes/ad-functions.php:724
+#: vendor/ayecode/wp-super-duper/sd-functions.php:101
+msgid "Margins"
+msgstr ""
+
+#: includes/ad-functions.php:730
+#: vendor/ayecode/wp-super-duper/sd-functions.php:107
+msgid "Margin right"
+msgstr ""
+
+#: includes/ad-functions.php:736
+#: vendor/ayecode/wp-super-duper/sd-functions.php:113
+msgid "Margin bottom"
+msgstr ""
+
+#: includes/ad-functions.php:742
+#: vendor/ayecode/wp-super-duper/sd-functions.php:119
+msgid "Margin left"
+msgstr ""
+
+#: includes/ad-functions.php:777 includes/ad-functions.php:786
+#: vendor/ayecode/wp-super-duper/sd-functions.php:160
+#: vendor/ayecode/wp-super-duper/sd-functions.php:169
+msgid "Padding top"
+msgstr ""
+
+#: includes/ad-functions.php:789
+#: vendor/ayecode/wp-super-duper/sd-functions.php:172
+msgid "Padding"
+msgstr ""
+
+#: includes/ad-functions.php:795
+#: vendor/ayecode/wp-super-duper/sd-functions.php:178
+msgid "Padding right"
+msgstr ""
+
+#: includes/ad-functions.php:801
+#: vendor/ayecode/wp-super-duper/sd-functions.php:184
+msgid "Padding bottom"
+msgstr ""
+
+#: includes/ad-functions.php:807
+#: vendor/ayecode/wp-super-duper/sd-functions.php:190
+msgid "Padding left"
+msgstr ""
+
+#: includes/ad-functions.php:834
+#: vendor/ayecode/wp-super-duper/sd-functions.php:217
+msgid "Border"
+msgstr ""
+
+#: includes/ad-functions.php:843
+#: vendor/ayecode/wp-super-duper/sd-functions.php:226
+msgid "Border radius type"
+msgstr ""
+
+#: includes/ad-functions.php:845 includes/ad-functions.php:858
+#: includes/ad-functions.php:875
+#: vendor/ayecode/wp-super-duper/sd-functions.php:228
+#: vendor/ayecode/wp-super-duper/sd-functions.php:241
+#: vendor/ayecode/wp-super-duper/sd-functions.php:252
+#: vendor/ayecode/wp-super-duper/sd-functions.php:261
+#: vendor/ayecode/wp-super-duper/sd-functions.php:271
+#: vendor/ayecode/wp-super-duper/sd-functions.php:295
+#: vendor/ayecode/wp-super-duper/sd-functions.php:373
+#: vendor/ayecode/wp-super-duper/sd-functions.php:835
+#: vendor/ayecode/wp-super-duper/sd-functions.php:928
+#: vendor/ayecode/wp-super-duper/sd-functions.php:967
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1218
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1252
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1525
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1693
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1746
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1800
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1853
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1926
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1974
+#: vendor/ayecode/wp-super-duper/sd-functions.php:2003
+#: vendor/ayecode/wp-super-duper/sd-functions.php:2033
+#: vendor/ayecode/wp-super-duper/sd-functions.php:2086
+#: vendor/ayecode/wp-super-duper/sd-functions.php:2165
+#: vendor/ayecode/wp-super-duper/sd-functions.php:2206
+msgid "Default"
+msgstr ""
+
+#: includes/ad-functions.php:856
+#: vendor/ayecode/wp-super-duper/sd-functions.php:237
+msgid "Border radius size"
+msgstr ""
+
+#: includes/ad-functions.php:859 includes/ad-functions.php:897
+#: vendor/ayecode/wp-super-duper/sd-functions.php:253
+#: vendor/ayecode/wp-super-duper/sd-functions.php:316
+msgid "Small"
+msgstr ""
+
+#: includes/ad-functions.php:860 includes/ad-functions.php:899
+#: vendor/ayecode/wp-super-duper/sd-functions.php:254
+#: vendor/ayecode/wp-super-duper/sd-functions.php:318
+msgid "Large"
+msgstr ""
+
+#: includes/ad-functions.php:863
+msgid "Border type"
+msgstr ""
+
+#: includes/ad-functions.php:866
+msgid "Full"
+msgstr ""
+
+#: includes/ad-functions.php:867
+#: vendor/ayecode/wp-super-duper/sd-functions.php:282
+#: vendor/ayecode/wp-super-duper/sd-functions.php:590
+msgid "Top"
+msgstr ""
+
+#: includes/ad-functions.php:868
+#: vendor/ayecode/wp-super-duper/sd-functions.php:283
+#: vendor/ayecode/wp-super-duper/sd-functions.php:591
+msgid "Bottom"
+msgstr ""
+
+#: includes/ad-functions.php:869 includes/ad-functions.php:1038
+#: vendor/ayecode/wp-super-duper/sd-functions.php:284
+#: vendor/ayecode/wp-super-duper/sd-functions.php:929
+msgid "Left"
+msgstr ""
+
+#: includes/ad-functions.php:870 includes/ad-functions.php:1040
+#: vendor/ayecode/wp-super-duper/sd-functions.php:285
+#: vendor/ayecode/wp-super-duper/sd-functions.php:930
+msgid "Right"
+msgstr ""
+
+#: includes/ad-functions.php:873
+#: vendor/ayecode/wp-super-duper/sd-functions.php:293
+msgid "Border color"
+msgstr ""
+
+#: includes/ad-functions.php:898
+#: vendor/ayecode/wp-super-duper/sd-functions.php:317
+msgid "Regular"
+msgstr ""
+
+#: includes/ad-functions.php:904
+#: vendor/ayecode/wp-super-duper/sd-functions.php:323
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1660
+msgid "Shadow"
+msgstr ""
+
+#: includes/ad-functions.php:933
+#: vendor/ayecode/wp-super-duper/sd-functions.php:351
+msgid "Background color"
+msgstr ""
+
+#: includes/ad-functions.php:958
+msgid "Title HTML tag"
+msgstr ""
+
+#: includes/ad-functions.php:959
+msgid "Set the HTML tag for the title."
+msgstr ""
+
+#: includes/ad-functions.php:962
+msgid "Default (theme widget default)"
+msgstr ""
+
+#: includes/ad-functions.php:973 includes/ad-functions.php:1012
+#: includes/ad-functions.php:1045 includes/ad-functions.php:1075
+#: includes/admin/views/new-ad-frontend.php:74
+#: includes/admin/views/new-ad-frontend.php:79
+msgid "Title"
+msgstr ""
+
+#: includes/ad-functions.php:994
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1377
+msgid "Font size"
+msgstr ""
+
+#: includes/ad-functions.php:997
+msgid "Default (title tag size)"
+msgstr ""
+
+#: includes/ad-functions.php:1034
+#: vendor/ayecode/wp-super-duper/sd-functions.php:936
+msgid "Text align"
+msgstr ""
+
+#: includes/ad-functions.php:1037
+msgid "Default (left)"
+msgstr ""
+
+#: includes/ad-functions.php:1039
+#: vendor/ayecode/wp-super-duper/sd-functions.php:931
+msgid "Center"
+msgstr ""
+
+#: includes/ad-functions.php:1065
+msgid "Default (theme color)"
+msgstr ""
+
+#: includes/ad-functions.php:1070
+#: vendor/ayecode/wp-super-duper/sd-functions.php:761
+msgid "Text color"
+msgstr ""
+
+#: includes/ad-functions.php:1088
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1028
+msgid "Primary"
+msgstr ""
+
+#: includes/ad-functions.php:1089
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1029
+msgid "Secondary"
+msgstr ""
+
+#: includes/ad-functions.php:1090
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1030
+msgid "Success"
+msgstr ""
+
+#: includes/ad-functions.php:1091
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1031
+msgid "Danger"
+msgstr ""
+
+#: includes/ad-functions.php:1092
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1032
+msgid "Warning"
+msgstr ""
+
+#: includes/ad-functions.php:1093
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1033
+msgid "Info"
+msgstr ""
+
+#: includes/ad-functions.php:1094
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1034
+msgid "Light"
+msgstr ""
+
+#: includes/ad-functions.php:1095
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1035
+msgid "Dark"
+msgstr ""
+
+#: includes/ad-functions.php:1096
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1037
+msgid "White"
+msgstr ""
+
+#: includes/ad-functions.php:1097
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1038
+msgid "Purple"
+msgstr ""
+
+#: includes/ad-functions.php:1098
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1039
+msgid "Salmon"
+msgstr ""
+
+#: includes/ad-functions.php:1099
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1040
+msgid "Cyan"
+msgstr ""
+
+#: includes/ad-functions.php:1100
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1041
+msgid "Gray"
+msgstr ""
+
+#: includes/ad-functions.php:1101
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1044
+msgid "Indigo"
+msgstr ""
+
+#: includes/ad-functions.php:1102
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1045
+msgid "Orange"
+msgstr ""
+
+#: includes/ad-functions.php:1105
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1090
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1114
+msgid "(button only)"
+msgstr ""
+
+#: includes/ad-functions.php:1106
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1091
+msgid "Primary outline"
+msgstr ""
+
+#: includes/ad-functions.php:1107
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1092
+msgid "Secondary outline"
+msgstr ""
+
+#: includes/ad-functions.php:1108
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1093
+msgid "Success outline"
+msgstr ""
+
+#: includes/ad-functions.php:1109
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1094
+msgid "Danger outline"
+msgstr ""
+
+#: includes/ad-functions.php:1110
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1095
+msgid "Warning outline"
+msgstr ""
+
+#: includes/ad-functions.php:1111
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1096
+msgid "Info outline"
+msgstr ""
+
+#: includes/ad-functions.php:1112
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1097
+msgid "Light outline"
+msgstr ""
+
+#: includes/ad-functions.php:1113
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1098
+msgid "Dark outline"
+msgstr ""
+
+#: includes/ad-functions.php:1114
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1099
+msgid "White outline"
+msgstr ""
+
+#: includes/ad-functions.php:1115
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1100
+msgid "Purple outline"
+msgstr ""
+
+#: includes/ad-functions.php:1116
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1101
+msgid "Salmon outline"
+msgstr ""
+
+#: includes/ad-functions.php:1117
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1102
+msgid "Cyan outline"
+msgstr ""
+
+#: includes/ad-functions.php:1118
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1103
+msgid "Gray outline"
+msgstr ""
+
+#: includes/ad-functions.php:1119
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1105
+msgid "Indigo outline"
+msgstr ""
+
+#: includes/ad-functions.php:1120
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1106
+msgid "Orange outline"
+msgstr ""
+
+#: includes/ad-functions.php:1133
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1143
+msgid "Facebook"
+msgstr ""
+
+#: includes/ad-functions.php:1134
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1144
+msgid "Twitter"
+msgstr ""
+
+#: includes/ad-functions.php:1135
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1145
+msgid "Instagram"
+msgstr ""
+
+#: includes/ad-functions.php:1136
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1146
+msgid "Linkedin"
+msgstr ""
+
+#: includes/ad-functions.php:1137
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1147
+msgid "Flickr"
+msgstr ""
+
+#: includes/ad-functions.php:1138
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1148
+msgid "GitHub"
+msgstr ""
+
+#: includes/ad-functions.php:1139
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1149
+msgid "YouTube"
+msgstr ""
+
+#: includes/ad-functions.php:1140
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1150
+msgid "WordPress"
+msgstr ""
+
+#: includes/ad-functions.php:1141
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1151
+msgid "Google"
+msgstr ""
+
+#: includes/ad-functions.php:1142
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1152
+msgid "Yahoo"
+msgstr ""
+
+#: includes/ad-functions.php:1143
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1153
+msgid "Vkontakte"
+msgstr ""
+
+#: includes/admin/admin-functions.php:17
+msgid "Upload Image"
+msgstr ""
+
+#: includes/admin/admin-functions.php:19
+msgid "Dashboard"
+msgstr ""
+
+#: includes/admin/admin-functions.php:21
+#: includes/class-adv-frontend-assets.php:52
+msgid "Searching..."
+msgstr ""
+
+#: includes/admin/admin-functions.php:22
+#: includes/class-adv-frontend-assets.php:53
+msgid "Search Listings"
+msgstr ""
+
+#: includes/admin/admin-functions.php:133
+msgid "User Roles Settings:"
+msgstr ""
+
+#: includes/admin/admin-functions.php:137
+msgid "Show to all user roles"
+msgstr ""
+
+#: includes/admin/admin-functions.php:138
+msgid "Only show to selected user roles"
+msgstr ""
+
+#: includes/admin/admin-functions.php:139
+msgid "Hide for selected user roles"
+msgstr ""
+
+#: includes/admin/admin-functions.php:143
+#: vendor/ayecode/wp-super-duper/sd-functions.php:3027
+msgid "Guest (logged out)"
+msgstr ""
+
+#: includes/admin/admin-functions.php:159
+msgid "User rules take priority over all other rules."
+msgstr ""
+
+#: includes/admin/admin-functions.php:189
+msgid "Post Types Settings:"
+msgstr ""
+
+#: includes/admin/admin-functions.php:193
+msgid "Hide on all post types"
+msgstr ""
+
+#: includes/admin/admin-functions.php:194
+msgid "Show on all post types"
+msgstr ""
+
+#: includes/admin/admin-functions.php:195
+msgid "Only show on selected post types"
+msgstr ""
+
+#: includes/admin/admin-functions.php:196
+msgid "Hide on selected post types"
+msgstr ""
+
+#: includes/admin/admin-functions.php:213
+msgid ""
+"These rules affect the root archive ie: \"/events/\" and single posts (posts "
+"can be disabled in post settings)."
+msgstr ""
+
+#: includes/admin/admin-functions.php:243
+msgid "Taxonomies Settings:"
+msgstr ""
+
+#: includes/admin/admin-functions.php:247
+msgid "Hide on all taxonomy archives"
+msgstr ""
+
+#: includes/admin/admin-functions.php:248
+msgid "Show on all taxonomy archives"
+msgstr ""
+
+#: includes/admin/admin-functions.php:249
+msgid "Only show on selected taxonomy archives"
+msgstr ""
+
+#: includes/admin/admin-functions.php:250
+msgid "Hide on selected taxonomy archives"
+msgstr ""
+
+#: includes/admin/admin-functions.php:267
+msgid ""
+"Taxonomy rules affect tag and category archives such as : \"/events/sports/"
+"\" or \"/blog/news/"
+msgstr ""
+
+#: includes/admin/admin-functions.php:294
+msgid "Posts Settings:"
+msgstr ""
+
+#: includes/admin/admin-functions.php:298
+msgid "Hide for all posts"
+msgstr ""
+
+#: includes/admin/admin-functions.php:299
+msgid "Show on all posts"
+msgstr ""
+
+#: includes/admin/admin-functions.php:300
+msgid "Only Show on selected posts"
+msgstr ""
+
+#: includes/admin/admin-functions.php:301
+msgid "Hide on selected posts"
+msgstr ""
+
+#: includes/admin/admin-functions.php:306
+msgid ""
+"You can show/hide this ad for certain posts by entering a comma separated "
+"string with the Post ID's. The format will become something like: "
+"10,20,99,100"
+msgstr ""
+
+#: includes/admin/admin-functions.php:317
+msgid ""
+"Post Type settings also take affect here, if limited, those settings will "
+"also affect the show or hide all settings here."
+msgstr ""
+
+#: includes/admin/admin-functions.php:344
+msgid "Terms Settings:"
+msgstr ""
+
+#: includes/admin/admin-functions.php:348
+msgid "Hide for all terms"
+msgstr ""
+
+#: includes/admin/admin-functions.php:349
+msgid "Show on all terms"
+msgstr ""
+
+#: includes/admin/admin-functions.php:350
+msgid "Only show on selected terms"
+msgstr ""
+
+#: includes/admin/admin-functions.php:351
+msgid "Hide on selected terms"
+msgstr ""
+
+#: includes/admin/admin-functions.php:356
+msgid ""
+"You can show/hide this ad for certain terms (categories, tags & custom "
+"taxonomies) by entering a comma separated string with the Term ID's. The "
+"format will become something like: 11,20,99,120"
+msgstr ""
+
+#: includes/admin/admin-functions.php:367
+msgid ""
+"Taxonomy settings also take affect here, if limited, those settings will "
+"also affect the show or hide all settings here."
+msgstr ""
+
+#: includes/admin/admin-settings.php:238
+msgid "Cart"
+msgstr ""
+
+#: includes/admin/admin-settings.php:240
+#, php-format
+msgid "You must have %sGetPaid%s installed and active."
+msgstr ""
+
+#: includes/admin/admin-settings.php:246
+msgid "Dashboard Page"
+msgstr ""
+
+#: includes/admin/admin-settings.php:247
+msgid ""
+"This is the advertisers dashboard page. The <b>[ads_dashboard]</b> shortcode "
+"must be on this page."
+msgstr ""
+
+#: includes/admin/admin-settings.php:252
+msgid "Tracking link base slug"
+msgstr ""
+
+#: includes/admin/admin-settings.php:253
+msgid "click"
+msgstr ""
+
+#: includes/admin/admin-settings.php:255
+#, php-format
+msgid ""
+"The slug variable for tracking click links. For example: <b>%s</b>, so "
+"tracking link will be %s."
+msgstr ""
+
+#: includes/admin/admin-settings.php:260
+msgid "Delete data on uninstall"
+msgstr ""
+
+#: includes/admin/admin-settings.php:262
+msgid "Delete all data related to this plugin when deleting the plugin."
+msgstr ""
+
+#: includes/admin/admin-settings.php:267
+msgid "Paid ads status"
+msgstr ""
+
+#: includes/admin/admin-settings.php:269
+msgid "Select the status to assign an ad after it has been paid for"
+msgstr ""
+
+#: includes/admin/admin-settings.php:274
+msgid "Do not allow HTML ads"
+msgstr ""
+
+#: includes/admin/admin-settings.php:275
+msgid "Only allow HTML ads in the admin area"
+msgstr ""
+
+#: includes/admin/admin-settings.php:276
+msgid "Allow HTML ads"
+msgstr ""
+
+#: includes/admin/admin-settings.php:278
+msgid "HTML Ads"
+msgstr ""
+
+#: includes/admin/admin-settings.php:280
+msgid "Select whether or not to allow HTML ads"
+msgstr ""
+
+#: includes/admin/admin-settings.php:328
+msgid "Settings updated."
+msgstr ""
+
+#: includes/admin/admin-settings.php:541
+#, php-format
+msgid "The callback function used for the %s setting is missing."
+msgstr ""
+
+#: includes/admin/class-adv-admin-menus.php:31
+#: includes/admin/class-adv-admin-menus.php:32
+#: includes/class-adv-pricing-manager.php:64
+msgid "Advertising"
+msgstr ""
+
+#: includes/admin/class-adv-admin-menus.php:49
+#: includes/admin/class-adv-admin-menus.php:50
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:3231
+msgid "Settings"
+msgstr ""
+
+#: includes/admin/class-adv-metaboxes.php:61
+msgid "Ad Details"
+msgstr ""
+
+#: includes/admin/class-adv-metaboxes.php:64
+msgid "Ad Stats"
+msgstr ""
+
+#: includes/admin/class-adv-metaboxes.php:68
+msgid "Related Invoices"
+msgstr ""
+
+#: includes/admin/class-adv-metaboxes.php:82
+msgid "Zone Details"
+msgstr ""
+
+#: includes/admin/class-adv-metaboxes.php:85
+msgid "Display Rules"
+msgstr ""
+
+#: includes/admin/class-adv-metaboxes.php:88
+msgid "Usage Details"
+msgstr ""
+
+#: includes/admin/class-adv-metaboxes.php:91
+msgid "Zone Stats"
+msgstr ""
+
+#: includes/admin/class-adv-post-types-admin.php:48
+#: includes/admin/class-adv-post-types-admin.php:51
+msgid "Zone updated."
+msgstr ""
+
+#: includes/admin/class-adv-post-types-admin.php:49
+#: includes/admin/class-adv-post-types-admin.php:65
+msgid "Custom field updated."
+msgstr ""
+
+#: includes/admin/class-adv-post-types-admin.php:50
+#: includes/admin/class-adv-post-types-admin.php:66
+msgid "Custom field deleted."
+msgstr ""
+
+#: includes/admin/class-adv-post-types-admin.php:53
+msgid "Zone published."
+msgstr ""
+
+#: includes/admin/class-adv-post-types-admin.php:54
+msgid "Zone saved."
+msgstr ""
+
+#: includes/admin/class-adv-post-types-admin.php:55
+msgid "Zone submitted."
+msgstr ""
+
+#: includes/admin/class-adv-post-types-admin.php:56
+#, php-format
+msgid "Zone scheduled for: <strong>%1$s</strong>."
+msgstr ""
+
+#: includes/admin/class-adv-post-types-admin.php:58
+#: includes/admin/class-adv-post-types-admin.php:74
+msgid "M j, Y @ G:i"
+msgstr ""
+
+#: includes/admin/class-adv-post-types-admin.php:59
+msgid "Zone draft updated."
+msgstr ""
+
+#: includes/admin/class-adv-post-types-admin.php:64
+#: includes/admin/class-adv-post-types-admin.php:67
+msgid "Ad updated."
+msgstr ""
+
+#: includes/admin/class-adv-post-types-admin.php:69
+msgid "Ad published."
+msgstr ""
+
+#: includes/admin/class-adv-post-types-admin.php:70
+msgid "Ad saved."
+msgstr ""
+
+#: includes/admin/class-adv-post-types-admin.php:71
+msgid "Ad submitted."
+msgstr ""
+
+#: includes/admin/class-adv-post-types-admin.php:72
+#, php-format
+msgid "Ad scheduled for: <strong>%1$s</strong>."
+msgstr ""
+
+#: includes/admin/class-adv-post-types-admin.php:75
+msgid "Ad draft updated."
+msgstr ""
+
+#: includes/admin/class-adv-post-types-admin.php:91
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:190
+msgid "Ad Size"
+msgstr ""
+
+#: includes/admin/class-adv-post-types-admin.php:92
+#: includes/class-adv-post-types.php:54 includes/core-functions.php:826
+#: templates/ads-overview.php:30
+msgid "Ads"
+msgstr ""
+
+#: includes/admin/class-adv-post-types-admin.php:93
+#: includes/admin/class-adv-post-types-admin.php:161
+#: templates/ads-overview.php:18
+msgid "CTR"
+msgstr ""
+
+#: includes/admin/class-adv-post-types-admin.php:94
+#: includes/admin/class-adv-post-types-admin.php:162
+#: includes/zone-functions.php:539 templates/ads-overview.php:19
+msgid "Clicks"
+msgstr ""
+
+#: includes/admin/class-adv-post-types-admin.php:95
+#: includes/admin/class-adv-post-types-admin.php:163
+#: includes/zone-functions.php:538 templates/ads-overview.php:20
+msgid "Impressions"
+msgstr ""
+
+#: includes/admin/class-adv-post-types-admin.php:96
+#: includes/admin/class-adv-post-types-admin.php:165
+#: includes/admin/metaboxes/class-adv-meta-box-zone-usage.php:62
+msgid "Shortcode"
+msgstr ""
+
+#: includes/admin/class-adv-post-types-admin.php:158
+#: includes/admin/metaboxes/class-adv-meta-box-ad-details.php:60
+msgid "Advertiser"
+msgstr ""
+
+#: includes/admin/class-adv-post-types-admin.php:159
+#: includes/admin/metaboxes/class-adv-meta-box-ad-details.php:80
+#: includes/admin/views/new-ad-frontend.php:91 templates/ads-overview.php:17
+msgid "Zone"
+msgstr ""
+
+#: includes/admin/class-adv-post-types-admin.php:160
+#: includes/libraries/class-tgm-plugin-activation.php:2642
+#: vendor/ayecode/wp-super-duper/sd-functions.php:567
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1195
+msgid "Type"
+msgstr ""
+
+#: includes/admin/class-adv-post-types-admin.php:164
+#: includes/admin/metaboxes/class-adv-meta-box-ad-invoice.php:141
+#: includes/libraries/class-tgm-plugin-activation.php:2647
+#: templates/ads-overview.php:21
+msgid "Status"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-ad-details.php:102
+#: includes/admin/metaboxes/class-adv-meta-box-ad-details.php:108
+#: includes/admin/views/new-ad-frontend.php:198 templates/ads-overview.php:16
+msgid "Ad Type"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-ad-details.php:111
+msgid "Select ad type"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-ad-details.php:130
+#: includes/admin/metaboxes/class-adv-meta-box-ad-details.php:138
+#: includes/admin/views/new-ad-frontend.php:250
+msgid "Target URL"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-ad-details.php:150
+#: includes/admin/views/new-ad-frontend.php:267
+msgid "Open in new tab"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-ad-details.php:160
+msgid "Where should users be redirected to after clicking on the ad?"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-ad-details.php:172
+#: includes/admin/views/new-ad-frontend.php:221
+msgid "Ad Image"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-ad-details.php:181
+msgid "Enter image URL"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-ad-details.php:197
+#: includes/admin/views/new-ad-frontend.php:299
+msgid "Ad Code"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-ad-details.php:200
+msgid "HTML or JavaScript code (e.g adsense) responsible for displaying the ad"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-ad-details.php:207
+#: includes/admin/views/new-ad-frontend.php:279
+msgid "Ad Text"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-ad-details.php:210
+#: includes/admin/views/new-ad-frontend.php:286
+msgid "Shown below the title. Must be 120 characters or less."
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-ad-details.php:239
+#: includes/admin/metaboxes/class-adv-meta-box-ad-details.php:245
+#: includes/admin/views/new-ad-frontend.php:342
+#: includes/admin/views/new-ad-frontend.php:348
+msgid "Select Listing"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-ad-details.php:249
+msgid "Select listing"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-ad-details.php:262
+msgid "Target locations"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-ad-details.php:276
+#: includes/admin/views/new-ad-frontend.php:366
+msgid "Target Location"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-ad-details.php:280
+#: includes/admin/views/new-ad-frontend.php:374
+msgid ""
+"Optional. Enter a comma separated list of region or city slugs to target."
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-ad-invoice.php:65
+msgid ""
+"This ad is not linked to any invoice. You can manually link an existing "
+"invoice or automatically generate a new invoice after you save the ad."
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-ad-invoice.php:72
+#: includes/admin/metaboxes/class-adv-meta-box-ad-invoice.php:78
+msgid "Invoice Action"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-ad-invoice.php:81
+msgid "Select an action"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-ad-invoice.php:82
+msgid "Optional. What should happen after you save this ad?"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-ad-invoice.php:84
+msgid "Do nothing"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-ad-invoice.php:85
+msgid "Automatically generate a new invoice"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-ad-invoice.php:86
+msgid "Link an existing invoice"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-ad-invoice.php:106
+#: includes/admin/metaboxes/class-adv-meta-box-ad-invoice.php:113
+msgid "Link Invoice"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-ad-invoice.php:116
+msgid "Invoice id or number"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-ad-invoice.php:117
+msgid "Enter the ID or Number of an existing invoice to link it to this ad."
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-ad-invoice.php:138
+msgid "Invoice"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-ad-invoice.php:139
+msgid "Created"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-ad-invoice.php:140
+msgid "Paid"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-ad-invoice.php:142
+msgid "Total"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-ad-stats.php:30
+#: includes/admin/metaboxes/class-adv-meta-box-zone-stats.php:30
+msgid "CTR Rate:"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-ad-stats.php:32
+#: includes/admin/metaboxes/class-adv-meta-box-zone-stats.php:32
+msgid "Clicks:"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-ad-stats.php:34
+#: includes/admin/metaboxes/class-adv-meta-box-zone-stats.php:34
+msgid "Impressions:"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:86
+msgid ""
+"Pricing and expiry terms are controlled by the linked GeoDirectory price "
+"package."
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:97
+msgid "Price"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:119
+msgid "for"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:130
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:266
+msgid "Unlimited"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:144
+msgid "Pricing Type"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:163
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:170
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:171
+msgid "Show Title"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:176
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1558
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:250
+msgid "Yes"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:177
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1557
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:250
+msgid "No"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:179
+msgid ""
+"Choose yes if you would like the title of this zone to show on the frontend."
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:196
+msgid "Full width"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:201
+msgid "Auto height"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:205
+msgid "Ad size (width x height) in pixels. Leave blank for any size."
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:213
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:221
+msgid "Visible Ads"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:229
+msgid "All"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:231
+msgid "Number of ads that are visible at the same time."
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:241
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:248
+msgid "Allowed Ad Types"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:254
+msgid "What ad types should be allowed on the frontend?"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:264
+msgid "Maximum Ads"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:267
+msgid "Maximum number of active ads that can be added to this zone."
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:274
+msgid "Grid"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:277
+msgid "Display ads in a grid with"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:278
+msgid "ads per row"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:285
+msgid "Admin Only"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:288
+msgid "Hide this zone in the drop down on the frontend ad placement form."
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:295
+msgid "Ad Rotation"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:298
+msgid "Auto rotate ads in this zone after every"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:299
+msgid "seconds"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:300
+msgid ""
+"Allow ads to auto-rotate in this zone while the user is on the page. New ads "
+"will be loaded automatically via AJAX."
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:307
+msgid "Advertisement Link"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:314
+msgid "Show \"Advertise Here\" link"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:319
+msgid "Do not show"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:320
+msgid "At the bottom"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:321
+msgid "At the top"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:322
+msgid "At the top and bottom"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:323
+msgid "Only show if there are no ads"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:325
+msgid ""
+"Show an \"Advertise Here\" link at the bottom, top, or both top and bottom "
+"of the zone."
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:332
+msgid "\"Advertise Here\" URL"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:338
+msgid ""
+"Enter the URL to use for the \"advertise here\" link, or leave empty to use "
+"the default URL."
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:346
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:353
+msgid "Zone Description"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-details.php:357
+msgid "Enter some help text about the zone, shown when adding a new ad."
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-usage.php:35
+#: includes/admin/metaboxes/class-adv-meta-box-zone-usage.php:40
+msgid "Ad Injection"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-usage.php:42
+msgid ""
+"Automatically insert the zone in your content whenever it meets the display "
+"rules defined above."
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-usage.php:46
+msgid "Before content"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-usage.php:47
+msgid "After content"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-usage.php:66
+msgid "Use this shortcode to display the zone in a post or page."
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-usage.php:81
+msgid "Template Code"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-usage.php:85
+msgid "Use this code to insert the zone into your theme templates."
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-usage.php:98
+msgid "Widget:"
+msgstr ""
+
+#: includes/admin/metaboxes/class-adv-meta-box-zone-usage.php:100
+#, php-format
+msgid "Add the %s widget to any widget area then select this zone."
+msgstr ""
+
+#: includes/admin/views/new-ad-frontend.php:24
+msgid "Your Ad was saved successfully"
+msgstr ""
+
+#: includes/admin/views/new-ad-frontend.php:40
+msgid "This ad is not editable"
+msgstr ""
+
+#: includes/admin/views/new-ad-frontend.php:56
+msgid "Ad zone has reached the maximum number of ads allowed for this zone."
+msgstr ""
+
+#: includes/admin/views/new-ad-frontend.php:203
+msgid "Select Ad Type"
+msgstr ""
+
+#: includes/admin/views/new-ad-frontend.php:229
+msgid "Note: Max upload image size: "
+msgstr ""
+
+#: includes/admin/views/new-ad-frontend.php:258
+msgid "Add a destination URL for the ad. Ex: https://www.mysite.com"
+msgstr ""
+
+#: includes/admin/views/new-ad-frontend.php:285
+msgid "Enter the ad plain text description."
+msgstr ""
+
+#: includes/admin/views/new-ad-frontend.php:300
+msgid "Enter the Ad Code"
+msgstr ""
+
+#: includes/admin/views/new-ad-frontend.php:301
+msgid "HTML or JavaScript code responsible for displaying the ad"
+msgstr ""
+
+#: includes/admin/views/new-ad-frontend.php:397
+msgid "Save"
+msgstr ""
+
+#: includes/carts/class-adv-cart-invoicing.php:71
+msgid "Advertising Zone"
+msgstr ""
+
+#: includes/carts/class-adv-cart-invoicing.php:90
+#: includes/carts/class-adv-cart-invoicing.php:101
+#, php-format
+msgid ""
+"Advert: %s \n"
+"Zone: %s "
+msgstr ""
+
+#: includes/carts/class-adv-cart-invoicing.php:126
+#: includes/carts/class-adv-cart-invoicing.php:169
+#: includes/carts/class-adv-cart-woocommerce.php:61
+#: includes/carts/class-adv-cart-woocommerce.php:99
+msgid "Pending admin approval"
+msgstr ""
+
+#: includes/carts/class-adv-cart-invoicing.php:134
+#: includes/carts/class-adv-cart-invoicing.php:178
+#: includes/carts/class-adv-cart-woocommerce.php:69
+#: includes/carts/class-adv-cart-woocommerce.php:107
+#, php-format
+msgid "%sPay for ad%s"
+msgstr ""
+
+#: includes/carts/class-adv-cart-invoicing.php:309
+#, php-format
+msgid "Ad: %s, %s"
+msgstr ""
+
+#: includes/carts/class-adv-cart-invoicing.php:312
+#, php-format
+msgid "Ad: %s, %s, %dx%d %s"
+msgstr ""
+
+#: includes/carts/class-adv-cart-invoicing.php:314
+#, php-format
+msgid "Ad: %s, %s, %d %s"
+msgstr ""
+
+#: includes/carts/class-adv-cart-invoicing.php:342
+#, php-format
+msgid "Invoice for the Ad:'%s' in the zone '%s'"
+msgstr ""
+
+#: includes/carts/class-adv-cart-invoicing.php:497
+msgid "Ad Pending Review (GetPaid Advertising)"
+msgstr ""
+
+#: includes/carts/class-adv-cart-invoicing.php:498
+msgid "These emails are sent to the site admin when an ad is pending review."
+msgstr ""
+
+#: includes/carts/class-adv-cart-invoicing.php:504
+msgid "Enable/Disable"
+msgstr ""
+
+#: includes/carts/class-adv-cart-invoicing.php:505
+msgid "Enable this email notification"
+msgstr ""
+
+#: includes/carts/class-adv-cart-invoicing.php:512
+msgid "Subject"
+msgstr ""
+
+#: includes/carts/class-adv-cart-invoicing.php:513
+msgid "Enter the subject line for this email."
+msgstr ""
+
+#: includes/carts/class-adv-cart-invoicing.php:516
+msgid "[{site_title}] Ad pending review"
+msgstr ""
+
+#: includes/carts/class-adv-cart-invoicing.php:522
+msgid "Email Heading"
+msgstr ""
+
+#: includes/carts/class-adv-cart-invoicing.php:523
+msgid "Enter the main heading contained within the email notification."
+msgstr ""
+
+#: includes/carts/class-adv-cart-invoicing.php:526
+msgid "Ad pending review"
+msgstr ""
+
+#: includes/carts/class-adv-cart-invoicing.php:532
+msgid "Email Content"
+msgstr ""
+
+#: includes/carts/class-adv-cart-invoicing.php:535
+msgid ""
+"<p>A new ad \"<a href=\"{ad_link}\">{ad_title}</a>\" by {name} has been "
+"created on your site. <a class=\"btn btn-success\" href=\"{ad_link}\">Review "
+"Ad</a></p>"
+msgstr ""
+
+#: includes/carts/class-adv-cart-woocommerce.php:151
+#, php-format
+msgid "Advertisement Zone:'%s'"
+msgstr ""
+
+#: includes/carts/class-adv-cart-woocommerce.php:203
+#, php-format
+msgid "Payment for the Ad:'%s' in the zone '%s'"
+msgstr ""
+
+#: includes/class-adv-dashboard.php:146
+msgid "Reports coming soon..."
+msgstr ""
+
+#: includes/class-adv-dashboard.php:160 includes/class-adv-query.php:54
+#: includes/core-functions.php:436
+msgid "Add a new Ad"
+msgstr ""
+
+#: includes/class-adv-dashboard.php:177 includes/class-adv-post-types.php:52
+msgid "Edit Ad"
+msgstr ""
+
+#: includes/class-adv-dashboard.php:213
+msgid "We could not save the ad. Please refresh the page and try again."
+msgstr ""
+
+#: includes/class-adv-dashboard.php:219
+msgid "Specify a title for the ad"
+msgstr ""
+
+#: includes/class-adv-dashboard.php:226
+msgid "Select a zone for the ad"
+msgstr ""
+
+#: includes/class-adv-dashboard.php:231
+msgid "Specify a target url for the ad"
+msgstr ""
+
+#: includes/class-adv-dashboard.php:237
+msgid "set an image for the ad"
+msgstr ""
+
+#: includes/class-adv-dashboard.php:242
+msgid "You are not allowed to post HTML ads."
+msgstr ""
+
+#: includes/class-adv-dashboard.php:247
+msgid "Set a description for the ad"
+msgstr ""
+
+#: includes/class-adv-dashboard.php:252
+msgid "Select a listing for the ad"
+msgstr ""
+
+#: includes/class-adv-dashboard.php:264
+msgid "That ad is not valid."
+msgstr ""
+
+#: includes/class-adv-dashboard.php:352
+msgid "You must be logged in to access the advertising dashboard."
+msgstr ""
+
+#: includes/class-adv-dashboard.php:352
+msgid "Login"
+msgstr ""
+
+#: includes/class-adv-frontend-assets.php:50
+msgid "Are you sure to delete this Ad?"
+msgstr ""
+
+#: includes/class-adv-frontend-assets.php:51
+msgid "Unsupported file type."
+msgstr ""
+
+#: includes/class-adv-geodirectory.php:60
+#: includes/class-adv-geodirectory.php:79
+#: includes/class-adv-geodirectory.php:98
+#: includes/class-adv-geodirectory.php:117
+msgid "GeoDirectory Listings"
+msgstr ""
+
+#: includes/class-adv-geodirectory.php:63
+msgid "Only show listing ads on their own Custom Post Type pages."
+msgstr ""
+
+#: includes/class-adv-geodirectory.php:65
+msgid ""
+"This will prevent listing ads showing on CPTs that are not the same. For "
+"example: Event ads would not show on Places CPT pages."
+msgstr ""
+
+#: includes/class-adv-geodirectory.php:82
+msgid "Only show listing ads on their own taxonomy pages."
+msgstr ""
+
+#: includes/class-adv-geodirectory.php:84
+msgid ""
+"This will prevent listing ads from other CPTs showing on listing category "
+"and tags pages. For example: If viewing any Place category archive, only "
+"other Places ads would show."
+msgstr ""
+
+#: includes/class-adv-geodirectory.php:101
+msgid "Only show listing ads on their own terms pages."
+msgstr ""
+
+#: includes/class-adv-geodirectory.php:103
+msgid ""
+"This will prevent listing ads showing on terms that the listing ad itself is "
+"not part of. For example: If an ad has the category of \"Hotels\" it would "
+"not show in \"Restaurants\" category archive pages."
+msgstr ""
+
+#: includes/class-adv-geodirectory.php:120
+msgid "Only show listing ads from the same location."
+msgstr ""
+
+#: includes/class-adv-geodirectory.php:122
+msgid ""
+"This will prevent listing ads showing from other locations. For example: A "
+"listing ad from \"New York\" will not show if the current page is limited to "
+"\"London\"."
+msgstr ""
+
+#: includes/class-adv-geodirectory.php:135
+msgid "Locations"
+msgstr ""
+
+#: includes/class-adv-geodirectory.php:274
+msgid "Regions / Cities"
+msgstr ""
+
+#: includes/class-adv-geodirectory.php:279
+msgid ""
+"Enter a comma separated list of region or city slugs to limit this zone to. "
+"Leave empty to ignore this rule."
+msgstr ""
+
+#: includes/class-adv-geodirectory.php:292
+msgid "Before GD Search Results"
+msgstr ""
+
+#: includes/class-adv-geodirectory.php:293
+msgid "Before GD Archive content"
+msgstr ""
+
+#: includes/class-adv-geodirectory.php:294
+msgid "After GD Search Results"
+msgstr ""
+
+#: includes/class-adv-geodirectory.php:295
+msgid "After GD Archive content"
+msgstr ""
+
+#: includes/class-adv-geodirectory.php:378
+#, php-format
+msgctxt "geodirctory listing title"
+msgid "%s (%s)"
+msgstr ""
+
+#: includes/class-adv-geodirectory.php:413
+#: includes/class-adv-geodirectory.php:420
+msgid "GD Post Types"
+msgstr ""
+
+#: includes/class-adv-geodirectory.php:421
+msgid "All Post Types"
+msgstr ""
+
+#: includes/class-adv-geodirectory.php:427
+msgid ""
+"Users will be allowed to create listing ads for selected GeoDirectory post "
+"types.(For Listing Ad only)."
+msgstr ""
+
+#: includes/class-adv-post-types.php:45
+msgctxt "post type general name"
+msgid "Ads"
+msgstr ""
+
+#: includes/class-adv-post-types.php:46
+msgctxt "post type singular name"
+msgid "Ad"
+msgstr ""
+
+#: includes/class-adv-post-types.php:47
+msgctxt "admin menu"
+msgid "Ads"
+msgstr ""
+
+#: includes/class-adv-post-types.php:48
+msgctxt "add new on admin bar"
+msgid "Ad"
+msgstr ""
+
+#: includes/class-adv-post-types.php:49
+msgctxt "Ad"
+msgid "Add New"
+msgstr ""
+
+#: includes/class-adv-post-types.php:50
+msgid "Add New Ad"
+msgstr ""
+
+#: includes/class-adv-post-types.php:51
+msgid "New Ad"
+msgstr ""
+
+#: includes/class-adv-post-types.php:53
+msgid "View Ad"
+msgstr ""
+
+#: includes/class-adv-post-types.php:55
+msgid "Search ads"
+msgstr ""
+
+#: includes/class-adv-post-types.php:56
+msgid "Parent ad:"
+msgstr ""
+
+#: includes/class-adv-post-types.php:57
+msgid "No ads found."
+msgstr ""
+
+#: includes/class-adv-post-types.php:58
+msgid "No ads found in trash."
+msgstr ""
+
+#: includes/class-adv-post-types.php:60
+msgid "This is where you can add new advert."
+msgstr ""
+
+#: includes/class-adv-post-types.php:84
+msgctxt "post type general name"
+msgid "Zones"
+msgstr ""
+
+#: includes/class-adv-post-types.php:85
+msgctxt "post type singular name"
+msgid "Zone"
+msgstr ""
+
+#: includes/class-adv-post-types.php:86
+msgctxt "admin menu"
+msgid "Zones"
+msgstr ""
+
+#: includes/class-adv-post-types.php:87
+msgctxt "add new on admin bar"
+msgid "Zone"
+msgstr ""
+
+#: includes/class-adv-post-types.php:88
+msgctxt "Advertising one"
+msgid "Add New"
+msgstr ""
+
+#: includes/class-adv-post-types.php:89
+msgid "Add New Zone"
+msgstr ""
+
+#: includes/class-adv-post-types.php:90
+msgid "New Zone"
+msgstr ""
+
+#: includes/class-adv-post-types.php:91
+msgid "Edit Zone"
+msgstr ""
+
+#: includes/class-adv-post-types.php:92
+msgid "View Zone"
+msgstr ""
+
+#: includes/class-adv-post-types.php:93
+msgid "Zones"
+msgstr ""
+
+#: includes/class-adv-post-types.php:94
+msgid "Search Zones"
+msgstr ""
+
+#: includes/class-adv-post-types.php:95
+msgid "Parent Zones:"
+msgstr ""
+
+#: includes/class-adv-post-types.php:96
+msgid "No zones found."
+msgstr ""
+
+#: includes/class-adv-post-types.php:97
+msgid "No zones found in trash."
+msgstr ""
+
+#: includes/class-adv-post-types.php:99
+msgid "Add new advertising zones."
+msgstr ""
+
+#: includes/class-adv-pricing-manager.php:70
+msgid "Advertisement Zones"
+msgstr ""
+
+#: includes/class-adv-pricing-manager.php:71
+msgid ""
+"Select the advertisement zones where new listings in this package will be "
+"advertised for free."
+msgstr ""
+
+#: includes/class-adv-pricing-manager.php:73
+msgid "Select Package"
+msgstr ""
+
+#: includes/class-adv-pricing-manager.php:350
+msgid "Link to GeoDirectory"
+msgstr ""
+
+#: includes/class-adv-pricing-manager.php:353
+msgid ""
+"If checked, users will only be able to add ads to this zone when they "
+"publish a listing on your site."
+msgstr ""
+
+#: includes/class-adv-pricing-manager.php:386 includes/class-adv-query.php:50
+msgid "Packages"
+msgstr ""
+
+#: includes/class-adv-pricing-manager.php:419
+msgid "Package Settings:"
+msgstr ""
+
+#: includes/class-adv-pricing-manager.php:423
+msgid "Show on all packages"
+msgstr ""
+
+#: includes/class-adv-pricing-manager.php:424
+msgid "Only show on selected packages"
+msgstr ""
+
+#: includes/class-adv-pricing-manager.php:425
+msgid "Hide on selected packages"
+msgstr ""
+
+#: includes/class-adv-pricing-manager.php:438
+msgid "Applies to details page only"
+msgstr ""
+
+#: includes/class-adv-query.php:34
+#, php-format
+msgid "My Ads (page %d)"
+msgstr ""
+
+#: includes/class-adv-query.php:36 includes/core-functions.php:432
+msgid "My Ads"
+msgstr ""
+
+#: includes/class-adv-query.php:41
+#, php-format
+msgid "My Campaigns (page %d)"
+msgstr ""
+
+#: includes/class-adv-query.php:43
+msgid "My Campaigns"
+msgstr ""
+
+#: includes/class-adv-query.php:48
+#, php-format
+msgid "Packages (page %d)"
+msgstr ""
+
+#: includes/class-adv-query.php:57
+msgid "Create Campaign"
+msgstr ""
+
+#: includes/class-adv-query.php:60
+msgid "My Reports"
+msgstr ""
+
+#: includes/class-advertising.php:281
+msgid "Advertising Dashboard"
+msgstr ""
+
+#: includes/class-advertising.php:587
+msgid "Missing or unsupported file type."
+msgstr ""
+
+#: includes/class-advertising.php:608
+msgid "Image Missing"
+msgstr ""
+
+#: includes/class-advertising.php:616
+msgid "Unsupported File Type"
+msgstr ""
+
+#: includes/class-advertising.php:621
+msgid "Error retrieving upload dir"
+msgstr ""
+
+#: includes/class-advertising.php:641
+msgid "Error uploading image."
+msgstr ""
+
+#: includes/core-functions.php:10
+msgid "Users"
+msgstr ""
+
+#: includes/core-functions.php:14
+msgid "Post Types"
+msgstr ""
+
+#: includes/core-functions.php:18
+msgid "Taxonomies"
+msgstr ""
+
+#: includes/core-functions.php:22
+msgid "Posts"
+msgstr ""
+
+#: includes/core-functions.php:26
+msgid "Terms"
+msgstr ""
+
+#: includes/core-functions.php:955 includes/core-functions.php:970
+msgid "Ad"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:334
+msgid "Install Required Plugins"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:335
+msgid "Install Plugins"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:337
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:339
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:340
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:343
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:349
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:355
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:361
+#, php-format
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:367
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:373
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:378
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:383
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:388
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:392
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:393
+#: includes/libraries/class-tgm-plugin-activation.php:920
+#: includes/libraries/class-tgm-plugin-activation.php:2626
+#: includes/libraries/class-tgm-plugin-activation.php:3673
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:394
+#: includes/libraries/class-tgm-plugin-activation.php:3252
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:395
+#: includes/libraries/class-tgm-plugin-activation.php:3045
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:397
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:399
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:401
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:402
+msgid "Dismiss this notice"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:403
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:404
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:607
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:608
+msgid "Update Required"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:725
+msgid "Set the parent_slug config variable instead."
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:1027
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:1027
+#: includes/libraries/class-tgm-plugin-activation.php:1030
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:1030
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:1214
+#: includes/libraries/class-tgm-plugin-activation.php:3041
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:2075
+#, php-format
+msgid "TGMPA v%s"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:2366
+msgid "Required"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:2369
+msgid "Recommended"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:2385
+msgid "WordPress Repository"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:2388
+msgid "External Source"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:2391
+msgid "Pre-Packaged"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:2408
+msgid "Not Installed"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:2412
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:2414
+msgid "Active"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:2420
+msgid "Required Update not Available"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:2423
+msgid "Requires Update"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:2426
+msgid "Update recommended"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:2435
+#, php-format
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:2481
+#, php-format
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:2485
+#, php-format
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:2489
+#, php-format
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:2493
+#, php-format
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:2575
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:2583
+msgid "Installed version:"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:2591
+msgid "Minimum required version:"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:2603
+msgid "Available version:"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:2626
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:2640
+msgid "Plugin"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:2641
+msgid "Source"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:2646
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:939
+msgid "Version"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:2696
+#, php-format
+msgid "Install %2$s"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:2701
+#, php-format
+msgid "Update %2$s"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:2707
+#, php-format
+msgid "Activate %2$s"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:2777
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:2810
+msgid "Install"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:2816
+msgid "Update"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:2819
+msgid "Activate"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:2850
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:2852
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:2893
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:2895
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:3001
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:3027
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:3045
+msgid "The following plugins were activated successfully:"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:3251
+msgid "Plugin activation failed."
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:3591
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:3594
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:3596
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:3600
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:3602
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:3602
+#: includes/libraries/class-tgm-plugin-activation.php:3610
+msgid "Show Details"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:3602
+#: includes/libraries/class-tgm-plugin-activation.php:3610
+msgid "Hide Details"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:3603
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:3605
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:3608
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:3610
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:3611
+msgid "All installations have been completed."
+msgstr ""
+
+#: includes/libraries/class-tgm-plugin-activation.php:3613
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: includes/payment-functions.php:20
+msgid "GetPaid"
+msgstr ""
+
+#: includes/payment-functions.php:22
+msgid "No Cart"
+msgstr ""
+
+#: includes/payment-functions.php:111
+msgid "Pending review"
+msgstr ""
+
+#: includes/payment-functions.php:112
+msgid "Publish"
+msgstr ""
+
+#: includes/rest-ads.php:63 includes/rest-zones.php:63
+msgid "Sorry, you cannot list resources."
+msgstr ""
+
+#: includes/rest-ads.php:150 includes/rest-zones.php:160
+msgid "A numeric identifier for the resource."
+msgstr ""
+
+#: includes/rest-ads.php:156
+msgid "A numeric identifier for the zone."
+msgstr ""
+
+#: includes/rest-ads.php:162 includes/rest-zones.php:172
+msgid "A human-readable description of the resource."
+msgstr ""
+
+#: includes/rest-ads.php:168
+msgid "Whether or not the ad is in a GD zone."
+msgstr ""
+
+#: includes/rest-ads.php:174
+msgid "The type of ad."
+msgstr ""
+
+#: includes/rest-ads.php:180
+msgid "The target URL for the ad."
+msgstr ""
+
+#: includes/rest-ads.php:186
+msgid "The target location for the ad."
+msgstr ""
+
+#: includes/rest-ads.php:192
+msgid "The associated image."
+msgstr ""
+
+#: includes/rest-ads.php:198
+msgid "The raw HTML ad code."
+msgstr ""
+
+#: includes/rest-ads.php:204
+msgid "The associated GeoDirectory listing"
+msgstr ""
+
+#: includes/rest-ads.php:210
+msgid "Whether or not to open the target URL in a new tab."
+msgstr ""
+
+#: includes/rest-zones.php:166
+msgid "A human-readable name for the resource."
+msgstr ""
+
+#: includes/rest-zones.php:178
+msgid "The cost for advertising in the zone."
+msgstr ""
+
+#: includes/rest-zones.php:184
+msgid "The term per cost."
+msgstr ""
+
+#: includes/rest-zones.php:190
+msgid "The type of pricing term."
+msgstr ""
+
+#: includes/rest-zones.php:196
+msgid "Whether or not to display the name of the zone"
+msgstr ""
+
+#: includes/rest-zones.php:202
+msgid "Whether or not the zone is linked to a GeoDirectory package"
+msgstr ""
+
+#: includes/rest-zones.php:208
+msgid "Whether or not to display ads in a grid"
+msgstr ""
+
+#: includes/rest-zones.php:214
+msgid "The number of ads to display per row in the grid."
+msgstr ""
+
+#: includes/rest-zones.php:220
+msgid "Whether or not to hide the zone when creating ads via the frontend."
+msgstr ""
+
+#: includes/rest-zones.php:226
+msgid "The URL to redirect users who click on the advertise here link."
+msgstr ""
+
+#: includes/rest-zones.php:233
+msgid "The advertise here link position."
+msgstr ""
+
+#: includes/rest-zones.php:239
+msgid "The number of visible ads at any given time."
+msgstr ""
+
+#: includes/rest-zones.php:245
+msgid "The maximum number of ads that can be added to the zone."
+msgstr ""
+
+#: includes/rest-zones.php:251
+msgid "The prefered zone width."
+msgstr ""
+
+#: includes/rest-zones.php:257
+msgid "The prefered zone height."
+msgstr ""
+
+#: includes/rest-zones.php:263
+msgid "The allowed ad types."
+msgstr ""
+
+#: includes/widgets/class-adv-widget-ad.php:29
+msgid "Ads > Ad"
+msgstr ""
+
+#: includes/widgets/class-adv-widget-ad.php:32
+msgid "Displays a single ad."
+msgstr ""
+
+#: includes/widgets/class-adv-widget-ad.php:55
+msgid "Select an ad"
+msgstr ""
+
+#: includes/widgets/class-adv-widget-ad.php:62
+msgid "Ad:"
+msgstr ""
+
+#: includes/widgets/class-adv-widget-ad.php:63
+msgid "Select an ad to display."
+msgstr ""
+
+#: includes/widgets/class-adv-widget-ad.php:65
+msgid "Select ad"
+msgstr ""
+
+#: includes/widgets/class-adv-widget-dashboard.php:29
+msgid "Ads > Dashboard"
+msgstr ""
+
+#: includes/widgets/class-adv-widget-dashboard.php:32
+msgid "Displays a user's dashboard."
+msgstr ""
+
+#: includes/widgets/class-adv-widget-zone.php:29
+msgid "Ads > Zone"
+msgstr ""
+
+#: includes/widgets/class-adv-widget-zone.php:32
+msgid "Displays ads in a given zone."
+msgstr ""
+
+#: includes/widgets/class-adv-widget-zone.php:59
+msgid "Select a zone"
+msgstr ""
+
+#: includes/widgets/class-adv-widget-zone.php:66
+msgid "Zone:"
+msgstr ""
+
+#: includes/widgets/class-adv-widget-zone.php:67
+msgid "Select the zone whose ads should be displayed."
+msgstr ""
+
+#: includes/widgets/class-adv-widget-zone.php:69
+msgid "Select zone"
+msgstr ""
+
+#: includes/zone-functions.php:168
+msgid "Free"
+msgstr ""
+
+#: includes/zone-functions.php:193
+#, php-format
+msgid "%1$s per %2$s %3$s"
+msgstr ""
+
+#: includes/zone-functions.php:202
+#, php-format
+msgid "%1$s for %2$s %3$s"
+msgstr ""
+
+#: includes/zone-functions.php:218
+#, php-format
+msgid "1 row"
+msgid_plural "%s rows"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/zone-functions.php:218
+#, php-format
+msgid "1 column"
+msgid_plural "%s columns"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/zone-functions.php:392
+msgid "Select Zone"
+msgstr ""
+
+#: includes/zone-functions.php:393
+msgid "Advertisement Zone"
+msgstr ""
+
+#: includes/zone-functions.php:394
+msgid "Select the zone where this ad will be shown"
+msgstr ""
+
+#: includes/zone-functions.php:540
+msgid "Days"
+msgstr ""
+
+#: templates/ad-listing.php:24
+msgid "This is listing is either expired or deleted"
+msgstr ""
+
+#: templates/ads-overview.php:15
+msgid "Ad Title"
+msgstr ""
+
+#: templates/ads-overview.php:22
+msgid "Action"
+msgstr ""
+
+#: templates/ads-overview.php:30
+msgid "Add New"
+msgstr ""
+
+#: templates/ads-overview.php:31
+msgid ""
+"Here you can see a list of your ads. If you want to add new ads, click on "
+"\"Add a new Ad\" button."
+msgstr ""
+
+#: templates/ads-overview.php:37
+msgid "No ads found!"
+msgstr ""
+
+#: templates/ads-overview.php:135
+msgid "Delete this Ad"
+msgstr ""
+
+#: templates/ads-overview.php:138
+msgid "Renew Ad"
+msgstr ""
+
+#: templates/crop-ad-image.php:18
+msgid "Crop Ad Image"
+msgstr ""
+
+#: templates/crop-ad-image.php:20 templates/crop-ad-image.php:22
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:4005
+msgid "Close"
+msgstr ""
+
+#: templates/crop-ad-image.php:34
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:3854
+msgid "Cancel"
+msgstr ""
+
+#: templates/crop-ad-image.php:35
+msgid "Crop Image"
+msgstr ""
+
+#: templates/zone-content.php:27 templates/zone-content.php:35
+#: templates/zone-no-ads.php:19
+msgid "Advertise Here"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:366
+msgid "<b>Style Issue:</b> AyeCode UI is disable or set wrong."
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:848
+msgid ""
+"<b>Style Issue:</b> AyeCode UI has changed its default version from v4 to "
+"v5, if you notice unwanted style changes, please revert to v4 (saving the "
+"settings page will remove this notice)"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:912
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:919
+msgid "Here you can adjust settings if you are having compatibility issues."
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:926
+msgid "BootStrap Version"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:927
+msgid ""
+"V5 is recommended, however if you have another plugin installed using v4, "
+"you may need to use v4 also."
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:932
+msgid "Some options are disabled as your current theme is overriding them."
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:942
+msgid "v5 (recommended)"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:943
+msgid "v4 (legacy)"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:949
+msgid "Frontend"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:952
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:987
+msgid "Load CSS"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:955
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:990
+msgid "Compatibility Mode (default)"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:956
+msgid "Full Mode"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:957
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:992
+msgid "Disabled"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:963
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:998
+msgid "Load JS"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:966
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:1001
+msgid "Core + Popper (default)"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:967
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:1002
+msgid "Popper"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:968
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:1003
+msgid "Required functions only"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:969
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:1004
+msgid "Disabled (not recommended)"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:975
+msgid "HTML Font Size (px)"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:978
+msgid ""
+"Our font sizing is rem (responsive based) here you can set the html font "
+"size in-case your theme is setting it too low."
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:984
+msgid "Backend"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:991
+msgid "Full Mode (will cause style issues)"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:1010
+msgid "Disable load on URL"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:1012
+msgid ""
+"If you have backend conflict you can enter a partial URL argument that will "
+"disable the loading of AUI on those pages. Add each argument on a new line."
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:1048
+msgid "AyeCode UI"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:1063
+msgid "Primary Color"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:1076
+msgid "Secondary Color"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2310
+msgid "January"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2311
+msgid "February"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2312
+msgid "March"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2313
+msgid "April"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2314
+msgid "May"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2315
+msgid "June"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2316
+msgid "July"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2317
+msgid "August"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2318
+msgid "September"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2319
+msgid "October"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2320
+msgid "November"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2321
+msgid "December"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2322
+msgctxt "January abbreviation"
+msgid "Jan"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2323
+msgctxt "February abbreviation"
+msgid "Feb"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2324
+msgctxt "March abbreviation"
+msgid "Mar"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2325
+msgctxt "April abbreviation"
+msgid "Apr"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2326
+msgctxt "May abbreviation"
+msgid "May"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2327
+msgctxt "June abbreviation"
+msgid "Jun"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2328
+msgctxt "July abbreviation"
+msgid "Jul"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2329
+msgctxt "August abbreviation"
+msgid "Aug"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2330
+msgctxt "September abbreviation"
+msgid "Sep"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2331
+msgctxt "October abbreviation"
+msgid "Oct"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2332
+msgctxt "November abbreviation"
+msgid "Nov"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2333
+msgctxt "December abbreviation"
+msgid "Dec"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2334
+msgctxt "Sunday initial"
+msgid "S"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2335
+msgctxt "Monday initial"
+msgid "M"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2336
+msgctxt "Tuesday initial"
+msgid "T"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2337
+msgctxt "Wednesday initial"
+msgid "W"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2338
+msgctxt "Friday initial"
+msgid "T"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2339
+msgctxt "Thursday initial"
+msgid "F"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2340
+msgctxt "Saturday initial"
+msgid "S"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2341
+msgid "Su"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2342
+msgid "Mo"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2343
+msgid "Tu"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2344
+msgid "We"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2345
+msgid "Th"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2346
+msgid "Fr"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2347
+msgid "Sa"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2348
+msgid "Sun"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2349
+msgid "Mon"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2350
+msgid "Tue"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2351
+msgid "Wed"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2352
+msgid "Thu"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2353
+msgid "Fri"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2354
+msgid "Sat"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2355
+msgid "Sunday"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2356
+msgid "Monday"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2357
+msgid "Tuesday"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2358
+msgid "Wednesday"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2359
+msgid "Thursday"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2360
+msgid "Friday"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2361
+msgid "Saturday"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2362
+msgid "am"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2363
+msgid "pm"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2364
+msgid "AM"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2365
+msgid "PM"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2368
+msgid "Year"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2369
+msgid "Hour"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2370
+msgid "Minute"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2371
+msgid "Wk"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2372
+msgid " to "
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2373
+msgid "Scroll to increment"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2374
+msgid "Click to toggle"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2472
+msgid "Select an option&hellip;"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2473
+msgctxt "enhanced select"
+msgid "No matches found"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2474
+msgctxt "enhanced select"
+msgid "Loading failed"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2475
+msgctxt "enhanced select"
+msgid "Please enter 1 or more characters"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2476
+msgctxt "enhanced select"
+msgid "Please enter %item% or more characters"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2477
+msgctxt "enhanced select"
+msgid "Please delete 1 character"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2478
+msgctxt "enhanced select"
+msgid "Please delete %item% characters"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2479
+msgctxt "enhanced select"
+msgid "You can only select 1 item"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2480
+msgctxt "enhanced select"
+msgid "You can only select %item% items"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2481
+msgctxt "enhanced select"
+msgid "Loading more results&hellip;"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2482
+msgctxt "enhanced select"
+msgid "Searching&hellip;"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2521
+msgctxt "time ago"
+msgid "ago"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2522
+msgctxt "time ago"
+msgid "after"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2524
+msgctxt "time ago"
+msgid "less than a minute"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2525
+msgctxt "time ago"
+msgid "about a minute"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2526
+#, php-format
+msgctxt "time ago"
+msgid "%d minutes"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2527
+msgctxt "time ago"
+msgid "about an hour"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2528
+#, php-format
+msgctxt "time ago"
+msgid "about %d hours"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2529
+msgctxt "time ago"
+msgid "a day"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2530
+#, php-format
+msgctxt "time ago"
+msgid "%d days"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2531
+msgctxt "time ago"
+msgid "about a month"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2532
+#, php-format
+msgctxt "time ago"
+msgid "%d months"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2533
+msgctxt "time ago"
+msgid "about a year"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/ayecode-ui-settings.php:2534
+#, php-format
+msgctxt "time ago"
+msgid "%d years"
+msgstr ""
+
+#: vendor/ayecode/wp-ayecode-ui/includes/components/class-aui-component-pagination.php:29
+msgid "Posts navigation"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/hello-world.php:48
+msgid "Hello World"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/hello-world.php:53
+#: vendor/ayecode/wp-super-duper/map.php:74
+msgid ""
+"This is an example that will take a text parameter and output it after "
+"`Hello:`."
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/hello-world.php:59
+msgid "Text after hello:"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/hello-world.php:61
+msgid "This is the text that will appear after `Hello:`."
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/hello-world.php:131
+msgid "Another input:"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/hello-world.php:132
+msgid "This is an input added via filter."
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/includes/class-super-duper-bricks-element.php:192
+msgctxt "Widget option: Yes"
+msgid "Yes"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/includes/class-super-duper-bricks-element.php:193
+msgctxt "Widget option: No"
+msgid "No"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/map.php:25
+msgid ""
+"A Google API key is required to use this block, we recommend installing our "
+"plugin which makes it easy and sets it globally, or you can set a key in the "
+"block settings sidebar: "
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/map.php:31
+msgid "API KEY for Google Maps"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/map.php:48
+msgid "Placeholderx"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/map.php:61
+msgid "Click here, Settings are in the block settings sidebar"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/map.php:69
+msgid "Map"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/map.php:79
+msgid "Map Type:"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/map.php:80
+msgid "Select the map type to use."
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/map.php:83
+msgid "Static Image"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/map.php:84
+msgid "Place"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/map.php:96
+msgid "Location:"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/map.php:97
+msgid "Enter the location to show on the map, place, city, zip code or GPS."
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/map.php:105
+#: vendor/ayecode/wp-super-duper/map.php:134
+msgid "Width:"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/map.php:106
+msgid ""
+"This is the width of the map, for static maps you can only use px values."
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/map.php:119
+#: vendor/ayecode/wp-super-duper/map.php:144
+msgid "Height:"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/map.php:120
+msgid ""
+"This is the height of the map, for static maps you can only use px values."
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/map.php:135
+#, no-php-format
+msgid "This is the width of the map, you can use % or px here."
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/map.php:145
+#: vendor/ayecode/wp-super-duper/map.php:179
+msgid "This is the height of the map, you can use %, px or vh here."
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/map.php:154
+msgid "Mapview:"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/map.php:155
+msgid "This is the type of map view that will be used by default."
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/map.php:157
+msgid "Road Map"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/map.php:158
+msgid "Satellite Map"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/map.php:168
+msgid "Zoom level:"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/map.php:169
+msgid "This is the zoom level of the map, `auto` is recommended."
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/map.php:178
+msgid "Api Key:"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:56
+#: vendor/ayecode/wp-super-duper/sd-functions.php:836
+#: vendor/ayecode/wp-super-duper/sd-functions.php:885
+msgid "auto"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:259
+msgid "Border width"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:269
+msgid "Border opacity"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:279
+msgid "Border show"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:281
+msgid "Full (set color to show)"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:286
+msgid "-Top"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:287
+msgid "-Bottom"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:288
+msgid "-Left"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:289
+msgid "-Right"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:346
+#: vendor/ayecode/wp-super-duper/sd-functions.php:417
+#: vendor/ayecode/wp-super-duper/sd-functions.php:601
+msgid "Transparent"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:391
+msgid "Opacity"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:421
+#: vendor/ayecode/wp-super-duper/sd-functions.php:604
+msgid "Custom Color"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:425
+msgid "Custom Gradient"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:430
+msgid "Background Color"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:434
+#: vendor/ayecode/wp-super-duper/sd-functions.php:450
+#: vendor/ayecode/wp-super-duper/sd-functions.php:465
+#: vendor/ayecode/wp-super-duper/sd-functions.php:478
+#: vendor/ayecode/wp-super-duper/sd-functions.php:488
+#: vendor/ayecode/wp-super-duper/sd-functions.php:501
+#: vendor/ayecode/wp-super-duper/sd-functions.php:514
+#: vendor/ayecode/wp-super-duper/sd-functions.php:525
+msgid "Background"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:446
+#: vendor/ayecode/wp-super-duper/sd-functions.php:623
+#: vendor/ayecode/wp-super-duper/sd-functions.php:756
+#: vendor/ayecode/wp-super-duper/sd-functions.php:800
+msgid "Custom color"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:461
+msgid "Custom gradient"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:475
+msgid "Fixed background"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:485
+msgid "Use featured image"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:497
+msgid "Custom image"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:545
+msgid "Mountains"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:546
+msgid "Drops"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:547
+msgid "Clouds"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:548
+msgid "Zigzag"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:549
+msgid "Pyramids"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:550
+msgid "Triangle"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:551
+msgid "Triangle Asymmetrical"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:552
+msgid "Tilt"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:553
+msgid "Opacity Tilt"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:554
+msgid "Opacity Fan"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:555
+msgid "Curve"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:556
+msgid "Curve Asymmetrical"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:557
+msgid "Waves"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:558
+msgid "Wave Brush"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:559
+msgid "Waves Pattern"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:560
+msgid "Arrow"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:561
+msgid "Split"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:562
+msgid "Book"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:571
+#: vendor/ayecode/wp-super-duper/sd-functions.php:580
+#: vendor/ayecode/wp-super-duper/sd-functions.php:594
+#: vendor/ayecode/wp-super-duper/sd-functions.php:614
+#: vendor/ayecode/wp-super-duper/sd-functions.php:627
+#: vendor/ayecode/wp-super-duper/sd-functions.php:644
+#: vendor/ayecode/wp-super-duper/sd-functions.php:658
+#: vendor/ayecode/wp-super-duper/sd-functions.php:688
+#: vendor/ayecode/wp-super-duper/sd-functions.php:697
+#: vendor/ayecode/wp-super-duper/sd-functions.php:706
+msgid "Shape Divider"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:578
+msgid "Parent element must be position `relative`"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:588
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1231
+msgid "Position"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:611
+msgid "Color"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:636
+#: vendor/ayecode/wp-super-duper/sd-functions.php:2175
+msgid "Width"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:651
+#: vendor/ayecode/wp-super-duper/sd-functions.php:2216
+msgid "Height"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:685
+msgid "Flip"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:694
+msgid "Invert"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:703
+msgid "Bring to front"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:765
+#: vendor/ayecode/wp-super-duper/sd-functions.php:804
+#: vendor/ayecode/wp-super-duper/sd-functions.php:940
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1008
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1381
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1410
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1443
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1506
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1537
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1567
+msgid "Typography"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:853
+msgid "Column width"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:857
+#: vendor/ayecode/wp-super-duper/sd-functions.php:900
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1199
+msgid "Container"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:896
+msgid "Row columns"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:981
+msgid "Display"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1005
+msgid "Text justify"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1036
+msgid "Black"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1042
+msgid "Muted"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1043
+msgid "Gray dark"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1046
+msgid "Body"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1051
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1052
+msgid "Primary Subtle"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1053
+msgid "Secondary Subtle"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1054
+msgid "Success Subtle"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1055
+msgid "Danger Subtle"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1056
+msgid "Warning Subtle"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1057
+msgid "Info Subtle"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1058
+msgid "Light Subtle"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1059
+msgid "Dark Subtle"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1060
+msgid "Purple Subtle"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1061
+msgid "Salmon Subtle"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1062
+msgid "Cyan Subtle"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1063
+msgid "Gray Subtle"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1064
+msgid "Gray dark Subtle"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1065
+msgid "Indigo Subtle"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1066
+msgid "Orange Subtle"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1071
+msgid "Primary Emphasis"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1072
+msgid "Secondary Emphasis"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1073
+msgid "Success Emphasis"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1074
+msgid "Danger Emphasis"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1075
+msgid "Warning Emphasis"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1076
+msgid "Info Emphasis"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1077
+msgid "Light Emphasis"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1078
+msgid "Dark Emphasis"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1079
+msgid "Purple Emphasis"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1080
+msgid "Salmon Emphasis"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1081
+msgid "Cyan Emphasis"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1082
+msgid "Gray Emphasis"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1083
+msgid "Muted Emphasis"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1084
+msgid "Gray dark Emphasis"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1085
+msgid "Indigo Emphasis"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1086
+msgid "Orange Emphasis"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1104
+msgid "Gray dark outline"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1115
+msgid "Primary translucent"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1116
+msgid "Secondary translucent"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1117
+msgid "Success translucent"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1118
+msgid "Danger translucent"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1119
+msgid "Warning translucent"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1120
+msgid "Info translucent"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1121
+msgid "Light translucent"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1122
+msgid "Dark translucent"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1123
+msgid "White translucent"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1124
+msgid "Purple translucent"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1125
+msgid "Salmon translucent"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1126
+msgid "Cyan translucent"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1127
+msgid "Gray translucent"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1128
+msgid "Gray dark translucent"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1129
+msgid "Indigo translucent"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1130
+msgid "Orange translucent"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1169
+msgid "container (default)"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1190
+msgid "no container class"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1266
+msgid "Absolute Position"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1291
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1304
+msgid "Sticky offset"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1301
+msgid "Top offset"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1310
+msgid "Bottom offset"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1334
+msgid "Inherit from parent"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1372
+msgid "Custom size"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1401
+msgid "Font size (rem)"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1434
+msgid "Font Line Height"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1486
+msgid "Inherit"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1502
+msgid "Appearance"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1526
+msgid "lowercase"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1527
+msgid "UPPERCASE"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1528
+msgid "Capitalize"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1533
+msgid "Letter case"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1563
+msgid "Font italic"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1587
+msgid "HTML anchor"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1588
+msgid ""
+"Enter a word or two — without spaces — to make a unique web address just for "
+"this block, called an “anchor.” Then, you’ll be able to link directly to "
+"this section of your page."
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1591
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1615
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1639
+msgid "Advanced"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1611
+msgid "Additional CSS class(es)"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1612
+msgid "Separate multiple classes with spaces."
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1635
+msgid "Block Name"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1636
+msgid "Set a custom name for this block"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1658
+msgid "none"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1659
+msgid "Zoom"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1661
+msgid "Move up"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1662
+msgid "Move down"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1663
+msgid "Move left"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1664
+msgid "Move right"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1670
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1674
+msgid "Hover Animations"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1703
+msgid "Vertical Align Items"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1756
+msgid "Justify content"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1810
+msgid "Align Self"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1864
+msgid "Flex Order"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1934
+msgid "Flex wrap"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:1982
+msgid "Float"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:2012
+msgid "Z-index"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:2034
+msgid "Auto"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:2035
+msgid "Hidden"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:2036
+msgid "Visible"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:2037
+msgid "Scroll"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:2042
+msgid "Overflow"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:2064
+msgid "Max height"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:2087
+msgid "IOS Style"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:2092
+msgid "Scrollbars"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:2114
+msgid "Open in new window"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:2117
+#: vendor/ayecode/wp-super-duper/sd-functions.php:2138
+#: vendor/ayecode/wp-super-duper/sd-functions.php:2243
+msgid "Link"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:2135
+msgid "Add nofollow"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:2238
+msgid "Custom Attributes"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:2991
+msgid "Block Visibility"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:2992
+msgid "Set Block Visibility"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:2995
+msgid "Visibility Conditions"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:3041
+msgid "Logged In"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:3042
+msgid "Logged Out"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:3043
+msgid "Post Author"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:3044
+msgid "Specific User Roles"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:3048
+msgid "GD Field"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:3140
+msgid "is empty"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:3141
+msgid "is not empty"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:3142
+msgid "is equal"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:3143
+msgid "is not equal"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:3144
+msgid "is greater than"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:3145
+msgid "is less than"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:3146
+msgid "is contains"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:3147
+msgid "is not contains"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:3162
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:5260
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:5352
+msgid "Show Block"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:3163
+msgid "Hide Block"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:3164
+msgid "Show Custom Message"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:3165
+msgid "Show Page Content"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:3166
+msgid "Show Template Part"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:3186
+msgid "Select Page..."
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/sd-functions.php:3265
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:5296
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:5388
+msgid "Select Template Part..."
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:303
+msgid "Select shortcode"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:318
+msgid "Insert shortcode"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:320
+msgid "Copy shortcode"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:534
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:1199
+msgid "Advanced Settings"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:1492
+#, php-format
+msgid "Placeholder for: %s"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:1718
+msgid "General"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:3016
+msgid "Placeholder for:"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:3854
+msgid "Are you sure?"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:3854
+msgid "Delete"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:4005
+msgid "Reset"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:4005
+msgid "Save Rules"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:5130
+msgid "Remove Rule"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:5135
+msgid "Rule"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:5136
+msgid "Select Rule..."
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:5143
+msgid "Rule:"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:5163
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:5164
+msgid "FIELD"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:5185
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:5186
+msgid "CONDITION"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:5208
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:5210
+msgid "VALUE TO MATCH"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:5224
+msgid "Select User Roles:"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:5248
+msgid "AND"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:5253
+msgid "Add Rule"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:5259
+msgid "What should happen if rules met."
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:5279
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:5371
+msgid "Page Content"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:5280
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:5372
+msgid "Select Page ID..."
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:5295
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:5387
+msgid "Template Part"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:5314
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:5406
+msgid "Custom Message Type"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:5315
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:5407
+msgid "Default (none)"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:5338
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:5430
+msgid "CUSTOM MESSAGE TO SHOW"
+msgstr ""
+
+#: vendor/ayecode/wp-super-duper/wp-super-duper.php:5351
+msgid "What should happen if rules NOT met."
+msgstr ""

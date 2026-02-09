@@ -1,0 +1,26 @@
+#geodir-selected-fields .dd-item[data-field_type_key="franchise"] [data-setting="is_active"],
+#geodir-selected-fields .dd-item[data-field_type_key="franchise"] [data-setting="for_admin_use"],
+#geodir-selected-fields .dd-item[data-field_type_key="franchise"] [data-setting="show_in"],
+#geodir-selected-fields .dd-item[data-field_type_key="franchise"] [data-setting="css_class"],
+#geodir-selected-fields .dd-item[data-field_type_key="franchise"] [data-setting="option_values"],
+#geodir-selected-fields .dd-item[data-field_type_key="franchise_fields"] [data-setting="is_active"],
+#geodir-selected-fields .dd-item[data-field_type_key="franchise_fields"] [data-setting="for_admin_use"],
+#geodir-selected-fields .dd-item[data-field_type_key="franchise_fields"] [data-setting="show_in"],
+#geodir-selected-fields .dd-item[data-field_type_key="franchise_fields"] [data-setting="multi_display_type"],
+#geodir-selected-fields .dd-item[data-field_type_key="franchise_fields"] [data-setting="css_class"],
+#geodir-selected-fields .dd-item[data-field_type_key="franchise_fields"] [data-setting="option_values"],
+#geodir-selected-fields .dd-item[data-field_type_key="franchise_of"] [data-setting="data_type"],
+#geodir-selected-fields .dd-item[data-field_type_key="franchise_of"] [data-setting="is_active"],
+#geodir-selected-fields .dd-item[data-field_type_key="franchise_of"] [data-setting="for_admin_use"],
+#geodir-selected-fields .dd-item[data-field_type_key="franchise_of"] [data-setting="default_value"],
+#geodir-selected-fields .dd-item[data-field_type_key="franchise_of"] [data-setting="is_required"],
+#geodir-selected-fields .dd-item[data-field_type_key="franchise_of"] [data-setting="validation_pattern"],
+#geodir-selected-fields .dd-item[data-field_type_key="franchise_of"] [data-setting="validation_msg"],
+#geodir-selected-fields .dd-item[data-field_type_key="franchise_of"] [data-setting="cat_sort_heading"],
+#geodir-selected-fields .dd-item[data-field_type_key="franchise_of"] [data-setting="cat_sort"],
+#geodir-selected-fields .dd-item[data-field_type_key="franchise_of"] [data-setting="is_price"] {
+	display: none !important;
+}
+.wp-list-table .column-franchise {
+	width: 40px;
+}

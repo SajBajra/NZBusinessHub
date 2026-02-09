@@ -1,0 +1,492 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoDirectory Embed 2.3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-29 18:32+0530\n"
+"PO-Revision-Date: 2025-01-29 18:32+0530\n"
+"Last-Translator: \n"
+"Language-Team: AyeCode Ltd <contact@ayecode.io>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;__ngettext:1,2;__ngettext_noop:1,2;_c;_e;_ex:1,2c;"
+"_n:1,2;_n_noop:1,2;_nc:4c,1,2;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;gettext;"
+"gettext_noop\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: includes/admin/class-geodir-embed-admin-settings.php:26
+msgid "Embed"
+msgstr ""
+
+#: includes/admin/class-geodir-embed-admin-settings.php:67
+msgid "Embed Settings"
+msgstr ""
+
+#: includes/admin/class-geodir-embed-admin-settings.php:74
+msgid "Border color (user set)"
+msgstr ""
+
+#: includes/admin/class-geodir-embed-admin-settings.php:75
+#: includes/admin/class-geodir-embed-admin-settings.php:95
+#: includes/admin/class-geodir-embed-admin-settings.php:115
+#: includes/admin/class-geodir-embed-admin-settings.php:135
+#: includes/admin/class-geodir-embed-admin-settings.php:155
+#: includes/admin/class-geodir-embed-admin-settings.php:176
+#: includes/admin/class-geodir-embed-admin-settings.php:196
+msgid ""
+"This allows the user to adjust the setting while building the embed code."
+msgstr ""
+
+#: includes/admin/class-geodir-embed-admin-settings.php:83
+msgid "Border color"
+msgstr ""
+
+#: includes/admin/class-geodir-embed-admin-settings.php:84
+msgid "The color of the border for the embed."
+msgstr ""
+
+#: includes/admin/class-geodir-embed-admin-settings.php:94
+msgid "Border width (user set)"
+msgstr ""
+
+#: includes/admin/class-geodir-embed-admin-settings.php:103
+msgid "Border width"
+msgstr ""
+
+#: includes/admin/class-geodir-embed-admin-settings.php:104
+msgid "The width of the border for the embed."
+msgstr ""
+
+#: includes/admin/class-geodir-embed-admin-settings.php:114
+msgid "Border radius (user set)"
+msgstr ""
+
+#: includes/admin/class-geodir-embed-admin-settings.php:123
+msgid "Border radius"
+msgstr ""
+
+#: includes/admin/class-geodir-embed-admin-settings.php:124
+msgid "Set the border radius."
+msgstr ""
+
+#: includes/admin/class-geodir-embed-admin-settings.php:134
+msgid "Border shadow (user set)"
+msgstr ""
+
+#: includes/admin/class-geodir-embed-admin-settings.php:143
+msgid "Border shadow"
+msgstr ""
+
+#: includes/admin/class-geodir-embed-admin-settings.php:144
+msgid "Set if the border shadow should be shown"
+msgstr ""
+
+#: includes/admin/class-geodir-embed-admin-settings.php:154
+msgid "Background color (user set)"
+msgstr ""
+
+#: includes/admin/class-geodir-embed-admin-settings.php:163
+msgid "Background color"
+msgstr ""
+
+#: includes/admin/class-geodir-embed-admin-settings.php:164
+msgid "Select the background color to use."
+msgstr ""
+
+#: includes/admin/class-geodir-embed-admin-settings.php:175
+msgid "Link color (user set)"
+msgstr ""
+
+#: includes/admin/class-geodir-embed-admin-settings.php:184
+#: includes/class-geodir-embed-builder.php:181
+msgid "Link color"
+msgstr ""
+
+#: includes/admin/class-geodir-embed-admin-settings.php:185
+msgid "The color of the links in the embed."
+msgstr ""
+
+#: includes/admin/class-geodir-embed-admin-settings.php:195
+msgid "Text color (user set)"
+msgstr ""
+
+#: includes/admin/class-geodir-embed-admin-settings.php:204
+#: includes/class-geodir-embed-builder.php:194
+msgid "Text color"
+msgstr ""
+
+#: includes/admin/class-geodir-embed-admin-settings.php:205
+msgid "The color of the text in the embed."
+msgstr ""
+
+#: includes/admin/class-geodir-embed-admin-settings.php:213
+msgid "Link Ratings"
+msgstr ""
+
+#: includes/admin/class-geodir-embed-admin-settings.php:214
+msgid "Allows user to link ratings to the listing reviews tab."
+msgstr ""
+
+#: includes/admin/class-geodir-embed-admin-settings.php:224
+msgid "Branding text"
+msgstr ""
+
+#: includes/admin/class-geodir-embed-admin-settings.php:225
+msgid "If no logo is set then this is the branding text that will be show."
+msgstr ""
+
+#: includes/admin/class-geodir-embed-admin-settings.php:234
+msgid "Embed logo"
+msgstr ""
+
+#: includes/admin/class-geodir-embed-admin-settings.php:235
+msgid "The logo to show on the embed (this replaces the branding text)."
+msgstr ""
+
+#: includes/admin/class-geodir-embed-admin-settings.php:244
+msgid "CDN URL"
+msgstr ""
+
+#: includes/admin/class-geodir-embed-admin-settings.php:245
+msgid ""
+"Here you can enter a Content Delivery Network (CDN) url, using a CDN can "
+"reduce the load on your server but will reduce the update freshness of the "
+"rating info to that of your CDN settings (make sure to set and expire time)."
+msgstr ""
+
+#: includes/admin/class-geodir-embed-admin.php:65
+msgid "Disable Embed Rating"
+msgstr ""
+
+#: includes/admin/class-geodir-embed-admin.php:66
+msgid ""
+"Disable embeddable reviews & ratings for the listings with this package."
+msgstr ""
+
+#: includes/class-geodir-embed-action.php:242
+#, php-format
+msgid "%s Ratings"
+msgstr ""
+
+#: includes/class-geodir-embed-action.php:242
+#, php-format
+msgid "%s Rating"
+msgstr ""
+
+#: includes/class-geodir-embed-action.php:508
+msgid "Embeddable ratings"
+msgstr ""
+
+#: includes/class-geodir-embed-action.php:512
+msgid "No embeddable ratings"
+msgstr ""
+
+#: includes/class-geodir-embed-builder.php:82
+msgid "Size:"
+msgstr ""
+
+#: includes/class-geodir-embed-builder.php:83
+msgid "The size of the widget."
+msgstr ""
+
+#: includes/class-geodir-embed-builder.php:86
+msgid "Narrow: 160px width, variable height"
+msgstr ""
+
+#: includes/class-geodir-embed-builder.php:87
+msgid "Wide: 468px width maximum, 47px height"
+msgstr ""
+
+#: includes/class-geodir-embed-builder.php:96
+msgid "Border color:"
+msgstr ""
+
+#: includes/class-geodir-embed-builder.php:97
+msgid "Set the border color."
+msgstr ""
+
+#: includes/class-geodir-embed-builder.php:108
+msgid "Border width:"
+msgstr ""
+
+#: includes/class-geodir-embed-builder.php:109
+msgid "Set the border width in px."
+msgstr ""
+
+#: includes/class-geodir-embed-builder.php:120
+msgid "Border radius:"
+msgstr ""
+
+#: includes/class-geodir-embed-builder.php:121
+msgid "Set the border corner radius"
+msgstr ""
+
+#: includes/class-geodir-embed-builder.php:133
+msgid "Show shadow"
+msgstr ""
+
+#: includes/class-geodir-embed-builder.php:134
+msgid "Show the widget border shadow."
+msgstr ""
+
+#: includes/class-geodir-embed-builder.php:146
+msgid "Background:"
+msgstr ""
+
+#: includes/class-geodir-embed-builder.php:147
+msgid "The background color."
+msgstr ""
+
+#: includes/class-geodir-embed-builder.php:158
+msgid "Link rating stars to reviews"
+msgstr ""
+
+#: includes/class-geodir-embed-builder.php:159
+msgid ""
+"Add link to rating stars, so click on rating stars redirects to the listing "
+"reviews."
+msgstr ""
+
+#: includes/class-geodir-embed-builder.php:168
+msgid "Link rating text to reviews"
+msgstr ""
+
+#: includes/class-geodir-embed-builder.php:169
+msgid ""
+"Add link to rating text, so click on rating text redirects to the listing "
+"reviews."
+msgstr ""
+
+#: includes/class-geodir-embed-builder.php:182
+msgid "Set the link color."
+msgstr ""
+
+#: includes/class-geodir-embed-builder.php:195
+msgid "Set the text color."
+msgstr ""
+
+#: includes/class-geodir-embed-builder.php:207
+msgid "Rating (embed your ratings score on your site)."
+msgstr ""
+
+#: includes/class-geodir-embed-builder.php:208
+msgid "Embed your ratings on your site."
+msgstr ""
+
+#: includes/class-geodir-embed-builder.php:420
+#: includes/class-geodir-embed-builder.php:449
+#: includes/class-geodir-embed-builder.php:515
+#: includes/class-geodir-embed-builder.php:522
+#: includes/class-geodir-embed-builder.php:542
+msgid "Loading..."
+msgstr ""
+
+#: includes/class-geodir-embed-builder.php:474
+msgid "Code Copied!"
+msgstr ""
+
+#: includes/class-geodir-embed-builder.php:498
+msgid "Embeddable reviews & ratings feature is not allowed for this listing!"
+msgstr ""
+
+#: includes/class-geodir-embed-builder.php:520
+#: includes/class-geodir-embed-builder.php:552
+msgid ""
+"To use a embedded widget, add the customized code below into an HTML page on "
+"your website."
+msgstr ""
+
+#: includes/class-geodir-embed-builder.php:523
+#: includes/class-geodir-embed-builder.php:566
+msgid "Copy Code"
+msgstr ""
+
+#: includes/class-geodir-embed-builder.php:559
+msgid "Loading.."
+msgstr ""
+
+#: templates/bootstrap/embed-modal.php:13
+msgid "Build your embed code"
+msgstr ""
+
+#: templates/bootstrap/embed-modal.php:15
+#: templates/bootstrap/embed-modal.php:17
+#: templates/bootstrap/embed-modal.php:27
+msgid "Close"
+msgstr ""
+
+#: widgets/class-geodir-widget-embed.php:29
+#: widgets/class-geodir-widget-embed.php:37
+msgid "Small"
+msgstr ""
+
+#: widgets/class-geodir-widget-embed.php:30
+#: widgets/class-geodir-widget-embed.php:38
+msgid "Normal"
+msgstr ""
+
+#: widgets/class-geodir-widget-embed.php:31
+#: widgets/class-geodir-widget-embed.php:39
+msgid "Medium"
+msgstr ""
+
+#: widgets/class-geodir-widget-embed.php:32
+#: widgets/class-geodir-widget-embed.php:40
+msgid "Large"
+msgstr ""
+
+#: widgets/class-geodir-widget-embed.php:33
+#: widgets/class-geodir-widget-embed.php:41
+msgid "Extra Large"
+msgstr ""
+
+#: widgets/class-geodir-widget-embed.php:53
+msgid "GD > Embed"
+msgstr ""
+
+#: widgets/class-geodir-widget-embed.php:57
+msgid "This shows a button to get embed code for a listing"
+msgstr ""
+
+#: widgets/class-geodir-widget-embed.php:67
+msgid "Badge:"
+msgstr ""
+
+#: widgets/class-geodir-widget-embed.php:68
+msgid "Embed badge text."
+msgstr ""
+
+#: widgets/class-geodir-widget-embed.php:69
+#: widgets/class-geodir-widget-embed.php:196
+#: widgets/class-geodir-widget-embed.php:227
+msgid "Get embed code"
+msgstr ""
+
+#: widgets/class-geodir-widget-embed.php:76
+msgid "Icon class:"
+msgstr ""
+
+#: widgets/class-geodir-widget-embed.php:77
+msgid "You can show a font-awesome icon here by entering the icon class."
+msgstr ""
+
+#: widgets/class-geodir-widget-embed.php:85
+msgid "Show to:"
+msgstr ""
+
+#: widgets/class-geodir-widget-embed.php:86
+msgid "Sets who can see the button. (allays visible to admins)"
+msgstr ""
+
+#: widgets/class-geodir-widget-embed.php:88
+msgid "All"
+msgstr ""
+
+#: widgets/class-geodir-widget-embed.php:89
+msgid "Logged in users"
+msgstr ""
+
+#: widgets/class-geodir-widget-embed.php:90
+msgid "Owner"
+msgstr ""
+
+#: widgets/class-geodir-widget-embed.php:98
+msgid "Badge background color:"
+msgstr ""
+
+#: widgets/class-geodir-widget-embed.php:99
+msgid "Color for the badge background."
+msgstr ""
+
+#: widgets/class-geodir-widget-embed.php:107
+msgid "Badge text color:"
+msgstr ""
+
+#: widgets/class-geodir-widget-embed.php:108
+msgid "Color for the badge text."
+msgstr ""
+
+#: widgets/class-geodir-widget-embed.php:116
+msgid "Badge size:"
+msgstr ""
+
+#: widgets/class-geodir-widget-embed.php:117
+msgid "Size of the badge."
+msgstr ""
+
+#: widgets/class-geodir-widget-embed.php:125
+msgid "Alignment:"
+msgstr ""
+
+#: widgets/class-geodir-widget-embed.php:126
+msgid "How the item should be positioned on the page."
+msgstr ""
+
+#: widgets/class-geodir-widget-embed.php:128
+#: widgets/class-geodir-widget-embed.php:141
+#: widgets/class-geodir-widget-embed.php:155
+msgid "None"
+msgstr ""
+
+#: widgets/class-geodir-widget-embed.php:129
+msgid "Left"
+msgstr ""
+
+#: widgets/class-geodir-widget-embed.php:130
+msgid "Center"
+msgstr ""
+
+#: widgets/class-geodir-widget-embed.php:131
+msgid "Right"
+msgstr ""
+
+#: widgets/class-geodir-widget-embed.php:137
+msgid "Hide item on view:"
+msgstr ""
+
+#: widgets/class-geodir-widget-embed.php:138
+msgid "You can set at what view the item will become hidden."
+msgstr ""
+
+#: widgets/class-geodir-widget-embed.php:142
+#: widgets/class-geodir-widget-embed.php:156
+msgid "Grid view 2"
+msgstr ""
+
+#: widgets/class-geodir-widget-embed.php:143
+#: widgets/class-geodir-widget-embed.php:157
+msgid "Grid view 3"
+msgstr ""
+
+#: widgets/class-geodir-widget-embed.php:144
+#: widgets/class-geodir-widget-embed.php:158
+msgid "Grid view 4"
+msgstr ""
+
+#: widgets/class-geodir-widget-embed.php:145
+#: widgets/class-geodir-widget-embed.php:159
+msgid "Grid view 5"
+msgstr ""
+
+#: widgets/class-geodir-widget-embed.php:151
+msgid "Hide secondary info on view"
+msgstr ""
+
+#: widgets/class-geodir-widget-embed.php:152
+msgid ""
+"You can set at what view the secondary info such as label will become hidden."
+msgstr ""
+
+#: widgets/class-geodir-widget-embed.php:166
+msgid "Extra class:"
+msgstr ""
+
+#: widgets/class-geodir-widget-embed.php:167
+msgid "Give the wrapper an extra class so you can style things as you want."
+msgstr ""

@@ -1,0 +1,27 @@
+{
+  "name": "geodir-booking",
+  "version": "2.1.9",
+  "description": "Bookings add-on for GeoDirectory",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "csswatch": "sass --no-source-map  --watch assets/scss:assets/css",
+		"compile:css": "sass --no-source-map assets/scss:assets/css && postcss assets/css/*.css -r --no-map"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AyeCode/geodir-booking.git"
+  },
+  "keywords": [
+    "geodirectory",
+    "booking",
+    "airbnb"
+  ],
+  "author": "picocodes",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/AyeCode/geodir-booking/issues"
+  },
+  "homepage": "https://github.com/AyeCode/geodir-booking#readme",
+  "dependencies": {}
+}

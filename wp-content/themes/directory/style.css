@@ -1,0 +1,666 @@
+/*
+Theme Name:		    Directory
+Theme URI:		    https://wpgeodirectory.com/downloads/directory-theme/
+Description:	    Directory is a unique theme concept, for WordPress.org. With Directory Theme you can easily create an online portal and submit your business listings. Directory utilises the power of the WordPress block editor, GeoDirectory and Bootstrap to be able to create a fast loading modern directory site.
+Tags:               full-site-editing, blog, food-and-drink, two-columns, editor-style, block-styles
+Author:			    AyeCode Ltd
+Author URI:		    https://ayecode.io
+Template:		    blockstrap
+Version:		    3.0.10
+Text Domain:	    directory
+Requires at least:  6.1
+Requires PHP:       7.2
+Tested up to:       6.8
+
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/* GeoDirectory: hide dropdown/caret indicators for parent category lists we render */
+.geodir-parent-cats li::after,
+.geodir-post-parent-cats li::after {
+	display: none !important;
+	content: none !important;
+}
+
+/* Common caret/icon classes used by themes/plugins */
+.geodir-parent-cats li .caret,
+.geodir-post-parent-cats li .caret,
+.geodir-parent-cats li .dropdown-toggle,
+.geodir-post-parent-cats li .dropdown-toggle,
+.geodir-parent-cats li .fa-caret-down,
+.geodir-post-parent-cats li .fa-caret-down,
+.geodir-parent-cats li .fa-chevron-down,
+.geodir-post-parent-cats li .fa-chevron-down {
+	display: none !important;
+}
+
+/* If an icon is intentionally used before the title (like a map pin), keep it visible by targeting only pseudo elements and explicit caret classes above. */
+
+
+/* ===============================
+ * Custom GeoDirectory category archive layout
+ * =============================== */
+
+.nz-cat-hero {
+	background: #f4f5f7;
+	padding: 5rem 1rem 3rem;
+}
+
+.nz-cat-hero-inner {
+	max-width: 640px;
+	margin: 0 auto;
+}
+
+.nz-cat-hero-avatar {
+	width: 140px;
+	height: 80px;
+	border-radius: 50px;
+	background: #dcdfe5;
+}
+
+.nz-cat-hero-in {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-weight: 600;
+	font-size: 0.9rem;
+	color: #444;
+}
+
+.nz-cat-hero-title {
+	font-weight: 700;
+	font-size: 2rem;
+}
+
+.nz-cat-hero-cta {
+	padding: 0.6rem 1.6rem;
+	border-radius: 999px;
+	font-weight: 600;
+}
+
+/* Business Categories hero refinements */
+.business-cats-hero {
+	background-image:
+		linear-gradient(135deg, rgba(15, 23, 42, 0.78), rgba(37, 99, 235, 0.78)),
+		url('assets/images/home-bg.jpg');
+	background-size: cover;
+	background-position: center;
+	color: #ffffff;
+	padding-top: 5rem;
+	padding-bottom: 4rem;
+}
+
+.business-cats-hero-subtitle {
+	max-width: 520px;
+	margin-left: auto;
+	margin-right: auto;
+	color: #e5e7eb;
+	font-size: 0.95rem;
+}
+
+.business-cats-hero .nz-cat-hero-title {
+	color: #ffffff;
+}
+
+.nz-cat-regions-heading {
+	font-weight: 600;
+	margin-bottom: 1.5rem;
+}
+
+.nz-cat-regions-columns {
+	column-count: 3;
+	column-gap: 2.5rem;
+}
+
+@media (max-width: 991.98px) {
+	.nz-cat-regions-columns {
+		column-count: 2;
+	}
+}
+
+@media (max-width: 575.98px) {
+	.nz-cat-regions-columns {
+		column-count: 1;
+	}
+}
+
+.nz-cat-regions .geodir_all_location {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+.nz-cat-regions .geodir_all_location > li {
+	break-inside: avoid;
+	margin-bottom: 1.5rem;
+}
+
+.nz-cat-regions .geodir_states {
+	list-style: none;
+	margin: 0.5rem 0 0;
+	padding-left: 0;
+}
+
+.nz-cat-regions .geodir_region {
+	margin-bottom: 0.75rem;
+}
+
+.nz-cat-regions .geodir_cities {
+	list-style: none;
+	margin: 0.25rem 0 0;
+	padding-left: 0;
+}
+
+.nz-cat-regions .geodir_cities li {
+	font-size: 0.875rem;
+}
+
+.nz-cat-listings-heading {
+	font-weight: 600;
+	margin-bottom: 1.5rem;
+}
+
+/* Home page business categories carousel controls */
+.nz-cat-carousel-controls {
+	max-width: 640px;
+	margin: 0 auto;
+}
+
+.nz-cat-carousel-controls .nz-cat-carousel-prev,
+.nz-cat-carousel-controls .nz-cat-carousel-next {
+	color: #495057;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	border: 1px solid #d0d4da;
+	background-color: #ffffff;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nz-cat-carousel-controls .nz-cat-carousel-prev:hover,
+.nz-cat-carousel-controls .nz-cat-carousel-next:hover {
+	background-color: #0073aa;
+	color: #ffffff;
+	box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.08);
+}
+
+.nz-cat-carousel-dots {
+	gap: 4px;
+}
+
+.nz-cat-carousel-dot {
+	width: 8px;
+	height: 8px;
+	padding: 0;
+	border-radius: 999px;
+	border: none;
+	background-color: #d0d4da;
+	transition: background-color 0.2s ease, transform 0.2s ease, width 0.2s ease;
+}
+
+.nz-cat-carousel-dot.active {
+	background-color: #0073aa;
+	width: 16px;
+	transform: scale(1.05);
+}
+
+/* Simple fade animation when changing slides */
+.nz-cat-carousel-fade {
+	animation: nzCatCarouselFade 0.4s ease-in-out;
+}
+
+@keyframes nzCatCarouselFade {
+	from {
+		opacity: 0;
+		transform: translateY(4px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Business Categories page tweaks */
+.business-cats-search-shell {
+	border-top: 1px solid #e5e7eb;
+	background: #f9fafb;
+	padding-top: 2.5rem;
+	padding-bottom: 2.5rem;
+}
+
+.business-cats-search-inner {
+	max-width: 720px;
+}
+
+@media (max-width: 767.98px) {
+	.business-cats-search-inner {
+		max-width: 100%;
+	}
+}
+
+/* Make sure the GeoDirectory search bar fills the available width
+ * and stays centred nicely under the hero on the Business Categories page.
+ */
+.business-cats-search-inner .geodir-search-form-wrapper,
+.business-cats-search-inner form.geodir-search-show-all,
+.business-cats-search-inner form.geodir-search-show-main {
+	width: 100%;
+}
+
+.business-cats-search-inner .geodir-search {
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.business-cats-search-label {
+	font-size: 0.9rem;
+}
+
+/* Shared section shell for the Business Categories content blocks */
+.business-cats-section {
+	background-color: #ffffff;
+}
+
+.business-cats-section-header .business-cats-heading {
+	font-weight: 600;
+}
+
+.business-cats-section-header p {
+	max-width: 620px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 0.92rem;
+}
+
+/* All business categories – three-column browse list (Cybo style) */
+.business-cats-all {
+	background: #f8f9fb;
+}
+
+.business-cats-list {
+	margin: 0 !important;
+	padding-left: 1.2rem !important;
+	column-count: 3 !important;
+	column-gap: 2.25rem !important;
+	list-style: none !important;
+}
+
+.business-cats-list li {
+	break-inside: avoid !important;
+	margin-bottom: 0.4rem !important;
+	position: relative !important;
+	padding-left: 1.1rem !important;
+	font-size: 0.96rem !important;
+}
+
+.business-cats-list li::before {
+	content: "\25B8"; /* small right-pointing triangle, similar to Cybo caret */
+	position: absolute !important;
+	left: 0 !important;
+	top: 0.05rem !important;
+	font-size: 0.7rem !important;
+	color: #111827 !important;
+}
+
+.business-cats-list a {
+	color: #111827 !important;
+	text-decoration: none !important;
+}
+
+.business-cats-list a:hover {
+	color: #2563eb !important;
+	text-decoration: underline !important;
+}
+
+@media (max-width: 991.98px) {
+	.business-cats-list {
+		column-count: 2;
+	}
+}
+
+@media (max-width: 575.98px) {
+	.business-cats-list {
+		column-count: 1;
+	}
+}
+
+/* Parents with children – Cybo‑style panels grid */
+.business-cats-children-section {
+	background: #ffffff;
+	border-top: 1px solid #e2e4ea;
+	padding-top: 3rem;
+	padding-bottom: 4rem;
+}
+
+.business-cats-panels-grid {
+	display: grid;
+	grid-template-columns: repeat(1, minmax(0, 1fr));
+	gap: 1.5rem;
+}
+
+.business-cats-panel {
+	border-radius: 1rem !important;
+	border: 1px solid #e1e4ec !important;
+	background: #ffffff !important;
+	box-shadow: 0 14px 32px rgba(15, 23, 42, 0.04) !important;
+	overflow: hidden !important;
+}
+
+.business-cats-panel-header {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: flex-start !important;
+	gap: 0.75rem !important;
+	padding: 0.9rem 1.25rem 0.5rem !important;
+	color: #111827 !important;
+	font-weight: 600 !important;
+	font-size: 1.02rem !important;
+}
+
+.business-cats-panel-header a {
+	color: #111827 !important;
+	text-decoration: none !important;
+}
+
+.business-cats-panel-header a:hover {
+	color: #2563eb !important;
+	text-decoration: underline !important;
+}
+
+.business-cats-panel-icon {
+	display: inline-flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	width: 28px !important;
+	height: 28px !important;
+	border-radius: 999px !important;
+	background: #eff6ff !important;
+	margin-right: 0.35rem !important;
+}
+
+.business-cats-panel-body {
+	padding: 0.5rem 1.25rem 1.25rem !important;
+	display: flex !important;
+	flex-wrap: wrap !important;
+	gap: 0.5rem !important;
+}
+
+.business-cats-chip {
+	display: inline-flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	padding: 0.4rem 0.75rem !important;
+	border-radius: 999px !important;
+	background: #eef2ff !important;
+	color: #1d4ed8 !important;
+	font-size: 0.85rem !important;
+	font-weight: 500 !important;
+	text-decoration: none !important;
+	transition: background-color 0.16s ease, color 0.16s ease, box-shadow 0.16s ease, transform 0.16s ease !important;
+}
+
+.business-cats-chip:hover {
+	background: #2563eb !important;
+	color: #ffffff !important;
+	box-shadow: 0 8px 22px rgba(37, 99, 235, 0.25) !important;
+	transform: translateY(-1px) !important;
+	text-decoration: none !important;
+}
+
+/* New Cybo-style panels for parent/child categories */
+.business-cats-panel {
+	border-radius: 0.85rem;
+	overflow: hidden;
+	border: 1px solid #d4ddf5;
+	background-color: #f9fbff;
+}
+
+.business-cats-panel-header {
+	background: linear-gradient(135deg, #0b63ce 0%, #1d4ed8 100%);
+	color: #ffffff;
+	font-weight: 600;
+	padding: 0.7rem 1.1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	font-size: 1.1rem;
+}
+
+.business-cats-panel-header a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.business-cats-panel-header a:hover {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.business-cats-panel-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 26px;
+	height: 26px;
+	border-radius: 999px;
+	background-color: rgba(255, 255, 255, 0.18);
+}
+
+.business-cats-panel-body {
+	padding: 1rem 1.1rem 1.1rem;
+	background-color: #f9fbff;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem 0.75rem;
+}
+
+.business-cats-chip {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.35rem 0.9rem;
+	border-radius: 999px;
+	background-color: #ffffff;
+	color: #0073aa;
+	font-size: 0.85rem;
+	text-decoration: none;
+	border: 1px solid #d4ddf5;
+	white-space: nowrap;
+	transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.business-cats-chip:hover {
+	background-color: #0b63ce;
+	color: #ffffff;
+	box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+	transform: translateY(-1px);
+	text-decoration: none;
+}
+
+@media (max-width: 575.98px) {
+	.business-cats-panel-body {
+		padding: 0.85rem;
+	}
+
+	.business-cats-chip {
+		font-size: 0.8rem;
+	}
+}
+
+/* Sub-category section heading emphasis */
+.business-cats-children-section .business-cats-heading {
+	text-align: center;
+	font-size: 2rem;
+}
+
+/* Stronger specificity + !important so Business Categories page styles
+ * always win over plugin / theme defaults.
+ */
+body.page-business-categories .business-cats-hero {
+	background-image:
+		linear-gradient(135deg, rgba(15, 23, 42, 0.78), rgba(37, 99, 235, 0.78)),
+		url('assets/images/home-bg.jpg') !important;
+	background-size: cover !important;
+	background-position: center !important;
+	color: #ffffff !important;
+	padding-top: 5rem !important;
+	padding-bottom: 4rem !important;
+}
+
+body.page-business-categories .business-cats-search-shell {
+	border-top: 1px solid #e5e7eb !important;
+	background: #f9fafb !important;
+	padding-top: 2.5rem !important;
+	padding-bottom: 2.5rem !important;
+}
+
+body.page-business-categories .business-cats-search-inner {
+	max-width: 720px !important;
+}
+
+body.page-business-categories .business-cats-search-inner .geodir-search-form-wrapper,
+body.page-business-categories .business-cats-search-inner form.geodir-search-show-all,
+body.page-business-categories .business-cats-search-inner form.geodir-search-show-main {
+	width: 100% !important;
+}
+
+body.page-business-categories .business-cats-search-inner .geodir-search {
+	width: 100% !important;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+
+body.page-business-categories .business-cats-all {
+	background: #f8f9fb !important;
+}
+
+body.page-business-categories .business-cats-list {
+	margin: 0 !important;
+	padding-left: 1.2rem !important;
+	column-count: 3 !important;
+	column-gap: 2.25rem !important;
+	list-style: none !important;
+}
+
+body.page-business-categories .business-cats-list li {
+	break-inside: avoid !important;
+	margin-bottom: 0.4rem !important;
+	position: relative !important;
+	padding-left: 1.1rem !important;
+	font-size: 0.96rem !important;
+}
+
+body.page-business-categories .business-cats-list li::before {
+	content: "\25B8" !important;
+	position: absolute !important;
+	left: 0 !important;
+	top: 0.05rem !important;
+	font-size: 0.7rem !important;
+	color: #111827 !important;
+}
+
+body.page-business-categories .business-cats-list a {
+	color: #111827 !important;
+	text-decoration: none !important;
+}
+
+body.page-business-categories .business-cats-list a:hover {
+	color: #2563eb !important;
+	text-decoration: underline !important;
+}
+
+@media (max-width: 991.98px) {
+	body.page-business-categories .business-cats-list {
+		column-count: 2 !important;
+	}
+}
+
+@media (max-width: 575.98px) {
+	body.page-business-categories .business-cats-list {
+		column-count: 1 !important;
+	}
+}
+
+body.page-business-categories .business-cats-children-section {
+	background: #ffffff !important;
+	border-top: 1px solid #e2e4ea !important;
+	padding-top: 3rem !important;
+	padding-bottom: 4rem !important;
+}
+
+body.page-business-categories .business-cats-panel {
+	border-radius: 0.85rem !important;
+	overflow: hidden !important;
+	border: 1px solid #d4ddf5 !important;
+	background-color: #f9fbff !important;
+}
+
+body.page-business-categories .business-cats-panel-header {
+	background: linear-gradient(135deg, #0b63ce 0%, #1d4ed8 100%) !important;
+	color: #ffffff !important;
+	font-weight: 600 !important;
+	padding: 0.7rem 1.1rem !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	gap: 0.5rem !important;
+	font-size: 1.1rem !important;
+}
+
+body.page-business-categories .business-cats-panel-header a {
+	color: #ffffff !important;
+	text-decoration: none !important;
+}
+
+body.page-business-categories .business-cats-panel-header a:hover {
+	color: #ffffff !important;
+	text-decoration: none !important;
+}
+
+body.page-business-categories .business-cats-panel-icon {
+	display: inline-flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	width: 26px !important;
+	height: 26px !important;
+	border-radius: 999px !important;
+	background-color: rgba(255, 255, 255, 0.18) !important;
+}
+
+body.page-business-categories .business-cats-panel-body {
+	padding: 1rem 1.1rem 1.1rem !important;
+	background-color: #f9fbff !important;
+	display: flex !important;
+	flex-wrap: wrap !important;
+	gap: 0.5rem 0.75rem !important;
+}
+
+body.page-business-categories .business-cats-chip {
+	display: inline-flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	padding: 0.35rem 0.9rem !important;
+	border-radius: 999px !important;
+	background-color: #ffffff !important;
+	color: #0073aa !important;
+	font-size: 0.85rem !important;
+	text-decoration: none !important;
+	border: 1px solid #d4ddf5 !important;
+	white-space: nowrap !important;
+}
+
+body.page-business-categories .business-cats-chip:hover {
+	background-color: #0b63ce !important;
+	color: #ffffff !important;
+	box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15) !important;
+	transform: translateY(-1px) !important;
+	text-decoration: none !important;
+}
+

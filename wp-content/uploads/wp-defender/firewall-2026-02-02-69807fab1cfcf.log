@@ -1,0 +1,12 @@
+[2026-02-02T10:42:51+00:00] Cron job wpdef_firewall_send_compact_logs_to_api triggered at site 1
+[2026-02-02T10:42:51+00:00] wpdef_firewall_send_compact_logs_to_api is processing from site 1
+[2026-02-02T10:42:51+00:00] Cron job wpdef_firewall_send_compact_logs_to_api triggered at site 1
+[2026-02-02T10:42:51+00:00] wpdef_firewall_send_compact_logs_to_api is skipped running from site 1
+[2026-02-02T10:42:51+00:00] Server public IP whitelisted successfully.
+[2026-02-02T10:42:51+00:00] Server public IP whitelisted successfully.
+[2026-02-02T22:42:57+00:00] Cron job wpdef_firewall_send_compact_logs_to_api triggered at site 1
+[2026-02-02T22:42:57+00:00] wpdef_firewall_send_compact_logs_to_api is processing from site 1
+[2026-02-02T22:42:58+00:00] Cron job wpdef_firewall_send_compact_logs_to_api triggered at site 1
+[2026-02-02T22:42:58+00:00] wpdef_firewall_send_compact_logs_to_api is skipped running from site 1
+[2026-02-02T22:42:58+00:00] Server public IP whitelisted successfully.
+[2026-02-02T22:42:58+00:00] Server public IP whitelisted successfully.

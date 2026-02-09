@@ -1,0 +1,34 @@
+/* show skip links if selected */
+.wp-block-blockstrap-blockstrap-widget-skip-links.bs-skip-links.is-selected {
+	transform: translate(-50%, 0%);
+}
+
+/* show responsive menu if selected */
+@media ( max-width: 840px ) {
+	.wp-block-blockstrap-blockstrap-widget-navbar {
+		&.is-selected, &.has-child-selected {
+			.wp-block-blockstrap-blockstrap-widget-nav {
+				display: block;
+			}
+		}
+	}
+}
+
+// prevent our non display:block blocks overflowing
+#editor .editor-styles-wrapper  .block-editor-block-list__layout.is-root-container:not(.edit-site-block-editor__block-list):not(.edit-site-editor-canvas__block-list):not(.wp-site-blocks){
+	max-width: 840px;
+	margin: auto;
+}
+
+
+
+:root .wp-site-blocks > * {
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+
+:root :where(.editor-styles-wrapper) .wp-block-gallery-is-layout-flex {
+	gap: var( --wp--style--block-gap );
+}
+
+

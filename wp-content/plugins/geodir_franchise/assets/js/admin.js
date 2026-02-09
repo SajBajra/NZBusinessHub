@@ -1,0 +1,44 @@
+jQuery(function($) {
+    if ($('form#mainform .gd-pkg-lifetime-wrap').length) {
+        GeoDir_Franchise_Admin.init($('form#mainform'));
+    }
+
+    if ($('.geodir-add-franchise-action').length) {
+        GeoDir_Franchise_Admin.addFranchiseAction();
+    }
+});
+var GeoDir_Franchise_Admin = {
+    init: function($form) {
+        this.$form = $form;
+        var $self = this;
+
+        jQuery('[name="package_exclude_field[]"]', $form).on('change', function(e) {
+            $self.onChangeExcludeField(jQuery(this));
+        });
+        $self.onChangeExcludeField(jQuery('[name="package_exclude_field[]"]'), $form);
+    },
+    onChangeExcludeField: function($el) {
+        var $self = this,
+            fields = $el.val(),
+            $cost = jQuery('#package_franchise_cost', $self.$form).closest('tr'),
+            $limit = jQuery('#package_franchise_limit', $self.$form).closest('tr');
+        if (fields && typeof fields == 'object' && jQuery.inArray('franchise', fields) !== -1) {
+            /* show franchise fields */
+            $cost.addClass('geodir-pkg-none');
+            $limit.addClass('geodir-pkg-none');
+        } else {
+            /* hide franchise fields */
+            $cost.removeClass('geodir-pkg-none');
+            $limit.removeClass('geodir-pkg-none');
+        }
+    },
+    addFranchiseAction: function() {
+        var $fAct = jQuery(".geodir-add-franchise-action").detach();
+        if (jQuery('.page-title-action').length) {
+            jQuery('.page-title-action').after($fAct);
+        } else if (jQuery('.wp-header-end').length) {
+            jQuery('.wp-header-end').before($fAct);
+        }
+        jQuery(".geodir-add-franchise-action").addClass('page-title-action').show();
+    }
+}

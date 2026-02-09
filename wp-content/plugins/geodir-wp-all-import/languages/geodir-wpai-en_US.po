@@ -1,0 +1,225 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoDirectory WP All Import 2.3.9\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-09 19:15+0530\n"
+"PO-Revision-Date: 2025-10-09 19:15+0530\n"
+"Last-Translator: \n"
+"Language-Team: AyeCode Ltd <contact@ayecode.io>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_n:1,2;_n_noop:1,2;"
+"_nx:1,2;_x;_ex;esc_attr_e;esc_attr__\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: geodir-wp-all-import.php:45
+#, php-format
+msgid "%s requires the %sGeoDirectory%s plugin to be installed and active."
+msgstr ""
+
+#: geodir-wp-all-import.php:57
+#, php-format
+msgid "%s requires the %sWP All Import%s plugin to be installed and active."
+msgstr ""
+
+#: geodir-wp-all-import.php:68
+#, php-format
+msgid ""
+"The plugin %sWP Easy Updates%s is required to check for and update some "
+"installed plugins, please install it now."
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:85
+msgid "GeoDirectory Add-On"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:110
+msgid "Featured"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:111
+msgid "Post Status"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:112
+msgid "Featured Image"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:113
+msgid "Submit IP"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:114
+msgid "Overall Rating"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:115
+msgid "Rating Count"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:116
+msgid "Ratings"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:117
+msgid "Marker JSON"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:118
+msgid "Location ID"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:119
+msgid "Categories"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:120
+msgid "Default Category"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:121
+msgid "Tags"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:125
+msgid "RSVP Count"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:138
+msgid "Images (post_images)"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:151
+msgid "Zip (zip)"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:152
+msgid "Street (street)"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:153
+msgid "Street 2 (street2)"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:154
+msgid "City (city)"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:155
+msgid "Region (region)"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:156
+msgid "Country (country)"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:157
+msgid "Neighbourhood (neighbourhood)"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:158
+msgid "Latitude (latitude)"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:159
+msgid "Longitude (longitude)"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:160
+#: includes/class-geodir-wp-all-import-addon.php:171
+msgid "Map View (mapview)"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:161
+msgid "Map Zoom (mapzoom)"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:180
+msgid "Start Date (start_date) Ex: yyyy-mm-dd"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:181
+msgid "End Date (end_date) Ex: yyyy-mm-dd"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:182
+msgid "Start Time (start_time) Ex: hh:mm"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:183
+msgid "End Time (end_time) Ex: hh:mm"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:184
+msgid "Is all day event? (is_all_day_event). Ex: 0 or 1"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:185
+msgid "Duration in Days (recurring_duration_days)"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:186
+msgid ""
+"Repeat Type (recurring_type). One of from day, week, month, year, custom."
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:187
+msgid "Repeat Interval (recurring_interval)"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:188
+msgid "Repeat Week Days (recurring_week_days). Ex: mon,sat"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:189
+msgid "Repeat By Weeks (recurring_week_numbers). Ex: 2,3"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:190
+msgid "Max Repeat Limit (recurring_limit)"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:191
+msgid "Repeat End Date (recurring_end_date) Ex: yyyy-mm-dd"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:192
+msgid ""
+"Custom Recurring Dates (recurring_custom_dates) Ex: yyyy-mm-dd,yyyy-mm-dd"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:193
+msgid "Recurring Different Times (recurring_different_times). Ex: 0 or 1"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:194
+msgid "Recurring Start Times (recurring_start_times) Ex: hh:mm,hh:mm"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:195
+msgid "Recurring End Times (recurring_end_times) Ex: hh:mm,hh:mm"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:258
+msgid "DO ACTION `geodir_wpai_before_import_fields`..."
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:357
+msgid "Saved event dates"
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:414
+#, php-format
+msgid "- Importing address fields: `%s` ..."
+msgstr ""
+
+#: includes/class-geodir-wp-all-import-addon.php:486
+#, php-format
+msgid "- Importing `%s` ..."
+msgstr ""

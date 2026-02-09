@@ -1,0 +1,1390 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoDirectory Events Tickets Marketplace 2.1.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-20 18:20+0530\n"
+"PO-Revision-Date: 2025-11-20 18:20+0530\n"
+"Last-Translator: \n"
+"Language-Team: AyeCode Ltd <contact@ayecode.io>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;__ngettext:1,2;__ngettext_noop:1,2;_c;_e;_ex:1,2c;"
+"_n:1,2;_n_noop:1,2;_nc:4c,1,2;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;gettext;"
+"gettext_noop\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: includes/class-geodir-tickets-admin.php:36
+#: includes/class-geodir-tickets-admin.php:48
+#: includes/class-geodir-tickets-admin.php:49 includes/functions.php:552
+msgid "Sold Tickets"
+msgstr ""
+
+#: includes/class-geodir-tickets-admin.php:37
+#: includes/views/manage-tickets/sales.php:57
+msgid "Tickets"
+msgstr ""
+
+#: includes/class-geodir-tickets-admin.php:58
+msgid "Ticket Reports"
+msgstr ""
+
+#: includes/class-geodir-tickets-admin.php:59
+#: includes/class-geodir-tickets-admin.php:103
+msgid "Reports"
+msgstr ""
+
+#: includes/class-geodir-tickets-admin.php:68
+msgid "Ticket Settings"
+msgstr ""
+
+#: includes/class-geodir-tickets-admin.php:69
+msgid "Settings"
+msgstr ""
+
+#: includes/class-geodir-tickets-admin.php:111 includes/functions.php:649
+msgid "Popular Events"
+msgstr ""
+
+#: includes/class-geodir-tickets-admin.php:117 includes/functions.php:655
+msgid "Highest Revenue Events"
+msgstr ""
+
+#: includes/class-geodir-tickets-admin.php:161
+msgid "Ticket Sales Commission %"
+msgstr ""
+
+#: includes/class-geodir-tickets-admin.php:162
+msgid "Remember to account for gateway fees"
+msgstr ""
+
+#: includes/class-geodir-tickets-admin.php:170
+msgid "Payment Form"
+msgstr ""
+
+#: includes/class-geodir-tickets-admin.php:171
+msgid "Optional. Select a payment form to use when paying for tickets."
+msgstr ""
+
+#: includes/class-geodir-tickets-admin.php:173
+msgid "Select payment form"
+msgstr ""
+
+#: includes/class-geodir-tickets-admin.php:237
+msgid "Available template tags:"
+msgstr ""
+
+#: includes/class-geodir-tickets-admin.php:265
+msgid "Ticket refunded"
+msgstr ""
+
+#: includes/class-geodir-tickets-admin.php:300
+msgid "Ticket was sent successully"
+msgstr ""
+
+#: includes/class-geodir-tickets-admin.php:327
+msgid "Ticket was deleted successully"
+msgstr ""
+
+#: includes/class-geodir-tickets-data-store.php:88
+#: includes/class-geodir-tickets-data-store.php:112
+msgid "Invalid ticket."
+msgstr ""
+
+#: includes/class-geodir-tickets-list-table.php:267
+#: includes/class-geodir-tickets-list-table.php:290
+msgid "(Missing User)"
+msgstr ""
+
+#: includes/class-geodir-tickets-list-table.php:347
+#: includes/class-geodir-tickets.php:651 includes/views/view-tickets.php:52
+#, php-format
+msgid "%s ago"
+msgstr ""
+
+#: includes/class-geodir-tickets-list-table.php:357
+#: includes/views/manage-tickets/scanner.php:42
+#: includes/views/view-tickets.php:25
+msgid "Booked"
+msgstr ""
+
+#: includes/class-geodir-tickets-list-table.php:372
+msgid "View Event"
+msgstr ""
+
+#: includes/class-geodir-tickets-list-table.php:373
+msgid "View Invoice"
+msgstr ""
+
+#: includes/class-geodir-tickets-list-table.php:394
+#: includes/class-geodir-tickets-list-table.php:491
+msgid "Refund"
+msgstr ""
+
+#: includes/class-geodir-tickets-list-table.php:411
+#: includes/class-geodir-tickets-list-table.php:492
+msgid "Resend"
+msgstr ""
+
+#: includes/class-geodir-tickets-list-table.php:421 includes/functions.php:383
+#: includes/functions.php:410 includes/functions.php:435
+#: includes/functions.php:459 includes/views/view-tickets.php:10
+#: includes/widgets/sell-tickets.php:406
+#: templates/emails/wpinv-email-user_tickets.php:34
+msgid "View Tickets"
+msgstr ""
+
+#: includes/class-geodir-tickets-list-table.php:440
+msgid "Are you sure you want to delete the ticket?"
+msgstr ""
+
+#: includes/class-geodir-tickets-list-table.php:441
+#: includes/class-geodir-tickets-list-table.php:493
+msgid "Delete"
+msgstr ""
+
+#: includes/class-geodir-tickets-list-table.php:474
+#, php-format
+msgid "Paid via %s"
+msgstr ""
+
+#: includes/class-geodir-tickets-list-table.php:539
+msgid "Event"
+msgstr ""
+
+#: includes/class-geodir-tickets-list-table.php:540
+msgid "Seller"
+msgstr ""
+
+#: includes/class-geodir-tickets-list-table.php:541
+#: includes/views/manage-tickets/sales.php:53
+msgid "Buyer"
+msgstr ""
+
+#: includes/class-geodir-tickets-list-table.php:542
+#: includes/views/manage-tickets/report.php:66
+msgid "Quantity"
+msgstr ""
+
+#: includes/class-geodir-tickets-list-table.php:543
+#: includes/views/manage-tickets/types.php:10
+msgid "Price"
+msgstr ""
+
+#: includes/class-geodir-tickets-list-table.php:544
+msgid "Seller Earnings"
+msgstr ""
+
+#: includes/class-geodir-tickets-list-table.php:545
+msgid "Site Commision"
+msgstr ""
+
+#: includes/class-geodir-tickets-list-table.php:546
+#: includes/class-tgm-plugin-activation.php:2647
+#: includes/views/view-tickets.php:24
+msgid "Status"
+msgstr ""
+
+#: includes/class-geodir-tickets-list-table.php:547
+msgid "Action"
+msgstr ""
+
+#: includes/class-geodir-tickets-list-table.php:548
+msgid "Date"
+msgstr ""
+
+#: includes/class-geodir-tickets-list-table.php:609
+msgid "Filter"
+msgstr ""
+
+#: includes/class-geodir-tickets-list-table.php:642
+msgid "Filter by date"
+msgstr ""
+
+#: includes/class-geodir-tickets-list-table.php:644
+msgid "All dates"
+msgstr ""
+
+#: includes/class-geodir-tickets-list-table.php:659
+#, php-format
+msgid "%1$s %2$d"
+msgstr ""
+
+#: includes/class-geodir-tickets-list-table.php:688
+msgid "Filter by buyer"
+msgstr ""
+
+#: includes/class-geodir-tickets-list-table.php:697
+msgid "All Buyers"
+msgstr ""
+
+#: includes/class-geodir-tickets-list-table.php:724
+msgid "Filter by seller"
+msgstr ""
+
+#: includes/class-geodir-tickets-list-table.php:733
+msgid "All Sellers"
+msgstr ""
+
+#: includes/class-geodir-tickets-list-table.php:760
+msgid "Filter by event"
+msgstr ""
+
+#: includes/class-geodir-tickets-list-table.php:762
+msgid "All events"
+msgstr ""
+
+#: includes/class-geodir-tickets-report-event-sales.php:79
+#, php-format
+msgid "Total Revenue: %s"
+msgstr ""
+
+#: includes/class-geodir-tickets-report-events.php:79
+#, php-format
+msgid "Total Tickets Sold: %d"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:149
+msgid "Select Camera"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:161
+msgid "The ticket was refunded successfully"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:162
+msgid "The ticket was resent successfully"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:163
+msgid "Success!"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:164
+msgid "Error"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:165
+msgid "Invalid Ticket"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:166
+msgid "Are you sure you want to delete this ticket?"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:225 templates/tickets/ticket.php:46
+msgid "Ticket"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:457
+#, php-format
+msgid "Error generating event tickets for %s"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:469
+#, php-format
+msgid "Generated event tickets for %s"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:487
+#, php-format
+msgid "%s ticket earnings"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:536
+#, php-format
+msgid "Tickets for invoice #%s re-paid"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:612
+#, php-format
+msgid "Tickets for invoice #%s refunded"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:669
+msgid "Expired"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:670
+msgid "Expired Ticket"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:683
+#, php-format
+msgid "This ticket was used %s ago"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:697
+msgid "This ticket was refunded"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:709
+msgid "This ticket is pending payment"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:721
+msgid "Future"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:722
+#, php-format
+msgid "Ticket Valid for %s"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:733
+msgid "Valid!"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:793
+msgid "User Tickets"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:794
+msgid ""
+"These emails are sent to the customer with information about their tickets."
+msgstr ""
+
+#: includes/class-geodir-tickets.php:800 includes/class-geodir-tickets.php:856
+msgid "Enable/Disable"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:801 includes/class-geodir-tickets.php:857
+msgid "Enable this email notification"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:808 includes/class-geodir-tickets.php:864
+msgid "Enable Admin BCC"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:809 includes/class-geodir-tickets.php:865
+msgid ""
+"Check if you want to send a copy of this notification email to to the site "
+"admin."
+msgstr ""
+
+#: includes/class-geodir-tickets.php:816 includes/class-geodir-tickets.php:872
+msgid "Subject"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:817 includes/class-geodir-tickets.php:873
+msgid "Enter the subject line for this email."
+msgstr ""
+
+#: includes/class-geodir-tickets.php:820
+msgid "[{site_title}] Your tickets for {event_name}"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:826 includes/class-geodir-tickets.php:882
+msgid "Email Heading"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:827 includes/class-geodir-tickets.php:883
+msgid "Enter the main heading contained within the email notification."
+msgstr ""
+
+#: includes/class-geodir-tickets.php:830
+msgid "Your ticket details"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:836 includes/class-geodir-tickets.php:892
+msgid "Email Content"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:839
+msgid ""
+"<p>Hi {customer_name},</p><p>Click on the button below to view your tickets "
+"for <a href=\"{post_url}\">{event_name}</a>.</p>"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:849 includes/functions.php:571
+msgid "Tickets Sold"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:850
+msgid ""
+"These emails are sent to the event organizer whenever a customer buys a "
+"ticket."
+msgstr ""
+
+#: includes/class-geodir-tickets.php:876
+msgid "[{site_title}] New tickets sold for {event_name}"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:886
+msgid "New tickets sold for {event_name}"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:895
+msgid ""
+"<p>Hi {post_author},</p><p>You just sold new tickets worth {invoice_total} "
+"for <a href=\"{post_url}\">{event_name}</a></p><p>Congratulations on the "
+"sale!</p>"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:917
+msgid "View available merge tags."
+msgstr ""
+
+#: includes/class-geodir-tickets.php:920
+msgid "The content of the email (Merge Tags and HTML are allowed)."
+msgstr ""
+
+#: includes/class-geodir-tickets.php:980 includes/class-geodir-tickets.php:1023
+msgid " - ADMIN BCC COPY"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:987
+msgid "Successfully sent user tickets to the customer."
+msgstr ""
+
+#: includes/class-geodir-tickets.php:989
+msgid "Failed sending user tickets to the customer."
+msgstr ""
+
+#: includes/class-geodir-tickets.php:1030
+msgid "Successfully sent ticket notification to the event organizer."
+msgstr ""
+
+#: includes/class-geodir-tickets.php:1032
+msgid "Failed sending ticket notification to the event organizer."
+msgstr ""
+
+#: includes/class-geodir-tickets.php:1074
+#, php-format
+msgid "\"%1$s\" is sold out."
+msgstr ""
+
+#: includes/class-geodir-tickets.php:1082
+#, php-format
+msgid ""
+"\"%1$s\" does not have enough tickets to fullfill your order of %2$s "
+"tickets. (Only %3$s available)."
+msgstr ""
+
+#: includes/class-geodir-tickets.php:1101
+msgid "Sold Out"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:1120
+msgid "Available"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:1131
+#, php-format
+msgid "Only %s tickets left"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:1142
+#, php-format
+msgid "%s tickets left"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:1186
+msgid "Select Event Date"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:1202
+msgid "Event Date"
+msgstr ""
+
+#: includes/class-geodir-tickets.php:1217
+msgid "Select Tickets"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:334
+msgid "Install Required Plugins"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:335
+msgid "Install Plugins"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:337
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:339
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:340
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:343
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-tgm-plugin-activation.php:349
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-tgm-plugin-activation.php:355
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-tgm-plugin-activation.php:361
+#, php-format
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-tgm-plugin-activation.php:367
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-tgm-plugin-activation.php:373
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-tgm-plugin-activation.php:378
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-tgm-plugin-activation.php:383
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-tgm-plugin-activation.php:388
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-tgm-plugin-activation.php:392
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:393
+#: includes/class-tgm-plugin-activation.php:920
+#: includes/class-tgm-plugin-activation.php:2626
+#: includes/class-tgm-plugin-activation.php:3673
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:394
+#: includes/class-tgm-plugin-activation.php:3252
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:395
+#: includes/class-tgm-plugin-activation.php:3045
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:397
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:399
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:401
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:402
+msgid "Dismiss this notice"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:403
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:404
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:607
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:608
+msgid "Update Required"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:725
+msgid "Set the parent_slug config variable instead."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:1027
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:1027
+#: includes/class-tgm-plugin-activation.php:1030
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:1030
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:1214
+#: includes/class-tgm-plugin-activation.php:3041
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2075
+#, php-format
+msgid "TGMPA v%s"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2366
+msgid "Required"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2369
+msgid "Recommended"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2385
+msgid "WordPress Repository"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2388
+msgid "External Source"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2391
+msgid "Pre-Packaged"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2408
+msgid "Not Installed"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2412
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2414
+msgid "Active"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2420
+msgid "Required Update not Available"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2423
+msgid "Requires Update"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2426
+msgid "Update recommended"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2435
+#, php-format
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2481
+#, php-format
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-tgm-plugin-activation.php:2485
+#, php-format
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-tgm-plugin-activation.php:2489
+#, php-format
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-tgm-plugin-activation.php:2493
+#, php-format
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-tgm-plugin-activation.php:2575
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2583
+msgid "Installed version:"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2591
+msgid "Minimum required version:"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2603
+msgid "Available version:"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2626
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2640
+msgid "Plugin"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2641
+msgid "Source"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2642
+#: includes/views/manage-tickets/report.php:65
+#: includes/views/manage-tickets/types.php:9
+msgid "Type"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2646
+msgid "Version"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2696
+#, php-format
+msgid "Install %2$s"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2701
+#, php-format
+msgid "Update %2$s"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2707
+#, php-format
+msgid "Activate %2$s"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2777
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2810
+msgid "Install"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2816
+msgid "Update"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2819
+msgid "Activate"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2850
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2852
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2893
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2895
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:3001
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:3027
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:3045
+msgid "The following plugins were activated successfully:"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:3251
+msgid "Plugin activation failed."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:3591
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:3594
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:3596
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:3600
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:3602
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:3602
+#: includes/class-tgm-plugin-activation.php:3610
+msgid "Show Details"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:3602
+#: includes/class-tgm-plugin-activation.php:3610
+msgid "Hide Details"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:3603
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:3605
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:3608
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:3610
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:3611
+msgid "All installations have been completed."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:3613
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: includes/functions.php:65
+msgid "Pending"
+msgstr ""
+
+#: includes/functions.php:66
+msgid "Confirmed"
+msgstr ""
+
+#: includes/functions.php:67
+msgid "Used"
+msgstr ""
+
+#: includes/functions.php:68
+msgid "Refunded"
+msgstr ""
+
+#: includes/functions.php:553 includes/functions.php:575
+msgid "Ticket Revenue"
+msgstr ""
+
+#: includes/functions.php:554 includes/functions.php:579
+msgid "Ticket Commissions"
+msgstr ""
+
+#: includes/functions.php:570
+msgid "Total number of ticket sales in this period."
+msgstr ""
+
+#: includes/functions.php:574
+msgid "Total amount of ticket revenue in this period."
+msgstr ""
+
+#: includes/functions.php:578
+msgid "Total amount of ticket commisions in this period."
+msgstr ""
+
+#: includes/scripts/bootstrap-table.min.js:10
+msgid "div"
+msgstr ""
+
+#: includes/scripts/bootstrap-table.min.js:10
+msgid "iframe"
+msgstr ""
+
+#: includes/scripts/html5-qrcode.min.js:2
+msgid "This luminance source does not support cropping."
+msgstr ""
+
+#: includes/scripts/html5-qrcode.min.js:2
+msgid "This luminance source does not support rotation by 90 degrees."
+msgstr ""
+
+#: includes/scripts/html5-qrcode.min.js:2
+msgid "This luminance source does not support rotation by 45 degrees."
+msgstr ""
+
+#: includes/views/create-tickets.php:11
+msgid "Create Tickets"
+msgstr ""
+
+#: includes/views/create-tickets.php:13 includes/views/create-tickets.php:15
+#: includes/views/manage-tickets/index.php:37
+#: includes/views/manage-tickets/index.php:39
+#: includes/views/view-tickets.php:12 includes/views/view-tickets.php:14
+#: includes/views/view-tickets.php:86
+msgid "Close"
+msgstr ""
+
+#: includes/views/create-tickets.php:28
+#, php-format
+msgid "Fees & commission on ticket sales is %s%%"
+msgstr ""
+
+#: includes/views/create-tickets.php:41
+msgid "Ticket Details"
+msgstr ""
+
+#: includes/views/create-tickets.php:49
+#: includes/views/manage-tickets/types.php:39
+msgid "Ticket Name"
+msgstr ""
+
+#: includes/views/create-tickets.php:50
+#: includes/views/manage-tickets/types.php:40
+msgid "e.g Regular"
+msgstr ""
+
+#: includes/views/create-tickets.php:58
+#: includes/views/manage-tickets/types.php:48
+msgid "Ticket Price"
+msgstr ""
+
+#: includes/views/create-tickets.php:59
+#: includes/views/manage-tickets/types.php:49
+msgid "Price per ticket"
+msgstr ""
+
+#: includes/views/create-tickets.php:65
+#: includes/views/manage-tickets/types.php:55
+msgid "Available Quantity"
+msgstr ""
+
+#: includes/views/create-tickets.php:66
+#: includes/views/manage-tickets/types.php:56
+msgid "# of available tickets"
+msgstr ""
+
+#: includes/views/create-tickets.php:75
+#: includes/views/manage-tickets/types.php:65
+msgid "Selected by default"
+msgstr ""
+
+#: includes/views/create-tickets.php:82
+#: includes/views/manage-tickets/types.php:72
+msgid ""
+"Sell tickets till the event starts (once the event start time kicks off, "
+"tickets can no longer be bought)"
+msgstr ""
+
+#: includes/views/create-tickets.php:89
+#: includes/views/manage-tickets/types.php:79
+msgid ""
+"Sell tickets till the event ends (ticket can be purchased till the event "
+"ends)"
+msgstr ""
+
+#: includes/views/create-tickets.php:93
+msgid "Remove Ticket"
+msgstr ""
+
+#: includes/views/create-tickets.php:105
+#: includes/views/manage-tickets/types.php:33
+msgid "Add Another Ticket"
+msgstr ""
+
+#: includes/views/create-tickets.php:110
+msgid "Save Tickets"
+msgstr ""
+
+#: includes/views/manage-tickets/index.php:11
+msgid "Types"
+msgstr ""
+
+#: includes/views/manage-tickets/index.php:15
+#: includes/views/manage-tickets/report.php:30
+msgid "Sales"
+msgstr ""
+
+#: includes/views/manage-tickets/index.php:19
+msgid "Report"
+msgstr ""
+
+#: includes/views/manage-tickets/index.php:23
+msgid "Scanner"
+msgstr ""
+
+#: includes/views/manage-tickets/index.php:35
+msgid "Manage Tickets"
+msgstr ""
+
+#: includes/views/manage-tickets/report.php:25
+#: includes/views/manage-tickets/report.php:100
+#: includes/views/manage-tickets/sales.php:56
+msgid "Earnings"
+msgstr ""
+
+#: includes/views/manage-tickets/report.php:60
+msgid "Ticket Types"
+msgstr ""
+
+#: includes/views/manage-tickets/report.php:67
+#: includes/views/manage-tickets/report.php:87
+#: includes/views/manage-tickets/report.php:92
+msgid "Total"
+msgstr ""
+
+#: includes/views/manage-tickets/report.php:81
+msgid "Totals"
+msgstr ""
+
+#: includes/views/manage-tickets/report.php:86
+msgid "Items"
+msgstr ""
+
+#: includes/views/manage-tickets/report.php:96
+#: includes/views/manage-tickets/sales.php:55
+#, php-format
+msgid "Fees (%s%%)"
+msgstr ""
+
+#: includes/views/manage-tickets/sales.php:43
+msgid "No tickets sold yet"
+msgstr ""
+
+#: includes/views/manage-tickets/sales.php:54
+msgid "Paid"
+msgstr ""
+
+#: includes/views/manage-tickets/sales.php:58
+#: includes/views/manage-tickets/types.php:13
+msgid "Actions"
+msgstr ""
+
+#: includes/views/manage-tickets/sales.php:123
+msgid "Resend Tickets"
+msgstr ""
+
+#: includes/views/manage-tickets/sales.php:132
+msgid "Refund Ticket"
+msgstr ""
+
+#: includes/views/manage-tickets/scanner.php:10
+msgid "Or"
+msgstr ""
+
+#: includes/views/manage-tickets/scanner.php:20
+#: includes/views/manage-tickets/scanner.php:21
+msgid "Enter Ticket Number"
+msgstr ""
+
+#: includes/views/manage-tickets/scanner.php:30
+msgid "Verify"
+msgstr ""
+
+#: includes/views/manage-tickets/scanner.php:46
+#: includes/views/view-tickets.php:22
+msgid "Ticket Number"
+msgstr ""
+
+#: includes/views/manage-tickets/scanner.php:50
+msgid "Ticket Status"
+msgstr ""
+
+#: includes/views/manage-tickets/scanner.php:54
+msgid "Redeem Ticket"
+msgstr ""
+
+#: includes/views/manage-tickets/type-row.php:6
+msgid "Event Ends"
+msgstr ""
+
+#: includes/views/manage-tickets/type-row.php:6
+msgid "Event Starts"
+msgstr ""
+
+#: includes/views/manage-tickets/type-row.php:11
+msgid "Edit Ticket"
+msgstr ""
+
+#: includes/views/manage-tickets/type-row.php:25
+msgid "This ticket cannot be deleted because it purchased by the user."
+msgstr ""
+
+#: includes/views/manage-tickets/type-row.php:31
+msgid "Delete Ticket"
+msgstr ""
+
+#: includes/views/manage-tickets/types.php:11
+msgid "Remaining"
+msgstr ""
+
+#: includes/views/manage-tickets/types.php:12
+msgid "Sold Till"
+msgstr ""
+
+#: includes/views/manage-tickets/types.php:84
+msgid "Save"
+msgstr ""
+
+#: includes/views/manage-tickets/types.php:85
+msgid "Cancel"
+msgstr ""
+
+#: includes/views/settings.php:15
+msgid "Could not save your settings. Please try again."
+msgstr ""
+
+#: includes/views/settings.php:22
+msgid "Your settings have been saved."
+msgstr ""
+
+#: includes/views/view-tickets.php:23
+msgid "Ticket Type"
+msgstr ""
+
+#: includes/views/view-tickets.php:26
+msgid "Invoice"
+msgstr ""
+
+#: includes/views/view-tickets.php:43
+#, php-format
+msgid "Used %s ago"
+msgstr ""
+
+#: includes/widgets/sell-tickets.php:35
+msgid "GD > Sell Tickets"
+msgstr ""
+
+#: includes/widgets/sell-tickets.php:38
+msgid "Allows listing owners to sell tickets"
+msgstr ""
+
+#: includes/widgets/sell-tickets.php:56
+msgid "Event ID:"
+msgstr ""
+
+#: includes/widgets/sell-tickets.php:57
+msgid "Leave blank to use the event being viewed."
+msgstr ""
+
+#: includes/widgets/sell-tickets.php:58
+msgid "Event being viewed"
+msgstr ""
+
+#: includes/widgets/sell-tickets.php:65 includes/widgets/sell-tickets.php:80
+msgid "Button Shadow"
+msgstr ""
+
+#: includes/widgets/sell-tickets.php:68 includes/widgets/sell-tickets.php:83
+msgid "Default"
+msgstr ""
+
+#: includes/widgets/sell-tickets.php:69 includes/widgets/sell-tickets.php:84
+msgid "Small"
+msgstr ""
+
+#: includes/widgets/sell-tickets.php:70 includes/widgets/sell-tickets.php:85
+msgid "Medium"
+msgstr ""
+
+#: includes/widgets/sell-tickets.php:71 includes/widgets/sell-tickets.php:86
+msgid "Large"
+msgstr ""
+
+#: includes/widgets/sell-tickets.php:76 includes/widgets/sell-tickets.php:102
+#: includes/widgets/sell-tickets.php:128 includes/widgets/sell-tickets.php:153
+msgid "Primary Button"
+msgstr ""
+
+#: includes/widgets/sell-tickets.php:91 includes/widgets/sell-tickets.php:113
+#: includes/widgets/sell-tickets.php:143 includes/widgets/sell-tickets.php:163
+msgid "Secondary Button"
+msgstr ""
+
+#: includes/widgets/sell-tickets.php:95 includes/widgets/sell-tickets.php:106
+msgid "Button Color"
+msgstr ""
+
+#: includes/widgets/sell-tickets.php:96 includes/widgets/sell-tickets.php:107
+msgid "Select the the button color."
+msgstr ""
+
+#: includes/widgets/sell-tickets.php:117 includes/widgets/sell-tickets.php:132
+msgid "Hide button on:"
+msgstr ""
+
+#: includes/widgets/sell-tickets.php:118 includes/widgets/sell-tickets.php:133
+msgid ""
+"You can set at what view the button will become hidden. Only affects buttons "
+"placed inside the archive item template."
+msgstr ""
+
+#: includes/widgets/sell-tickets.php:121 includes/widgets/sell-tickets.php:136
+msgid "Always show"
+msgstr ""
+
+#: includes/widgets/sell-tickets.php:122 includes/widgets/sell-tickets.php:137
+msgid "Grid view 2"
+msgstr ""
+
+#: includes/widgets/sell-tickets.php:123 includes/widgets/sell-tickets.php:138
+msgid "Grid view 3"
+msgstr ""
+
+#: includes/widgets/sell-tickets.php:124 includes/widgets/sell-tickets.php:139
+msgid "Grid view 4"
+msgstr ""
+
+#: includes/widgets/sell-tickets.php:125 includes/widgets/sell-tickets.php:140
+msgid "Grid view 5"
+msgstr ""
+
+#: includes/widgets/sell-tickets.php:148 includes/widgets/sell-tickets.php:158
+msgid "Extra class:"
+msgstr ""
+
+#: includes/widgets/sell-tickets.php:149 includes/widgets/sell-tickets.php:159
+msgid "Give the button an extra class so you can style things as you want."
+msgstr ""
+
+#: includes/widgets/sell-tickets.php:297
+msgid "Sell Tickets"
+msgstr ""
+
+#: includes/widgets/sell-tickets.php:323 includes/widgets/sell-tickets.php:380
+msgid "Tickets Sold Out"
+msgstr ""
+
+#: includes/widgets/sell-tickets.php:337 includes/widgets/sell-tickets.php:394
+msgid "Buy Tickets"
+msgstr ""
+
+#: includes/widgets/sell-tickets.php:348
+msgid "Ticket Management"
+msgstr ""
+
+#: includes/widgets/sell-tickets.php:512
+msgid "Primary Button Preview"
+msgstr ""
+
+#: includes/widgets/sell-tickets.php:520
+msgid "Secondary Button Preview"
+msgstr ""
+
+#: setup-environment.php:37
+msgid "GeoDirectory Events"
+msgstr ""
+
+#: setup-environment.php:44
+msgid "GetPaid > Wallet"
+msgstr ""
+
+#: setup-environment.php:51
+msgid "GetPaid > Item Inventory"
+msgstr ""
+
+#: setup-environment.php:78
+#, php-format
+msgid "This plugin requires the following plugin: %1$s."
+msgid_plural "This plugin requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/tickets/base.php:16
+msgid "Invalid Invoice"
+msgstr ""
+
+#: templates/tickets/base.php:21
+msgid "You are not allowed to view this invoice"
+msgstr ""
+
+#: templates/tickets/base.php:26
+#, php-format
+msgid "Tickets | %s | %s"
+msgstr ""
+
+#: templates/tickets/base.php:75
+msgid "Print Tickets"
+msgstr ""
+
+#: templates/tickets/base.php:136
+msgid "Location:"
+msgstr ""
+
+#: templates/tickets/ticket.php:64
+msgid "Start"
+msgstr ""
+
+#: templates/tickets/ticket.php:68
+msgid "End"
+msgstr ""
+
+#: templates/tickets/ticket.php:72
+msgid "Attendee"
+msgstr ""

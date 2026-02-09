@@ -1,0 +1,200 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoDirectory Custom Map Styles 2.3.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-13 13:08+0530\n"
+"PO-Revision-Date: 2025-01-13 13:08+0530\n"
+"Last-Translator: \n"
+"Language-Team: AyeCode Ltd <contact@ayecode.io>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_n:1,2;_n_noop:1,2;"
+"_nx:1,2;_x;_ex;esc_attr_e;esc_attr__\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: geodir_custom_google_maps.php:52
+#, php-format
+msgid ""
+"%s requires to install the %sGeoDirectory%s plugin to be installed and "
+"active."
+msgstr ""
+
+#: geodir_custom_google_maps.php:67
+#, php-format
+msgid ""
+"The plugin %sWP Easy Updates%s is required to check for and update some "
+"installed plugins, please install it now."
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:133
+msgid "General"
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:137
+#: includes/admin/class-custom-google-maps-admin.php:383
+msgid "Manage Map Styles"
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:174
+msgid "Google Map"
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:175
+msgid "OpenStreetMap"
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:309
+msgid "General Settings"
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:316
+msgid "Custom Style on Directory Map?"
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:317
+msgid "Enable custom style on directory map."
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:324
+msgid "Custom Style on Archive Map?"
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:325
+msgid "Enable custom style on archive page map."
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:332
+msgid "Custom Style on Detail Map?"
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:333
+msgid "Enable custom style on detail page map."
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:340
+msgid "Custom Style on Add Listing page?"
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:341
+msgid "Enable custom style on add listing page map."
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:348
+msgid "OSM Layer API Key"
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:349
+msgid "Some OSM layers require an API key, you can enter it here."
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:466
+msgid "Edit Styles"
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:467
+msgid "Import Styles"
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:476
+#: includes/admin/class-custom-google-maps-admin.php:926
+msgid "Feature Type:"
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:491
+#: includes/admin/class-custom-google-maps-admin.php:927
+msgid "Element Type:"
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:509
+msgid "Color:"
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:513
+msgid "Gamma:"
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:517
+msgid "Hue:"
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:521
+msgid "Invert lightness:"
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:532
+msgid "Lightness:"
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:536
+msgid "Saturation:"
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:540
+msgid "Visibility:"
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:549
+msgid "Weight:"
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:555
+msgid "Read more about MapTypeStyler Properties."
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:559
+msgid "Add new styles"
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:565
+msgid "Preview Styles"
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:581
+msgid "Use the predefined map styles ( JavaScript Style Array ) available at "
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:581
+msgid "snazzymaps.com/explore"
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:581
+msgid " It must be an well defined javascript array format."
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:585
+msgid "Paste the predefined map styles ( JavaScript Style Array ) here."
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:590
+msgid "Import new styles"
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:658
+msgid "Save Changes"
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:747
+msgid "Directory Map Style"
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:750
+msgid "Archive Map Style"
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:753
+msgid "Single Map Style"
+msgstr ""
+
+#: includes/admin/class-custom-google-maps-admin.php:756
+msgid "Add Listing Map Style"
+msgstr ""
+
+#: includes/gd-google-maps-helper.php:61
+msgid "Select"
+msgstr ""

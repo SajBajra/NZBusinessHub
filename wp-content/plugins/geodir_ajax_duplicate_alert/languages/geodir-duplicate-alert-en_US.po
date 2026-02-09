@@ -1,0 +1,211 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoDirectory Ajax Duplicate Alert 2.3.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-25 19:52+0530\n"
+"PO-Revision-Date: 2025-12-25 19:52+0530\n"
+"Last-Translator: \n"
+"Language-Team: AyeCode Ltd <contact@ayecode.io>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;__ngettext:1,2;__ngettext_noop:1,2;_c;_e;_ex:1,2c;"
+"_n:1,2;_n_noop:1,2;_nc:4c,1,2;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;gettext;"
+"gettext_noop\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: geodir_ajax_duplicate_alert.php:47
+#, php-format
+msgid ""
+"%s requires to install the %sGeoDirectory%s plugin to be installed and "
+"active."
+msgstr ""
+
+#: geodir_ajax_duplicate_alert.php:58
+#, php-format
+msgid ""
+"The plugin %sWP Easy Updates%s is required to check for and update some "
+"installed plugins, please install it now."
+msgstr ""
+
+#: includes/admin/class-custom-ajax-duplicate-alert-admin.php:66
+msgid "AJAX Duplicate Alert"
+msgstr ""
+
+#: includes/admin/class-custom-ajax-duplicate-alert-admin.php:67
+msgid ""
+"Check this box if you would like to completely remove all of its data when "
+"AJAX Duplicate alert is deleted."
+msgstr ""
+
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:40
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:93
+msgid "Duplicate Alert"
+msgstr ""
+
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:95
+msgid ""
+"Show alert when duplicate value is entered in below fields for this post "
+"type on add new listing page."
+msgstr ""
+
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:100
+msgid "Fields to check"
+msgstr ""
+
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:103
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:124
+msgid "Post Title"
+msgstr ""
+
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:104
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:125
+msgid "Address"
+msgstr ""
+
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:105
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:126
+msgid "Zip/Post Code"
+msgstr ""
+
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:106
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:127
+msgid "Phone"
+msgstr ""
+
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:107
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:128
+msgid "Email"
+msgstr ""
+
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:108
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:129
+msgid "Website"
+msgstr ""
+
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:110
+msgid "Select one or more fields to check duplicate value."
+msgstr ""
+
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:111
+msgid "Please select fields"
+msgstr ""
+
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:122
+msgid "Submit Form Even When Duplicate Found For"
+msgstr ""
+
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:131
+msgid ""
+"Allow form submit even when duplicate record found for the selected fields."
+msgstr ""
+
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:132
+msgid "Select Fields"
+msgstr ""
+
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:140
+msgid "Validation message"
+msgstr ""
+
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:141
+msgid "Default duplicate value error message for all fields."
+msgstr ""
+
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:152
+msgid "Post title validation error"
+msgstr ""
+
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:153
+msgid "Add post title field duplication validation message"
+msgstr ""
+
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:157
+msgid "Please enter post title validation message"
+msgstr ""
+
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:164
+msgid "Address validation error"
+msgstr ""
+
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:165
+msgid "Add address field duplication validation message"
+msgstr ""
+
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:169
+msgid "Please enter address validation message"
+msgstr ""
+
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:176
+msgid "Zip/Post code validation error"
+msgstr ""
+
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:177
+msgid "Add zip/postal code field duplication validation message"
+msgstr ""
+
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:181
+msgid "Please enter Zip/Post code validation message"
+msgstr ""
+
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:188
+msgid "Phone validation error"
+msgstr ""
+
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:189
+msgid "Add phone field duplication validation message"
+msgstr ""
+
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:193
+msgid "Please enter phone validation message"
+msgstr ""
+
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:200
+msgid "Email validation error"
+msgstr ""
+
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:201
+msgid "Add email field duplication validation message"
+msgstr ""
+
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:205
+msgid "Please enter email validation message"
+msgstr ""
+
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:212
+msgid "Website validation error"
+msgstr ""
+
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:213
+msgid "Add Website field duplication validation message"
+msgstr ""
+
+#: includes/admin/settings/class-ajax-duplicate-alert-settings.php:217
+msgid "Please enter Website validation message"
+msgstr ""
+
+#: includes/class-ajax-duplicate-alert-defaults.php:25
+#, php-format
+msgid ""
+"A listing with this %s already exists! Please make sure you are not adding a "
+"duplicate entry."
+msgstr ""
+
+#: includes/class-ajax-duplicate-alert-defaults.php:27
+msgid ""
+"A listing with this field already exists! Please make sure you are not "
+"adding a duplicate entry."
+msgstr ""
+
+#: includes/geodir-ajax-duplicate-alert-activate.php:33
+#, php-format
+msgid ""
+"%s with this field is already listed! Please make sure you are not adding a "
+"duplicate entry."
+msgstr ""

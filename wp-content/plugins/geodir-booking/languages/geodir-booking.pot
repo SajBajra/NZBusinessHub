@@ -1,0 +1,3348 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoDirectory Booking Engine 2.1.12\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-01 18:21+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Generator: Poedit 3.5\n"
+"X-Domain: geodir-booking\n"
+"X-Poedit-KeywordsList: __;__ngettext:1,2;__ngettext_noop:1,2;_c;_e;_ex:1,2c;"
+"_n:1,2;_n_noop:1,2;_nc:4c,1,2;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;gettext;"
+"gettext_noop\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: assets\n"
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:106
+msgid "— Any —"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:162
+msgid "There is something that went wrong!"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:183
+#: includes/class-geodir-booking-ajax.php:251
+#: includes/class-geodir-booking-rest.php:995
+msgid "Check-in and check-out dates are required."
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:185
+#: includes/class-geodir-booking-ajax.php:260
+#: includes/class-geodir-booking-rest.php:1002
+msgid "Check-out date cannot be before check-in date."
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:315
+#, php-format
+msgctxt "Listing in price breakdown table. Example: #1 Double Room"
+msgid "#%1$d %2$s"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:316
+msgid "Expand"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:332
+#: includes/admin/class-geodir-booking-add-booking-page.php:727
+#: includes/admin/class-geodir-booking-add-booking-page.php:1046
+#: includes/class-geodir-booking-search.php:225 templates/booking-form.php:175
+#: templates/owner-new-booking-modal.php:95
+msgid "Adults"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:337
+#: includes/admin/class-geodir-booking-add-booking-page.php:747
+#: includes/admin/class-geodir-booking-add-booking-page.php:1065
+#: includes/class-geodir-booking-search.php:229 templates/booking-form.php:193
+#: templates/owner-new-booking-modal.php:114
+msgid "Children"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:342
+#: templates/bs5/ruleset-editor.php:139 templates/bs5/ruleset-editor.php:283
+#: templates/bs5/ruleset-editor.php:293 templates/bs5/ruleset-editor.php:308
+#: templates/bs5/ruleset-editor.php:318 templates/bs5/ruleset-editor.php:328
+#: templates/bs5/ruleset-editor.php:338 templates/bs5/ruleset-editor.php:348
+#: templates/bs5/ruleset-editor.php:358 templates/bs5/ruleset-editor.php:368
+#: templates/ruleset-editor.php:143 templates/ruleset-editor.php:287
+#: templates/ruleset-editor.php:297 templates/ruleset-editor.php:312
+#: templates/ruleset-editor.php:322 templates/ruleset-editor.php:332
+#: templates/ruleset-editor.php:342 templates/ruleset-editor.php:352
+#: templates/ruleset-editor.php:362 templates/ruleset-editor.php:372
+msgid "Nights"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:348
+#: templates/book-now-modal.php:51
+msgid "Dates"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:349
+msgid "Amount"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:369
+#: includes/admin/class-geodir-booking-add-booking-page.php:371
+#: includes/class-geodir-booking.php:984
+#: includes/class-geodir-customer-booking.php:593
+#: templates/bs5/ruleset-editor.php:95 templates/ruleset-editor.php:99
+msgid "Extra Guests Fee"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:370
+#: includes/class-geodir-booking.php:985
+#: includes/class-geodir-customer-booking.php:600
+#: templates/bs5/ruleset-editor.php:75 templates/ruleset-editor.php:79
+msgid "Cleaning Fee"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:372
+#: includes/class-geodir-booking.php:986
+#: includes/class-geodir-customer-booking.php:607
+#: templates/bs5/ruleset-editor.php:85 templates/ruleset-editor.php:89
+msgid "Pet Fee"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:373
+#: includes/class-geodir-booking.php:566 includes/class-geodir-booking.php:988
+#: includes/class-geodir-customer-booking.php:621
+#: includes/tables/class-geodir-booking-admin-bookings-table.php:332
+#: templates/customer-bookings.php:51
+msgid "Service Fee"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:374
+#: includes/admin/class-geodir-booking-add-booking-page.php:403
+#: includes/tables/class-geodir-booking-admin-bookings-table.php:333
+msgid "Site Commission"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:375
+#: includes/admin/class-geodir-booking-add-booking-page.php:405
+#: includes/class-geodir-booking.php:989
+#: includes/class-geodir-customer-booking.php:484
+#: includes/views/metabox-booking-invoice.php:18
+msgid "Total"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:401
+msgid "Fees"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:599
+#: includes/admin/class-geodir-booking-admin.php:120
+#: includes/admin/class-geodir-booking-admin.php:121
+#: includes/views/bookings.php:33 templates/owner-bookings.php:75
+#: templates/owner-new-booking-modal.php:21
+msgid "Add New Booking"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:600
+msgid "Clear Search Results"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:645
+msgid "Required fields are followed by"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:669
+#: templates/owner-new-booking-modal.php:38
+msgid "Check-in *"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:673
+#: includes/views/metabox-booking-details.php:88
+#: templates/owner-new-booking-modal.php:42
+#: templates/owner-new-booking-modal.php:169
+msgid "Check-in Date"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:688
+#: templates/owner-new-booking-modal.php:57
+msgid "Check-out *"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:692
+#: includes/views/metabox-booking-details.php:107
+#: templates/owner-new-booking-modal.php:61
+#: templates/owner-new-booking-modal.php:173
+msgid "Check-out Date"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:707
+#: includes/tables/class-geodir-booking-admin-bookings-table.php:330
+#: includes/tables/class-geodir-booking-sync-calendar-table.php:122
+#: includes/tables/class-geodir-booking-sync-listings-table.php:157
+#: includes/views/metabox-booking-details.php:20
+#: templates/customer-bookings.php:46 templates/owner-bookings.php:61
+#: templates/owner-new-booking-modal.php:76
+#: templates/owner-new-booking-modal.php:160
+msgid "Listing"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:767
+msgid "Search"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:815
+msgid "Search Results"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:822
+#: includes/class-geodir-booking-rest.php:1018
+#, php-format
+msgid "%s listing found"
+msgid_plural "%s listings found"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:826
+#: includes/class-geodir-booking-rest.php:1022
+msgid "No listings found"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:830
+#: includes/class-geodir-booking-rest.php:1038
+#, php-format
+msgid " from %1$s - till %2$s"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:848
+msgid "Title"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:849
+#: includes/admin/class-geodir-booking-add-booking-page.php:1046
+#: includes/class-geodir-customer-booking.php:472
+#: includes/class-geodir-customer-booking.php:569
+#: templates/booking-form.php:159 templates/owner-new-booking-modal.php:177
+msgid "Guests"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:850
+#: templates/bs5/ruleset-editor.php:54 templates/date-editor.php:32
+#: templates/ruleset-editor.php:57
+msgid "Nightly price"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:867
+msgid "Adults:"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:869
+msgid "Max guests:"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:873
+msgid "Children:"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:875
+msgid "Suitable for children"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:894
+#: templates/book-now-modal.php:58 templates/booking-form.php:359
+#: templates/owner-new-booking-modal.php:271
+msgid "Reserve"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:914
+msgid "There are no listings selected for reservation."
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:988
+#: includes/admin/class-geodir-booking-admin.php:766
+#: templates/calendar-single-body.php:46
+#: templates/customer-view-booking-modal.php:43
+#: templates/owner-view-booking-modal.php:27
+#: templates/owner-view-booking-modal.php:29
+#: templates/view-bookings-modal.php:50
+msgid "Booking Details"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:994
+msgid "Check-in:"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:1003
+msgid "Check-out:"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:1028
+#, php-format
+msgid "Room #%d"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:1033
+msgid "Listing:"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:1088
+msgid "Guest Information"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:1099
+#: templates/booking-form.php:140
+msgid "Full Name"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:1114
+#: includes/class-geodir-customer-booking.php:561
+#: templates/book-now-modal.php:40 templates/book-now-modal.php:41
+#: templates/booking-form.php:145 templates/booking-form.php:146
+#: templates/owner-view-booking-modal.php:55
+msgid "Email"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:1129
+#: includes/class-geodir-customer-booking.php:565
+#: templates/book-now-modal.php:45 templates/book-now-modal.php:46
+#: templates/booking-form.php:151 templates/booking-form.php:152
+msgid "Phone"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:1143
+msgid "Private Notes"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:1161
+#: includes/admin/class-geodir-booking-admin.php:786
+#: includes/class-geodir-booking.php:1011
+#: includes/views/metabox-booking-prices.php:16
+msgid "Price Breakdown"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:1174
+#: includes/class-geodir-booking.php:562
+#: includes/class-geodir-customer-booking.php:496
+#: includes/class-geodir-customer-booking.php:647
+#: includes/class-tgm-plugin-activation.php:2647
+#: includes/tables/class-geodir-booking-admin-bookings-table.php:334
+#: includes/tables/class-geodir-booking-sync-listings-table.php:158
+#: includes/tables/class-geodir-booking-sync-logs-table.php:103
+#: includes/views/metabox-booking-invoice.php:17
+#: includes/views/metabox-booking-status.php:29 templates/booking-form.php:272
+#: templates/customer-bookings.php:47 templates/owner-bookings.php:62
+#: templates/owner-new-booking-modal.php:242
+#: templates/owner-view-booking-modal.php:219
+#: templates/view-bookings-modal.php:90
+msgid "Status"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-add-booking-page.php:1208
+#: templates/book-now-modal.php:11 templates/owner-new-booking-modal.php:277
+msgid "Book Now"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:71
+msgid "Repair Bookings Database"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:72
+msgid "Repair"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:73
+msgid "Creates missing database tables and columns."
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:98
+#: includes/admin/class-geodir-booking-admin.php:99
+#: includes/admin/class-geodir-booking-admin.php:110
+#: includes/admin/class-geodir-booking-admin.php:111
+#: includes/admin/class-geodir-booking-admin.php:550
+#: includes/admin/class-geodir-booking-admin.php:663
+#: includes/views/bookings.php:32 templates/view-bookings-modal.php:49
+msgid "Bookings"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:130
+#: includes/admin/class-geodir-booking-admin.php:131
+msgid "Sync Calendars"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:140
+#: includes/admin/class-geodir-booking-admin.php:141
+#: includes/tables/class-geodir-booking-sync-calendar-table.php:124
+msgid "External Calendars"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:150
+#: includes/admin/class-geodir-booking-admin.php:151
+#: includes/admin/class-geodir-booking-ical-import-page.php:212
+#: includes/admin/class-geodir-booking-ical-import-page.php:274
+#: includes/tables/class-geodir-booking-sync-calendar-table.php:192
+msgid "Import Calendar"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:160
+#: includes/admin/class-geodir-booking-admin.php:161
+msgid "Sync Status"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:170
+#: includes/admin/class-geodir-booking-admin.php:171
+msgid "Emails"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:180
+msgid "Booking Settings"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:181
+msgid "Settings"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:230
+msgid "Sync, Import and Export Calendars"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:231
+#: includes/admin/class-geodir-booking-sync-status-page.php:140
+msgid "Sync All External Calendars"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:233
+msgid ""
+"Sync your bookings across various platforms like Booking.com, TripAdvisor, "
+"Airbnb etc. via iCalendar file format."
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:310
+msgid "Booking Payments"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:311
+msgid "Select the payment method to use for booking payments."
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:313
+msgid "Collect full payment for bookings"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:314
+msgid "Collect only a deposit"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:315
+msgid "Do not collect any payment"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:318
+#: includes/admin/class-geodir-booking-admin.php:366
+msgid "Select an option"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:322
+msgid "Deposit %"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:323
+msgid "Set the deposit payable for each booking"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:331
+msgid "Booking Sales Commission %"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:332
+msgid "Remember to account for gateway fees"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:340
+msgid "Additional Service fee %"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:341
+msgid "Optional. Payable by the guest."
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:350
+msgid "Allow Free Booking"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:351
+msgid ""
+"Allows listing owner to setup 0(zero) nightly price to allow free booking."
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:358
+msgid "Tax behaviour"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:359
+msgid "How should we calculate tax?"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:361
+msgid "Tax the booking amount"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:362
+msgid "Tax the booking amount and service fee"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:363
+msgid "Tax the service fee and site commision"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:371
+msgid "Payment Form"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:372
+msgid "Optional. Select a payment form to use when paying for a booking."
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:374
+msgid "Select payment form"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:379
+msgid "Hold booking (minutes)"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:380
+msgid ""
+"Hold booking (for unpaid invoices) for x minutes. When this time limit is "
+"reached, the pending invoice will be cancelled and the booking released, "
+"allowing other customers to book the same dates. Leave blank to disable."
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:382
+msgid "Do not hold bookings"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:387
+msgid "Cancellation policies"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:388
+msgid "Listing owners will be able to select one for each of their listings."
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:393
+msgid "iCalendar Synchronization"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:398
+msgid "Imported Bookings"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:399
+msgid "Do not export imported bookings."
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:406
+msgid "iCalendar Sync Scheduler"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:411
+msgid "Enable iCal Synchronization"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:412
+msgid "Enable automatic external calendars synchronization."
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:420
+msgid "Clock"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:421
+msgid ""
+"Sync calendars at this time (UTC) or starting at this time every interval "
+"below."
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:427
+msgid "Select Interval"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:428
+msgid "Interval"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:430
+#: includes/class-geodir-booking-cron.php:141
+msgid "Quarter an Hour"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:431
+#: includes/class-geodir-booking-cron.php:146
+msgid "Half an Hour"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:432
+msgid "Once Hourly"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:433
+msgid "Twice Daily"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:434
+msgid "Once Daily"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:442
+msgid "Select Period"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:443
+msgid "Automatically delete sync logs older than"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:445
+msgid "Day"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:446
+msgid "Week"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:447
+msgid "Month"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:448
+msgid "Quarter"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:449
+msgid "Half a Year"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:450
+msgid "Never Delete"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:569
+#: includes/admin/class-geodir-booking-admin.php:572
+#: includes/admin/class-geodir-booking-admin.php:576
+#, php-format
+msgid "Use Default (%s)"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:776
+#: includes/views/metabox-booking-status.php:71
+msgid "Update Booking"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:796
+#: includes/views/metabox-booking-note.php:15 templates/date-editor.php:42
+#: templates/owner-new-booking-modal.php:233
+#: templates/owner-view-booking-modal.php:107
+#: templates/owner-view-booking-modal.php:208
+#: templates/view-bookings-modal.php:205
+msgid "Private Note"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:807
+msgid "Booking Invoice"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:842
+msgid "Select Cancellation Policy"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:887
+#: includes/functions.php:170
+msgid "Booking"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:888
+msgid "Adds a checkbox in add listing page to make the listing bookable."
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:893
+msgid "Enable booking feature for the listing."
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:917
+msgid "Instant Book"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:918
+msgid ""
+"Adds a checkbox in add listing page to allow users to book listings without "
+"waiting for owner approval."
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:923
+msgid ""
+"Enable to automatically accept bookings. Disable to manually accept or "
+"decline booking requests."
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:947
+#: includes/admin/class-geodir-booking-admin.php:952
+#: includes/admin/class-geodir-booking-admin.php:953
+#: templates/bs5/ruleset-editor.php:48 templates/ruleset-editor.php:50
+msgid "Nightly Price"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:948
+msgid "Adds an input for the nightly price."
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:954
+msgid "Enter the default nightly price without a currency symbol"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:963
+msgid "Please enter number and decimal only e.g: 100.50"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:986
+msgid "Multiple Units"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:987
+msgid ""
+"Adds a checkbox in add listing page to indicate that the listing has "
+"several units."
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:992
+msgid "Check this if the listing has several units or rooms."
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:1016
+#: includes/admin/class-geodir-booking-admin.php:1021
+#: includes/admin/class-geodir-booking-admin.php:1022
+msgid "Number of Rooms"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:1017
+msgid "Adds an input for the number of rooms."
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:1023
+msgid "Enter the number of rooms."
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:1032
+msgid "Please enter number only e.g: 5"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:1049
+#: includes/class-geodir-customer-booking.php:642
+msgid "Cancellation Policy"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:1050
+msgid "Allows listing owners to set the cancellation policy."
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:1081
+msgid "Property Max Guests"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:1082
+msgid "Adds a input to enter max number of guests allowed for the property."
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:1087
+msgid "Enter max number of guests allowed."
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:1111
+msgid "Property Suitable For Infants"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:1112
+msgid ""
+"Adds a checkbox to allow users to tick the listing suitable for infants."
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:1141
+msgid "Property Suitable For Pets"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-admin.php:1142
+msgid "Adds a checkbox to allow users to tick the listing suitable for pets."
+msgstr ""
+
+#: includes/admin/class-geodir-booking-external-calendar-page.php:77
+#, php-format
+msgid "Edit External Calendars of \"%s\""
+msgstr ""
+
+#: includes/admin/class-geodir-booking-external-calendar-page.php:87
+#: includes/admin/class-geodir-booking-external-calendar-page.php:150
+#: templates/bs5/ruleset-editor.php:444 templates/ruleset-editor.php:447
+msgid "Calendar URL"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-external-calendar-page.php:89
+#: templates/owner-bookings.php:142
+msgid "Actions"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-external-calendar-page.php:105
+#: templates/bs5/ruleset-editor.php:451 templates/ruleset-editor.php:454
+msgid "Add New Calendar"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-external-calendar-page.php:112
+#: includes/class-tgm-plugin-activation.php:2816
+msgid "Update"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-external-calendar-page.php:113
+#: includes/admin/class-geodir-booking-ical-import-page.php:213
+#: includes/admin/class-geodir-booking-ical-import-page.php:273
+msgid "Back"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-external-calendar-page.php:154
+#: includes/tables/class-geodir-booking-admin-bookings-table.php:255
+#: includes/tables/class-geodir-booking-admin-bookings-table.php:281
+#: includes/tables/class-geodir-booking-sync-listings-table.php:189
+#: templates/bs5/ruleset-editor.php:445 templates/owner-bookings.php:160
+#: templates/ruleset-editor.php:448
+msgid "Delete"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-ical-import-page.php:116
+#: includes/admin/class-geodir-booking-sync-status-page.php:101
+#: includes/admin/class-geodir-booking-sync-status-page.php:141
+#: includes/ical/class-geodir-booking-logs-handler.php:99
+msgid "Abort Process"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-ical-import-page.php:117
+#: includes/admin/class-geodir-booking-sync-status-page.php:102
+msgid "Aborting..."
+msgstr ""
+
+#: includes/admin/class-geodir-booking-ical-import-page.php:217
+#: includes/functions.php:674 includes/functions.php:710
+#, php-format
+msgid "Listing: %s"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-ical-import-page.php:224
+msgid ""
+"Please be patient while the calendars are imported. You will be notified "
+"via this page when the process is completed."
+msgstr ""
+
+#: includes/admin/class-geodir-booking-sync-status-page.php:103
+#: includes/admin/class-geodir-booking-sync-status-page.php:142
+#: includes/ical/class-geodir-booking-logs-handler.php:110
+msgid "Delete All Logs"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-sync-status-page.php:104
+msgid "Deleting..."
+msgstr ""
+
+#: includes/admin/class-geodir-booking-sync-status-page.php:105
+#, php-format
+msgid "%d item"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-sync-status-page.php:106
+#, php-format
+msgid "%d items"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-sync-status-page.php:122
+#: includes/admin/class-geodir-booking-sync-status-page.php:185
+msgid "iCalendars Sync Status"
+msgstr ""
+
+#: includes/admin/class-geodir-booking-sync-status-page.php:123
+msgid "View the synchronization status of your external calendars."
+msgstr ""
+
+#: includes/admin/class-geodir-booking-sync-status-page.php:188
+msgid "Display iCalendars synchronization status."
+msgstr ""
+
+#: includes/background-processes/class-geodir-booking-background-sync.php:85
+#, php-format
+msgid "Maximum execution time is set to %d seconds."
+msgstr ""
+
+#: includes/background-processes/class-geodir-booking-background-sync.php:137
+#, php-format
+msgid "%d URL pulled for parsing."
+msgid_plural "%d URLs pulled for parsing."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/background-processes/class-geodir-booking-background-sync.php:139
+msgid "Skipped. No URLs found for parsing."
+msgstr ""
+
+#: includes/background-processes/class-geodir-booking-background-uploader.php:108
+msgid "Cannot read uploaded file"
+msgstr ""
+
+#: includes/background-processes/class-geodir-booking-background-worker.php:428
+#, php-format
+msgctxt "%s - calendar URI or calendar filename"
+msgid "%1$d event found in calendar %2$s"
+msgid_plural "%1$d events found in calendar %2$s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/background-processes/class-geodir-booking-background-worker.php:458
+#, php-format
+msgctxt "%s - calendar URI or calendar filename"
+msgid "Calendar source is empty (%s)"
+msgstr ""
+
+#: includes/background-processes/class-geodir-booking-background-worker.php:471
+#, php-format
+msgctxt "%s - calendar URI or calendar filename"
+msgid "Calendar file is not empty, but there are no events in %s"
+msgstr ""
+
+#: includes/background-processes/class-geodir-booking-background-worker.php:508
+#, php-format
+msgid ""
+"We will need to check %d previous day rule after importing and remove it if "
+"it is outdated."
+msgid_plural ""
+"We will need to check %d previous day rules after importing and remove the "
+"outdated ones."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/background-processes/class-geodir-booking-background-worker.php:529
+#, php-format
+msgid "Error while loading calendar (%1$s): %2$s"
+msgstr ""
+
+#: includes/background-processes/class-geodir-booking-background-worker.php:531
+#, php-format
+msgctxt "%s - error description"
+msgid "Parse error. %s"
+msgstr ""
+
+#: includes/background-processes/class-geodir-booking-background-worker.php:582
+#, php-format
+msgid "Skipped. Outdated day rule #%d already removed."
+msgstr ""
+
+#: includes/background-processes/class-geodir-booking-background-worker.php:588
+#, php-format
+msgid "Skipped. Day rule #%d updated with new data."
+msgstr ""
+
+#: includes/background-processes/class-geodir-booking-background-worker.php:639
+#, php-format
+msgid "The outdated day rule #%d has been removed."
+msgstr ""
+
+#: includes/class-geodir-booking-ajax.php:177
+msgid ""
+"Request does not pass security verification. Please refresh the page and "
+"try one more time."
+msgstr ""
+
+#: includes/class-geodir-booking-ajax.php:215
+msgid "No room selected."
+msgstr ""
+
+#: includes/class-geodir-booking-ajax.php:224
+msgid "Customer name is required."
+msgstr ""
+
+#: includes/class-geodir-booking-ajax.php:233
+msgid "Phone number is required."
+msgstr ""
+
+#: includes/class-geodir-booking-ajax.php:242
+msgid "Valid email is required."
+msgstr ""
+
+#: includes/class-geodir-booking-ajax.php:269
+#: includes/class-geodir-booking-rest.php:517
+#: includes/class-geodir-booking-rest.php:906
+msgid "Please select a valid status."
+msgstr ""
+
+#: includes/class-geodir-booking-ajax.php:281
+msgid "Selected listing is not available."
+msgstr ""
+
+#: includes/class-geodir-booking-ajax.php:407
+#: includes/tables/class-geodir-booking-sync-listings-table.php:118
+msgid "Waiting"
+msgstr ""
+
+#: includes/class-geodir-booking-ajax.php:410
+#: includes/tables/class-geodir-booking-sync-listings-table.php:121
+msgid "Processing"
+msgstr ""
+
+#: includes/class-geodir-booking-ajax.php:413
+#: includes/tables/class-geodir-booking-sync-listings-table.php:124
+msgid "Done"
+msgstr ""
+
+#: includes/class-geodir-booking-cron.php:151
+msgid "Cancel all unpaid invoices after held duration to prevent stock lock."
+msgstr ""
+
+#: includes/class-geodir-booking-cron.php:156
+msgid "Mark bookings as completed"
+msgstr ""
+
+#: includes/class-geodir-booking-cron.php:161
+msgid "Interval for automatic cleaning of synchronization logs."
+msgstr ""
+
+#: includes/class-geodir-booking-day-rule.php:216
+msgid "Missing rule date."
+msgstr ""
+
+#: includes/class-geodir-booking-day-rule.php:221
+msgid "Missing listing id."
+msgstr ""
+
+#: includes/class-geodir-booking-day-rule.php:271
+#, php-format
+msgid "Error saving day rule: %s"
+msgstr ""
+
+#: includes/class-geodir-booking-emails.php:74
+#: includes/class-geodir-booking-emails.php:168
+msgid "Booking Request (Listing Owner)"
+msgstr ""
+
+#: includes/class-geodir-booking-emails.php:75
+msgid ""
+"This will send a BCC email to the site admin when there is a booking "
+"request."
+msgstr ""
+
+#: includes/class-geodir-booking-emails.php:83
+#: includes/class-geodir-booking-emails.php:174
+msgid "Booking Confirmation (Listing Owner)"
+msgstr ""
+
+#: includes/class-geodir-booking-emails.php:84
+msgid ""
+"This will send a BCC email to the site admin for listing owner booking "
+"confirmations."
+msgstr ""
+
+#: includes/class-geodir-booking-emails.php:92
+#: includes/class-geodir-booking-emails.php:180
+msgid "Booking Cancellation (Listing Owner)"
+msgstr ""
+
+#: includes/class-geodir-booking-emails.php:93
+msgid ""
+"This will send a BCC email to the site admin for listing owner booking "
+"cancellations."
+msgstr ""
+
+#: includes/class-geodir-booking-emails.php:101
+#: includes/class-geodir-booking-emails.php:186
+msgid "Booking Refunded (Listing Owner)"
+msgstr ""
+
+#: includes/class-geodir-booking-emails.php:102
+msgid ""
+"This will send a BCC email to the site admin for listing owner booking "
+"refunds."
+msgstr ""
+
+#: includes/class-geodir-booking-emails.php:110
+#: includes/class-geodir-booking-emails.php:192
+msgid "Booking Pending (Customer)"
+msgstr ""
+
+#: includes/class-geodir-booking-emails.php:111
+msgid ""
+"This will send a BCC email to the site admin for customer booking pending "
+"review emails."
+msgstr ""
+
+#: includes/class-geodir-booking-emails.php:119
+#: includes/class-geodir-booking-emails.php:198
+msgid "Booking Rejected (Customer)"
+msgstr ""
+
+#: includes/class-geodir-booking-emails.php:120
+msgid ""
+"This will send a BCC email to the site admin for customer booking rejected "
+"emails."
+msgstr ""
+
+#: includes/class-geodir-booking-emails.php:128
+#: includes/class-geodir-booking-emails.php:204
+msgid "Booking Confirmation (Customer)"
+msgstr ""
+
+#: includes/class-geodir-booking-emails.php:129
+msgid ""
+"This will send a BCC email to the site admin for customer booking "
+"confirmations."
+msgstr ""
+
+#: includes/class-geodir-booking-emails.php:137
+#: includes/class-geodir-booking-emails.php:210
+msgid "Booking Cancellation (Customer)"
+msgstr ""
+
+#: includes/class-geodir-booking-emails.php:138
+msgid ""
+"This will send a BCC email to the site admin for customer booking "
+"cancellations."
+msgstr ""
+
+#: includes/class-geodir-booking-emails.php:146
+#: includes/class-geodir-booking-emails.php:216
+msgid "Booking Refunded (Customer)"
+msgstr ""
+
+#: includes/class-geodir-booking-emails.php:147
+msgid ""
+"This will send a BCC email to the site admin for customer booking refunds."
+msgstr ""
+
+#: includes/class-geodir-booking-emails.php:169
+msgid ""
+"This will send an email to the listing owner when there is a booking "
+"request."
+msgstr ""
+
+#: includes/class-geodir-booking-emails.php:175
+msgid ""
+"This will send an email to the listing owner when a booking is confirmed."
+msgstr ""
+
+#: includes/class-geodir-booking-emails.php:181
+msgid ""
+"This will send an email to the listing owner when a booking is canceled."
+msgstr ""
+
+#: includes/class-geodir-booking-emails.php:187
+msgid ""
+"This will send an email to the listing owner when a booking is refunded."
+msgstr ""
+
+#: includes/class-geodir-booking-emails.php:193
+msgid ""
+"This will send an email to the customer when a booking is pending review."
+msgstr ""
+
+#: includes/class-geodir-booking-emails.php:199
+msgid "This will send an email to the customer when a booking is rejected."
+msgstr ""
+
+#: includes/class-geodir-booking-emails.php:205
+msgid "This will send an email to the customer when a booking is confirmed."
+msgstr ""
+
+#: includes/class-geodir-booking-emails.php:211
+msgid "This will send an email to the customer when a booking is canceled."
+msgstr ""
+
+#: includes/class-geodir-booking-emails.php:217
+msgid "This will send an email to the customer when a booking is refunded."
+msgstr ""
+
+#: includes/class-geodir-booking-emails.php:248
+msgid "Enable email"
+msgstr ""
+
+#: includes/class-geodir-booking-emails.php:257
+msgid "Subject"
+msgstr ""
+
+#: includes/class-geodir-booking-emails.php:258
+msgid "The email subject."
+msgstr ""
+
+#: includes/class-geodir-booking-emails.php:269
+msgid "Body"
+msgstr ""
+
+#: includes/class-geodir-booking-emails.php:270
+msgid "The email body, this can be text or HTML."
+msgstr ""
+
+#: includes/class-geodir-booking-emails.php:275
+msgid "Available template tags:"
+msgstr ""
+
+#: includes/class-geodir-booking-rest.php:255
+#: includes/class-geodir-booking-rest.php:305
+#: includes/class-geodir-booking-rest.php:358
+#: includes/class-geodir-booking-rest.php:418
+#: includes/class-geodir-booking-rest.php:688
+#: includes/class-geodir-booking-rest.php:696
+#: includes/class-geodir-booking-rest.php:730
+#: includes/class-geodir-booking-rest.php:737
+#: includes/class-geodir-booking-rest.php:781
+#: includes/class-geodir-booking-rest.php:788
+#: includes/class-geodir-booking-rest.php:830
+#: includes/class-geodir-booking-rest.php:837
+#: includes/class-geodir-booking-rest.php:1069
+#: includes/class-geodir-booking-rest.php:1080
+#: includes/class-geodir-booking-rest.php:1129
+msgid "Listing not found."
+msgstr ""
+
+#: includes/class-geodir-booking-rest.php:262
+#: includes/class-geodir-booking-rest.php:312
+#: includes/class-geodir-booking-rest.php:365
+#: includes/class-geodir-booking-rest.php:1141
+msgid "You do not have permission to perform this action."
+msgstr ""
+
+#: includes/class-geodir-booking-rest.php:297
+msgid "Please provide at least 1 day rule."
+msgstr ""
+
+#: includes/class-geodir-booking-rest.php:389
+#: includes/class-geodir-booking-rest.php:582
+#: includes/class-geodir-booking-rest.php:625
+#: includes/class-geodir-booking-rest.php:656
+#: includes/class-geodir-booking-rest.php:683
+#: includes/class-geodir-booking-rest.php:776
+#: includes/class-geodir-booking-rest.php:825
+#: includes/class-geodir-booking-rest.php:941
+#: includes/class-geodir-booking-rest.php:982
+msgid "Invalid nonce."
+msgstr ""
+
+#: includes/class-geodir-booking-rest.php:402
+#: includes/class-geodir-booking-rest.php:590
+#: includes/class-geodir-booking-rest.php:633
+#: includes/class-geodir-booking-rest.php:664
+msgid "Booking not found. It might have been deleted."
+msgstr ""
+
+#: includes/class-geodir-booking-rest.php:407
+msgid "You do not have permission to edit this booking."
+msgstr ""
+
+#: includes/class-geodir-booking-rest.php:412
+msgid "You can only edit draft bookings."
+msgstr ""
+
+#: includes/class-geodir-booking-rest.php:433
+msgid "This listing is not published."
+msgstr ""
+
+#: includes/class-geodir-booking-rest.php:438
+#: includes/class-geodir-booking-rest.php:861
+msgid "Please provide your name."
+msgstr ""
+
+#: includes/class-geodir-booking-rest.php:443
+#: includes/class-geodir-booking-rest.php:872
+msgid "Please provide your phone number."
+msgstr ""
+
+#: includes/class-geodir-booking-rest.php:448
+#: includes/class-geodir-booking-rest.php:883
+msgid "Please provide a valid email address."
+msgstr ""
+
+#: includes/class-geodir-booking-rest.php:453
+msgid "Please provide a valid date."
+msgstr ""
+
+#: includes/class-geodir-booking-rest.php:458
+msgid "End date cannot be before start date."
+msgstr ""
+
+#: includes/class-geodir-booking-rest.php:477
+#, php-format
+msgid ""
+"The dates from %1$s to %2$s are already booked. Please try different dates."
+msgstr ""
+
+#: includes/class-geodir-booking-rest.php:595
+msgid "This booking belongs to a different user."
+msgstr ""
+
+#: includes/class-geodir-booking-rest.php:638
+msgid "You do not have permission to cancel this booking."
+msgstr ""
+
+#: includes/class-geodir-booking-rest.php:669
+msgid "You do not have permission to confirm this booking."
+msgstr ""
+
+#: includes/class-geodir-booking-rest.php:701
+#: includes/class-geodir-booking-rest.php:793
+#: includes/class-geodir-booking-rest.php:842
+#: includes/class-geodir-booking-rest.php:960
+#: includes/class-geodir-booking-rest.php:1085
+msgid "You do not have permission to manage this listing."
+msgstr ""
+
+#: includes/class-geodir-booking-rest.php:798
+#: includes/class-geodir-booking-rest.php:804
+#: includes/class-geodir-booking-rest.php:847
+#: includes/class-geodir-booking-rest.php:853
+#: includes/class-geodir-booking-rest.php:946
+#: includes/class-geodir-booking-rest.php:953 includes/functions.php:493
+#: includes/views/booking.php:12
+msgid "Booking not found."
+msgstr ""
+
+#: includes/class-geodir-booking-rest.php:1029
+#, php-format
+msgid "%s room found"
+msgid_plural "%s rooms found"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-geodir-booking-rest.php:1033
+msgid "No rooms found"
+msgstr ""
+
+#: includes/class-geodir-booking-rest.php:1073
+msgid "Sync URLs not found."
+msgstr ""
+
+#: includes/class-geodir-booking-rest.php:1134
+msgid "Queue not found."
+msgstr ""
+
+#: includes/class-geodir-booking-ruleset.php:382
+#, php-format
+msgid "Error saving ruleset: %s"
+msgstr ""
+
+#: includes/class-geodir-booking-search.php:180
+#: includes/class-geodir-booking-search.php:188
+#: includes/class-geodir-booking-search.php:196
+#, php-format
+msgid "%1$d %2$s"
+msgid_plural "%1$d %2$s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-geodir-booking-search.php:182
+#: includes/class-geodir-booking-search.php:377
+msgctxt "guests search"
+msgid "guests"
+msgstr ""
+
+#: includes/class-geodir-booking-search.php:182
+#: includes/class-geodir-booking-search.php:378
+msgctxt "guests search"
+msgid "guest"
+msgstr ""
+
+#: includes/class-geodir-booking-search.php:190
+#: includes/class-geodir-booking-search.php:379
+msgctxt "guests search"
+msgid "infants"
+msgstr ""
+
+#: includes/class-geodir-booking-search.php:190
+#: includes/class-geodir-booking-search.php:380
+msgctxt "guests search"
+msgid "infant"
+msgstr ""
+
+#: includes/class-geodir-booking-search.php:198
+#: includes/class-geodir-booking-search.php:381
+msgctxt "guests search"
+msgid "pets"
+msgstr ""
+
+#: includes/class-geodir-booking-search.php:198
+#: includes/class-geodir-booking-search.php:382
+msgctxt "guests search"
+msgid "pet"
+msgstr ""
+
+#: includes/class-geodir-booking-search.php:216
+msgid "Clear field"
+msgstr ""
+
+#: includes/class-geodir-booking-search.php:225 templates/booking-form.php:175
+msgid "Ages 13 or above"
+msgstr ""
+
+#: includes/class-geodir-booking-search.php:229 templates/booking-form.php:193
+msgid "Ages 2-12"
+msgstr ""
+
+#: includes/class-geodir-booking-search.php:234 templates/booking-form.php:212
+msgid "Infants"
+msgstr ""
+
+#: includes/class-geodir-booking-search.php:234
+msgid "2 and under"
+msgstr ""
+
+#: includes/class-geodir-booking-search.php:240 templates/booking-form.php:232
+msgid "Pets"
+msgstr ""
+
+#: includes/class-geodir-booking-search.php:240 templates/booking-form.php:232
+msgid "Charges may apply"
+msgstr ""
+
+#: includes/class-geodir-booking-search.php:556
+#, php-format
+msgid "%d Guest"
+msgid_plural "%s Guests"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-geodir-booking.php:225
+#, php-format
+msgid ""
+"Make GeoDirectory Bookings better by suggesting improvements: %1$s Give "
+"Feedback %2$s"
+msgstr ""
+
+#: includes/class-geodir-booking.php:240
+msgid ""
+"Are you sure you wish to cancel this booking, it may incur a charge "
+"depending on the refund policy?"
+msgstr ""
+
+#: includes/class-geodir-booking.php:241
+msgid ""
+"Are you sure you wish to cancel this booking, it may incur a charge for "
+"card processing fees?"
+msgstr ""
+
+#: includes/class-geodir-booking.php:242
+#: includes/tables/class-geodir-booking-admin-bookings-table.php:254
+#: includes/views/metabox-booking-status.php:65
+msgid "Are you sure you want to delete this booking?"
+msgstr ""
+
+#: includes/class-geodir-booking.php:243
+msgid "Cannot Delete Booking"
+msgstr ""
+
+#: includes/class-geodir-booking.php:244 includes/class-geodir-booking.php:596
+msgid "An unexpected error occurred. Please try again."
+msgstr ""
+
+#: includes/class-geodir-booking.php:245
+#: templates/customer-view-booking-modal.php:68
+#: templates/owner-view-booking-modal.php:123
+#: templates/owner-view-booking-modal.php:247
+#: templates/view-bookings-modal.php:221
+#: templates/view-customer-bookings-modal.php:92
+msgid "Go Back"
+msgstr ""
+
+#: includes/class-geodir-booking.php:427
+#: templates/ical-sync-status-modal.php:67
+msgid "iCalendar Sync Status"
+msgstr ""
+
+#: includes/class-geodir-booking.php:563
+#: includes/class-geodir-customer-booking.php:464
+#: includes/class-geodir-customer-booking.php:573
+#: includes/tables/class-geodir-booking-admin-bookings-table.php:336
+#: templates/customer-bookings.php:48 templates/owner-bookings.php:65
+#: templates/view-bookings-modal.php:92
+msgid "Check-in"
+msgstr ""
+
+#: includes/class-geodir-booking.php:564 templates/customer-bookings.php:49
+#: templates/owner-bookings.php:66 templates/view-bookings-modal.php:92
+msgid "Checkout"
+msgstr ""
+
+#: includes/class-geodir-booking.php:565 templates/customer-bookings.php:50
+msgid "Booking Amount"
+msgstr ""
+
+#: includes/class-geodir-booking.php:978
+#: includes/class-geodir-booking.php:1010
+#: includes/class-geodir-customer-booking.php:585
+#: templates/booking-form.php:128
+msgid "night"
+msgid_plural "nights"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-geodir-booking.php:987
+#, php-format
+msgid "Discount (%s)"
+msgstr ""
+
+#: includes/class-geodir-booking.php:1011
+msgid "total"
+msgstr ""
+
+#: includes/class-geodir-booking.php:1215
+#, php-format
+msgid "%1$s - Room %2$d"
+msgstr ""
+
+#: includes/class-geodir-customer-booking.php:439
+msgid "guest"
+msgid_plural "guests"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-geodir-customer-booking.php:442
+msgid "infant"
+msgid_plural "infants"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-geodir-customer-booking.php:446
+msgid "pet"
+msgid_plural "pets"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-geodir-customer-booking.php:460
+#: includes/class-geodir-customer-booking.php:553
+msgid "Booking Number"
+msgstr ""
+
+#: includes/class-geodir-customer-booking.php:468
+#: includes/class-geodir-customer-booking.php:577
+#: includes/tables/class-geodir-booking-admin-bookings-table.php:337
+msgid "Check-out"
+msgstr ""
+
+#: includes/class-geodir-customer-booking.php:476
+#: includes/class-geodir-customer-booking.php:581
+#: includes/tables/class-geodir-booking-admin-bookings-table.php:335
+#: templates/owner-bookings.php:64 templates/view-bookings-modal.php:93
+msgid "Booked"
+msgstr ""
+
+#: includes/class-geodir-customer-booking.php:480
+msgid "Modified"
+msgstr ""
+
+#: includes/class-geodir-customer-booking.php:488
+#: includes/class-geodir-customer-booking.php:636
+msgid "Deposit"
+msgstr ""
+
+#: includes/class-geodir-customer-booking.php:492
+msgid "You receive"
+msgstr ""
+
+#: includes/class-geodir-customer-booking.php:557
+#: templates/book-now-modal.php:35 templates/book-now-modal.php:36
+#: templates/booking-form.php:139
+msgid "Name"
+msgstr ""
+
+#: includes/class-geodir-customer-booking.php:614
+#: templates/bs5/ruleset-editor.php:140 templates/bs5/ruleset-editor.php:187
+#: templates/bs5/ruleset-editor.php:234 templates/ruleset-editor.php:144
+#: templates/ruleset-editor.php:191 templates/ruleset-editor.php:238
+msgid "Discount"
+msgstr ""
+
+#: includes/class-geodir-customer-booking.php:628
+msgid "Booking Total"
+msgstr ""
+
+#: includes/class-geodir-customer-booking.php:655
+#: includes/class-geodir-customer-booking.php:747
+msgid "Pay"
+msgstr ""
+
+#: includes/class-geodir-customer-booking.php:864
+#, php-format
+msgid "Booking for %s"
+msgstr ""
+
+#: includes/class-geodir-customer-booking.php:959
+msgid "You have already confirmed this booking."
+msgstr ""
+
+#: includes/class-geodir-customer-booking.php:1134
+#, php-format
+msgid "%s booking earnings"
+msgstr ""
+
+#: includes/class-geodir-customer-booking.php:1245
+#: includes/class-geodir-customer-booking.php:1263
+#, php-format
+msgid "%s booking refund"
+msgstr ""
+
+#: includes/class-geodir-customer-booking.php:1369
+#, php-format
+msgid "Error saving booking: %s"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:334
+msgid "Install Required Plugins"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:335
+msgid "Install Plugins"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:337
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:339
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:340
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:343
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-tgm-plugin-activation.php:349
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-tgm-plugin-activation.php:355
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-tgm-plugin-activation.php:361
+#, php-format
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-tgm-plugin-activation.php:367
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-tgm-plugin-activation.php:373
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-tgm-plugin-activation.php:378
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-tgm-plugin-activation.php:383
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-tgm-plugin-activation.php:388
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-tgm-plugin-activation.php:392
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:393
+#: includes/class-tgm-plugin-activation.php:920
+#: includes/class-tgm-plugin-activation.php:2626
+#: includes/class-tgm-plugin-activation.php:3674
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:394
+#: includes/class-tgm-plugin-activation.php:3253
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:395
+#: includes/class-tgm-plugin-activation.php:3046
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:397
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:399
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:401
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:402
+msgid "Dismiss this notice"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:403
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:404
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:607
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:608
+msgid "Update Required"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:725
+msgid "Set the parent_slug config variable instead."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:1027
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:1027
+#: includes/class-tgm-plugin-activation.php:1030
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:1030
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:1214
+#: includes/class-tgm-plugin-activation.php:3041
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2075
+#, php-format
+msgid "TGMPA v%s"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2366
+msgid "Required"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2369
+msgid "Recommended"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2385
+msgid "WordPress Repository"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2388
+msgid "External Source"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2391
+msgid "Pre-Packaged"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2408
+msgid "Not Installed"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2412
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2414
+msgid "Active"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2420
+msgid "Required Update not Available"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2423
+msgid "Requires Update"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2426
+msgid "Update recommended"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2435
+#, php-format
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2481
+#, php-format
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-tgm-plugin-activation.php:2485
+#, php-format
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-tgm-plugin-activation.php:2489
+#, php-format
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-tgm-plugin-activation.php:2493
+#, php-format
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-tgm-plugin-activation.php:2575
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2583
+msgid "Installed version:"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2591
+msgid "Minimum required version:"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2603
+msgid "Available version:"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2626
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2640
+msgid "Plugin"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2641
+msgid "Source"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2642
+msgid "Type"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2646
+msgid "Version"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2696
+#, php-format
+msgid "Install %2$s"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2701
+#, php-format
+msgid "Update %2$s"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2707
+#, php-format
+msgid "Activate %2$s"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2777
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2810
+msgid "Install"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2819
+msgid "Activate"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2850
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2852
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2893
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:2895
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:3001
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:3027
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:3046
+msgid "The following plugins were activated successfully:"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:3252
+msgid "Plugin activation failed."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:3592
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:3595
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:3597
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:3601
+msgid ""
+"The installation and activation process is starting. This process may take "
+"a while on some hosts, so please be patient."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:3603
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:3603
+#: includes/class-tgm-plugin-activation.php:3611
+msgid "Show Details"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:3603
+#: includes/class-tgm-plugin-activation.php:3611
+msgid "Hide Details"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:3604
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:3606
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:3609
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:3611
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:3612
+msgid "All installations have been completed."
+msgstr ""
+
+#: includes/class-tgm-plugin-activation.php:3614
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: includes/crons/class-geodir-booking-cancel-invoices-cron.php:73
+msgid "Unpaid invoice cancelled - time limit reached."
+msgstr ""
+
+#: includes/functions.php:218
+msgid "Draft"
+msgstr ""
+
+#: includes/functions.php:219
+msgid "Pending Payment"
+msgstr ""
+
+#: includes/functions.php:220
+msgid "Pending Confirmation"
+msgstr ""
+
+#: includes/functions.php:221
+msgid "Confirmed"
+msgstr ""
+
+#: includes/functions.php:222
+msgid "Cancelled"
+msgstr ""
+
+#: includes/functions.php:223
+msgid "Rejected"
+msgstr ""
+
+#: includes/functions.php:224
+msgid "Completed"
+msgstr ""
+
+#: includes/functions.php:225
+msgid "Refunded"
+msgstr ""
+
+#: includes/functions.php:675 includes/functions.php:712
+#, php-format
+msgid "Customer name: %s"
+msgstr ""
+
+#: includes/functions.php:676 includes/functions.php:713
+#, php-format
+msgid "Customer email: %s"
+msgstr ""
+
+#: includes/functions.php:677 includes/functions.php:714
+#, php-format
+msgid "Customer phone: %s"
+msgstr ""
+
+#: includes/functions.php:678 includes/functions.php:715
+#, php-format
+msgid "Status: %s"
+msgstr ""
+
+#: includes/functions.php:679 includes/functions.php:716
+#, php-format
+msgid "Booked: %s"
+msgstr ""
+
+#: includes/functions.php:680 includes/functions.php:717
+#, php-format
+msgid "Check-in: %s"
+msgstr ""
+
+#: includes/functions.php:681 includes/functions.php:718
+#, php-format
+msgid "Check-out: %s"
+msgstr ""
+
+#: includes/functions.php:682
+#, php-format
+msgid "Amount Payable: %s"
+msgstr ""
+
+#: includes/functions.php:683
+#, php-format
+msgid "Potential Payout: %s"
+msgstr ""
+
+#: includes/functions.php:691 includes/functions.php:695
+#, php-format
+msgid "Amount: %s"
+msgstr ""
+
+#: includes/functions.php:711
+#, php-format
+msgid "Listed by: %s"
+msgstr ""
+
+#: includes/functions.php:719
+#, php-format
+msgid "Booking Amount: %s"
+msgstr ""
+
+#: includes/functions.php:720
+#, php-format
+msgid "Service Fee: %s"
+msgstr ""
+
+#: includes/functions.php:807 includes/functions.php:855
+msgid "My Bookings"
+msgstr ""
+
+#: includes/functions.php:815 includes/functions.php:859
+msgid "All Bookings"
+msgstr ""
+
+#: includes/ical/class-geodir-booking-ical-importer.php:234
+#, php-format
+msgid "Skipped. Event from %1$s to %2$s has passed."
+msgstr ""
+
+#: includes/ical/class-geodir-booking-ical-importer.php:253
+#, php-format
+msgid "New booking #%1$d. The dates from %2$s to %3$s are now blocked."
+msgstr ""
+
+#: includes/ical/class-geodir-booking-ical-importer.php:276
+#, php-format
+msgid "Success. Booking #%d updated with new data."
+msgstr ""
+
+#: includes/ical/class-geodir-booking-ical-importer.php:284
+#, php-format
+msgid "Skipped. The dates from %1$s to %2$s are already blocked."
+msgstr ""
+
+#: includes/ical/class-geodir-booking-ical-importer.php:301
+#, php-format
+msgid ""
+"Success. Booking #%1$d updated with new data. Removed %2$d outdated "
+"booking(s)."
+msgstr ""
+
+#: includes/ical/class-geodir-booking-ical-importer.php:302
+#, php-format
+msgid "Success. Booking #%1$d updated with new data."
+msgstr ""
+
+#: includes/ical/class-geodir-booking-ical-importer.php:313
+#, php-format
+msgid "Cannot import new event. Date from %1$s to %2$s is partially blocked."
+msgid_plural ""
+"Cannot import new event. Dates from %1$s to %2$s are partially blocked."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/ical/class-geodir-booking-logs-handler.php:44
+msgid "Process Information"
+msgstr ""
+
+#: includes/ical/class-geodir-booking-logs-handler.php:55
+#, php-format
+msgid "Total bookings: %s"
+msgstr ""
+
+#: includes/ical/class-geodir-booking-logs-handler.php:57
+#, php-format
+msgid "Success bookings: %s"
+msgstr ""
+
+#: includes/ical/class-geodir-booking-logs-handler.php:59
+#, php-format
+msgid "Skipped bookings: %s"
+msgstr ""
+
+#: includes/ical/class-geodir-booking-logs-handler.php:61
+#, php-format
+msgid "Failed bookings: %s"
+msgstr ""
+
+#: includes/ical/class-geodir-booking-logs-handler.php:63
+#, php-format
+msgid "Removed bookings: %s"
+msgstr ""
+
+#: includes/ical/class-geodir-booking-logs-handler.php:117
+msgid "Expand All"
+msgstr ""
+
+#: includes/ical/class-geodir-booking-logs-handler.php:124
+msgid "Collapse All"
+msgstr ""
+
+#: includes/ical/class-geodir-booking-logs-handler.php:179
+#, php-format
+msgid "All done! %1$d booking was successfully added."
+msgid_plural "All done! %1$d bookings were successfully added."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/ical/class-geodir-booking-logs-handler.php:185
+#, php-format
+msgid " There was %2$d failure."
+msgid_plural " There were %2$d failures."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/libraries/wp-background-processing/wp-background-process.php:427
+#, php-format
+msgid "Every %d Minutes"
+msgstr ""
+
+#: includes/tables/class-geodir-booking-admin-bookings-table.php:89
+#, php-format
+msgid "%d bookings deleted."
+msgstr ""
+
+#: includes/tables/class-geodir-booking-admin-bookings-table.php:91
+#: includes/views/bookings.php:13
+msgid "Booking deleted."
+msgstr ""
+
+#: includes/tables/class-geodir-booking-admin-bookings-table.php:231
+#, php-format
+msgid "ID: %d"
+msgstr ""
+
+#: includes/tables/class-geodir-booking-admin-bookings-table.php:238
+msgid "Manage"
+msgstr ""
+
+#: includes/tables/class-geodir-booking-admin-bookings-table.php:329
+#: templates/owner-bookings.php:63 templates/view-bookings-modal.php:91
+msgid "Client"
+msgstr ""
+
+#: includes/tables/class-geodir-booking-admin-bookings-table.php:331
+msgid "Payable Amount"
+msgstr ""
+
+#: includes/tables/class-geodir-booking-sync-calendar-table.php:49
+msgid "Calendar"
+msgstr ""
+
+#: includes/tables/class-geodir-booking-sync-calendar-table.php:50
+msgid "Calendars"
+msgstr ""
+
+#: includes/tables/class-geodir-booking-sync-calendar-table.php:111
+msgid "No bookable places available."
+msgstr ""
+
+#: includes/tables/class-geodir-booking-sync-calendar-table.php:123
+msgid "Export"
+msgstr ""
+
+#: includes/tables/class-geodir-booking-sync-calendar-table.php:191
+msgid "Edit"
+msgstr ""
+
+#: includes/tables/class-geodir-booking-sync-calendar-table.php:193
+#: includes/tables/class-geodir-booking-sync-calendar-table.php:262
+#: templates/bs5/ruleset-editor.php:459 templates/ruleset-editor.php:464
+msgid "Sync External Calendars"
+msgstr ""
+
+#: includes/tables/class-geodir-booking-sync-calendar-table.php:196
+msgctxt "Placeholder for empty place title"
+msgid "(no title)"
+msgstr ""
+
+#: includes/tables/class-geodir-booking-sync-calendar-table.php:221
+msgid "Download Calendar"
+msgstr ""
+
+#: includes/tables/class-geodir-booking-sync-listings-table.php:35
+msgid "Sync Listing"
+msgstr ""
+
+#: includes/tables/class-geodir-booking-sync-listings-table.php:36
+msgid "Sync Listings"
+msgstr ""
+
+#: includes/tables/class-geodir-booking-sync-listings-table.php:107
+msgctxt "Placeholder for empty listing title"
+msgid "(no title)"
+msgstr ""
+
+#: includes/tables/class-geodir-booking-sync-listings-table.php:113
+msgctxt "Date and time format"
+msgid "d/m/Y - H:i:s"
+msgstr ""
+
+#: includes/tables/class-geodir-booking-sync-listings-table.php:159
+msgctxt "Total number of processed bookings"
+msgid "Total"
+msgstr ""
+
+#: includes/tables/class-geodir-booking-sync-listings-table.php:160
+msgid "Succeed"
+msgstr ""
+
+#: includes/tables/class-geodir-booking-sync-listings-table.php:161
+msgid "Skipped"
+msgstr ""
+
+#: includes/tables/class-geodir-booking-sync-listings-table.php:162
+msgid "Failed"
+msgstr ""
+
+#: includes/tables/class-geodir-booking-sync-listings-table.php:163
+msgid "Removed"
+msgstr ""
+
+#: includes/tables/class-geodir-booking-sync-listings-table.php:164
+msgid "Date"
+msgstr ""
+
+#: includes/tables/class-geodir-booking-sync-listings-table.php:188
+msgid "View"
+msgstr ""
+
+#: includes/tables/class-geodir-booking-sync-logs-table.php:37
+msgid "Sync Log"
+msgstr ""
+
+#: includes/tables/class-geodir-booking-sync-logs-table.php:38
+msgid "Sync Logs"
+msgstr ""
+
+#: includes/tables/class-geodir-booking-sync-logs-table.php:104
+#: templates/view-bookings-modal.php:156
+msgid "Message"
+msgstr ""
+
+#: includes/tables/class-geodir-booking-sync-logs-table.php:121
+msgid "Success"
+msgstr ""
+
+#: includes/tables/class-geodir-booking-sync-logs-table.php:124
+msgid "Info"
+msgstr ""
+
+#: includes/tables/class-geodir-booking-sync-logs-table.php:127
+msgid "Warning"
+msgstr ""
+
+#: includes/tables/class-geodir-booking-sync-logs-table.php:130
+msgid "Error"
+msgstr ""
+
+#: includes/views/booking.php:30
+#, php-format
+msgid "Booking %s"
+msgstr ""
+
+#: includes/views/booking.php:37
+msgid "Could not save your changes. Please try again."
+msgstr ""
+
+#: includes/views/booking.php:44 templates/bs5/ruleset-editor.php:477
+#: templates/date-editor.php:57 templates/ruleset-editor.php:482
+msgid "Your changes have been saved."
+msgstr ""
+
+#: includes/views/bookings.php:53
+msgid "Search Bookings"
+msgstr ""
+
+#: includes/views/emails/owner_booking_cancellation_body.php:9
+#: includes/views/emails/owner_booking_confirmation_body.php:9
+#: includes/views/emails/owner_booking_refunded_body.php:9
+#: includes/views/emails/owner_booking_request_body.php:9
+#: includes/views/emails/user_booking_cancellation_body.php:9
+#: includes/views/emails/user_booking_confirmation_body.php:9
+#: includes/views/emails/user_booking_pending_body.php:9
+#: includes/views/emails/user_booking_refunded_body.php:9
+#: includes/views/emails/user_booking_rejected_body.php:9
+#, php-format
+msgid "Hi %s,"
+msgstr ""
+
+#: includes/views/emails/owner_booking_cancellation_body.php:11
+msgid "The following booking has been canceled."
+msgstr ""
+
+#: includes/views/emails/owner_booking_cancellation_subject.php:8
+msgid "Booking Canceled"
+msgstr ""
+
+#: includes/views/emails/owner_booking_confirmation_body.php:11
+msgid "The following booking has been confirmed."
+msgstr ""
+
+#: includes/views/emails/owner_booking_confirmation_subject.php:8
+msgid "Booking Confirmed"
+msgstr ""
+
+#: includes/views/emails/owner_booking_refunded_body.php:11
+msgid "The following booking has been refunded."
+msgstr ""
+
+#: includes/views/emails/owner_booking_refunded_subject.php:8
+msgid "Booking Refunded"
+msgstr ""
+
+#: includes/views/emails/owner_booking_request_body.php:11
+msgid "You have a new booking request."
+msgstr ""
+
+#: includes/views/emails/owner_booking_request_subject.php:8
+msgid "New Booking Request"
+msgstr ""
+
+#: includes/views/emails/user_booking_cancellation_body.php:11
+#: includes/views/emails/user_booking_cancellation_subject.php:8
+msgid "Your booking has been canceled."
+msgstr ""
+
+#: includes/views/emails/user_booking_confirmation_body.php:11
+#: includes/views/emails/user_booking_confirmation_subject.php:8
+msgid "Your booking has been confirmed."
+msgstr ""
+
+#: includes/views/emails/user_booking_pending_body.php:11
+msgid ""
+"Your booking is pending confirmation. We'll let you know once it has been "
+"confirmed."
+msgstr ""
+
+#: includes/views/emails/user_booking_pending_subject.php:8
+msgid "Your booking is pending confirmation"
+msgstr ""
+
+#: includes/views/emails/user_booking_refunded_body.php:11
+#: includes/views/emails/user_booking_refunded_subject.php:8
+msgid "Your booking has been refunded."
+msgstr ""
+
+#: includes/views/emails/user_booking_rejected_body.php:11
+#: includes/views/emails/user_booking_rejected_subject.php:8
+msgid "Your booking has been rejected."
+msgstr ""
+
+#: includes/views/metabox-booking-details.php:43
+#: templates/owner-new-booking-modal.php:188
+#: templates/owner-view-booking-modal.php:159
+msgid "Customer Name"
+msgstr ""
+
+#: includes/views/metabox-booking-details.php:58
+#: templates/owner-new-booking-modal.php:203
+#: templates/owner-view-booking-modal.php:176
+msgid "Customer Email"
+msgstr ""
+
+#: includes/views/metabox-booking-details.php:73
+#: templates/owner-new-booking-modal.php:218
+#: templates/owner-view-booking-modal.php:193
+msgid "Customer Phone"
+msgstr ""
+
+#: includes/views/metabox-booking-invoice.php:14
+msgid "Invoice"
+msgstr ""
+
+#: includes/views/metabox-booking-invoice.php:15
+msgid "Created"
+msgstr ""
+
+#: includes/views/metabox-booking-invoice.php:16
+msgid "Paid"
+msgstr ""
+
+#: includes/views/metabox-booking-invoice.php:138
+msgid ""
+"Booking status automatically changes whenever the invoice status changes."
+msgstr ""
+
+#: includes/views/metabox-booking-note.php:16
+#: templates/owner-new-booking-modal.php:235
+#: templates/owner-view-booking-modal.php:109
+#: templates/owner-view-booking-modal.php:210
+#: templates/view-bookings-modal.php:207
+msgid "This note will not be visible to the client."
+msgstr ""
+
+#: includes/views/metabox-booking-status.php:43
+msgid "Created on:"
+msgstr ""
+
+#: includes/views/metabox-booking-status.php:66
+msgid "Delete Permanently"
+msgstr ""
+
+#: includes/views/metabox-listing.php:29 includes/views/metabox-listing.php:47
+#: includes/views/metabox-listing.php:68 includes/views/metabox-listing.php:72
+msgid "Use Default"
+msgstr ""
+
+#: includes/views/settings.php:15
+msgid "Could not save your settings. Please try again."
+msgstr ""
+
+#: includes/views/settings.php:22
+msgid "Your settings have been saved."
+msgstr ""
+
+#: includes/views/settings.php:117
+msgid "If cancelled at least"
+msgstr ""
+
+#: includes/views/settings.php:119
+msgid "days before arrival, then refund"
+msgstr ""
+
+#: includes/views/settings.php:121
+msgid "else refund"
+msgstr ""
+
+#: includes/views/settings.php:126
+msgid "Policy Name"
+msgstr ""
+
+#: includes/views/settings.php:131
+msgid "Policy Description"
+msgstr ""
+
+#: includes/views/settings.php:138
+msgid "Set as default"
+msgstr ""
+
+#: includes/views/settings.php:143 templates/bs5/ruleset-editor.php:149
+#: templates/bs5/ruleset-editor.php:196 templates/bs5/ruleset-editor.php:243
+#: templates/ruleset-editor.php:153 templates/ruleset-editor.php:200
+#: templates/ruleset-editor.php:247
+msgid "Remove"
+msgstr ""
+
+#: includes/views/settings.php:148
+msgid "Add Policy"
+msgstr ""
+
+#: includes/widgets/availability.php:36
+msgid "GD > Booking Calendar"
+msgstr ""
+
+#: includes/widgets/availability.php:39
+msgid ""
+"Displays a calendar to view available days, the booking form is also "
+"required."
+msgstr ""
+
+#: includes/widgets/availability.php:44 includes/widgets/availability.php:92
+#: includes/widgets/availability.php:104 includes/widgets/booking.php:44
+#: includes/widgets/booking.php:98 includes/widgets/calendar-button.php:44
+#: includes/widgets/calendar-button.php:98
+#: includes/widgets/calendar-button.php:112
+#: includes/widgets/customer-bookings.php:44
+#: includes/widgets/customer-bookings.php:98
+#: includes/widgets/owner-bookings.php:44
+#: includes/widgets/owner-bookings.php:98
+msgid "Display"
+msgstr ""
+
+#: includes/widgets/availability.php:46 includes/widgets/booking.php:46
+#: includes/widgets/calendar-button.php:46
+#: includes/widgets/customer-bookings.php:46
+#: includes/widgets/owner-bookings.php:46
+msgid "Content"
+msgstr ""
+
+#: includes/widgets/availability.php:55 includes/widgets/booking.php:55
+#: includes/widgets/customer-bookings.php:55
+#: includes/widgets/owner-bookings.php:55
+msgid "Background"
+msgstr ""
+
+#: includes/widgets/availability.php:56 includes/widgets/booking.php:56
+#: includes/widgets/customer-bookings.php:56
+#: includes/widgets/owner-bookings.php:56
+msgid "Typography"
+msgstr ""
+
+#: includes/widgets/availability.php:59 includes/widgets/booking.php:59
+#: includes/widgets/calendar-button.php:59
+#: includes/widgets/customer-bookings.php:59
+#: includes/widgets/owner-bookings.php:59
+msgid "Styles"
+msgstr ""
+
+#: includes/widgets/availability.php:67 includes/widgets/booking.php:67
+#: includes/widgets/calendar-button.php:67
+#: includes/widgets/customer-bookings.php:67
+#: includes/widgets/owner-bookings.php:67
+msgid "Wrapper Styles"
+msgstr ""
+
+#: includes/widgets/availability.php:67 includes/widgets/availability.php:69
+#: includes/widgets/booking.php:67 includes/widgets/booking.php:69
+#: includes/widgets/calendar-button.php:67
+#: includes/widgets/calendar-button.php:69
+#: includes/widgets/customer-bookings.php:67
+#: includes/widgets/customer-bookings.php:69
+#: includes/widgets/owner-bookings.php:67
+#: includes/widgets/owner-bookings.php:69
+msgid "Advanced"
+msgstr ""
+
+#: includes/widgets/availability.php:90
+msgid ""
+"The GD > Booking Form block is also required on the page to complete a "
+"booking"
+msgstr ""
+
+#: includes/widgets/availability.php:98 includes/widgets/booking.php:92
+#: includes/widgets/calendar-button.php:92
+msgid "Listing ID:"
+msgstr ""
+
+#: includes/widgets/availability.php:99 includes/widgets/booking.php:93
+#: includes/widgets/calendar-button.php:93
+msgid "Leave blank to use the listing being viewed."
+msgstr ""
+
+#: includes/widgets/availability.php:100 includes/widgets/booking.php:94
+#: includes/widgets/calendar-button.php:94
+msgid "Listing being viewed"
+msgstr ""
+
+#: includes/widgets/availability.php:188
+msgid ""
+"Booking availability calendar will appear here. ( The \"GD > Booking Form\" "
+"block is also required for booking )"
+msgstr ""
+
+#: includes/widgets/availability.php:255 includes/widgets/booking.php:258
+msgid "Room type"
+msgstr ""
+
+#: includes/widgets/availability.php:259 includes/widgets/booking.php:262
+msgid "Select a room"
+msgstr ""
+
+#: includes/widgets/booking.php:36
+msgid "GD > Booking Form"
+msgstr ""
+
+#: includes/widgets/booking.php:39
+msgid "Displays a booking form"
+msgstr ""
+
+#: includes/widgets/booking.php:233 includes/widgets/booking.php:244
+#: templates/customer-view-booking-modal.php:81
+#: templates/owner-new-booking-modal.php:260
+#: templates/owner-view-booking-modal.php:131
+#: templates/owner-view-booking-modal.php:236
+#: templates/view-bookings-modal.php:229
+#: templates/view-customer-bookings-modal.php:99
+msgid "Loading..."
+msgstr ""
+
+#: includes/widgets/calendar-button.php:36
+msgid "GD > Booking Owner Management"
+msgstr ""
+
+#: includes/widgets/calendar-button.php:39
+msgid "Displays a button to set-up or view bookings"
+msgstr ""
+
+#: includes/widgets/calendar-button.php:55
+#: includes/widgets/calendar-button.php:127
+#: includes/widgets/calendar-button.php:153
+#: includes/widgets/calendar-button.php:179
+#: includes/widgets/calendar-button.php:204
+msgid "Setup Button"
+msgstr ""
+
+#: includes/widgets/calendar-button.php:56
+#: includes/widgets/calendar-button.php:142
+#: includes/widgets/calendar-button.php:164
+#: includes/widgets/calendar-button.php:194
+#: includes/widgets/calendar-button.php:214
+msgid "Manage Button"
+msgstr ""
+
+#: includes/widgets/calendar-button.php:102
+msgid "Show Setup Instructions"
+msgstr ""
+
+#: includes/widgets/calendar-button.php:103
+msgid "Show admin setup instruction and then show owner setup instructions."
+msgstr ""
+
+#: includes/widgets/calendar-button.php:106
+msgid "Yes"
+msgstr ""
+
+#: includes/widgets/calendar-button.php:107
+msgid "No"
+msgstr ""
+
+#: includes/widgets/calendar-button.php:116
+#: includes/widgets/calendar-button.php:131
+msgid "Button Shadow"
+msgstr ""
+
+#: includes/widgets/calendar-button.php:119
+#: includes/widgets/calendar-button.php:134
+msgid "Default"
+msgstr ""
+
+#: includes/widgets/calendar-button.php:120
+#: includes/widgets/calendar-button.php:135
+msgid "Small"
+msgstr ""
+
+#: includes/widgets/calendar-button.php:121
+#: includes/widgets/calendar-button.php:136
+msgid "Medium"
+msgstr ""
+
+#: includes/widgets/calendar-button.php:122
+#: includes/widgets/calendar-button.php:137
+msgid "Large"
+msgstr ""
+
+#: includes/widgets/calendar-button.php:146
+#: includes/widgets/calendar-button.php:157
+msgid "Button Color"
+msgstr ""
+
+#: includes/widgets/calendar-button.php:147
+#: includes/widgets/calendar-button.php:158
+msgid "Select the the button color."
+msgstr ""
+
+#: includes/widgets/calendar-button.php:168
+#: includes/widgets/calendar-button.php:183
+msgid "Hide button on:"
+msgstr ""
+
+#: includes/widgets/calendar-button.php:169
+#: includes/widgets/calendar-button.php:184
+msgid ""
+"You can set at what view the button will become hidden. Only affects "
+"buttons placed inside the archive item template."
+msgstr ""
+
+#: includes/widgets/calendar-button.php:172
+#: includes/widgets/calendar-button.php:187
+msgid "Always show"
+msgstr ""
+
+#: includes/widgets/calendar-button.php:173
+#: includes/widgets/calendar-button.php:188
+msgid "Grid view 2"
+msgstr ""
+
+#: includes/widgets/calendar-button.php:174
+#: includes/widgets/calendar-button.php:189
+msgid "Grid view 3"
+msgstr ""
+
+#: includes/widgets/calendar-button.php:175
+#: includes/widgets/calendar-button.php:190
+msgid "Grid view 4"
+msgstr ""
+
+#: includes/widgets/calendar-button.php:176
+#: includes/widgets/calendar-button.php:191
+msgid "Grid view 5"
+msgstr ""
+
+#: includes/widgets/calendar-button.php:199
+#: includes/widgets/calendar-button.php:209
+msgid "Extra class:"
+msgstr ""
+
+#: includes/widgets/calendar-button.php:200
+#: includes/widgets/calendar-button.php:210
+msgid "Give the button an extra class so you can style things as you want."
+msgstr ""
+
+#: includes/widgets/calendar-button.php:348
+#, php-format
+msgid ""
+"Admin Notice: The booking fields have not been added to this Custom Post "
+"Type. Please see %1$ssetup instructions%2$s to enable booking."
+msgstr ""
+
+#: includes/widgets/calendar-button.php:356
+msgid ""
+"Booking is not enabled for this listing, please edit your listing to enable "
+"booking."
+msgstr ""
+
+#: includes/widgets/calendar-button.php:391
+#: includes/widgets/calendar-button.php:476
+msgid "Setup Bookings"
+msgstr ""
+
+#: includes/widgets/calendar-button.php:404
+#: includes/widgets/calendar-button.php:484
+msgid "Manage Bookings"
+msgstr ""
+
+#: includes/widgets/calendar-button.php:440
+#: templates/view-customer-bookings-modal.php:21
+msgid "View Bookings"
+msgstr ""
+
+#: includes/widgets/customer-bookings.php:36
+msgid "GD > All Customer Bookings"
+msgstr ""
+
+#: includes/widgets/customer-bookings.php:39
+msgid "Displays all bookings by the current user"
+msgstr ""
+
+#: includes/widgets/customer-bookings.php:92
+#: includes/widgets/owner-bookings.php:92
+msgid "User ID:"
+msgstr ""
+
+#: includes/widgets/customer-bookings.php:93
+#: includes/widgets/owner-bookings.php:93
+msgid "Leave blank to use the current user's ID."
+msgstr ""
+
+#: includes/widgets/customer-bookings.php:94
+#: includes/widgets/owner-bookings.php:94
+msgid "Current user ID"
+msgstr ""
+
+#: includes/widgets/customer-bookings.php:184
+msgid "Log in to view your bookings."
+msgstr ""
+
+#: includes/widgets/owner-bookings.php:36
+msgid "GD > Owner Bookings"
+msgstr ""
+
+#: includes/widgets/owner-bookings.php:39
+msgid "Displays all bookings for listings by the current user"
+msgstr ""
+
+#: includes/widgets/owner-bookings.php:185
+msgid "Log in to view bookings."
+msgstr ""
+
+#: setup-environment.php:37
+msgid "GetPaid > Wallet"
+msgstr ""
+
+#: setup-environment.php:64
+#, php-format
+msgid "This plugin requires the following plugin: %1$s."
+msgid_plural "This plugin requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/book-now-modal.php:13 templates/book-now-modal.php:15
+#: templates/bs5/ruleset-editor.php:473
+#: templates/customer-view-booking-modal.php:46
+#: templates/customer-view-booking-modal.php:48 templates/date-editor.php:53
+#: templates/ical-sync-status-modal.php:69
+#: templates/ical-sync-status-modal.php:71
+#: templates/owner-new-booking-modal.php:24
+#: templates/owner-new-booking-modal.php:26
+#: templates/owner-view-booking-modal.php:32
+#: templates/owner-view-booking-modal.php:34
+#: templates/owner-view-booking-modal.php:145
+#: templates/owner-view-booking-modal.php:147 templates/ruleset-editor.php:479
+#: templates/setup-booking-modal.php:13 templates/setup-booking-modal.php:15
+#: templates/view-bookings-modal.php:52 templates/view-bookings-modal.php:54
+#: templates/view-customer-bookings-modal.php:24
+#: templates/view-customer-bookings-modal.php:26
+msgid "Close"
+msgstr ""
+
+#: templates/book-now-modal.php:23 templates/booking-form.php:109
+msgid "Confirm your booking details to continue."
+msgstr ""
+
+#: templates/book-now-modal.php:26
+msgid "Confirm and pay."
+msgstr ""
+
+#: templates/book-now-modal.php:27 templates/booking-form.php:112
+msgid ""
+"Your booking has been successfully submitted. We will contact you shortly."
+msgstr ""
+
+#: templates/book-now-modal.php:37 templates/booking-form.php:141
+msgid "Please enter your full name."
+msgstr ""
+
+#: templates/book-now-modal.php:42 templates/booking-form.php:147
+msgid "Please enter a valid email address."
+msgstr ""
+
+#: templates/book-now-modal.php:47 templates/booking-form.php:153
+msgid "Please enter a valid phone number."
+msgstr ""
+
+#: templates/book-now-modal.php:50 templates/booking-form.php:255
+msgid "Check-in and Check-out dates"
+msgstr ""
+
+#: templates/book-now-modal.php:57 templates/book-now-modal.php:63
+#: templates/booking-form.php:346 templates/booking-form.php:375
+msgid "Processing..."
+msgstr ""
+
+#: templates/book-now-modal.php:77
+msgid "Confirming..."
+msgstr ""
+
+#: templates/book-now-modal.php:78
+msgid "Confirm Booking Details"
+msgstr ""
+
+#: templates/book-now-modal.php:81
+msgid "Edit Booking Details"
+msgstr ""
+
+#: templates/book-now-modal.php:83 templates/booking-form.php:119
+#: templates/booking-form.php:388
+msgid "Confirm and pay"
+msgstr ""
+
+#: templates/booking-availability.php:30
+msgid "Clear dates"
+msgstr ""
+
+#: templates/booking-form.php:46
+msgid "Please select your dates"
+msgstr ""
+
+#: templates/booking-form.php:128
+msgid "(avg)"
+msgstr ""
+
+#: templates/booking-form.php:294
+#, php-format
+msgid "%1$s x %2$s %3$s"
+msgstr ""
+
+#: templates/booking-form.php:300
+msgid "Average nightly rate is rounded."
+msgstr ""
+
+#: templates/booking-form.php:306
+msgid "Extra Guests Fee:"
+msgstr ""
+
+#: templates/booking-form.php:311
+msgid "Cleaning Fee:"
+msgstr ""
+
+#: templates/booking-form.php:316
+msgid "Pet Fee:"
+msgstr ""
+
+#: templates/booking-form.php:321
+msgid "Discount:"
+msgstr ""
+
+#: templates/booking-form.php:321
+msgid "% OFF"
+msgstr ""
+
+#: templates/booking-form.php:326
+msgid "Service Fee:"
+msgstr ""
+
+#: templates/booking-form.php:331
+msgid "Total:"
+msgstr ""
+
+#: templates/booking-form.php:353
+#, php-format
+msgid "Reserve for %s"
+msgstr ""
+
+#: templates/booking-form.php:363
+msgid "Request to Book"
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:34 templates/ruleset-editor.php:36
+msgid "New Title"
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:38 templates/bs5/ruleset-editor.php:471
+#: templates/date-editor.php:50 templates/owner-view-booking-modal.php:117
+#: templates/owner-view-booking-modal.php:243 templates/ruleset-editor.php:40
+#: templates/ruleset-editor.php:476 templates/view-bookings-modal.php:215
+msgid "Save"
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:39 templates/ruleset-editor.php:41
+msgid "Cancel"
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:69 templates/ruleset-editor.php:72
+msgid "Extra Fees"
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:75 templates/bs5/ruleset-editor.php:85
+#: templates/ruleset-editor.php:79 templates/ruleset-editor.php:89
+msgid "per booking"
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:100 templates/ruleset-editor.php:104
+#, php-format
+msgid "After more than: %s, charge %s per extra person, per night."
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:115 templates/ruleset-editor.php:119
+msgid "For each guest after"
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:129 templates/ruleset-editor.php:133
+msgid "Length-of-stay discounts"
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:135 templates/ruleset-editor.php:139
+msgid "Set discounts based on weekly or monthly stays, or customize your own."
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:166 templates/bs5/ruleset-editor.php:213
+#: templates/bs5/ruleset-editor.php:260 templates/ruleset-editor.php:170
+#: templates/ruleset-editor.php:217 templates/ruleset-editor.php:264
+msgid "Add discount"
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:176 templates/ruleset-editor.php:180
+msgid "Last-minute discounts"
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:182 templates/ruleset-editor.php:186
+msgid "Offer a discount for bookings that happen close to arrival."
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:186 templates/ruleset-editor.php:190
+msgid "Days"
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:223 templates/ruleset-editor.php:227
+msgid "Early-bird discounts"
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:229 templates/ruleset-editor.php:233
+msgid "Offer a discount for bookings that happen well in advance."
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:233 templates/ruleset-editor.php:237
+msgid "Months"
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:270 templates/ruleset-editor.php:274
+msgid "Availability"
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:276 templates/ruleset-editor.php:280
+msgid "Set the minimum and maximum stay, and customize it by day if needed."
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:279 templates/ruleset-editor.php:283
+msgid "Minimum stay"
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:281 templates/bs5/ruleset-editor.php:291
+#: templates/bs5/ruleset-editor.php:306 templates/bs5/ruleset-editor.php:316
+#: templates/bs5/ruleset-editor.php:326 templates/bs5/ruleset-editor.php:336
+#: templates/bs5/ruleset-editor.php:346 templates/bs5/ruleset-editor.php:356
+#: templates/bs5/ruleset-editor.php:366 templates/ruleset-editor.php:285
+#: templates/ruleset-editor.php:295 templates/ruleset-editor.php:310
+#: templates/ruleset-editor.php:320 templates/ruleset-editor.php:330
+#: templates/ruleset-editor.php:340 templates/ruleset-editor.php:350
+#: templates/ruleset-editor.php:360 templates/ruleset-editor.php:370
+msgid "Unlimited"
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:289 templates/ruleset-editor.php:293
+msgid "Maximum stay"
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:300 templates/ruleset-editor.php:304
+msgid "Customize minimum stay by check in day"
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:304 templates/ruleset-editor.php:308
+msgid "Monday check in"
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:314 templates/ruleset-editor.php:318
+msgid "Tuesday check in"
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:324 templates/ruleset-editor.php:328
+msgid "Wednesday check in"
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:334 templates/ruleset-editor.php:338
+msgid "Thursday check in"
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:344 templates/ruleset-editor.php:348
+msgid "Friday check in"
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:354 templates/ruleset-editor.php:358
+msgid "Saturday check in"
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:364 templates/ruleset-editor.php:368
+msgid "Sunday check in"
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:379 templates/ruleset-editor.php:383
+msgid "Check-in and checkout days"
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:385 templates/ruleset-editor.php:389
+msgid "Select the days when you don't want guests to check in and check out"
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:390 templates/ruleset-editor.php:394
+msgid "Guests can't check in on"
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:398 templates/ruleset-editor.php:402
+msgid "Guests can't check out on"
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:413 templates/ruleset-editor.php:417
+msgid "iCalendar Import / Export"
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:420 templates/ruleset-editor.php:424
+msgid "Export iCalendar Feed URL"
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:427 templates/ruleset-editor.php:430
+msgid "Copied"
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:428 templates/ruleset-editor.php:431
+msgid "Copy"
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:433 templates/ruleset-editor.php:436
+msgid "Download iCalendar"
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:436 templates/ruleset-editor.php:439
+msgid "Import iCalendar From External Source."
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:439 templates/ruleset-editor.php:442
+msgid ""
+"Add the URL to the external calendar you want to import. The calendar must "
+"be in a valid Calendar format (.ics)."
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:458 templates/ruleset-editor.php:463
+msgid "Syncing..."
+msgstr ""
+
+#: templates/bs5/ruleset-editor.php:470 templates/date-editor.php:49
+#: templates/owner-view-booking-modal.php:116
+#: templates/owner-view-booking-modal.php:242 templates/ruleset-editor.php:475
+#: templates/view-bookings-modal.php:214
+msgid "Saving..."
+msgstr ""
+
+#: templates/calendar-single-body.php:56
+msgid "Booking #"
+msgstr ""
+
+#: templates/calendar-single-body.php:64
+msgid "Edit Price Data"
+msgstr ""
+
+#: templates/calendar.php:39
+msgid "You have no published listings."
+msgstr ""
+
+#: templates/customer-bookings.php:24
+msgid "User email not found."
+msgstr ""
+
+#: templates/customer-bookings.php:37 templates/owner-bookings.php:52
+#: templates/view-bookings-modal.php:80
+#: templates/view-customer-bookings-modal.php:36
+msgid "No bookings found."
+msgstr ""
+
+#: templates/customer-bookings.php:108 templates/customer-bookings.php:112
+#: templates/owner-bookings.php:147 templates/owner-bookings.php:151
+#: templates/view-bookings-modal.php:131
+#: templates/view-customer-bookings-modal.php:58
+msgid "View Details"
+msgstr ""
+
+#: templates/customer-view-booking-modal.php:72
+#: templates/view-customer-bookings-modal.php:82
+msgid "Cancelling..."
+msgstr ""
+
+#: templates/customer-view-booking-modal.php:73
+#: templates/owner-view-booking-modal.php:120
+#: templates/view-bookings-modal.php:218
+#: templates/view-customer-bookings-modal.php:83
+msgid "Cancel Booking"
+msgstr ""
+
+#: templates/date-editor.php:27
+msgid "Is this date available?"
+msgstr ""
+
+#: templates/date-editor.php:28
+msgid "Are these dates available?"
+msgstr ""
+
+#: templates/owner-bookings.php:36
+msgid "No listings found."
+msgstr ""
+
+#: templates/owner-bookings.php:67 templates/view-bookings-modal.php:94
+msgid "You Receive"
+msgstr ""
+
+#: templates/owner-bookings.php:106 templates/view-bookings-modal.php:111
+#, php-format
+msgid "Send email to %s"
+msgstr ""
+
+#: templates/owner-bookings.php:109 templates/view-bookings-modal.php:112
+#: templates/view-bookings-modal.php:159
+#, php-format
+msgid "Call to %s"
+msgstr ""
+
+#: templates/owner-bookings.php:156 templates/owner-view-booking-modal.php:142
+msgid "Edit Booking"
+msgstr ""
+
+#: templates/owner-new-booking-modal.php:136
+msgid "Available Listings"
+msgstr ""
+
+#: templates/owner-new-booking-modal.php:138
+msgid "Select Listing"
+msgstr ""
+
+#: templates/owner-new-booking-modal.php:146
+msgid "Available Rooms"
+msgstr ""
+
+#: templates/owner-new-booking-modal.php:148
+msgid "Select Room"
+msgstr ""
+
+#: templates/owner-new-booking-modal.php:266
+msgid "Searching..."
+msgstr ""
+
+#: templates/owner-new-booking-modal.php:267
+msgid "Search Available Listings"
+msgstr ""
+
+#: templates/owner-new-booking-modal.php:276
+msgid "Booking..."
+msgstr ""
+
+#: templates/owner-view-booking-modal.php:58
+msgid "SMS"
+msgstr ""
+
+#: templates/owner-view-booking-modal.php:61
+#: templates/view-bookings-modal.php:159
+msgid "Call"
+msgstr ""
+
+#: templates/owner-view-booking-modal.php:85
+#: templates/view-bookings-modal.php:183
+msgid "Amount breakdown"
+msgstr ""
+
+#: templates/owner-view-booking-modal.php:96
+#: templates/view-bookings-modal.php:194
+msgid "Booking Action"
+msgstr ""
+
+#: templates/owner-view-booking-modal.php:98
+#: templates/view-bookings-modal.php:196
+msgid "Select Action"
+msgstr ""
+
+#: templates/owner-view-booking-modal.php:99
+#: templates/view-bookings-modal.php:197
+msgid "Approve"
+msgstr ""
+
+#: templates/owner-view-booking-modal.php:100
+#: templates/view-bookings-modal.php:198
+msgid "Reject"
+msgstr ""
+
+#: templates/owner-view-booking-modal.php:102
+#: templates/view-bookings-modal.php:200
+msgid "You will not be able to undo this change."
+msgstr ""
+
+#: templates/setup-booking-modal.php:11
+msgid "Set-up Bookings"
+msgstr ""
+
+#: templates/setup-booking-modal.php:25
+msgid "Click and drag to select multiple dates or Hold SHIFT + CLICK."
+msgstr ""
+
+#: templates/view-bookings-modal.php:64
+msgid "All"
+msgstr ""
+
+#: templates/view-bookings-modal.php:65
+msgid "Upcoming"
+msgstr ""
+
+#: templates/view-bookings-modal.php:107
+msgid "iCal"
+msgstr ""
+
+#: templates/view-bookings-modal.php:156
+#, php-format
+msgid "Send SMS to %s"
+msgstr ""
