@@ -15,8 +15,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 /** User meta key for plan. */
 define( 'DIRECTORY_LISTING_PLAN_META', 'directory_listing_plan' );
 
-/** Free plan: max images per listing (premium = unlimited). */
-define( 'DIRECTORY_FREE_MAX_IMAGES_PER_LISTING', 3 );
+/** Free plan: max images per listing (premium = unlimited).
+ *  Note: the images field is hidden for free users, but we keep this
+ *  limit in case it's ever re-enabled.
+ */
+define( 'DIRECTORY_FREE_MAX_IMAGES_PER_LISTING', 1 );
 
 /**
  * Custom field htmlvar_name values that free users can see and edit.
@@ -25,26 +28,67 @@ define( 'DIRECTORY_FREE_MAX_IMAGES_PER_LISTING', 3 );
  * @return array
  */
 function directory_get_free_allowed_fields() {
+	/**
+	 * For FREE users we only allow:
+	 * - post_title   (Place title)
+	 * - address      (single address line shown on the card – advanced
+	 *                 address/map bits are visually hidden via CSS)
+	 *
+	 * No description (post_content), no images field and no separate country / region / city / zip / map /
+	 * latitude / longitude inputs on the form – those are effectively
+	 * PREMIUM-only.
+	 */
 	$default = array(
 		'post_title',
-		'post_content',
-		'post_images',
 		'address',
-		'street',
-		'city',
-		'region',
-		'country',
-		'zip',
-		'latitude',
-		'longitude',
-		'phone',
-		'email',
-		'website',
-		'fax',
-		'gd_placecategory',
 	);
 	return apply_filters( 'directory_free_allowed_fields', $default );
 }
+
+/**
+ * On Add Listing page, show a small free‑vs‑premium CTA for free users.
+ */
+function directory_listing_plan_add_listing_cta( $content ) {
+	// Only show this CTA for logged-in FREE users on the Add Listing page.
+	if ( ! is_user_logged_in() || directory_is_premium_listing_user() ) {
+		return $content;
+	}
+
+	if ( function_exists( 'geodir_add_listing_page_id' ) ) {
+		$add_page_id = geodir_add_listing_page_id( 'gd_place' );
+		if ( $add_page_id && is_page( $add_page_id ) && in_the_loop() && is_main_query() ) {
+			$upgrade_url = directory_get_upgrade_url();
+			$cta_html    = '<div class="directory-plan-cta">';
+			$cta_html   .= '<h2 class="directory-plan-cta-title">' . esc_html__( 'Want to unlock more listing options?', 'directory' ) . '</h2>';
+			$cta_html   .= '<p class="directory-plan-cta-text">' . esc_html__( 'Free listings include a basic title and address. Upgrade to Premium to add full address details, map, images, description and more.', 'directory' ) . '</p>';
+			$cta_html   .= '<a class="directory-plan-cta-btn" href="' . esc_url( $upgrade_url ) . '">' . esc_html__( 'Unlock more listing options', 'directory' ) . '</a>';
+			$cta_html   .= '</div>';
+
+			$content .= $cta_html;
+		}
+	}
+	return $content;
+}
+add_filter( 'the_content', 'directory_listing_plan_add_listing_cta', 20 );
+
+/**
+ * Add a body class on the Add Listing page so we can hide map/images
+ * UI for free users via CSS only on that page.
+ */
+function directory_listing_plan_body_class( $classes ) {
+	if ( function_exists( 'geodir_add_listing_page_id' ) ) {
+		$add_page_id = geodir_add_listing_page_id( 'gd_place' );
+		if ( $add_page_id && is_page( $add_page_id ) ) {
+			if ( directory_is_premium_listing_user() ) {
+				$classes[] = 'directory-plan-premium';
+			} else {
+				$classes[] = 'directory-plan-free';
+			}
+		}
+	}
+	return $classes;
+}
+add_filter( 'body_class', 'directory_listing_plan_body_class' );
 
 /**
  * Get the listing plan for a user (free or premium).

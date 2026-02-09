@@ -2616,6 +2616,14 @@ body.custom-frontend .geodir-add-listing input[type="submit"].btn {
 	transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
 }
 
+/* Free plan: hide map UI + extra address bits and images field on Add Listing */
+body.custom-frontend.directory-plan-free .geodir-add-listing #geodir_post_map_row,
+body.custom-frontend.directory-plan-free .geodir-add-listing #geodir_post_mapview_row,
+body.custom-frontend.directory-plan-free .geodir-add-listing #geodir_post_latitude_row,
+body.custom-frontend.directory-plan-free .geodir-add-listing #geodir_post_longitude_row {
+	display: none !important;
+}
+
 /* Primary buttons (Submit, main actions, etc.) */
 body.custom-frontend .geodir-add-listing .btn-primary,
 body.custom-frontend .geodir-add-listing .geodir_button.btn-primary,
@@ -2654,6 +2662,53 @@ body.custom-frontend .geodir-add-listing .geodir_preview_button.btn-outline-prim
 body.custom-frontend .geodir-add-listing a.btn-outline-primary:hover {
 	background: #1d4ed8;
 	border-color: #1d4ed8;
+	color: #fff !important;
+	text-decoration: none !important;
+}
+
+/* Add Listing – free plan CTA below the form */
+body.custom-frontend .directory-plan-cta {
+	margin-top: 2.5rem;
+	padding: 1.75rem 1.5rem;
+	border-radius: 16px;
+	background: linear-gradient(135deg, #eff6ff 0%, #e0f2fe 100%);
+	border: 1px solid #bfdbfe;
+	width: 100%;
+	max-width: none;
+}
+
+body.custom-frontend .directory-plan-cta-title {
+	margin: 0 0 0.5rem;
+	font-size: 1.125rem;
+	font-weight: 600;
+	color: #0f172a;
+}
+
+body.custom-frontend .directory-plan-cta-text {
+	margin: 0 0 1rem;
+	font-size: 0.9375rem;
+	color: #1e293b;
+}
+
+body.custom-frontend .directory-plan-cta-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.6rem 1.4rem;
+	border-radius: 999px;
+	background: #2563eb;
+	color: #fff !important;
+	font-weight: 600;
+	font-size: 0.9375rem;
+	text-decoration: none !important;
+	box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+	transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+body.custom-frontend .directory-plan-cta-btn:hover {
+	background: #1d4ed8;
+	box-shadow: 0 6px 16px rgba(37, 99, 235, 0.32);
+	transform: translateY(-1px);
 	color: #fff !important;
 	text-decoration: none !important;
 }
