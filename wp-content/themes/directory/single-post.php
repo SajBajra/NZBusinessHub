@@ -22,26 +22,42 @@ if ( ! $blog_page ) {
 ?>
 
 <main class="custom-frontend-main cf-blog-single-main" id="main">
-	<?php
-	while ( have_posts() ) :
-		the_post();
-		$pid   = get_the_ID();
-		$thumb = get_the_post_thumbnail_url( $pid, 'large' );
-		$cats  = get_the_category( $pid );
-		?>
+	<div class="cf-blog-single-shell">
+		<?php
+		while ( have_posts() ) :
+			the_post();
+			$pid   = get_the_ID();
+			$thumb = get_the_post_thumbnail_url( $pid, 'large' );
+			$cats  = get_the_category( $pid );
 
-		<section class="cf-blog-single-hero">
-			<div class="cf-blog-single-hero-inner">
-				<nav class="cf-blog-single-breadcrumb" aria-label="<?php esc_attr_e( 'Breadcrumb', 'directory' ); ?>">
-					<a href="<?php echo esc_url( $blog_home ); ?>"><?php esc_html_e( 'Home', 'directory' ); ?></a>
-					<span class="cf-blog-single-breadcrumb-sep" aria-hidden="true">›</span>
-					<a href="<?php echo esc_url( $blog_page ); ?>"><?php esc_html_e( 'Blog', 'directory' ); ?></a>
-					<span class="cf-blog-single-breadcrumb-sep" aria-hidden="true">›</span>
-					<span class="cf-blog-single-breadcrumb-current"><?php echo esc_html( get_the_title( $pid ) ); ?></span>
-				</nav>
+			// Similar posts (same categories if possible) for grid section.
+			$similar_args = array(
+				'post_type'           => 'post',
+				'post_status'         => 'publish',
+				'posts_per_page'      => 3,
+				'post__not_in'        => array( $pid ),
+				'ignore_sticky_posts' => true,
+			);
+			if ( ! empty( $cats ) && ! is_wp_error( $cats ) ) {
+				$cat_ids = wp_list_pluck( $cats, 'term_id' );
+				if ( ! empty( $cat_ids ) ) {
+					$similar_args['category__in'] = $cat_ids;
+				}
+			}
+			$recent = new WP_Query( $similar_args );
+			?>
 
+			<nav class="cf-blog-single-breadcrumb" aria-label="<?php esc_attr_e( 'Breadcrumb', 'directory' ); ?>">
+				<a href="<?php echo esc_url( $blog_home ); ?>"><?php esc_html_e( 'Home', 'directory' ); ?></a>
+				<span class="cf-blog-single-breadcrumb-sep" aria-hidden="true">›</span>
+				<a href="<?php echo esc_url( $blog_page ); ?>"><?php esc_html_e( 'Blog', 'directory' ); ?></a>
+				<span class="cf-blog-single-breadcrumb-sep" aria-hidden="true">›</span>
+				<span class="cf-blog-single-breadcrumb-current"><?php echo esc_html( get_the_title( $pid ) ); ?></span>
+			</nav>
+
+			<article id="post-<?php echo esc_attr( $pid ); ?>" <?php post_class( 'cf-blog-single-card' ); ?>>
 				<?php if ( ! empty( $cats ) && ! is_wp_error( $cats ) ) : ?>
-					<div class="cf-blog-single-cats">
+					<div class="cf-blog-single-cats cf-blog-single-cats--main">
 						<?php
 						foreach ( $cats as $cat ) {
 							printf(
@@ -53,9 +69,7 @@ if ( ! $blog_page ) {
 					</div>
 				<?php endif; ?>
 
-				<h1 class="cf-blog-single-title"><?php the_title(); ?></h1>
-
-				<div class="cf-blog-single-meta">
+				<div class="cf-blog-single-meta cf-blog-single-meta--top">
 					<span class="cf-blog-single-meta-item">
 						<?php echo esc_html( get_the_date( '', $pid ) ); ?>
 					</span>
@@ -67,17 +81,15 @@ if ( ! $blog_page ) {
 						?>
 					</span>
 				</div>
-			</div>
 
-			<?php if ( $thumb ) : ?>
-				<div class="cf-blog-single-hero-image">
-					<img src="<?php echo esc_url( $thumb ); ?>" alt="" class="cf-blog-single-hero-img" />
-				</div>
-			<?php endif; ?>
-		</section>
+				<h1 class="cf-blog-single-main-title"><?php the_title(); ?></h1>
 
-		<section class="cf-blog-single-body">
-			<article id="post-<?php echo esc_attr( $pid ); ?>" <?php post_class( 'cf-blog-single-article' ); ?>>
+				<?php if ( $thumb ) : ?>
+					<div class="cf-blog-single-main-image-wrap">
+						<img src="<?php echo esc_url( $thumb ); ?>" alt="" class="cf-blog-single-main-image" />
+					</div>
+				<?php endif; ?>
+
 				<div class="cf-blog-single-content entry-content">
 					<?php the_content(); ?>
 				</div>
@@ -91,15 +103,61 @@ if ( ! $blog_page ) {
 				);
 				?>
 
+				<?php if ( comments_open() || get_comments_number() ) : ?>
+					<section class="cf-blog-single-comments" aria-label="<?php esc_attr_e( 'Comments', 'directory' ); ?>">
+						<?php comments_template(); ?>
+					</section>
+				<?php endif; ?>
+
 				<footer class="cf-blog-single-footer">
 					<a href="<?php echo esc_url( $blog_page ); ?>" class="cf-single-back">← <?php esc_html_e( 'Back to Blog', 'directory' ); ?></a>
 				</footer>
 			</article>
-		</section>
 
-		<?php
-	endwhile;
-	?>
+			<?php if ( $recent->have_posts() ) : ?>
+				<section class="cf-blog-single-next" aria-label="<?php esc_attr_e( 'Similar posts', 'directory' ); ?>">
+					<div class="cf-blog-single-next-header">
+						<h2 class="cf-blog-single-next-title"><?php esc_html_e( 'Similar posts', 'directory' ); ?></h2>
+					</div>
+					<div class="cf-blog-single-next-grid">
+						<?php
+						while ( $recent->have_posts() ) :
+							$recent->the_post();
+							$r_id    = get_the_ID();
+							$r_thumb = get_the_post_thumbnail_url( $r_id, 'medium_large' );
+							$r_link  = get_the_permalink();
+							if ( function_exists( 'directory_relative_url' ) ) {
+								$r_link = directory_relative_url( $r_link );
+							}
+							?>
+							<article id="recent-post-<?php echo esc_attr( $r_id ); ?>" <?php post_class( 'cf-blog-card', $r_id ); ?>>
+								<a href="<?php echo esc_url( $r_link ); ?>" class="cf-blog-card-link">
+									<div class="cf-blog-card-image-wrap">
+										<?php if ( $r_thumb ) : ?>
+											<img src="<?php echo esc_url( $r_thumb ); ?>" alt="" class="cf-blog-card-image" loading="lazy" />
+										<?php else : ?>
+											<div class="cf-blog-card-image-placeholder" aria-hidden="true"></div>
+										<?php endif; ?>
+									</div>
+									<div class="cf-blog-card-body">
+										<p class="cf-blog-card-author"><?php echo esc_html( get_the_date() ); ?></p>
+										<h3 class="cf-blog-card-title"><?php the_title(); ?></h3>
+										<p class="cf-blog-card-excerpt"><?php echo esc_html( wp_trim_words( get_the_excerpt(), 18 ) ); ?></p>
+									</div>
+								</a>
+							</article>
+							<?php
+						endwhile;
+						wp_reset_postdata();
+						?>
+					</div>
+				</section>
+			<?php endif; ?>
+
+			<?php
+		endwhile;
+		?>
+	</div>
 </main>
 
 <?php

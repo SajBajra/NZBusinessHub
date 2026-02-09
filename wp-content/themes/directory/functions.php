@@ -99,6 +99,33 @@ function directory_ensure_upgrade_page_exists() {
 add_action( 'init', 'directory_ensure_upgrade_page_exists' );
 
 /**
+ * Remove the block-based post author panel from single posts rendered
+ * inside our custom layouts (we already show compact meta).
+ */
+function directory_strip_post_author_block( $block_content, $block ) {
+	if ( empty( $block['blockName'] ) ) {
+		return $block_content;
+	}
+
+	// Strip the core Post Author block entirely.
+	if ( $block['blockName'] === 'core/post-author' ) {
+		return '';
+	}
+
+	// If a Group block only contains a Post Author block, strip the group too.
+	if ( $block['blockName'] === 'core/group' && ! empty( $block['innerBlocks'] ) ) {
+		foreach ( $block['innerBlocks'] as $inner ) {
+			if ( isset( $inner['blockName'] ) && $inner['blockName'] === 'core/post-author' ) {
+				return '';
+			}
+		}
+	}
+
+	return $block_content;
+}
+add_filter( 'render_block', 'directory_strip_post_author_block', 12, 2 );
+
+/**
  * Enqueue child-theme assets.
  */
 function directory_theme_enqueue_assets() {
