@@ -66,6 +66,39 @@ function directory_theme_setup()
 add_action('after_setup_theme', 'directory_theme_setup');
 
 /**
+ * Ensure an "Upgrade" page exists for listing plans.
+ * The page content uses the [directory_listing_plan_table] shortcode.
+ */
+function directory_ensure_upgrade_page_exists() {
+	// Only run for admins to avoid creating pages for anonymous traffic.
+	if ( ! current_user_can( 'manage_options' ) ) {
+		return;
+	}
+
+	$upgrade_page = get_page_by_path( 'upgrade' );
+	if ( $upgrade_page instanceof WP_Post ) {
+		return;
+	}
+
+	$page_id = wp_insert_post(
+		array(
+			'post_title'   => 'Upgrade',
+			'post_name'    => 'upgrade',
+			'post_status'  => 'publish',
+			'post_type'    => 'page',
+			'post_content' => '[directory_listing_plan_table]',
+		),
+		true
+	);
+
+	// If it failed, do nothing; button will still fall back to /upgrade/.
+	if ( is_wp_error( $page_id ) ) {
+		return;
+	}
+}
+add_action( 'init', 'directory_ensure_upgrade_page_exists' );
+
+/**
  * Enqueue child-theme assets.
  */
 function directory_theme_enqueue_assets() {

@@ -2668,26 +2668,125 @@ body.custom-frontend .geodir-add-listing a.btn-outline-primary:hover {
 
 /* Add Listing – free plan CTA below the form */
 body.custom-frontend .directory-plan-cta {
-	margin-top: 2.5rem;
-	padding: 1.75rem 1.5rem;
-	border-radius: 16px;
-	background: linear-gradient(135deg, #eff6ff 0%, #e0f2fe 100%);
-	border: 1px solid #bfdbfe;
+	margin-top: 3rem;
+	padding: 2.5rem 1.75rem 2.75rem;
+	border-radius: 24px;
+	background: linear-gradient(180deg, #f9fafb 0%, #eff6ff 40%, #e0f2fe 100%);
+	border: 1px solid rgba(148, 163, 184, 0.28);
 	width: 100%;
 	max-width: none;
+	box-shadow: 0 18px 60px rgba(15, 23, 42, 0.16);
+	box-sizing: border-box;
 }
 
-body.custom-frontend .directory-plan-cta-title {
-	margin: 0 0 0.5rem;
-	font-size: 1.125rem;
+body.custom-frontend .directory-plan-cta-header {
+	text-align: center;
+	max-width: 720px;
+	margin: 0 auto 2.25rem;
+}
+
+body.custom-frontend .directory-plan-cta-eyebrow {
+	margin: 0 0 0.4rem;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.15rem 0.9rem;
+	border-radius: 999px;
+	background: rgba(15, 23, 42, 0.06);
+	font-size: 0.75rem;
 	font-weight: 600;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
 	color: #0f172a;
 }
 
-body.custom-frontend .directory-plan-cta-text {
-	margin: 0 0 1rem;
-	font-size: 0.9375rem;
-	color: #1e293b;
+body.custom-frontend .directory-plan-cta-title {
+	margin: 0;
+	font-size: clamp(1.5rem, 3vw, 1.9rem);
+	font-weight: 650;
+	color: #0f172a;
+	letter-spacing: -0.03em;
+}
+
+body.custom-frontend .directory-plan-cta-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1.75rem;
+	align-items: stretch;
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+	body.custom-frontend .directory-plan-cta-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+body.custom-frontend .directory-plan-card {
+	position: relative;
+	background: #ffffff;
+	border-radius: 18px;
+	padding: 1.75rem 1.6rem 1.8rem;
+	border: 1px solid #e5e7eb;
+	box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+	display: flex;
+	flex-direction: column;
+	gap: 0.9rem;
+}
+
+body.custom-frontend .directory-plan-card--premium {
+	background: radial-gradient(circle at top, rgba(59, 130, 246, 0.14), transparent 60%), #f9fafb;
+	border-color: #bfdbfe;
+	box-shadow: 0 16px 40px rgba(37, 99, 235, 0.32);
+}
+
+body.custom-frontend .directory-plan-card-pill {
+	align-self: flex-start;
+	padding: 0.2rem 0.85rem;
+	border-radius: 999px;
+	background: #1d4ed8;
+	color: #fff;
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	margin-bottom: 0.1rem;
+}
+
+body.custom-frontend .directory-plan-card-title {
+	margin: 0;
+	font-size: 1.1rem;
+	font-weight: 650;
+	color: #0f172a;
+}
+
+body.custom-frontend .directory-plan-card-subtitle {
+	margin: 0;
+	font-size: 0.9rem;
+	color: #4b5563;
+}
+
+body.custom-frontend .directory-plan-card-list {
+	margin: 0.5rem 0 0;
+	padding-left: 1.1rem;
+	font-size: 0.9rem;
+	color: #374151;
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+}
+
+body.custom-frontend .directory-plan-card-list li {
+	margin: 0;
+}
+
+/* Upgrade page shell */
+body.custom-frontend .cf-plans-shell {
+	max-width: 1200px;
+	margin: 2.5rem auto 4rem;
+	padding: 0 1.5rem;
+	box-sizing: border-box;
 }
 
 body.custom-frontend .directory-plan-cta-btn {
@@ -2711,6 +2810,25 @@ body.custom-frontend .directory-plan-cta-btn:hover {
 	transform: translateY(-1px);
 	color: #fff !important;
 	text-decoration: none !important;
+}
+
+/* Small inline CTA on Add Listing page (above links to full Upgrade page) */
+body.custom-frontend .directory-plan-inline-cta {
+	margin-top: 1.75rem;
+	padding: 0.9rem 1rem;
+	border-radius: 999px;
+	background: rgba(37, 99, 235, 0.06);
+	border: 1px solid rgba(37, 99, 235, 0.18);
+	display: inline-flex;
+	align-items: center;
+	gap: 0.75rem;
+	flex-wrap: wrap;
+}
+
+body.custom-frontend .directory-plan-inline-text {
+	font-size: 0.9rem;
+	color: #1f2937;
+	font-weight: 500;
 }
 
 /* Add Listing – login/register links inside notices */

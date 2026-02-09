@@ -48,7 +48,8 @@ function directory_get_free_allowed_fields() {
 }
 
 /**
- * On Add Listing page, show a small free‑vs‑premium CTA for free users.
+ * On Add Listing page, show a small inline CTA for FREE users linking
+ * to the full Upgrade page (separate pricing layout).
  */
 function directory_listing_plan_add_listing_cta( $content ) {
 	// Only show this CTA for logged-in FREE users on the Add Listing page.
@@ -60,15 +61,18 @@ function directory_listing_plan_add_listing_cta( $content ) {
 		$add_page_id = geodir_add_listing_page_id( 'gd_place' );
 		if ( $add_page_id && is_page( $add_page_id ) && in_the_loop() && is_main_query() ) {
 			$upgrade_url = directory_get_upgrade_url();
-			$cta_html    = '<div class="directory-plan-cta">';
-			$cta_html   .= '<h2 class="directory-plan-cta-title">' . esc_html__( 'Want to unlock more listing options?', 'directory' ) . '</h2>';
-			$cta_html   .= '<p class="directory-plan-cta-text">' . esc_html__( 'Free listings include a basic title and address. Upgrade to Premium to add full address details, map, images, description and more.', 'directory' ) . '</p>';
-			$cta_html   .= '<a class="directory-plan-cta-btn" href="' . esc_url( $upgrade_url ) . '">' . esc_html__( 'Unlock more listing options', 'directory' ) . '</a>';
-			$cta_html   .= '</div>';
+
+			$cta_html  = '<div class="directory-plan-inline-cta">';
+			$cta_html .= '<span class="directory-plan-inline-text">' . esc_html__( 'Need more fields for this listing?', 'directory' ) . '</span>';
+			$cta_html .= '<a class="directory-plan-cta-btn" href="' . esc_url( $upgrade_url ) . '">';
+			$cta_html .= esc_html__( 'Unlock more listing options', 'directory' );
+			$cta_html .= '</a>';
+			$cta_html .= '</div>';
 
 			$content .= $cta_html;
 		}
 	}
+
 	return $content;
 }
 add_filter( 'the_content', 'directory_listing_plan_add_listing_cta', 20 );
@@ -293,51 +297,49 @@ add_action( 'personal_options_update', 'directory_listing_plan_save_user_profile
 add_action( 'edit_user_profile_update', 'directory_listing_plan_save_user_profile' );
 
 /**
- * Shortcode: [directory_listing_plan_table] – show Free vs Premium comparison.
+ * Shortcode: [directory_listing_plan_table] – Free vs Premium cards (separate page).
  */
 function directory_listing_plan_table_shortcode() {
 	$upgrade_url = directory_get_upgrade_url();
+
 	ob_start();
 	?>
-	<div class="directory-plans-table">
-		<table class="directory-plans">
-			<thead>
-				<tr>
-					<th><?php esc_html_e( 'Feature', 'directory' ); ?></th>
-					<th><?php esc_html_e( 'Free', 'directory' ); ?></th>
-					<th><?php esc_html_e( 'Premium', 'directory' ); ?></th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td><?php esc_html_e( 'Number of listings', 'directory' ); ?></td>
-					<td><?php esc_html_e( 'Unlimited', 'directory' ); ?></td>
-					<td><?php esc_html_e( 'Unlimited', 'directory' ); ?></td>
-				</tr>
-				<tr>
-					<td><?php esc_html_e( 'Listing form fields', 'directory' ); ?></td>
-					<td><?php esc_html_e( 'Limited (basics only)', 'directory' ); ?></td>
-					<td><?php esc_html_e( 'All fields unlocked', 'directory' ); ?></td>
-				</tr>
-				<tr>
-					<td><?php esc_html_e( 'Images per listing', 'directory' ); ?></td>
-					<td><?php echo (int) DIRECTORY_FREE_MAX_IMAGES_PER_LISTING; ?></td>
-					<td><?php esc_html_e( 'Unlimited', 'directory' ); ?></td>
-				</tr>
-				<tr>
-					<td><?php esc_html_e( 'Featured listing', 'directory' ); ?></td>
-					<td>&#8212;</td>
-					<td>&#10003;</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td><?php esc_html_e( 'Current plan', 'directory' ); ?></td>
-					<td><a href="<?php echo esc_url( $upgrade_url ); ?>" class="button button-primary"><?php esc_html_e( 'Upgrade to Premium', 'directory' ); ?></a></td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
+	<section class="directory-plan-cta" aria-label="<?php esc_attr_e( 'Listing plans', 'directory' ); ?>">
+		<header class="directory-plan-cta-header">
+			<p class="directory-plan-cta-eyebrow"><?php esc_html_e( 'Choose your plan for listing', 'directory' ); ?></p>
+			<h2 class="directory-plan-cta-title"><?php esc_html_e( 'Start free. Upgrade when you need more.', 'directory' ); ?></h2>
+		</header>
+
+		<div class="directory-plan-cta-grid">
+			<article class="directory-plan-card directory-plan-card--free">
+				<h3 class="directory-plan-card-title"><?php esc_html_e( 'Free listing', 'directory' ); ?></h3>
+				<p class="directory-plan-card-subtitle"><?php esc_html_e( 'Great for getting started.', 'directory' ); ?></p>
+				<ul class="directory-plan-card-list">
+					<li><?php esc_html_e( 'Place title & category', 'directory' ); ?></li>
+					<li><?php esc_html_e( 'Single address line', 'directory' ); ?></li>
+					<li><?php esc_html_e( 'No description, map or gallery', 'directory' ); ?></li>
+					<li><?php esc_html_e( 'Unlimited free listings', 'directory' ); ?></li>
+				</ul>
+			</article>
+
+			<article class="directory-plan-card directory-plan-card--premium">
+				<p class="directory-plan-card-pill"><?php esc_html_e( 'Recommended', 'directory' ); ?></p>
+				<h3 class="directory-plan-card-title"><?php esc_html_e( 'Premium listing', 'directory' ); ?></h3>
+				<p class="directory-plan-card-subtitle"><?php esc_html_e( 'Unlock full details and visibility.', 'directory' ); ?></p>
+				<ul class="directory-plan-card-list">
+					<li><?php esc_html_e( 'Full address + interactive map', 'directory' ); ?></li>
+					<li><?php esc_html_e( 'Rich description & extra fields', 'directory' ); ?></li>
+					<li><?php esc_html_e( 'Multiple images in a gallery', 'directory' ); ?></li>
+					<li><?php esc_html_e( 'Higher impact, more engagement', 'directory' ); ?></li>
+				</ul>
+				<a class="directory-plan-cta-btn" href="<?php echo esc_url( $upgrade_url ); ?>">
+					<?php esc_html_e( 'Unlock more listing options', 'directory' ); ?>
+				</a>
+			</article>
+		</div>
+	</section>
 	<?php
+
 	return ob_get_clean();
 }
 add_shortcode( 'directory_listing_plan_table', 'directory_listing_plan_table_shortcode' );
