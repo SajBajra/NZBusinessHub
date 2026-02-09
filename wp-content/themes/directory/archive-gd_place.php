@@ -35,10 +35,11 @@ global $wp_query;
 
 // Use a dedicated query for gd_place so listings always show (main query may be the archive page).
 $gd_query_vars = array(
-	'post_type'      => 'gd_place',
-	'post_status'    => 'publish',
-	'posts_per_page' => 9,
-	'paged'          => max( 1, (int) get_query_var( 'paged' ) ),
+	'post_type'               => 'gd_place',
+	'post_status'             => 'publish',
+	'posts_per_page'          => 9,
+	'paged'                   => max( 1, (int) get_query_var( 'paged' ) ),
+	'update_post_meta_cache'  => false,
 );
 // Preserve main query vars for search/filters (GD uses query vars).
 if ( ! empty( $wp_query->query_vars ) ) {
@@ -104,6 +105,7 @@ $gd_total = (int) $gd_query->found_posts;
 				<?php if ( $gd_query->have_posts() ) : ?>
 					<div class="cf-gd-cards cf-gd-cards-grid">
 						<?php
+						$gd_card_index = 0;
 						while ( $gd_query->have_posts() ) :
 							$gd_query->the_post();
 							$pid   = get_the_ID();
@@ -145,12 +147,14 @@ $gd_total = (int) $gd_query->found_posts;
 									$rating_html = geodir_get_rating_stars( $post_rating, $pid );
 								}
 							}
+							$gd_first_image = $gd_card_index === 0;
+							$gd_card_index++;
 							?>
 							<article id="post-<?php echo esc_attr( $pid ); ?>" <?php post_class( 'cf-gd-card' ); ?>>
 								<a class="cf-gd-card-link" href="<?php echo esc_url( $link ); ?>">
 									<div class="cf-gd-card-image-wrap">
 										<?php if ( $thumb ) : ?>
-											<img src="<?php echo esc_url( $thumb ); ?>" alt="" class="cf-gd-card-image" loading="lazy" />
+											<img src="<?php echo esc_url( $thumb ); ?>" alt="" class="cf-gd-card-image" loading="<?php echo $gd_first_image ? 'eager' : 'lazy'; ?>" decoding="async"<?php echo $gd_first_image ? ' fetchpriority="high"' : ''; ?> />
 										<?php else : ?>
 											<div class="cf-gd-card-image-placeholder"></div>
 										<?php endif; ?>

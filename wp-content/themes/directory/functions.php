@@ -69,18 +69,35 @@ add_action('after_setup_theme', 'directory_theme_setup');
  * Enqueue child-theme assets.
  */
 function directory_theme_enqueue_assets() {
+	if ( is_admin() ) {
+		return;
+	}
 	$theme_version = wp_get_theme( get_template() )->get( 'Version' );
 
-	// Simple carousel for home page categories section.
-	wp_enqueue_script(
-		'directory-home-categories-carousel',
-		get_stylesheet_directory_uri() . '/assets/js/home-categories-carousel.js',
-		array(),
-		$theme_version,
-		true
-	);
+	// Carousel only on front page; load in footer with defer for faster parsing.
+	if ( is_front_page() ) {
+		wp_enqueue_script(
+			'directory-home-categories-carousel',
+			get_stylesheet_directory_uri() . '/assets/js/home-categories-carousel.js',
+			array(),
+			$theme_version,
+			true
+		);
+	}
 }
 add_action( 'wp_enqueue_scripts', 'directory_theme_enqueue_assets' );
+
+/**
+ * Add defer to theme scripts to avoid render-blocking.
+ */
+function directory_script_loader_tag( $tag, $handle, $src ) {
+	$defer_handles = array( 'directory-home-categories-carousel' );
+	if ( in_array( $handle, $defer_handles, true ) ) {
+		return str_replace( ' src=', ' defer src=', $tag );
+	}
+	return $tag;
+}
+add_filter( 'script_loader_tag', 'directory_script_loader_tag', 10, 3 );
 
 /**
  * Enqueue standalone layout CSS for Business Categories page (outside BlockStrap).
@@ -187,6 +204,20 @@ function directory_enqueue_custom_frontend() {
 	);
 }
 add_action( 'wp_enqueue_scripts', 'directory_enqueue_custom_frontend', 20 );
+
+/**
+ * Preload main frontend CSS for faster first paint (critical path).
+ */
+function directory_preload_custom_frontend_css() {
+	if ( is_admin() || ! is_front_page() ) {
+		return;
+	}
+	$version = wp_get_theme( get_template() )->get( 'Version' );
+	$url     = get_stylesheet_directory_uri() . '/assets/css/custom-frontend.css';
+	$url     = add_query_arg( 'ver', $version, $url );
+	echo '<link rel="preload" href="' . esc_url( $url ) . '" as="style" />' . "\n";
+}
+add_action( 'wp_head', 'directory_preload_custom_frontend_css', 1 );
 
 /**
  * Blog archive: 6 posts per page.
