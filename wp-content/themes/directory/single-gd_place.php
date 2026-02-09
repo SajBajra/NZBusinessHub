@@ -40,15 +40,21 @@ while ( have_posts() ) :
 	<div class="cf-single-place-inner">
 		<nav class="cf-single-place-breadcrumb" aria-label="<?php esc_attr_e( 'Breadcrumb', 'directory' ); ?>">
 			<a href="<?php echo esc_url( $gd_home ); ?>"><?php esc_html_e( 'Home', 'directory' ); ?></a>
-			<span class="cf-single-place-breadcrumb-sep" aria-hidden="true">/</span>
+			<span class="cf-single-place-breadcrumb-sep" aria-hidden="true">›</span>
 			<a href="<?php echo esc_url( $gd_archive ); ?>"><?php esc_html_e( 'Businesses', 'directory' ); ?></a>
 			<?php if ( $cat_name ) : ?>
-				<span class="cf-single-place-cat-tag"><?php echo esc_html( $cat_name ); ?></span>
+				<span class="cf-single-place-breadcrumb-sep" aria-hidden="true">›</span>
+				<span class="cf-single-place-breadcrumb-current"><?php echo esc_html( $cat_name ); ?></span>
 			<?php endif; ?>
+			<span class="cf-single-place-breadcrumb-sep" aria-hidden="true">›</span>
+			<span class="cf-single-place-breadcrumb-current"><?php the_title(); ?></span>
 		</nav>
 
 		<header class="cf-single-place-header">
 			<div class="cf-single-place-header-text">
+				<?php if ( $cat_name ) : ?>
+					<p class="cf-single-place-cat-badge"><?php echo esc_html( $cat_name ); ?></p>
+				<?php endif; ?>
 				<h1 class="cf-single-place-title"><?php the_title(); ?></h1>
 				<?php if ( function_exists( 'geodir_get_rating_stars' ) && function_exists( 'geodir_get_post_rating' ) ) : ?>
 					<?php $post_rating = geodir_get_post_rating( $pid ); ?>
