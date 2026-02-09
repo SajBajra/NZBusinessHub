@@ -234,3 +234,4 @@ This text file is a high-level reference to the major theme changes:
 - What they do (behavior and UI)
 - How to adjust them later (e.g. plan rules, upgrade layout, single-post design).
 
+

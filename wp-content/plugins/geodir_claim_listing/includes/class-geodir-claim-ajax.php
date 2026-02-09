@@ -224,7 +224,8 @@ class GeoDir_Claim_AJAX {
 				}
 			}
 		} else {
-			echo aself::alert( __( 'Claim not allowed for this listing!', 'geodir-claim' ) );
+			// Typo fix: use self::alert instead of aself::alert to avoid fatal error.
+			echo self::alert( __( 'Claim not allowed for this listing!', 'geodir-claim' ) );
 		}
 		wp_die();
 	}
