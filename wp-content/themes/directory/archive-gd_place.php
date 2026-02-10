@@ -292,6 +292,42 @@ $gd_total = (int) $gd_query->found_posts;
 					$has_section1 = $has_content || (bool) $image1;
 					$has_section2 = $has_content2 || (bool) $image2;
 
+					// If there is no custom CMS data at all, show friendly dummy copy + placeholder images/FAQs.
+					if ( ! $has_section1 && ! $has_section2 && ! $has_faq ) {
+						$dummy_title = $gd_archive_clean;
+
+						$dummy_intro  = '<p><strong>' . sprintf( esc_html__( 'About %s', 'directory' ), esc_html( $dummy_title ) ) . '</strong></p>';
+						$dummy_intro .= '<p>' . esc_html__( 'This category groups together businesses that offer similar services or products. Use it to quickly discover options that are relevant to what you are looking for.', 'directory' ) . '</p>';
+
+						$dummy_more  = '<p>' . esc_html__( 'Listings in this category may include a mix of local specialists, national brands, and trusted providers. Check individual listings for opening hours, reviews, and contact details.', 'directory' ) . '</p>';
+
+						$content   = $dummy_intro;
+						$content2  = $dummy_more;
+						$heading2  = sprintf( esc_html__( '%s highlights', 'directory' ), esc_html( $dummy_title ) );
+						$has_content  = true;
+						$has_content2 = true;
+
+						// Simple static placeholders from theme assets.
+						$placeholder1 = get_stylesheet_directory_uri() . '/assets/images/home-bg.jpg';
+						$placeholder2 = get_stylesheet_directory_uri() . '/assets/images/testimonials.jpg';
+						$image1 = $placeholder1;
+						$image2 = $placeholder2;
+
+						$faq = array(
+							array(
+								'q' => sprintf( esc_html__( 'What types of businesses are listed under %s?', 'directory' ), $dummy_title ),
+								'a' => esc_html__( 'You will typically find a range of businesses that share a similar focus, making it easier to compare options side by side.', 'directory' ),
+							),
+							array(
+								'q' => esc_html__( 'How do I add my business to this category?', 'directory' ),
+								'a' => esc_html__( 'Create a free account, click the “Add listing” button in the header, and choose this category when you submit your business.', 'directory' ),
+							),
+						);
+						$has_faq      = true;
+						$has_section1 = true;
+						$has_section2 = true;
+					}
+
 					if ( $has_section1 || $has_section2 || $has_faq ) :
 						?>
 						<section class="cf-gd-cat-cms" aria-label="<?php esc_attr_e( 'Category information', 'directory' ); ?>">
