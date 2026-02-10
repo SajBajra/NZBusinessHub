@@ -3818,24 +3818,23 @@ body.custom-frontend .geodir-add-listing .gd-notification a:hover {
 	.fp__hf-viewport {
 		box-shadow: none;
 		border-radius: 16px;
-		overflow: visible;
+		overflow: hidden;
 	}
 	.fp__hf-track {
-		display: block;
-		column-gap: 0;
-		overflow: visible;
-		scroll-snap-type: none;
-		-webkit-overflow-scrolling: auto;
-		padding: 0;
+		display: flex;
+		column-gap: 12px;
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+		-webkit-overflow-scrolling: touch;
+		padding: 0 0.15rem 0.25rem;
 	}
 	.fp__hf-arrow {
 		display: none;
 	}
 	.fp__hf-card {
-		flex: none;
+		flex: 0 0 100%;
 		max-width: 100%;
-		scroll-snap-align: none;
-		margin-bottom: 1.25rem;
+		scroll-snap-align: center;
 	}
 	.fp__hf-card-link {
 		box-shadow: 0 12px 30px rgba(15, 23, 42, 0.22);
