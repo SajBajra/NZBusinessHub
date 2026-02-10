@@ -205,19 +205,22 @@ $gd_total = (int) $gd_query->found_posts;
 				// Category CMS content + FAQs (from term meta) – shown under business cards or empty state.
 				if ( $gd_is_category && ! empty( $gd_queried->term_id ) ) {
 					$term_id  = (int) $gd_queried->term_id;
-					$content  = get_term_meta( $term_id, function_exists( 'directory_gd_cat_meta_key_content' ) ? directory_gd_cat_meta_key_content() : '_directory_cat_content', true );
-					$image1id = get_term_meta( $term_id, function_exists( 'directory_gd_cat_meta_key_image1' ) ? directory_gd_cat_meta_key_image1() : '_directory_cat_image_1_id', true );
-					$image2id = get_term_meta( $term_id, function_exists( 'directory_gd_cat_meta_key_image2' ) ? directory_gd_cat_meta_key_image2() : '_directory_cat_image_2_id', true );
-					$faq      = get_term_meta( $term_id, function_exists( 'directory_gd_cat_meta_key_faq' ) ? directory_gd_cat_meta_key_faq() : '_directory_cat_faq', true );
+					$content_key  = function_exists( 'directory_gd_cat_meta_key_content' ) ? directory_gd_cat_meta_key_content() : '_directory_cat_content';
+					$image1_key   = function_exists( 'directory_gd_cat_meta_key_image1' ) ? directory_gd_cat_meta_key_image1() : '_directory_cat_image_1_id';
+					$image2_key   = function_exists( 'directory_gd_cat_meta_key_image2' ) ? directory_gd_cat_meta_key_image2() : '_directory_cat_image_2_id';
+					$faq_key      = function_exists( 'directory_gd_cat_meta_key_faq' ) ? directory_gd_cat_meta_key_faq() : '_directory_cat_faq';
 
-					$image1 = $image1id ? wp_get_attachment_image_url( (int) $image1id, 'large' ) : '';
-					$image2 = $image2id ? wp_get_attachment_image_url( (int) $image2id, 'large' ) : '';
+					$content  = get_term_meta( $term_id, $content_key, true );
+					$image1id = get_term_meta( $term_id, $image1_key, true );
+					$image2id = get_term_meta( $term_id, $image2_key, true );
+					$faq      = get_term_meta( $term_id, $faq_key, true );
+
 					if ( ! is_array( $faq ) ) {
 						$faq = array();
 					}
 
 					$has_content = is_string( $content ) && trim( $content ) !== '';
-					$has_images  = (bool) ( $image1 || $image2 );
+					$has_images_raw  = (bool) ( $image1id || $image2id );
 					$has_faq     = false;
 					foreach ( $faq as $item ) {
 						$q = isset( $item['q'] ) ? (string) $item['q'] : '';
@@ -227,6 +230,55 @@ $gd_total = (int) $gd_query->found_posts;
 							break;
 						}
 					}
+
+					// If this is a child category with no own CMS data, fall back to the nearest ancestor that has data.
+					if ( ! $has_content && ! $has_images_raw && ! $has_faq && ! empty( $gd_queried->parent ) ) {
+						$parent_id = (int) $gd_queried->parent;
+						while ( $parent_id ) {
+							$parent_term = get_term( $parent_id, 'gd_placecategory' );
+							if ( ! $parent_term || is_wp_error( $parent_term ) ) {
+								break;
+							}
+
+							$p_content  = get_term_meta( $parent_term->term_id, $content_key, true );
+							$p_image1id = get_term_meta( $parent_term->term_id, $image1_key, true );
+							$p_image2id = get_term_meta( $parent_term->term_id, $image2_key, true );
+							$p_faq      = get_term_meta( $parent_term->term_id, $faq_key, true );
+							if ( ! is_array( $p_faq ) ) {
+								$p_faq = array();
+							}
+
+							$p_has_content = is_string( $p_content ) && trim( $p_content ) !== '';
+							$p_has_images  = (bool) ( $p_image1id || $p_image2id );
+							$p_has_faq     = false;
+							foreach ( $p_faq as $p_item ) {
+								$p_q = isset( $p_item['q'] ) ? (string) $p_item['q'] : '';
+								$p_a = isset( $p_item['a'] ) ? (string) $p_item['a'] : '';
+								if ( trim( $p_q ) !== '' || trim( $p_a ) !== '' ) {
+									$p_has_faq = true;
+									break;
+								}
+							}
+
+							if ( $p_has_content || $p_has_images || $p_has_faq ) {
+								// Use parent data but keep the child category name as the title.
+								$content  = $p_content;
+								$image1id = $p_image1id;
+								$image2id = $p_image2id;
+								$faq      = $p_faq;
+								$has_content = $p_has_content;
+								$has_images_raw = $p_has_images;
+								$has_faq = $p_has_faq;
+								break;
+							}
+
+							$parent_id = (int) $parent_term->parent;
+						}
+					}
+
+					$image1 = $image1id ? wp_get_attachment_image_url( (int) $image1id, 'large' ) : '';
+					$image2 = $image2id ? wp_get_attachment_image_url( (int) $image2id, 'large' ) : '';
+					$has_images = (bool) ( $image1 || $image2 );
 
 					if ( $has_content || $has_images || $has_faq ) :
 						?>
