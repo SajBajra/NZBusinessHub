@@ -49,6 +49,13 @@ if ( $custom_logo_id ) {
 			<a href="<?php echo esc_url( $custom_businesses_url ); ?>"><?php esc_html_e( 'Businesses', 'directory' ); ?></a>
 			<a href="<?php echo esc_url( $custom_categories_url ); ?>"><?php esc_html_e( 'Category', 'directory' ); ?></a>
 			<a href="<?php echo esc_url( $custom_blog_url ); ?>"><?php esc_html_e( 'Blog', 'directory' ); ?></a>
+			<button type="button" class="cf-set-location-trigger" id="cf-set-location-trigger" aria-haspopup="dialog" aria-expanded="false" aria-controls="cf-location-modal" aria-label="<?php esc_attr_e( 'Set location', 'directory' ); ?>">
+				<span class="cf-set-location-icon" aria-hidden="true">
+					<svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" fill="#3993d5"/></svg>
+				</span>
+				<span class="cf-set-location-text"><?php esc_html_e( 'Set Location', 'directory' ); ?></span>
+				<span class="cf-set-location-divider" aria-hidden="true"></span>
+			</button>
 		</nav>
 		<div class="cf-actions">
 			<?php if ( is_user_logged_in() ) : ?>
@@ -75,3 +82,23 @@ if ( $custom_logo_id ) {
 		</div>
 	</div>
 </header>
+
+<div class="cf-location-modal-overlay" id="cf-location-modal" role="dialog" aria-modal="true" aria-labelledby="cf-location-modal-title" aria-hidden="true">
+	<div class="cf-location-modal">
+		<div class="cf-location-modal-header">
+			<h2 class="cf-location-modal-title" id="cf-location-modal-title"><?php esc_html_e( 'Change Location', 'directory' ); ?></h2>
+			<button type="button" class="cf-location-modal-close" aria-label="<?php esc_attr_e( 'Close', 'directory' ); ?>" data-close-modal>&times;</button>
+		</div>
+		<p class="cf-location-modal-subtitle"><?php esc_html_e( 'Find awesome listings near you!', 'directory' ); ?></p>
+		<form class="cf-location-modal-form" method="get" action="<?php echo esc_url( $custom_businesses_url ); ?>" data-businesses-url="<?php echo esc_attr( $custom_businesses_url ); ?>">
+			<input type="hidden" name="post_type" value="gd_place" />
+			<label for="cf-location-input" class="screen-reader-text"><?php esc_attr_e( 'City, region, or country', 'directory' ); ?></label>
+			<input type="text" id="cf-location-input" name="near" class="cf-location-input" placeholder="<?php esc_attr_e( 'city, region, country', 'directory' ); ?>" autocomplete="off" />
+			<button type="button" class="cf-location-my-location" id="cf-location-my-location">
+				<svg class="cf-location-my-location-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+				<span><?php esc_html_e( 'Near: My Location', 'directory' ); ?></span>
+			</button>
+			<button type="submit" class="cf-location-submit screen-reader-text"><?php esc_html_e( 'Search', 'directory' ); ?></button>
+		</form>
+	</div>
+</div>
