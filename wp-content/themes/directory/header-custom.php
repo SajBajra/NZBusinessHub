@@ -92,7 +92,7 @@ if ( $custom_logo_id ) {
 		<p class="cf-location-modal-subtitle"><?php esc_html_e( 'Find awesome listings near you!', 'directory' ); ?></p>
 		<div class="cf-location-modal-search">
 			<?php if ( function_exists( 'do_shortcode' ) ) : ?>
-				<?php echo do_shortcode( '[gd_search hide_search_input="false" hide_near_input="false" input_size="lg" bar_flex_wrap="flex-wrap" bar_flex_wrap_md="flex-md-nowrap" bar_flex_wrap_lg="flex-lg-nowrap"]' ); ?>
+				<?php echo do_shortcode( '[gd_search hide_search_input="true" hide_near_input="false" input_size="lg" bar_flex_wrap="flex-wrap" bar_flex_wrap_md="flex-md-nowrap" bar_flex_wrap_lg="flex-lg-nowrap"]' ); ?>
 			<?php endif; ?>
 		</div>
 	</div>
