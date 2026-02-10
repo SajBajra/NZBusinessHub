@@ -2280,6 +2280,10 @@ body.custom-frontend .cf-gd-cat-cms-text {
 	font-size: 1rem;
 	line-height: 1.75;
 	color: #334155;
+	max-width: 100%;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	word-break: break-word;
 }
 body.custom-frontend .cf-gd-cat-cms-text a {
 	color: #3993d5;
