@@ -105,19 +105,22 @@ body.custom-frontend .cf-nav a:hover {
 body.custom-frontend .cf-set-location-trigger {
 	display: inline-flex;
 	align-items: center;
-	gap: 0.5rem;
-	padding: 0.5rem 0.85rem;
-	background: #f7f7f7;
+	gap: 0.4rem;
+	padding: 0;
+	margin: 0;
+	background: transparent;
 	border: none;
-	border-radius: 8px;
+	border-radius: 0;
 	cursor: pointer;
-	font-size: 0.9375rem;
-	font-weight: 600;
-	color: #4c4f5a;
-	transition: background 0.2s ease;
+	font-size: 1rem;
+	font-weight: 500;
+	color: #374151;
+	text-decoration: none;
+	transition: color 0.2s ease;
 }
 body.custom-frontend .cf-set-location-trigger:hover {
-	background: #eeeeee;
+	color: #2563eb;
+	background: transparent;
 }
 body.custom-frontend .cf-set-location-icon {
 	display: inline-flex;
@@ -127,10 +130,7 @@ body.custom-frontend .cf-set-location-text {
 	white-space: nowrap;
 }
 body.custom-frontend .cf-set-location-divider {
-	width: 1px;
-	height: 20px;
-	background: #e0e0e0;
-	margin-left: 0.25rem;
+	display: none;
 }
 
 /* Change Location modal */
