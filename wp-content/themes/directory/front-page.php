@@ -286,6 +286,13 @@ $fp_rel         = function_exists( 'directory_relative_url' ) ? 'directory_relat
 			</div>
 		</section>
 
+		<?php
+		// 6.5 – Home featured sliders ("Top Restaurants" style) before customer feedback.
+		if ( function_exists( 'directory_render_home_featured_sections' ) ) {
+			directory_render_home_featured_sections();
+		}
+		?>
+
 		<!-- 7. Customer feedback (dynamic from Testimonials CPT) -->
 		<?php
 		$fp_testimonials = get_posts( array(
@@ -329,13 +336,6 @@ $fp_rel         = function_exists( 'directory_relative_url' ) ? 'directory_relat
 				</div>
 			</div>
 		</section>
-
-		<?php
-		// 6.5 – Home featured sliders ("Top Restaurants" style) before customer feedback.
-		if ( function_exists( 'directory_render_home_featured_sections' ) ) {
-			directory_render_home_featured_sections();
-		}
-		?>
 		<?php endif; ?>
 
 		<!-- 8. Bottom CTA -->

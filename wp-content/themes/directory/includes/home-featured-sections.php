@@ -117,6 +117,17 @@ function directory_home_featured_admin_page() {
 
 	$data = directory_get_home_featured_sections();
 	$sections = $data['sections'];
+
+	// Parent GeoDirectory categories to choose from.
+	$parent_terms = get_terms(
+		array(
+			'taxonomy'   => 'gd_placecategory',
+			'hide_empty' => false,
+			'parent'     => 0,
+			'orderby'    => 'name',
+			'order'      => 'ASC',
+		)
+	);
 	?>
 	<div class="wrap">
 		<h1><?php esc_html_e( 'Home Featured Sections', 'directory' ); ?></h1>
@@ -139,9 +150,25 @@ function directory_home_featured_admin_page() {
 								<input type="text" class="regular-text" name="<?php echo esc_attr( DIRECTORY_HOME_FEATURED_OPTION ); ?>[sections][<?php echo (int) $i; ?>][title]" value="<?php echo esc_attr( $section['title'] ); ?>" />
 							</p>
 							<p>
-								<label><strong><?php esc_html_e( 'Category slug (optional)', 'directory' ); ?></strong></label><br />
-								<input type="text" class="regular-text" name="<?php echo esc_attr( DIRECTORY_HOME_FEATURED_OPTION ); ?>[sections][<?php echo (int) $i; ?>][cat_slug]" value="<?php echo esc_attr( $section['cat_slug'] ); ?>" />
-								<br /><span class="description"><?php esc_html_e( 'Use the slug of a GeoDirectory place category (gd_placecategory). Leave blank to show latest listings from all categories.', 'directory' ); ?></span>
+								<label><strong><?php esc_html_e( 'Parent category to feature (optional)', 'directory' ); ?></strong></label><br />
+								<select name="<?php echo esc_attr( DIRECTORY_HOME_FEATURED_OPTION ); ?>[sections][<?php echo (int) $i; ?>][cat_slug]">
+									<?php
+									$current_slug = isset( $section['cat_slug'] ) ? $section['cat_slug'] : '';
+									?>
+									<option value=""><?php esc_html_e( 'All categories', 'directory' ); ?></option>
+									<?php
+									if ( ! is_wp_error( $parent_terms ) && ! empty( $parent_terms ) ) :
+										foreach ( $parent_terms as $term ) :
+											?>
+											<option value="<?php echo esc_attr( $term->slug ); ?>" <?php selected( $current_slug, $term->slug ); ?>>
+												<?php echo esc_html( $term->name ); ?>
+											</option>
+											<?php
+										endforeach;
+									endif;
+									?>
+								</select>
+								<br /><span class="description"><?php esc_html_e( 'Choose which parent GeoDirectory place category to pull listings from. Leave as "All categories" to show latest listings from everywhere.', 'directory' ); ?></span>
 							</p>
 							<p>
 								<label><strong><?php esc_html_e( 'Number of listings', 'directory' ); ?></strong></label><br />
