@@ -2243,6 +2243,130 @@ body.custom-frontend .cf-gd-pagination-nav .page-numbers.dots {
 	color: #94a3b8;
 }
 
+/* Category CMS content + FAQ (under listings) */
+body.custom-frontend .cf-gd-cat-cms {
+	margin-top: 2.5rem;
+	padding-top: 2.25rem;
+	border-top: 1px solid #e2e8f0;
+}
+body.custom-frontend .cf-gd-cat-cms-inner {
+	max-width: 1100px;
+	margin: 0 auto;
+}
+body.custom-frontend .cf-gd-cat-cms-grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+	gap: 1.75rem;
+	align-items: start;
+	background: #ffffff;
+	border: 1px solid #e2e8f0;
+	border-radius: 16px;
+	padding: 1.75rem;
+	box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+@media (max-width: 900px) {
+	body.custom-frontend .cf-gd-cat-cms-grid {
+		grid-template-columns: minmax(0, 1fr);
+	}
+}
+body.custom-frontend .cf-gd-cat-cms-title {
+	margin: 0 0 0.75rem;
+	font-size: 1.35rem;
+	font-weight: 750;
+	color: #0f172a;
+	letter-spacing: -0.02em;
+}
+body.custom-frontend .cf-gd-cat-cms-text {
+	font-size: 1rem;
+	line-height: 1.75;
+	color: #334155;
+}
+body.custom-frontend .cf-gd-cat-cms-text a {
+	color: #3993d5;
+	text-decoration: none;
+	border-bottom: 1px solid rgba(57, 147, 213, 0.35);
+}
+body.custom-frontend .cf-gd-cat-cms-text a:hover {
+	border-bottom-color: rgba(57, 147, 213, 0.7);
+}
+body.custom-frontend .cf-gd-cat-cms-empty {
+	margin: 0;
+	color: #64748b;
+}
+body.custom-frontend .cf-gd-cat-cms-images {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 0.75rem;
+}
+@media (max-width: 900px) {
+	body.custom-frontend .cf-gd-cat-cms-images {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+@media (max-width: 520px) {
+	body.custom-frontend .cf-gd-cat-cms-images {
+		grid-template-columns: minmax(0, 1fr);
+	}
+}
+body.custom-frontend .cf-gd-cat-cms-img {
+	aspect-ratio: 4 / 3;
+	border-radius: 12px;
+	background-size: cover;
+	background-position: center;
+	background-color: #f1f5f9;
+	border: 1px solid #e2e8f0;
+}
+
+body.custom-frontend .cf-gd-cat-faq {
+	margin-top: 1.75rem;
+	background: #ffffff;
+	border: 1px solid #e2e8f0;
+	border-radius: 16px;
+	padding: 1.5rem 1.75rem;
+	box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+}
+body.custom-frontend .cf-gd-cat-faq-title {
+	margin: 0 0 1rem;
+	font-size: 1.25rem;
+	font-weight: 750;
+	color: #0f172a;
+	letter-spacing: -0.02em;
+}
+body.custom-frontend .cf-gd-cat-faq-list {
+	display: grid;
+	gap: 0.75rem;
+}
+body.custom-frontend .cf-gd-cat-faq-item {
+	border: 1px solid #e2e8f0;
+	border-radius: 12px;
+	background: #f8fafc;
+	padding: 0.25rem 0.9rem;
+}
+body.custom-frontend .cf-gd-cat-faq-q {
+	cursor: pointer;
+	padding: 0.8rem 0.25rem;
+	font-weight: 650;
+	color: #0f172a;
+	list-style: none;
+}
+body.custom-frontend .cf-gd-cat-faq-q::-webkit-details-marker {
+	display: none;
+}
+body.custom-frontend .cf-gd-cat-faq-item > summary::after {
+	content: '+';
+	float: right;
+	color: #3993d5;
+	font-weight: 900;
+}
+body.custom-frontend .cf-gd-cat-faq-item[open] > summary::after {
+	content: '–';
+}
+body.custom-frontend .cf-gd-cat-faq-a {
+	padding: 0 0.25rem 0.95rem;
+	color: #334155;
+	line-height: 1.7;
+}
+
 /* Legacy toolbar class (if still used) */
 body.custom-frontend .cf-gd-toolbar {
 	display: flex;
