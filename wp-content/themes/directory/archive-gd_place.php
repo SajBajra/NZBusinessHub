@@ -191,6 +191,84 @@ $gd_total = (int) $gd_query->found_posts;
 					if ( $pag ) {
 						echo '<nav class="cf-gd-pagination-nav" aria-label="' . esc_attr__( 'Listings navigation', 'directory' ) . '">' . $pag . '</nav>';
 					}
+
+					// Category CMS content + FAQs (from term meta) – shown under business cards.
+					if ( $gd_is_category && ! empty( $gd_queried->term_id ) ) {
+						$term_id  = (int) $gd_queried->term_id;
+						$content  = get_term_meta( $term_id, function_exists( 'directory_gd_cat_meta_key_content' ) ? directory_gd_cat_meta_key_content() : '_directory_cat_content', true );
+						$image1id = get_term_meta( $term_id, function_exists( 'directory_gd_cat_meta_key_image1' ) ? directory_gd_cat_meta_key_image1() : '_directory_cat_image_1_id', true );
+						$image2id = get_term_meta( $term_id, function_exists( 'directory_gd_cat_meta_key_image2' ) ? directory_gd_cat_meta_key_image2() : '_directory_cat_image_2_id', true );
+						$faq      = get_term_meta( $term_id, function_exists( 'directory_gd_cat_meta_key_faq' ) ? directory_gd_cat_meta_key_faq() : '_directory_cat_faq', true );
+
+						$image1 = $image1id ? wp_get_attachment_image_url( (int) $image1id, 'large' ) : '';
+						$image2 = $image2id ? wp_get_attachment_image_url( (int) $image2id, 'large' ) : '';
+						if ( ! is_array( $faq ) ) {
+							$faq = array();
+						}
+
+						$has_content = is_string( $content ) && trim( $content ) !== '';
+						$has_images  = (bool) ( $image1 || $image2 );
+						$has_faq     = false;
+						foreach ( $faq as $item ) {
+							$q = isset( $item['q'] ) ? (string) $item['q'] : '';
+							$a = isset( $item['a'] ) ? (string) $item['a'] : '';
+							if ( trim( $q ) !== '' || trim( $a ) !== '' ) {
+								$has_faq = true;
+								break;
+							}
+						}
+
+						if ( $has_content || $has_images || $has_faq ) :
+							?>
+							<section class="cf-gd-cat-cms" aria-label="<?php esc_attr_e( 'Category information', 'directory' ); ?>">
+								<div class="cf-gd-cat-cms-inner">
+									<?php if ( $has_content || $has_images ) : ?>
+										<div class="cf-gd-cat-cms-grid">
+											<div class="cf-gd-cat-cms-content">
+												<h2 class="cf-gd-cat-cms-title"><?php echo esc_html( $gd_archive_clean ); ?></h2>
+												<?php if ( $has_content ) : ?>
+													<div class="cf-gd-cat-cms-text"><?php echo wp_kses_post( $content ); ?></div>
+												<?php else : ?>
+													<p class="cf-gd-cat-cms-empty"><?php esc_html_e( 'More details coming soon.', 'directory' ); ?></p>
+												<?php endif; ?>
+											</div>
+											<?php if ( $has_images ) : ?>
+												<div class="cf-gd-cat-cms-images" aria-hidden="true">
+													<?php if ( $image1 ) : ?>
+														<div class="cf-gd-cat-cms-img" style="background-image:url('<?php echo esc_url( $image1 ); ?>');"></div>
+													<?php endif; ?>
+													<?php if ( $image2 ) : ?>
+														<div class="cf-gd-cat-cms-img" style="background-image:url('<?php echo esc_url( $image2 ); ?>');"></div>
+													<?php endif; ?>
+												</div>
+											<?php endif; ?>
+										</div>
+									<?php endif; ?>
+
+									<?php if ( $has_faq ) : ?>
+										<div class="cf-gd-cat-faq">
+											<h2 class="cf-gd-cat-faq-title"><?php esc_html_e( 'Frequently asked questions', 'directory' ); ?></h2>
+											<div class="cf-gd-cat-faq-list">
+												<?php foreach ( $faq as $item ) :
+													$q = isset( $item['q'] ) ? trim( (string) $item['q'] ) : '';
+													$a = isset( $item['a'] ) ? trim( (string) $item['a'] ) : '';
+													if ( $q === '' && $a === '' ) {
+														continue;
+													}
+													?>
+													<details class="cf-gd-cat-faq-item">
+														<summary class="cf-gd-cat-faq-q"><?php echo esc_html( $q ?: __( 'Question', 'directory' ) ); ?></summary>
+														<div class="cf-gd-cat-faq-a"><?php echo wp_kses_post( $a ); ?></div>
+													</details>
+												<?php endforeach; ?>
+											</div>
+										</div>
+									<?php endif; ?>
+								</div>
+							</section>
+							<?php
+						endif;
+					}
 					wp_reset_postdata();
 					?>
 				<?php else : ?>
