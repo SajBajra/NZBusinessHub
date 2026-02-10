@@ -131,9 +131,6 @@ $cf_footer_logo = directory_relative_url( content_url( 'uploads/2026/01/NZ-Direc
 	var modal = document.getElementById('cf-location-modal');
 	var trigger = document.getElementById('cf-set-location-trigger');
 	var closeBtn = modal && modal.querySelector('[data-close-modal]');
-	var form = modal && modal.querySelector('.cf-location-modal-form');
-	var input = modal && modal.querySelector('#cf-location-input');
-	var myLocationBtn = document.getElementById('cf-location-my-location');
 	if (!modal || !trigger) return;
 
 	function openModal() {
@@ -141,7 +138,10 @@ $cf_footer_logo = directory_relative_url( content_url( 'uploads/2026/01/NZ-Direc
 		modal.setAttribute('aria-hidden', 'false');
 		trigger.setAttribute('aria-expanded', 'true');
 		document.body.style.overflow = 'hidden';
-		if (input) { input.value = ''; input.focus(); }
+		setTimeout(function() {
+			var firstInput = modal.querySelector('input[type="text"], input[name="s"], input[name="near"]');
+			if (firstInput) firstInput.focus();
+		}, 100);
 	}
 	function closeModal() {
 		modal.classList.remove('is-open');
@@ -158,28 +158,5 @@ $cf_footer_logo = directory_relative_url( content_url( 'uploads/2026/01/NZ-Direc
 	document.addEventListener('keydown', function(e) {
 		if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
 	});
-
-	if (myLocationBtn && form) {
-		myLocationBtn.addEventListener('click', function() {
-			if (!navigator.geolocation) {
-				if (input) input.placeholder = 'Geolocation not supported';
-				return;
-			}
-			myLocationBtn.disabled = true;
-			myLocationBtn.textContent = 'Getting location…';
-			navigator.geolocation.getCurrentPosition(
-				function(pos) {
-					var url = form.getAttribute('data-businesses-url') || form.action;
-					var sep = url.indexOf('?') !== -1 ? '&' : '?';
-					window.location.href = url + sep + 'near=' + encodeURIComponent(pos.coords.latitude + ',' + pos.coords.longitude);
-				},
-				function() {
-					myLocationBtn.disabled = false;
-					myLocationBtn.innerHTML = '<svg class="cf-location-my-location-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg><span>Near: My Location</span>';
-					if (input) input.placeholder = 'Location denied or unavailable';
-				}
-			);
-		});
-	}
 })();
 </script>

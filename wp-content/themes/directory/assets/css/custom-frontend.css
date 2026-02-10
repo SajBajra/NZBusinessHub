@@ -189,74 +189,23 @@ body.custom-frontend .cf-location-modal-subtitle {
 	font-size: 0.9375rem;
 	color: #6b7280;
 }
-body.custom-frontend .cf-location-modal-form {
-	display: flex;
-	flex-direction: column;
-	gap: 0.85rem;
+body.custom-frontend .cf-location-modal-search {
+	margin-top: 0.25rem;
 }
-body.custom-frontend .cf-location-input {
-	width: 100%;
-	padding: 0.75rem 1rem;
-	font-size: 1rem;
-	border: 2px solid #e5e7eb;
-	border-radius: 10px;
-	transition: border-color 0.2s ease, box-shadow 0.2s ease;
-	box-sizing: border-box;
+body.custom-frontend .cf-location-modal-search .geodir-search,
+body.custom-frontend .cf-location-modal-search .bsui {
+	max-width: 100%;
 }
-body.custom-frontend .cf-location-input:focus {
-	outline: none;
+body.custom-frontend .cf-location-modal-search input[type="text"],
+body.custom-frontend .cf-location-modal-search .form-control {
+	background: #fff;
+	border-color: #e2e8f0;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+body.custom-frontend .cf-location-modal-search input[type="text"]:focus,
+body.custom-frontend .cf-location-modal-search .form-control:focus {
 	border-color: #3993d5;
 	box-shadow: 0 0 0 3px rgba(57, 147, 213, 0.2);
-}
-body.custom-frontend .cf-location-input::placeholder {
-	color: #9ca3af;
-}
-body.custom-frontend .cf-location-my-location {
-	display: inline-flex;
-	align-items: center;
-	gap: 0.5rem;
-	padding: 0.6rem 1rem;
-	background: #f3f4f6;
-	border: none;
-	border-radius: 10px;
-	font-size: 0.9375rem;
-	font-weight: 500;
-	color: #3993d5;
-	cursor: pointer;
-	transition: background 0.2s ease;
-	width: 100%;
-	justify-content: flex-start;
-}
-body.custom-frontend .cf-location-my-location:hover {
-	background: #e5e7eb;
-}
-body.custom-frontend .cf-location-my-location-icon {
-	flex-shrink: 0;
-}
-body.custom-frontend .cf-location-submit {
-	padding: 0.75rem 1.25rem;
-	background: #3993d5;
-	border: none;
-	border-radius: 10px;
-	color: #fff;
-	font-size: 1rem;
-	font-weight: 600;
-	cursor: pointer;
-	transition: background 0.2s ease;
-}
-body.custom-frontend .cf-location-submit:hover {
-	background: #2d7ab8;
-}
-body.custom-frontend .cf-location-modal .screen-reader-text {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	padding: 0;
-	margin: -1px;
-	overflow: hidden;
-	clip: rect(0, 0, 0, 0);
-	white-space: nowrap;
-	border: 0;
 }
 
 body.custom-frontend .cf-actions {
