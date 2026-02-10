@@ -159,7 +159,7 @@ body.custom-frontend .cf-set-location-divider {
 	display: none;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
 	body.custom-frontend .cf-header {
 		padding: 0.75rem 1rem;
 	}
@@ -185,15 +185,21 @@ body.custom-frontend .cf-set-location-divider {
 		width: 100%;
 		display: none;
 		flex-direction: column;
-		align-items: flex-start;
+		align-items: stretch;
 		gap: 0.5rem;
-		margin-top: 0.25rem;
+		margin-top: 0.4rem;
+		padding-top: 0.6rem;
+		border-top: 1px solid #e5e7eb;
 	}
 	body.custom-frontend .cf-header.cf-header--nav-open .cf-nav,
 	body.custom-frontend .cf-header.cf-header--nav-open .cf-actions {
 		display: flex;
 	}
 	body.custom-frontend .cf-actions .cf-btn-add {
+		width: 100%;
+		justify-content: center;
+	}
+	body.custom-frontend .cf-actions .cf-link-sign {
 		width: 100%;
 		justify-content: center;
 	}
