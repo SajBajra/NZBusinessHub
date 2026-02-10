@@ -1653,6 +1653,21 @@ body.custom-frontend .fp__blog-more a:hover {
 	text-decoration: underline;
 }
 
+/* Blog – primary button override */
+body.custom-frontend .fp__blog-more .fp__btn-primary {
+	color: #fff;
+	background: #3993d5;
+	border-color: #3993d5;
+	text-decoration: none;
+	font-weight: 600;
+}
+body.custom-frontend .fp__blog-more .fp__btn-primary:hover {
+	background: #2d7ab8;
+	border-color: #2d7ab8;
+	color: #fff;
+	text-decoration: none;
+}
+
 /* Customer feedback */
 body.custom-frontend .fp__testimonials {
 	background: #fff;
