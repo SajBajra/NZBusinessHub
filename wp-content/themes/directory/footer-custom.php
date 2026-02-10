@@ -131,9 +131,9 @@ $cf_footer_logo = directory_relative_url( content_url( 'uploads/2026/01/NZ-Direc
 	var modal = document.getElementById('cf-location-modal');
 	var trigger = document.getElementById('cf-set-location-trigger');
 	var closeBtn = modal && modal.querySelector('[data-close-modal]');
-	if (!modal || !trigger) return;
 
 	function openModal() {
+		if (!modal || !trigger) return;
 		modal.classList.add('is-open');
 		modal.setAttribute('aria-hidden', 'false');
 		trigger.setAttribute('aria-expanded', 'true');
@@ -144,19 +144,32 @@ $cf_footer_logo = directory_relative_url( content_url( 'uploads/2026/01/NZ-Direc
 		}, 100);
 	}
 	function closeModal() {
+		if (!modal || !trigger) return;
 		modal.classList.remove('is-open');
 		modal.setAttribute('aria-hidden', 'true');
 		trigger.setAttribute('aria-expanded', 'false');
 		document.body.style.overflow = '';
 	}
 
-	trigger.addEventListener('click', openModal);
-	if (closeBtn) closeBtn.addEventListener('click', closeModal);
-	modal.addEventListener('click', function(e) {
-		if (e.target === modal) closeModal();
-	});
-	document.addEventListener('keydown', function(e) {
-		if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
-	});
+	if (modal && trigger) {
+		trigger.addEventListener('click', openModal);
+		if (closeBtn) closeBtn.addEventListener('click', closeModal);
+		modal.addEventListener('click', function(e) {
+			if (e.target === modal) closeModal();
+		});
+		document.addEventListener('keydown', function(e) {
+			if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+		});
+	}
+
+	// Mobile nav toggle
+	var header = document.querySelector('.cf-header');
+	var navToggle = document.querySelector('.cf-nav-toggle');
+	if (header && navToggle) {
+		navToggle.addEventListener('click', function() {
+			var isOpen = header.classList.toggle('cf-header--nav-open');
+			navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+		});
+	}
 })();
 </script>

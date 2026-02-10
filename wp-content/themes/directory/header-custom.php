@@ -44,8 +44,13 @@ if ( $custom_logo_id ) {
 			<?php else : ?>
 				<img src="<?php echo esc_url( $custom_default_logo ); ?>" alt="<?php echo esc_attr( $custom_site_name ); ?>" class="cf-logo-img" />
 			<?php endif; ?>
-				</a>
-		<nav class="cf-nav">
+		</a>
+		<button type="button" class="cf-nav-toggle" aria-label="<?php esc_attr_e( 'Toggle navigation', 'directory' ); ?>" aria-expanded="false" aria-controls="cf-nav-main">
+			<span class="cf-nav-toggle-bar"></span>
+			<span class="cf-nav-toggle-bar"></span>
+			<span class="cf-nav-toggle-bar"></span>
+		</button>
+		<nav class="cf-nav" id="cf-nav-main">
 			<button type="button" class="cf-set-location-trigger" id="cf-set-location-trigger" aria-haspopup="dialog" aria-expanded="false" aria-controls="cf-location-modal" aria-label="<?php esc_attr_e( 'Set location', 'directory' ); ?>">
 				<span class="cf-set-location-icon" aria-hidden="true">
 					<svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" fill="#3993d5"/></svg>

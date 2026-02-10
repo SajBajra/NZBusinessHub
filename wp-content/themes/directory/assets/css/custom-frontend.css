@@ -83,6 +83,32 @@ body.custom-frontend .cf-logo-icon svg {
 	display: block;
 }
 
+/* Mobile nav toggle (hamburger) */
+body.custom-frontend .cf-nav-toggle {
+	display: none;
+	align-items: center;
+	justify-content: center;
+	width: 36px;
+	height: 32px;
+	border-radius: 999px;
+	border: 1px solid #e5e7eb;
+	background: #ffffff;
+	padding: 0;
+	margin-left: auto;
+	cursor: pointer;
+}
+body.custom-frontend .cf-nav-toggle-bar {
+	display: block;
+	width: 18px;
+	height: 2px;
+	border-radius: 999px;
+	background: #0f172a;
+	transition: transform 0.15s ease, opacity 0.15s ease;
+}
+body.custom-frontend .cf-nav-toggle-bar + .cf-nav-toggle-bar {
+	margin-top: 3px;
+}
+
 body.custom-frontend .cf-nav {
 	display: flex;
 	align-items: center;
@@ -131,6 +157,46 @@ body.custom-frontend .cf-set-location-text {
 }
 body.custom-frontend .cf-set-location-divider {
 	display: none;
+}
+
+@media (max-width: 900px) {
+	body.custom-frontend .cf-header {
+		padding: 0.75rem 1rem;
+	}
+	body.custom-frontend .cf-header-inner {
+		align-items: center;
+		gap: 0.75rem;
+	}
+	body.custom-frontend .cf-logo-img {
+		height: 38px;
+	}
+	body.custom-frontend .cf-nav-toggle {
+		display: inline-flex;
+	}
+	body.custom-frontend .cf-nav {
+		width: 100%;
+		display: none;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.6rem;
+		margin-top: 0.25rem;
+	}
+	body.custom-frontend .cf-actions {
+		width: 100%;
+		display: none;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.5rem;
+		margin-top: 0.25rem;
+	}
+	body.custom-frontend .cf-header.cf-header--nav-open .cf-nav,
+	body.custom-frontend .cf-header.cf-header--nav-open .cf-actions {
+		display: flex;
+	}
+	body.custom-frontend .cf-actions .cf-btn-add {
+		width: 100%;
+		justify-content: center;
+	}
 }
 
 /* Change Location modal */
