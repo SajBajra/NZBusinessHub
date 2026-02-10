@@ -265,3 +265,79 @@ function directory_gd_cat_save_fields( $term_id ) {
 add_action( 'created_' . 'gd_placecategory', 'directory_gd_cat_save_fields', 10, 1 );
 add_action( 'edited_' . 'gd_placecategory', 'directory_gd_cat_save_fields', 10, 1 );
 
+/**
+ * Optionally seed a bit of dummy CMS content/FAQs for categories that have none yet.
+ * This helps visually test the layout on archive pages.
+ *
+ * Runs once in admin; only fills empty categories and never overwrites existing content.
+ */
+function directory_gd_cat_seed_dummy_content() {
+	if ( ! is_admin() ) {
+		return;
+	}
+
+	$flag = get_option( 'directory_gd_cat_cms_seeded', false );
+	if ( $flag ) {
+		return;
+	}
+
+	$tax = directory_gd_category_taxonomy();
+	$terms = get_terms(
+		array(
+			'taxonomy'   => $tax,
+			'hide_empty' => false,
+			'number'     => 5,
+		)
+	);
+
+	if ( is_wp_error( $terms ) || empty( $terms ) ) {
+		update_option( 'directory_gd_cat_cms_seeded', 1 );
+		return;
+	}
+
+	foreach ( $terms as $term ) {
+		$term_id   = (int) $term->term_id;
+		$has_any   = false;
+		$content   = get_term_meta( $term_id, directory_gd_cat_meta_key_content(), true );
+		$image1    = get_term_meta( $term_id, directory_gd_cat_meta_key_image1(), true );
+		$image2    = get_term_meta( $term_id, directory_gd_cat_meta_key_image2(), true );
+		$faq_exist = get_term_meta( $term_id, directory_gd_cat_meta_key_faq(), true );
+
+		if ( is_string( $content ) && trim( $content ) !== '' ) {
+			$has_any = true;
+		}
+		if ( ! empty( $image1 ) || ! empty( $image2 ) ) {
+			$has_any = true;
+		}
+		if ( ! empty( $faq_exist ) && is_array( $faq_exist ) ) {
+			$has_any = true;
+		}
+
+		if ( $has_any ) {
+			continue;
+		}
+
+		// Seed simple content + FAQs.
+		$sample_content  = '<p><strong>' . esc_html__( 'About this category', 'directory' ) . '</strong></p>';
+		$sample_content .= '<p>' . esc_html__( 'This is sample copy for your category CMS section. Replace it in Places → Categories → edit this category.', 'directory' ) . '</p>';
+		update_term_meta( $term_id, directory_gd_cat_meta_key_content(), wp_kses_post( $sample_content ) );
+
+		$sample_faq = array(
+			array(
+				'q' => __( 'What kind of businesses are listed here?', 'directory' ),
+				'a' => __( 'This sample FAQ explains what appears in this category. Edit or remove it from the category edit screen.', 'directory' ),
+			),
+			array(
+				'q' => __( 'How do I add my business?', 'directory' ),
+				'a' => __( 'Sign in and use the “Add listing” button to submit your business to this category.', 'directory' ),
+			),
+		);
+		update_term_meta( $term_id, directory_gd_cat_meta_key_faq(), $sample_faq );
+	}
+
+	// Mark as done so we do not keep re-seeding.
+	update_option( 'directory_gd_cat_cms_seeded', 1 );
+}
+add_action( 'admin_init', 'directory_gd_cat_seed_dummy_content' );
+
+
