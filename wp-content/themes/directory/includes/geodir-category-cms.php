@@ -57,53 +57,14 @@ function directory_gd_cat_cms_admin_enqueue( $hook_suffix ) {
 	}
 
 	wp_enqueue_media();
-	wp_enqueue_script( 'jquery' );
 
-	// Minimal JS for media fields + FAQ repeater.
-	wp_add_inline_script(
-		'jquery',
-		"(function($){\n" .
-		"function pickMedia(onSelect){\n" .
-		"  var frame = wp.media({title:'Select image',button:{text:'Use this image'},multiple:false});\n" .
-		"  frame.on('select', function(){ var att = frame.state().get('selection').first().toJSON(); onSelect(att); });\n" .
-		"  frame.open();\n" .
-		"}\n" .
-		"function bindImageField($wrap){\n" .
-		"  $wrap.on('click','.dir-cat-img-pick',function(e){e.preventDefault();\n" .
-		"    var $w=$(this).closest('.dir-cat-img-field');\n" .
-		"    pickMedia(function(att){\n" .
-		"      $w.find('input.dir-cat-img-id').val(att.id);\n" .
-		"      $w.find('img.dir-cat-img-preview').attr('src',att.url).show();\n" .
-		"      $w.find('.dir-cat-img-remove').show();\n" .
-		"    });\n" .
-		"  });\n" .
-		"  $wrap.on('click','.dir-cat-img-remove',function(e){e.preventDefault();\n" .
-		"    var $w=$(this).closest('.dir-cat-img-field');\n" .
-		"    $w.find('input.dir-cat-img-id').val('');\n" .
-		"    $w.find('img.dir-cat-img-preview').attr('src','').hide();\n" .
-		"    $(this).hide();\n" .
-		"  });\n" .
-		"}\n" .
-		"function bindFaq($root){\n" .
-		"  $root.on('click','.dir-faq-add',function(e){e.preventDefault();\n" .
-		"    var $list=$root.find('.dir-faq-list');\n" .
-		"    var idx=$list.children('.dir-faq-item').length;\n" .
-		"    var html='<div class=\"dir-faq-item\" style=\"border:1px solid #ddd;padding:10px;margin:10px 0;border-radius:6px;\">'\n" .
-		"      +'<p style=\"margin:0 0 6px;\"><strong>Question</strong></p>'\n" .
-		"      +'<input type=\"text\" class=\"widefat\" name=\"directory_cat_faq['+idx+'][q]\" value=\"\" placeholder=\"Question\" />'\n" .
-		"      +'<p style=\"margin:10px 0 6px;\"><strong>Answer</strong></p>'\n" .
-		"      +'<textarea class=\"widefat\" rows=\"3\" name=\"directory_cat_faq['+idx+'][a]\" placeholder=\"Answer\"></textarea>'\n" .
-		"      +'<p style=\"margin:10px 0 0;\"><a href=\"#\" class=\"button dir-faq-remove\">Remove</a></p>'\n" .
-		"      +'</div>';\n" .
-		"    $list.append(html);\n" .
-		"  });\n" .
-		"  $root.on('click','.dir-faq-remove',function(e){e.preventDefault(); $(this).closest('.dir-faq-item').remove(); });\n" .
-		"}\n" .
-		"$(function(){\n" .
-		"  bindImageField($(document));\n" .
-		"  bindFaq($(document));\n" .
-		"});\n" .
-		"})(jQuery);"
+	$version = wp_get_theme( get_template() )->get( 'Version' );
+	wp_enqueue_script(
+		'directory-gd-cat-cms-admin',
+		get_stylesheet_directory_uri() . '/assets/js/geodir-category-cms-admin.js',
+		array( 'jquery', 'media-editor' ),
+		$version,
+		true
 	);
 }
 add_action( 'admin_enqueue_scripts', 'directory_gd_cat_cms_admin_enqueue' );
