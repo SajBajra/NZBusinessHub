@@ -220,18 +220,32 @@ function directory_render_home_destinations() {
 
 	// Limit to 10 destinations visually, even if more are configured.
 	$active = array_slice( $active, 0, 10 );
+
+	$base_url = function_exists( 'directory_relative_url' ) ? directory_relative_url( home_url( '/' ) ) : home_url( '/' );
 	?>
 	<section class="fp__section fp__destinations">
 		<div class="fp__wrap">
 			<h2 class="fp__section-title fp__destinations-title"><?php esc_html_e( 'Destinations nearby', 'directory' ); ?></h2>
 			<div class="fp__destinations-grid">
-				<?php foreach ( $active as $dest ) : ?>
-					<article class="fp__destination-card">
+				<?php foreach ( $active as $dest ) :
+					$name = isset( $dest['name'] ) ? trim( $dest['name'] ) : '';
+					if ( $name === '' ) {
+						continue;
+					}
+					$search_url = add_query_arg(
+						array(
+							's'    => '',
+							'near' => $name,
+						),
+						$base_url
+					);
+					?>
+					<a class="fp__destination-card" href="<?php echo esc_url( $search_url ); ?>">
 						<div class="fp__destination-img" <?php if ( ! empty( $dest['image'] ) ) : ?>style="background-image:url('<?php echo esc_url( $dest['image'] ); ?>');"<?php endif; ?>></div>
 						<div class="fp__destination-label">
-							<span class="fp__destination-name"><?php echo esc_html( $dest['name'] ); ?></span>
+							<span class="fp__destination-name"><?php echo esc_html( $name ); ?></span>
 						</div>
-					</article>
+					</a>
 				<?php endforeach; ?>
 			</div>
 		</div>

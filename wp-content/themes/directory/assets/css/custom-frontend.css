@@ -3753,11 +3753,14 @@ body.custom-frontend .geodir-add-listing .gd-notification a:hover {
 }
 .fp__destination-card {
 	position: relative;
+	display: block;
 	min-height: 190px;
 	border-radius: 18px;
 	overflow: hidden;
 	box-shadow: 0 16px 40px rgba(15, 23, 42, 0.18);
 	background: radial-gradient(circle at top, #0f172a, #020617);
+	text-decoration: none;
+	color: inherit;
 }
 .fp__destination-img {
 	width: 100%;
