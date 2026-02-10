@@ -306,6 +306,39 @@ function directory_preload_custom_frontend_css() {
 add_action( 'wp_head', 'directory_preload_custom_frontend_css', 1 );
 
 /**
+ * Preload LCP image (hero globe) on front page to improve Largest Contentful Paint.
+ */
+function directory_preload_front_page_lcp() {
+	if ( ! is_front_page() ) {
+		return;
+	}
+	$hero_globe  = content_url( '/uploads/2026/02/Group-394831.png' );
+	$hero_pattern = content_url( '/uploads/2026/02/bg-pattern.png' );
+	echo '<link rel="preload" href="' . esc_url( $hero_globe ) . '" as="image" fetchpriority="high">' . "\n";
+	echo '<link rel="preload" href="' . esc_url( $hero_pattern ) . '" as="image" fetchpriority="low">' . "\n";
+}
+add_action( 'wp_head', 'directory_preload_front_page_lcp', 2 );
+
+/**
+ * Inline critical hero CSS on front page so LCP (title or hero image) can paint without waiting for full stylesheet.
+ */
+function directory_inline_critical_hero_css() {
+	if ( ! is_front_page() ) {
+		return;
+	}
+	$css = '
+.fp__hero{position:relative;background-color:#f0f7ff;padding:3rem 1.5rem 4rem;text-align:center;overflow:hidden}
+.fp__hero-in{position:relative;z-index:1;max-width:720px;margin:0 auto}
+.fp__hero-title{margin:0 0 .75rem;font-size:clamp(1.75rem,4.5vw,2.5rem);font-weight:700;line-height:1.2;color:#111827}
+.fp__hero-desc{margin:0 0 1.5rem;font-size:1.0625rem;color:#475569}
+.fp__hero-globe-wrap{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
+.fp__hero-globe{max-width:min(98vw,1200px);width:100%;height:auto;object-fit:contain}
+';
+	echo '<style id="directory-critical-hero">' . wp_strip_all_tags( $css ) . '</style>' . "\n";
+}
+add_action( 'wp_head', 'directory_inline_critical_hero_css', 3 );
+
+/**
  * Blog archive: 6 posts per page.
  */
 function directory_blog_posts_per_page( $query ) {

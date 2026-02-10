@@ -84,7 +84,7 @@ $fp_rel         = function_exists( 'directory_relative_url' ) ? 'directory_relat
 		<!-- 1. Hero + Search -->
 		<section class="fp__hero" style="background-image: url('<?php echo $fp_hero_pattern; ?>');">
 			<div class="fp__hero-globe-wrap" aria-hidden="true">
-				<img src="<?php echo $fp_hero_globe; ?>" alt="" class="fp__hero-globe" />
+				<img src="<?php echo $fp_hero_globe; ?>" alt="" class="fp__hero-globe" width="1200" height="600" fetchpriority="high" loading="eager" decoding="async" />
 			</div>
 			<div class="fp__hero-in">
 				<h1 class="fp__hero-title"><?php echo esc_html( __( 'Your Local guide to businesses and services in New Zealand', 'directory' ) ); ?></h1>
