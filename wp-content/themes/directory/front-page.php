@@ -288,7 +288,11 @@ $fp_rel         = function_exists( 'directory_relative_url' ) ? 'directory_relat
 					<?php endif; ?>
 				</div>
 				<?php if ( $fp_blog_url ) : ?>
-					<p class="fp__blog-more"><a href="<?php echo esc_url( $fp_blog_url ); ?>"><?php esc_html_e( 'View all posts', 'directory' ); ?> &rarr;</a></p>
+					<p class="fp__blog-more">
+						<a href="<?php echo esc_url( $fp_blog_url ); ?>" class="fp__btn fp__btn-primary">
+							<?php esc_html_e( 'View all blogs', 'directory' ); ?>
+						</a>
+					</p>
 				<?php endif; ?>
 			</div>
 		</section>
