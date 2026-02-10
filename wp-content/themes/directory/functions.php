@@ -14,6 +14,7 @@ require_once 'includes/geodir-parent-cats.php';
 require_once 'includes/geodir-category-cms.php';
 require_once 'includes/listing-plans.php';
 require_once 'includes/testimonials.php';
+require_once 'includes/home-featured-sections.php';
 
 // Register patterns
 require_once 'includes/register-patterns.php';
@@ -170,6 +171,13 @@ function directory_theme_enqueue_assets() {
 			$theme_version,
 			true
 		);
+		wp_enqueue_script(
+			'directory-home-featured-sliders',
+			get_stylesheet_directory_uri() . '/assets/js/home-featured-sliders.js',
+			array(),
+			$theme_version,
+			true
+		);
 	}
 }
 add_action( 'wp_enqueue_scripts', 'directory_theme_enqueue_assets' );
@@ -178,7 +186,7 @@ add_action( 'wp_enqueue_scripts', 'directory_theme_enqueue_assets' );
  * Add defer to theme scripts to avoid render-blocking.
  */
 function directory_script_loader_tag( $tag, $handle, $src ) {
-	$defer_handles = array( 'directory-home-categories-carousel' );
+	$defer_handles = array( 'directory-home-categories-carousel', 'directory-home-featured-sliders' );
 	if ( in_array( $handle, $defer_handles, true ) ) {
 		return str_replace( ' src=', ' defer src=', $tag );
 	}
