@@ -1389,7 +1389,7 @@ body.custom-frontend .fp__btn {
 	font-size: 0.9375rem;
 	font-weight: 600;
 	text-decoration: none;
-	border-radius: 8px;
+	border-radius: 999px;
 	transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 body.custom-frontend .fp__btn-primary {
@@ -2973,7 +2973,7 @@ body.custom-frontend .cf-single-place-reviews input[type="submit"] {
 	color: #fff;
 	border: none;
 	padding: 0.65rem 1.25rem;
-	border-radius: 8px;
+	border-radius: 999px;
 	font-weight: 600;
 	font-size: 0.9375rem;
 	cursor: pointer;
@@ -3287,6 +3287,7 @@ body.custom-frontend .geodir-add-listing .geodir_button:not(.btn-outline-primary
 	color: #fff !important;
 	border-color: #3993d5;
 	box-shadow: 0 4px 12px rgba(57, 147, 213, 0.25);
+	border-radius: 999px;
 }
 
 body.custom-frontend .geodir-add-listing .btn-primary:hover,
