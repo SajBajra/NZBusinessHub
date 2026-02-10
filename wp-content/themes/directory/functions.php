@@ -347,3 +347,21 @@ function directory_blog_posts_per_page( $query ) {
 	}
 }
 add_action( 'pre_get_posts', 'directory_blog_posts_per_page' );
+
+/**
+ * Custom login message for GeoDirectory Add Listing widget.
+ * Replaces the default "You must login to post." text with a friendlier message.
+ */
+function directory_add_listing_login_message_atts( $out, $pairs, $atts, $shortcode ) {
+	if ( $shortcode !== 'gd_add_listing' ) {
+		return $out;
+	}
+
+	// Only override if not explicitly set in shortcode/widget.
+	if ( empty( $atts['login_msg'] ) ) {
+		$out['login_msg'] = __( 'To add a business listing, please sign in or create a free account.', 'directory' );
+	}
+
+	return $out;
+}
+add_filter( 'shortcode_atts_gd_add_listing', 'directory_add_listing_login_message_atts', 10, 4 );
