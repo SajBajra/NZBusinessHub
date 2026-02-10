@@ -251,13 +251,21 @@ function directory_render_home_featured_sections() {
 		}
 
 		$slider_id = 'hf-' . ( $index + 1 );
+
+		// Fixed public titles for first two sliders.
+		$display_title = $title !== '' ? $title : __( 'Top picks', 'directory' );
+		if ( $index === 0 ) {
+			$display_title = __( 'Top Restaurants', 'directory' );
+		} elseif ( $index === 1 ) {
+			$display_title = __( 'Top Experiences', 'directory' );
+		}
 		?>
 		<section class="fp__section fp__hf-section">
 			<div class="fp__wrap">
 				<header class="fp__hf-header">
 					<div class="fp__hf-header-main">
 						<h2 class="fp__section-title fp__hf-title">
-							<?php echo esc_html( $title !== '' ? $title : __( 'Top picks', 'directory' ) ); ?>
+							<?php echo esc_html( $display_title ); ?>
 						</h2>
 						<p class="fp__hf-subtitle">
 							<?php esc_html_e( 'Highly rated places near you.', 'directory' ); ?>
