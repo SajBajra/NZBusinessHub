@@ -229,27 +229,6 @@ function directory_render_home_featured_sections() {
 			continue;
 		}
 
-		// "View all" target.
-		$view_all_url  = '';
-		$view_all_text = __( 'View all', 'directory' );
-		if ( $cat_slug !== '' ) {
-			$term = get_term_by( 'slug', $cat_slug, 'gd_placecategory' );
-			if ( $term && ! is_wp_error( $term ) ) {
-				$view_all_url  = $rel_fn( get_term_link( $term ) );
-				$view_all_text = sprintf(
-					/* translators: %s: category name */
-					__( 'View all in %s', 'directory' ),
-					$term->name
-				);
-			}
-		}
-		if ( ! $view_all_url && function_exists( 'get_post_type_archive_link' ) ) {
-			$archive = get_post_type_archive_link( 'gd_place' );
-			if ( $archive ) {
-				$view_all_url = $rel_fn( $archive );
-			}
-		}
-
 		$slider_id = 'hf-' . ( $index + 1 );
 
 		// Fixed public titles for first two sliders.
@@ -271,11 +250,6 @@ function directory_render_home_featured_sections() {
 							<?php esc_html_e( 'Highly rated places near you.', 'directory' ); ?>
 						</p>
 					</div>
-					<?php if ( $view_all_url ) : ?>
-						<a class="fp__hf-viewall" href="<?php echo esc_url( $view_all_url ); ?>">
-							<?php echo esc_html( $view_all_text ); ?>
-						</a>
-					<?php endif; ?>
 				</header>
 				<div class="fp__hf-slider" data-hf-slider="<?php echo esc_attr( $slider_id ); ?>">
 					<button type="button" class="fp__hf-arrow fp__hf-prev" aria-label="<?php esc_attr_e( 'Previous featured listing', 'directory' ); ?>">
