@@ -51,40 +51,42 @@ if ( $custom_logo_id ) {
 			<span class="cf-nav-toggle-bar"></span>
 		</button>
 		<nav class="cf-nav" id="cf-nav-main">
-			<button type="button" class="cf-set-location-trigger" id="cf-set-location-trigger" aria-haspopup="dialog" aria-expanded="false" aria-controls="cf-location-modal" aria-label="<?php esc_attr_e( 'Set location', 'directory' ); ?>">
-				<span class="cf-set-location-icon" aria-hidden="true">
-					<svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" fill="#3993d5"/></svg>
-				</span>
-				<span class="cf-set-location-text"><?php esc_html_e( 'Set Location', 'directory' ); ?></span>
-				<span class="cf-set-location-divider" aria-hidden="true"></span>
-			</button>
-			<a href="<?php echo esc_url( $custom_businesses_url ); ?>"><?php esc_html_e( 'Businesses', 'directory' ); ?></a>
-			<a href="<?php echo esc_url( $custom_categories_url ); ?>"><?php esc_html_e( 'Category', 'directory' ); ?></a>
-			<a href="<?php echo esc_url( $custom_blog_url ); ?>"><?php esc_html_e( 'Blog', 'directory' ); ?></a>
+			<div class="cf-nav-links">
+				<button type="button" class="cf-set-location-trigger" id="cf-set-location-trigger" aria-haspopup="dialog" aria-expanded="false" aria-controls="cf-location-modal" aria-label="<?php esc_attr_e( 'Set location', 'directory' ); ?>">
+					<span class="cf-set-location-icon" aria-hidden="true">
+						<svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" fill="#3993d5"/></svg>
+					</span>
+					<span class="cf-set-location-text"><?php esc_html_e( 'Set Location', 'directory' ); ?></span>
+					<span class="cf-set-location-divider" aria-hidden="true"></span>
+				</button>
+				<a href="<?php echo esc_url( $custom_businesses_url ); ?>"><?php esc_html_e( 'Businesses', 'directory' ); ?></a>
+				<a href="<?php echo esc_url( $custom_categories_url ); ?>"><?php esc_html_e( 'Category', 'directory' ); ?></a>
+				<a href="<?php echo esc_url( $custom_blog_url ); ?>"><?php esc_html_e( 'Blog', 'directory' ); ?></a>
+			</div>
+			<div class="cf-actions">
+				<?php if ( is_user_logged_in() ) : ?>
+					<a class="cf-link-sign" href="<?php echo esc_url( $custom_logout_url ); ?>">
+						<span class="cf-icon-user" aria-hidden="true">
+							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+						</span>
+						<?php esc_html_e( 'Sign out', 'directory' ); ?>
+					</a>
+				<?php else : ?>
+					<a class="cf-link-sign uwp-login-link" href="<?php echo esc_url( $custom_login_url ); ?>">
+						<span class="cf-icon-user" aria-hidden="true">
+							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+						</span>
+						<?php esc_html_e( 'Sign in', 'directory' ); ?>
+					</a>
+				<?php endif; ?>
+				<a class="cf-btn-add" href="<?php echo esc_url( $custom_add_listing_url ); ?>">
+					<span class="cf-icon-plus" aria-hidden="true">
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+					</span>
+					<?php esc_html_e( 'Add listing', 'directory' ); ?>
+				</a>
+			</div>
 		</nav>
-		<div class="cf-actions">
-			<?php if ( is_user_logged_in() ) : ?>
-				<a class="cf-link-sign" href="<?php echo esc_url( $custom_logout_url ); ?>">
-					<span class="cf-icon-user" aria-hidden="true">
-						<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-					</span>
-					<?php esc_html_e( 'Sign out', 'directory' ); ?>
-				</a>
-			<?php else : ?>
-				<a class="cf-link-sign uwp-login-link" href="<?php echo esc_url( $custom_login_url ); ?>">
-					<span class="cf-icon-user" aria-hidden="true">
-						<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-					</span>
-					<?php esc_html_e( 'Sign in', 'directory' ); ?>
-				</a>
-			<?php endif; ?>
-			<a class="cf-btn-add" href="<?php echo esc_url( $custom_add_listing_url ); ?>">
-				<span class="cf-icon-plus" aria-hidden="true">
-					<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-				</span>
-				<?php esc_html_e( 'Add listing', 'directory' ); ?>
-			</a>
-		</div>
 	</div>
 </header>
 

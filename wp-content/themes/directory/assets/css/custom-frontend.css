@@ -113,9 +113,17 @@ body.custom-frontend .cf-nav-toggle-bar + .cf-nav-toggle-bar {
 body.custom-frontend .cf-nav {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
+	flex: 1 1 auto;
+	margin-left: 2.25rem;
+	gap: 1.25rem;
+}
+
+body.custom-frontend .cf-nav-links {
+	display: flex;
+	align-items: center;
 	gap: 1.75rem;
 	flex-wrap: wrap;
-	margin-left: 2.25rem;
 }
 
 body.custom-frontend .cf-nav a {
@@ -182,9 +190,15 @@ body.custom-frontend .cf-set-location-divider {
 		display: none;
 		flex-direction: column;
 		align-items: flex-start;
-		gap: 0.6rem;
+		gap: 0.4rem;
 		margin-top: 0.35rem;
 		margin-left: 0;
+	}
+	body.custom-frontend .cf-nav-links {
+		width: 100%;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.4rem;
 	}
 	body.custom-frontend .cf-nav a,
 	body.custom-frontend .cf-set-location-trigger {
@@ -195,23 +209,21 @@ body.custom-frontend .cf-set-location-divider {
 	}
 	body.custom-frontend .cf-actions {
 		width: 100%;
-		display: none;
 		flex-direction: column;
 		align-items: stretch;
-		gap: 0.4rem;
+		gap: 0.45rem;
 		margin-top: 0.4rem;
-		padding-top: 0.2rem;
-		border-top: none;
+		padding-top: 0.6rem;
+		border-top: 1px solid #e5e7eb;
 		margin-left: 0;
 	}
-	body.custom-frontend .cf-header.cf-header--nav-open .cf-nav,
-	body.custom-frontend .cf-header.cf-header--nav-open .cf-actions {
+	body.custom-frontend .cf-header.cf-header--nav-open .cf-nav {
 		display: flex;
 	}
 	body.custom-frontend .cf-actions .cf-btn-add,
 	body.custom-frontend .cf-actions .cf-link-sign {
-		width: auto;
-		justify-content: flex-start;
+		width: 100%;
+		justify-content: center;
 	}
 }
 
