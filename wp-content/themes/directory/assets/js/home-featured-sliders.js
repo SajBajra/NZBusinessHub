@@ -2,11 +2,6 @@
 	'use strict';
 
 	function initSlider(slider) {
-		// On mobile, use simple horizontal swipe with CSS only.
-		if (window.innerWidth <= 900) {
-			return;
-		}
-
 		var viewport = slider.querySelector('.fp__hf-viewport');
 		var track = slider.querySelector('.fp__hf-track');
 		var cards = Array.prototype.slice.call(slider.querySelectorAll('.fp__hf-card'));
@@ -20,7 +15,7 @@
 
 		var current = 0;
 		var slideWidth = 0;
-		var gap = 16; // keep in sync with CSS track gap
+		var gap = 16; // desktop track gap
 
 		function goTo(index) {
 			if (!cards.length) return;
@@ -64,11 +59,22 @@
 			});
 		}
 
-		// Ensure each card is narrower than viewport to "peek" next slide.
+		// Ensure each card is narrower than viewport to "peek" next slide on desktop,
+		// and full-width single-card view on mobile.
 		function syncWidths() {
 			var viewportWidth = viewport.clientWidth;
-			var cardWidth = Math.round(viewportWidth * 0.6); // even smaller cards, more peek
-			slideWidth = cardWidth + gap;
+			var cardWidth;
+			var localGap;
+
+			if (window.innerWidth <= 900) {
+				cardWidth = viewportWidth;
+				localGap = 0;
+			} else {
+				cardWidth = Math.round(viewportWidth * 0.6); // desktop: show peek of next card
+				localGap = gap;
+			}
+
+			slideWidth = cardWidth + localGap;
 			cards.forEach(function (card) {
 				card.style.width = cardWidth + 'px';
 				card.style.flex = '0 0 ' + cardWidth + 'px';

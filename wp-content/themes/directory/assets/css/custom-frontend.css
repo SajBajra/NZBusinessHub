@@ -3845,7 +3845,7 @@ body.custom-frontend .geodir-add-listing .gd-notification a:hover {
 		bottom: 1rem;
 	}
 	.fp__hf-dots {
-		display: none;
+		display: flex;
 	}
 }
 
