@@ -226,7 +226,8 @@ function directory_render_home_destinations() {
 	<section class="fp__section fp__destinations">
 		<div class="fp__wrap">
 			<h2 class="fp__section-title fp__destinations-title"><?php esc_html_e( 'Destinations nearby', 'directory' ); ?></h2>
-			<div class="fp__destinations-grid">
+			<div class="fp__destinations-slider" data-destinations-slider>
+				<div class="fp__destinations-grid" data-destinations-grid>
 				<?php foreach ( $active as $dest ) :
 					$name = isset( $dest['name'] ) ? trim( $dest['name'] ) : '';
 					if ( $name === '' ) {
@@ -247,6 +248,8 @@ function directory_render_home_destinations() {
 						</div>
 					</a>
 				<?php endforeach; ?>
+				</div>
+				<nav class="fp__destinations-pages" data-destinations-pages aria-label="<?php esc_attr_e( 'Destinations navigation', 'directory' ); ?>"></nav>
 			</div>
 		</div>
 	</section>

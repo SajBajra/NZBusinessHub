@@ -179,6 +179,13 @@ function directory_theme_enqueue_assets() {
 			$theme_version,
 			true
 		);
+		wp_enqueue_script(
+			'directory-home-destinations-carousel',
+			get_stylesheet_directory_uri() . '/assets/js/home-destinations-carousel.js',
+			array(),
+			$theme_version,
+			true
+		);
 	}
 }
 add_action( 'wp_enqueue_scripts', 'directory_theme_enqueue_assets' );
@@ -187,7 +194,7 @@ add_action( 'wp_enqueue_scripts', 'directory_theme_enqueue_assets' );
  * Add defer to theme scripts to avoid render-blocking.
  */
 function directory_script_loader_tag( $tag, $handle, $src ) {
-	$defer_handles = array( 'directory-home-categories-carousel', 'directory-home-featured-sliders' );
+	$defer_handles = array( 'directory-home-categories-carousel', 'directory-home-featured-sliders', 'directory-home-destinations-carousel' );
 	if ( in_array( $handle, $defer_handles, true ) ) {
 		return str_replace( ' src=', ' defer src=', $tag );
 	}
