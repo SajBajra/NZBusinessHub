@@ -88,6 +88,7 @@ body.custom-frontend .cf-nav-toggle {
 	display: none;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
 	width: 36px;
 	height: 32px;
 	border-radius: 999px;
@@ -106,7 +107,7 @@ body.custom-frontend .cf-nav-toggle-bar {
 	transition: transform 0.15s ease, opacity 0.15s ease;
 }
 body.custom-frontend .cf-nav-toggle-bar + .cf-nav-toggle-bar {
-	margin-top: 3px;
+	margin-top: 4px;
 }
 
 body.custom-frontend .cf-nav {
