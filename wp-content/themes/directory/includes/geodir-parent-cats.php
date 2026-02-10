@@ -225,9 +225,9 @@ if ( ! function_exists( 'directory_business_categories_inline_css' ) ) {
 		echo "body.page-business-categories .business-cats-list li{break-inside:avoid!important;margin-bottom:0.4rem!important;position:relative!important;padding-left:1.1rem!important;font-size:0.96rem!important;}\n";
 		echo "body.page-business-categories .business-cats-list li::before{content:\"\\25B8\"!important;position:absolute!important;left:0!important;top:0.05rem!important;font-size:0.7rem!important;color:#111827!important;}\n";
 		echo "body.page-business-categories .business-cats-list a{color:#111827!important;text-decoration:none!important;}\n";
-		echo "body.page-business-categories .business-cats-list a:hover{color:#2563eb!important;text-decoration:underline!important;}\n";
+		echo "body.page-business-categories .business-cats-list a:hover{color:#3993d5!important;text-decoration:underline!important;}\n";
 		echo "body.page-business-categories .business-cats-panel{border-radius:0.85rem!important;overflow:hidden!important;border:1px solid #d4ddf5!important;background-color:#f9fbff!important;}\n";
-		echo "body.page-business-categories .business-cats-panel-header{background:linear-gradient(135deg,#0b63ce 0%,#1d4ed8 100%)!important;color:#ffffff!important;font-weight:600!important;padding:0.7rem 1.1rem!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:0.5rem!important;font-size:1.1rem!important;}\n";
+		echo "body.page-business-categories .business-cats-panel-header{background:linear-gradient(135deg,#0b63ce 0%,#2d7ab8 100%)!important;color:#ffffff!important;font-weight:600!important;padding:0.7rem 1.1rem!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:0.5rem!important;font-size:1.1rem!important;}\n";
 		echo "body.page-business-categories .business-cats-panel-header a{color:#ffffff!important;text-decoration:none!important;}\n";
 		echo "body.page-business-categories .business-cats-panel-header a:hover{color:#ffffff!important;text-decoration:none!important;}\n";
 		echo "body.page-business-categories .business-cats-panel-body{padding:1rem 1.1rem 1.1rem!important;background-color:#f9fbff!important;display:flex!important;flex-wrap:wrap!important;gap:0.5rem 0.75rem!important;}\n";
@@ -468,7 +468,7 @@ function directory_business_categories_page_content() {
 	$bc_hero_bg = esc_url( get_stylesheet_directory_uri() . '/assets/images/home-bg.jpg' );
 	?>
 	<div class="bc-page">
-		<section class="bc-hero bc-hero-with-bg" style="background-image: linear-gradient(135deg, rgba(37, 99, 235, 0.78), rgba(29, 78, 216, 0.82)), url('<?php echo $bc_hero_bg; ?>');">
+		<section class="bc-hero bc-hero-with-bg" style="background-image: linear-gradient(135deg, rgba(57, 147, 213, 0.78), rgba(32, 99, 160, 0.82)), url('<?php echo $bc_hero_bg; ?>');">
 			<div class="bc-hero-inner">
 				<nav class="bc-hero-breadcrumb" aria-label="<?php esc_attr_e( 'Breadcrumb', 'directory' ); ?>">
 					<a href="<?php echo esc_url( $bc_home_url ); ?>"><?php esc_html_e( 'Home', 'directory' ); ?></a>

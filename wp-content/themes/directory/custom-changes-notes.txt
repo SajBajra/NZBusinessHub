@@ -223,10 +223,10 @@ Custom frontend changes – summary
 - Link styles inside blog content:
   - File: assets/css/custom-frontend.css
     - body.custom-frontend .cf-blog-single-content a:
-      - color: #2563eb;
+      - color: #3993d5;
       - text-decoration: none !important;
-      - border-bottom: 1px solid rgba(37, 99, 235, 0.3) !important;
-    - Hover: border-bottom-color darkens to rgba(37, 99, 235, 0.7).
+      - border-bottom: 1px solid rgba(57, 147, 213, 0.3) !important;
+    - Hover: border-bottom-color darkens to rgba(57, 147, 213, 0.7).
 
 
 This text file is a high-level reference to the major theme changes:

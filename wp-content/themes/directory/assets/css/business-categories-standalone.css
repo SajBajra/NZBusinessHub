@@ -11,7 +11,7 @@ body.custom-frontend .standalone-bc-main .bc-page {
 
 /* ----- Hero: revamped with background image + overlay ----- */
 body.custom-frontend .standalone-bc-main .bc-hero {
-	background-color: #2563eb;
+	background-color: #3993d5;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -156,8 +156,8 @@ body.custom-frontend .standalone-bc-main .bc-search-input::placeholder {
 
 body.custom-frontend .standalone-bc-main .bc-search-input:focus {
 	outline: none;
-	border-color: #2563eb;
-	box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+	border-color: #3993d5;
+	box-shadow: 0 0 0 3px rgba(57, 147, 213, 0.15);
 }
 
 /* ----- Browse by Category ----- */
@@ -308,7 +308,7 @@ body.custom-frontend .standalone-bc-main .bc-panel-header {
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	background: #2563eb;
+	background: #3993d5;
 	padding: 0.875rem 1.25rem;
 }
 
@@ -357,9 +357,9 @@ body.custom-frontend .standalone-bc-main .bc-chip {
 }
 
 body.custom-frontend .standalone-bc-main .bc-chip:hover {
-	background: #2563eb;
+	background: #3993d5;
 	color: #fff;
-	border-color: #2563eb;
+	border-color: #3993d5;
 	transform: scale(1.02);
 }
 

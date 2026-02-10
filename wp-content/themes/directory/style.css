@@ -83,7 +83,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /* Business Categories hero refinements */
 .business-cats-hero {
 	background-image:
-		linear-gradient(135deg, rgba(15, 23, 42, 0.78), rgba(37, 99, 235, 0.78)),
+		linear-gradient(135deg, rgba(15, 23, 42, 0.78), rgba(57, 147, 213, 0.78)),
 		url('assets/images/home-bg.jpg');
 	background-size: cover;
 	background-position: center;
@@ -314,7 +314,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 
 .business-cats-list a:hover {
-	color: #2563eb !important;
+	color: #3993d5 !important;
 	text-decoration: underline !important;
 }
 
@@ -369,7 +369,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 
 .business-cats-panel-header a:hover {
-	color: #2563eb !important;
+	color: #3993d5 !important;
 	text-decoration: underline !important;
 }
 
@@ -398,7 +398,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	padding: 0.4rem 0.75rem !important;
 	border-radius: 999px !important;
 	background: #eef2ff !important;
-	color: #1d4ed8 !important;
+	color: #2d7ab8 !important;
 	font-size: 0.85rem !important;
 	font-weight: 500 !important;
 	text-decoration: none !important;
@@ -406,9 +406,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 
 .business-cats-chip:hover {
-	background: #2563eb !important;
+	background: #3993d5 !important;
 	color: #ffffff !important;
-	box-shadow: 0 8px 22px rgba(37, 99, 235, 0.25) !important;
+	box-shadow: 0 8px 22px rgba(57, 147, 213, 0.25) !important;
 	transform: translateY(-1px) !important;
 	text-decoration: none !important;
 }
@@ -422,7 +422,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 
 .business-cats-panel-header {
-	background: linear-gradient(135deg, #0b63ce 0%, #1d4ed8 100%);
+	background: linear-gradient(135deg, #0b63ce 0%, #2d7ab8 100%);
 	color: #ffffff;
 	font-weight: 600;
 	padding: 0.7rem 1.1rem;
@@ -505,7 +505,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  */
 body.page-business-categories .business-cats-hero {
 	background-image:
-		linear-gradient(135deg, rgba(15, 23, 42, 0.78), rgba(37, 99, 235, 0.78)),
+		linear-gradient(135deg, rgba(15, 23, 42, 0.78), rgba(57, 147, 213, 0.78)),
 		url('assets/images/home-bg.jpg') !important;
 	background-size: cover !important;
 	background-position: center !important;
@@ -572,7 +572,7 @@ body.page-business-categories .business-cats-list a {
 }
 
 body.page-business-categories .business-cats-list a:hover {
-	color: #2563eb !important;
+	color: #3993d5 !important;
 	text-decoration: underline !important;
 }
 
@@ -603,7 +603,7 @@ body.page-business-categories .business-cats-panel {
 }
 
 body.page-business-categories .business-cats-panel-header {
-	background: linear-gradient(135deg, #0b63ce 0%, #1d4ed8 100%) !important;
+	background: linear-gradient(135deg, #0b63ce 0%, #2d7ab8 100%) !important;
 	color: #ffffff !important;
 	font-weight: 600 !important;
 	padding: 0.7rem 1.1rem !important;
