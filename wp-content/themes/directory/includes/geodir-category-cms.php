@@ -57,10 +57,11 @@ function directory_gd_cat_cms_admin_enqueue( $hook_suffix ) {
 	}
 
 	wp_enqueue_media();
+	wp_enqueue_script( 'jquery' );
 
 	// Minimal JS for media fields + FAQ repeater.
 	wp_add_inline_script(
-		'jquery-core',
+		'jquery',
 		"(function($){\n" .
 		"function pickMedia(onSelect){\n" .
 		"  var frame = wp.media({title:'Select image',button:{text:'Use this image'},multiple:false});\n" .
