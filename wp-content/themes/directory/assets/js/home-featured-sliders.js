@@ -20,7 +20,9 @@
 		function goTo(index) {
 			if (!cards.length) return;
 			current = (index + cards.length) % cards.length;
-			viewport.scrollTo({ left: current * slideWidth, behavior: 'smooth' });
+			if (window.innerWidth > 900) {
+				viewport.scrollTo({ left: current * slideWidth, behavior: 'smooth' });
+			}
 			updateActive();
 		}
 

@@ -3821,20 +3821,25 @@ body.custom-frontend .geodir-add-listing .gd-notification a:hover {
 		overflow: hidden;
 	}
 	.fp__hf-track {
-		display: flex;
-		column-gap: 12px;
-		overflow-x: auto;
-		scroll-snap-type: x mandatory;
-		-webkit-overflow-scrolling: touch;
-		padding: 0 0.15rem 0.25rem;
+		display: block;
+		column-gap: 0;
+		overflow: visible;
+		scroll-snap-type: none;
+		-webkit-overflow-scrolling: auto;
+		padding: 0;
 	}
 	.fp__hf-arrow {
 		display: none;
 	}
 	.fp__hf-card {
-		flex: 0 0 100%;
+		flex: none;
 		max-width: 100%;
-		scroll-snap-align: center;
+		scroll-snap-align: none;
+		display: none;
+		margin: 0;
+	}
+	.fp__hf-card.is-active {
+		display: block;
 	}
 	.fp__hf-card-link {
 		box-shadow: 0 12px 30px rgba(15, 23, 42, 0.22);
