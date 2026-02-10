@@ -198,23 +198,20 @@ body.custom-frontend .cf-set-location-divider {
 		display: none;
 		flex-direction: column;
 		align-items: stretch;
-		gap: 0.5rem;
+		gap: 0.4rem;
 		margin-top: 0.4rem;
-		padding-top: 0.6rem;
-		border-top: 1px solid #e5e7eb;
+		padding-top: 0.2rem;
+		border-top: none;
 		margin-left: 0;
 	}
 	body.custom-frontend .cf-header.cf-header--nav-open .cf-nav,
 	body.custom-frontend .cf-header.cf-header--nav-open .cf-actions {
 		display: flex;
 	}
-	body.custom-frontend .cf-actions .cf-btn-add {
-		width: 100%;
-		justify-content: center;
-	}
+	body.custom-frontend .cf-actions .cf-btn-add,
 	body.custom-frontend .cf-actions .cf-link-sign {
-		width: 100%;
-		justify-content: center;
+		width: auto;
+		justify-content: flex-start;
 	}
 }
 
