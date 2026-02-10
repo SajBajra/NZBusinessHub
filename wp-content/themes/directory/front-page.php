@@ -253,6 +253,13 @@ $fp_rel         = function_exists( 'directory_relative_url' ) ? 'directory_relat
 			</div>
 		</section>
 
+		<?php
+		// 5.5 – Destinations nearby (static NZ destinations from settings).
+		if ( function_exists( 'directory_render_home_destinations' ) ) {
+			directory_render_home_destinations();
+		}
+		?>
+
 		<!-- 6. Blog -->
 		<section class="fp__section fp__blog">
 			<div class="fp__wrap">

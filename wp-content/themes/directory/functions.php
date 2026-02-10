@@ -15,6 +15,7 @@ require_once 'includes/geodir-category-cms.php';
 require_once 'includes/listing-plans.php';
 require_once 'includes/testimonials.php';
 require_once 'includes/home-featured-sections.php';
+require_once 'includes/home-destinations.php';
 
 // Register patterns
 require_once 'includes/register-patterns.php';
