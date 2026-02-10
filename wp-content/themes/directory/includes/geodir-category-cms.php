@@ -25,6 +25,14 @@ function directory_gd_cat_meta_key_content() {
 	return '_directory_cat_content';
 }
 
+function directory_gd_cat_meta_key_content_2() {
+	return '_directory_cat_content_2';
+}
+
+function directory_gd_cat_meta_key_heading_2() {
+	return '_directory_cat_heading_2';
+}
+
 function directory_gd_cat_meta_key_image1() {
 	return '_directory_cat_image_1_id';
 }
@@ -100,6 +108,10 @@ function directory_gd_cat_add_fields() {
 		<p class="description"><?php esc_html_e( 'Displayed on the category archive page under the business cards.', 'directory' ); ?></p>
 	</div>
 	<div class="form-field">
+		<label for="directory_cat_content_2"><?php esc_html_e( 'Secondary section content (optional)', 'directory' ); ?></label>
+		<textarea name="directory_cat_content_2" id="directory_cat_content_2" rows="4" class="large-text" placeholder="<?php esc_attr_e( 'Extra details for a second section, e.g. “Wall Lights” description.', 'directory' ); ?>"></textarea>
+	</div>
+	<div class="form-field">
 		<?php directory_gd_cat_render_image_field( __( 'Image 1', 'directory' ), 'directory_cat_image_1_id', '' ); ?>
 	</div>
 	<div class="form-field">
@@ -120,6 +132,8 @@ add_action( directory_gd_category_taxonomy() . '_add_form_fields', 'directory_gd
  */
 function directory_gd_cat_edit_fields( $term ) {
 	$content = get_term_meta( $term->term_id, directory_gd_cat_meta_key_content(), true );
+	$content2 = get_term_meta( $term->term_id, directory_gd_cat_meta_key_content_2(), true );
+	$heading2 = get_term_meta( $term->term_id, directory_gd_cat_meta_key_heading_2(), true );
 	$image1  = get_term_meta( $term->term_id, directory_gd_cat_meta_key_image1(), true );
 	$image2  = get_term_meta( $term->term_id, directory_gd_cat_meta_key_image2(), true );
 	$faq     = get_term_meta( $term->term_id, directory_gd_cat_meta_key_faq(), true );
@@ -143,6 +157,28 @@ function directory_gd_cat_edit_fields( $term ) {
 			);
 			?>
 			<p class="description"><?php esc_html_e( 'Displayed on the category archive page under the business cards.', 'directory' ); ?></p>
+		</td>
+	</tr>
+	<tr class="form-field term-directory-cat-content2-wrap">
+		<th scope="row"><label for="directory_cat_content_2"><?php esc_html_e( 'Secondary section', 'directory' ); ?></label></th>
+		<td>
+			<p>
+				<label for="directory_cat_heading_2"><strong><?php esc_html_e( 'Secondary heading (optional)', 'directory' ); ?></strong></label>
+				<input type="text" class="regular-text" name="directory_cat_heading_2" id="directory_cat_heading_2" value="<?php echo esc_attr( (string) $heading2 ); ?>" placeholder="<?php esc_attr_e( 'e.g. Wall Lights', 'directory' ); ?>" />
+			</p>
+			<?php
+			wp_editor(
+				wp_kses_post( (string) $content2 ),
+				'directory_cat_content_2',
+				array(
+					'textarea_name' => 'directory_cat_content_2',
+					'textarea_rows' => 6,
+					'media_buttons' => true,
+					'tinymce'       => true,
+				)
+			);
+			?>
+			<p class="description"><?php esc_html_e( 'Optional second text block that can be paired with the second image in a separate row.', 'directory' ); ?></p>
 		</td>
 	</tr>
 	<tr class="form-field term-directory-cat-images-wrap">
@@ -192,6 +228,14 @@ function directory_gd_cat_save_fields( $term_id ) {
 	if ( isset( $_POST['directory_cat_content'] ) ) {
 		$content = wp_kses_post( wp_unslash( $_POST['directory_cat_content'] ) );
 		update_term_meta( $term_id, directory_gd_cat_meta_key_content(), $content );
+	}
+	if ( isset( $_POST['directory_cat_content_2'] ) ) {
+		$content2 = wp_kses_post( wp_unslash( $_POST['directory_cat_content_2'] ) );
+		update_term_meta( $term_id, directory_gd_cat_meta_key_content_2(), $content2 );
+	}
+	if ( isset( $_POST['directory_cat_heading_2'] ) ) {
+		$heading2 = sanitize_text_field( wp_unslash( $_POST['directory_cat_heading_2'] ) );
+		update_term_meta( $term_id, directory_gd_cat_meta_key_heading_2(), $heading2 );
 	}
 
 	if ( isset( $_POST['directory_cat_image_1_id'] ) ) {

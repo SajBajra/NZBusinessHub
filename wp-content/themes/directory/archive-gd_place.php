@@ -206,11 +206,15 @@ $gd_total = (int) $gd_query->found_posts;
 				if ( $gd_is_category && ! empty( $gd_queried->term_id ) ) {
 					$term_id  = (int) $gd_queried->term_id;
 					$content_key  = function_exists( 'directory_gd_cat_meta_key_content' ) ? directory_gd_cat_meta_key_content() : '_directory_cat_content';
+					$content2_key = function_exists( 'directory_gd_cat_meta_key_content_2' ) ? directory_gd_cat_meta_key_content_2() : '_directory_cat_content_2';
+					$heading2_key = function_exists( 'directory_gd_cat_meta_key_heading_2' ) ? directory_gd_cat_meta_key_heading_2() : '_directory_cat_heading_2';
 					$image1_key   = function_exists( 'directory_gd_cat_meta_key_image1' ) ? directory_gd_cat_meta_key_image1() : '_directory_cat_image_1_id';
 					$image2_key   = function_exists( 'directory_gd_cat_meta_key_image2' ) ? directory_gd_cat_meta_key_image2() : '_directory_cat_image_2_id';
 					$faq_key      = function_exists( 'directory_gd_cat_meta_key_faq' ) ? directory_gd_cat_meta_key_faq() : '_directory_cat_faq';
 
 					$content  = get_term_meta( $term_id, $content_key, true );
+					$content2 = get_term_meta( $term_id, $content2_key, true );
+					$heading2 = get_term_meta( $term_id, $heading2_key, true );
 					$image1id = get_term_meta( $term_id, $image1_key, true );
 					$image2id = get_term_meta( $term_id, $image2_key, true );
 					$faq      = get_term_meta( $term_id, $faq_key, true );
@@ -220,6 +224,7 @@ $gd_total = (int) $gd_query->found_posts;
 					}
 
 					$has_content = is_string( $content ) && trim( $content ) !== '';
+					$has_content2 = is_string( $content2 ) && trim( $content2 ) !== '';
 					$has_images_raw  = (bool) ( $image1id || $image2id );
 					$has_faq     = false;
 					foreach ( $faq as $item ) {
@@ -241,6 +246,8 @@ $gd_total = (int) $gd_query->found_posts;
 							}
 
 							$p_content  = get_term_meta( $parent_term->term_id, $content_key, true );
+							$p_content2 = get_term_meta( $parent_term->term_id, $content2_key, true );
+							$p_heading2 = get_term_meta( $parent_term->term_id, $heading2_key, true );
 							$p_image1id = get_term_meta( $parent_term->term_id, $image1_key, true );
 							$p_image2id = get_term_meta( $parent_term->term_id, $image2_key, true );
 							$p_faq      = get_term_meta( $parent_term->term_id, $faq_key, true );
@@ -249,6 +256,7 @@ $gd_total = (int) $gd_query->found_posts;
 							}
 
 							$p_has_content = is_string( $p_content ) && trim( $p_content ) !== '';
+							$p_has_content2 = is_string( $p_content2 ) && trim( $p_content2 ) !== '';
 							$p_has_images  = (bool) ( $p_image1id || $p_image2id );
 							$p_has_faq     = false;
 							foreach ( $p_faq as $p_item ) {
@@ -260,13 +268,16 @@ $gd_total = (int) $gd_query->found_posts;
 								}
 							}
 
-							if ( $p_has_content || $p_has_images || $p_has_faq ) {
+							if ( $p_has_content || $p_has_content2 || $p_has_images || $p_has_faq ) {
 								// Use parent data but keep the child category name as the title.
 								$content  = $p_content;
+								$content2 = $p_content2;
+								$heading2 = $p_heading2;
 								$image1id = $p_image1id;
 								$image2id = $p_image2id;
 								$faq      = $p_faq;
 								$has_content = $p_has_content;
+								$has_content2 = $p_has_content2;
 								$has_images_raw = $p_has_images;
 								$has_faq = $p_has_faq;
 								break;
@@ -278,30 +289,56 @@ $gd_total = (int) $gd_query->found_posts;
 
 					$image1 = $image1id ? wp_get_attachment_image_url( (int) $image1id, 'large' ) : '';
 					$image2 = $image2id ? wp_get_attachment_image_url( (int) $image2id, 'large' ) : '';
-					$has_images = (bool) ( $image1 || $image2 );
+					$has_section1 = $has_content || (bool) $image1;
+					$has_section2 = $has_content2 || (bool) $image2;
 
-					if ( $has_content || $has_images || $has_faq ) :
+					if ( $has_section1 || $has_section2 || $has_faq ) :
 						?>
 						<section class="cf-gd-cat-cms" aria-label="<?php esc_attr_e( 'Category information', 'directory' ); ?>">
 							<div class="cf-gd-cat-cms-inner">
-								<?php if ( $has_content || $has_images ) : ?>
-									<div class="cf-gd-cat-cms-grid">
-										<div class="cf-gd-cat-cms-content">
-											<h2 class="cf-gd-cat-cms-title"><?php echo esc_html( $gd_archive_clean ); ?></h2>
-											<?php if ( $has_content ) : ?>
-												<div class="cf-gd-cat-cms-text"><?php echo wp_kses_post( $content ); ?></div>
-											<?php else : ?>
-												<p class="cf-gd-cat-cms-empty"><?php esc_html_e( 'More details coming soon.', 'directory' ); ?></p>
-											<?php endif; ?>
-										</div>
-										<?php if ( $has_images ) : ?>
-											<div class="cf-gd-cat-cms-images" aria-hidden="true">
+								<?php if ( $has_section1 || $has_section2 ) : ?>
+									<div class="cf-gd-cat-cms-rows">
+										<?php if ( $has_section1 ) : ?>
+											<div class="cf-gd-cat-cms-row cf-gd-cat-cms-row--1">
+												<div class="cf-gd-cat-cms-col cf-gd-cat-cms-col--text">
+													<h2 class="cf-gd-cat-cms-title"><?php echo esc_html( $gd_archive_clean ); ?></h2>
+													<?php if ( $has_content ) : ?>
+														<div class="cf-gd-cat-cms-text"><?php echo wp_kses_post( $content ); ?></div>
+													<?php else : ?>
+														<p class="cf-gd-cat-cms-empty"><?php esc_html_e( 'More details coming soon.', 'directory' ); ?></p>
+													<?php endif; ?>
+												</div>
 												<?php if ( $image1 ) : ?>
-													<div class="cf-gd-cat-cms-img" style="background-image:url('<?php echo esc_url( $image1 ); ?>');"></div>
+													<div class="cf-gd-cat-cms-col cf-gd-cat-cms-col--image">
+														<div class="cf-gd-cat-cms-img" style="background-image:url('<?php echo esc_url( $image1 ); ?>');"></div>
+													</div>
 												<?php endif; ?>
+											</div>
+										<?php endif; ?>
+
+										<?php if ( $has_section2 ) : ?>
+											<div class="cf-gd-cat-cms-row cf-gd-cat-cms-row--2">
 												<?php if ( $image2 ) : ?>
-													<div class="cf-gd-cat-cms-img" style="background-image:url('<?php echo esc_url( $image2 ); ?>');"></div>
+													<div class="cf-gd-cat-cms-col cf-gd-cat-cms-col--image">
+														<div class="cf-gd-cat-cms-img" style="background-image:url('<?php echo esc_url( $image2 ); ?>');"></div>
+													</div>
 												<?php endif; ?>
+												<div class="cf-gd-cat-cms-col cf-gd-cat-cms-col--text">
+													<h3 class="cf-gd-cat-cms-subtitle">
+														<?php
+														if ( is_string( $heading2 ) && trim( $heading2 ) !== '' ) {
+															echo esc_html( $heading2 );
+														} else {
+															echo esc_html( $gd_archive_clean );
+														}
+														?>
+													</h3>
+													<?php if ( $has_content2 ) : ?>
+														<div class="cf-gd-cat-cms-text"><?php echo wp_kses_post( $content2 ); ?></div>
+													<?php else : ?>
+														<p class="cf-gd-cat-cms-empty"><?php esc_html_e( 'More details coming soon.', 'directory' ); ?></p>
+													<?php endif; ?>
+												</div>
 											</div>
 										<?php endif; ?>
 									</div>
