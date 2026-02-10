@@ -365,3 +365,16 @@ function directory_add_listing_login_message_atts( $out, $pairs, $atts, $shortco
 	return $out;
 }
 add_filter( 'shortcode_atts_gd_add_listing', 'directory_add_listing_login_message_atts', 10, 4 );
+
+/**
+ * Fallback: globally override GeoDirectory's "You must login to post." text.
+ * Ensures the Add Listing notice uses our friendlier copy even if a widget/block sets its own login_msg.
+ */
+function directory_override_geodirectory_login_text( $translated, $text, $domain ) {
+	if ( $domain === 'geodirectory' && $text === 'You must login to post.' ) {
+		return __( 'To add a business listing, please sign in or create a free account.', 'directory' );
+	}
+
+	return $translated;
+}
+add_filter( 'gettext', 'directory_override_geodirectory_login_text', 10, 3 );
