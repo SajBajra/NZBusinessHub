@@ -2468,15 +2468,6 @@ body.custom-frontend .cf-profile-email {
 	font-size: 0.9375rem;
 	color: #6b7280;
 }
-body.custom-frontend .cf-profile-edit {
-	font-size: 0.9375rem;
-	font-weight: 500;
-	color: #3993d5;
-	text-decoration: none;
-}
-body.custom-frontend .cf-profile-edit:hover {
-	text-decoration: underline;
-}
 body.custom-frontend .cf-profile-plan-wrap {
 	display: flex;
 	align-items: center;

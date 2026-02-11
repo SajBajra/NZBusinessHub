@@ -73,9 +73,6 @@ if ( $upgrade_url && function_exists( 'directory_relative_url' ) ) {
 						<a class="cf-profile-upgrade-btn" href="<?php echo esc_url( $upgrade_url ); ?>"><?php esc_html_e( 'Upgrade to Premium', 'directory' ); ?></a>
 					<?php endif; ?>
 				</div>
-				<?php if ( $profile_url ) : ?>
-					<a class="cf-profile-edit" href="<?php echo esc_url( $profile_url ); ?>"><?php esc_html_e( 'Edit profile', 'directory' ); ?></a>
-				<?php endif; ?>
 			</div>
 		</div>
 	</header>
