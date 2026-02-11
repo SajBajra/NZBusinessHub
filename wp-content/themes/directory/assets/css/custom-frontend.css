@@ -124,6 +124,8 @@ body.custom-frontend .cf-nav-links {
 	align-items: center;
 	gap: 1.75rem;
 	flex-wrap: wrap;
+	flex: 1;
+	justify-content: center;
 }
 
 body.custom-frontend .cf-nav a {
@@ -131,6 +133,8 @@ body.custom-frontend .cf-nav a {
 	text-decoration: none;
 	font-weight: 500;
 	font-size: 1rem;
+}
+body.custom-frontend .cf-nav-links a {
 	padding: 0.1rem 0;
 }
 
@@ -316,7 +320,7 @@ body.custom-frontend .cf-link-sign {
 	color: #374151;
 	text-decoration: none;
 	font-weight: 500;
-	font-size: 0.975rem;
+	font-size: 1rem;
 }
 
 body.custom-frontend .cf-link-sign:hover {
@@ -332,24 +336,33 @@ body.custom-frontend .cf-icon-user {
 body.custom-frontend .cf-btn-add {
 	display: inline-flex;
 	align-items: center;
-	gap: 0.4rem;
-	padding: 0.6rem 1.15rem;
-	background: #3993d5;
+	justify-content: center;
+	gap: 0.5rem;
+	padding: 0.5rem 1.5rem !important;
+	background: #3498db;
 	color: #fff !important;
 	text-decoration: none;
-	font-weight: 600;
-	font-size: 0.975rem;
+	font-weight: 500;
+	font-size: 1rem;
 	border-radius: 999px;
 	transition: background 0.2s ease;
+	min-height: 2.75rem;
+	white-space: nowrap;
+	border: none;
+	box-sizing: border-box;
 }
 
 body.custom-frontend .cf-btn-add:hover {
-	background: #3993d5;
+	background: #2980b9;
 	color: #fff !important;
 }
 
 body.custom-frontend .cf-icon-plus {
 	display: inline-flex;
+}
+body.custom-frontend .cf-btn-add .cf-icon-plus svg {
+	width: 18px;
+	height: 18px;
 }
 
 /* ----- Footer (4 columns + bottom bar) ----- */
