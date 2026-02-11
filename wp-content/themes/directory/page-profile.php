@@ -43,6 +43,12 @@ $add_listing_url = function_exists( 'geodir_add_listing_page_url' ) ? geodir_add
 if ( $add_listing_url && function_exists( 'directory_relative_url' ) ) {
 	$add_listing_url = directory_relative_url( $add_listing_url );
 }
+$profile_plan   = function_exists( 'directory_get_listing_plan' ) ? directory_get_listing_plan( $profile_user_id ) : 'free';
+$profile_premium = $profile_plan === 'premium';
+$upgrade_url    = function_exists( 'directory_get_upgrade_url' ) ? directory_get_upgrade_url() : '';
+if ( $upgrade_url && function_exists( 'directory_relative_url' ) ) {
+	$upgrade_url = directory_relative_url( $upgrade_url );
+}
 ?>
 <main class="custom-frontend-main cf-profile-main" id="main">
 	<header class="cf-profile-hero">
@@ -59,6 +65,14 @@ if ( $add_listing_url && function_exists( 'directory_relative_url' ) ) {
 				<?php if ( $profile_email ) : ?>
 					<p class="cf-profile-email"><?php echo esc_html( $profile_email ); ?></p>
 				<?php endif; ?>
+				<div class="cf-profile-plan-wrap">
+					<span class="cf-profile-plan-badge cf-profile-plan-badge--<?php echo esc_attr( $profile_plan ); ?>">
+						<?php echo $profile_premium ? esc_html__( 'Premium', 'directory' ) : esc_html__( 'Free', 'directory' ); ?>
+					</span>
+					<?php if ( ! $profile_premium && $upgrade_url ) : ?>
+						<a class="cf-profile-upgrade-btn" href="<?php echo esc_url( $upgrade_url ); ?>"><?php esc_html_e( 'Upgrade to Premium', 'directory' ); ?></a>
+					<?php endif; ?>
+				</div>
 				<?php if ( $profile_url ) : ?>
 					<a class="cf-profile-edit" href="<?php echo esc_url( $profile_url ); ?>"><?php esc_html_e( 'Edit profile', 'directory' ); ?></a>
 				<?php endif; ?>

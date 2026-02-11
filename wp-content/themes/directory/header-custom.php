@@ -67,20 +67,29 @@ if ( $custom_logo_id ) {
 			</div>
 			<div class="cf-actions">
 				<?php if ( is_user_logged_in() ) : ?>
-					<?php if ( $custom_profile_url ) : ?>
-						<a class="cf-link-sign" href="<?php echo esc_url( $custom_profile_url ); ?>">
-							<span class="cf-icon-user" aria-hidden="true">
-								<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+					<div class="cf-profile-dropdown" id="cf-profile-dropdown">
+						<button type="button" class="cf-profile-dropdown-trigger" id="cf-profile-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-controls="cf-profile-dropdown-menu" aria-label="<?php esc_attr_e( 'Account menu', 'directory' ); ?>">
+							<span class="cf-profile-dropdown-icon" aria-hidden="true">
+								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
 							</span>
-							<?php esc_html_e( 'Profile', 'directory' ); ?>
-						</a>
-					<?php endif; ?>
-					<a class="cf-link-sign" href="<?php echo esc_url( $custom_logout_url ); ?>">
-						<span class="cf-icon-user" aria-hidden="true">
-							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-						</span>
-						<?php esc_html_e( 'Sign out', 'directory' ); ?>
-					</a>
+						</button>
+						<div class="cf-profile-dropdown-menu" id="cf-profile-dropdown-menu" role="menu" aria-label="<?php esc_attr_e( 'Account options', 'directory' ); ?>">
+							<?php if ( $custom_profile_url ) : ?>
+								<a class="cf-profile-dropdown-item" href="<?php echo esc_url( $custom_profile_url ); ?>" role="menuitem">
+									<span class="cf-profile-dropdown-item-icon" aria-hidden="true">
+										<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+									</span>
+									<?php esc_html_e( 'Profile', 'directory' ); ?>
+								</a>
+							<?php endif; ?>
+							<a class="cf-profile-dropdown-item" href="<?php echo esc_url( $custom_logout_url ); ?>" role="menuitem">
+								<span class="cf-profile-dropdown-item-icon" aria-hidden="true">
+									<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+								</span>
+								<?php esc_html_e( 'Sign out', 'directory' ); ?>
+							</a>
+						</div>
+					</div>
 				<?php else : ?>
 					<a class="cf-link-sign uwp-login-link" href="<?php echo esc_url( $custom_login_url ); ?>">
 						<span class="cf-icon-user" aria-hidden="true">
@@ -114,3 +123,26 @@ if ( $custom_logo_id ) {
 		</div>
 	</div>
 </div>
+<script>
+(function() {
+	var dropdown = document.getElementById('cf-profile-dropdown');
+	var trigger = document.getElementById('cf-profile-dropdown-trigger');
+	var menu = document.getElementById('cf-profile-dropdown-menu');
+	if (!dropdown || !trigger || !menu) return;
+	function open() {
+		dropdown.classList.add('is-open');
+		trigger.setAttribute('aria-expanded', 'true');
+	}
+	function close() {
+		dropdown.classList.remove('is-open');
+		trigger.setAttribute('aria-expanded', 'false');
+	}
+	trigger.addEventListener('click', function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+		dropdown.classList.contains('is-open') ? close() : open();
+	});
+	document.addEventListener('click', function() { close(); });
+	dropdown.addEventListener('click', function(e) { e.stopPropagation(); });
+})();
+</script>
