@@ -26,6 +26,8 @@ $custom_add_listing_url = directory_relative_url( $custom_add_listing_url );
 $custom_site_name    = function_exists( 'directory_display_site_name' ) ? directory_display_site_name() : get_bloginfo( 'name' );
 $custom_logout_url   = directory_relative_url( wp_logout_url( get_permalink() ) );
 $custom_login_url    = directory_relative_url( wp_login_url( get_permalink() ) );
+$custom_profile_page = get_page_by_path( 'profile' ) ?: get_page_by_path( 'my-profile' );
+$custom_profile_url  = $custom_profile_page ? directory_relative_url( get_permalink( $custom_profile_page ) ) : '';
 $custom_logo_id      = get_theme_mod( 'custom_logo' );
 $custom_default_logo = directory_relative_url( content_url( 'uploads/2026/01/nz-Business-Hub-1.png' ) );
 $custom_logo_src    = '';
@@ -65,6 +67,14 @@ if ( $custom_logo_id ) {
 			</div>
 			<div class="cf-actions">
 				<?php if ( is_user_logged_in() ) : ?>
+					<?php if ( $custom_profile_url ) : ?>
+						<a class="cf-link-sign" href="<?php echo esc_url( $custom_profile_url ); ?>">
+							<span class="cf-icon-user" aria-hidden="true">
+								<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+							</span>
+							<?php esc_html_e( 'Profile', 'directory' ); ?>
+						</a>
+					<?php endif; ?>
 					<a class="cf-link-sign" href="<?php echo esc_url( $custom_logout_url ); ?>">
 						<span class="cf-icon-user" aria-hidden="true">
 							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
