@@ -259,7 +259,7 @@ function directory_theme_pattern_page_content_gd_archive_default( $content ) {
                     <!-- /wp:blockstrap/blockstrap-widget-container --></div>
                 <!-- /wp:blockstrap/blockstrap-widget-container -->
 
-                <!-- wp:geodirectory/geodir-widget-loop {"template_type":"template_part","tmpl_part":"gd-archive-item-simple","content": "","sd_shortcode":"[gd_loop layout='2'  row_gap=''  column_gap=''  card_border=''  card_shadow=''  bg=''  mt=''  mr=''  mb=''  ml=''  pt=''  pr=''  pb=''  pl=''  border=''  rounded=''  rounded_size=''  shadow=''  template_type='template_part'  tmpl_page=''  tmpl_part='gd-archive-item-simple' ]"} -->
+                <!-- wp:geodirectory/geodir-widget-loop {"template_type":"template_part","tmpl_part":"gd-archive-item-simple","content": "","sd_shortcode":"[gd_loop layout='3'  row_gap=''  column_gap=''  card_border=''  card_shadow=''  bg=''  mt=''  mr=''  mb=''  ml=''  pt=''  pr=''  pb=''  pl=''  border=''  rounded=''  rounded_size=''  shadow=''  template_type='template_part'  tmpl_page=''  tmpl_part='gd-archive-item-simple' ]"} -->
                 <div class="wp-block-geodirectory-geodir-widget-loop"></div>
                 <!-- /wp:geodirectory/geodir-widget-loop -->
 
@@ -384,7 +384,7 @@ function directory_theme_pattern_page_content_gd_archive_custom( $content ) {
 			<?php
 			// Category listings grid.
 			echo do_shortcode(
-				'[gd_loop layout="2" template_type="template_part" tmpl_part="gd-archive-item-simple"]'
+				'[gd_loop layout="3" template_type="template_part" tmpl_part="gd-archive-item-simple"]'
 			);
 
 			// Pagination under the grid.
