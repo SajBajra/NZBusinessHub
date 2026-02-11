@@ -2316,6 +2316,136 @@ body.custom-frontend .cf-gd-empty {
 	margin-right: auto;
 }
 
+/* ----- User Profile page (signed-in: details + my listings cards) ----- */
+body.custom-frontend .cf-profile-main {
+	padding-bottom: 3rem;
+}
+body.custom-frontend .cf-profile-hero {
+	background: #fff;
+	border-bottom: 1px solid #e5e7eb;
+	padding: 2rem 1.5rem;
+}
+body.custom-frontend .cf-profile-hero-inner {
+	max-width: 1440px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	gap: 1.5rem;
+	flex-wrap: wrap;
+}
+body.custom-frontend .cf-profile-avatar-wrap {
+	flex-shrink: 0;
+}
+body.custom-frontend .cf-profile-avatar {
+	width: 96px;
+	height: 96px;
+	border-radius: 50%;
+	display: block;
+	object-fit: cover;
+}
+body.custom-frontend .cf-profile-avatar-placeholder {
+	width: 96px;
+	height: 96px;
+	border-radius: 50%;
+	background: linear-gradient(145deg, #e2e8f0 0%, #cbd5e1 100%);
+	display: block;
+}
+body.custom-frontend .cf-profile-details {
+	flex: 1 1 200px;
+}
+body.custom-frontend .cf-profile-title {
+	margin: 0 0 0.25rem;
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: #111827;
+	line-height: 1.3;
+}
+body.custom-frontend .cf-profile-email {
+	margin: 0 0 0.5rem;
+	font-size: 0.9375rem;
+	color: #6b7280;
+}
+body.custom-frontend .cf-profile-edit {
+	font-size: 0.9375rem;
+	font-weight: 500;
+	color: #3993d5;
+	text-decoration: none;
+}
+body.custom-frontend .cf-profile-edit:hover {
+	text-decoration: underline;
+}
+body.custom-frontend .cf-profile-listings-section {
+	padding: 2rem 1.5rem 3rem;
+}
+body.custom-frontend .cf-profile-listings-inner {
+	max-width: 1440px;
+	margin: 0 auto;
+}
+body.custom-frontend .cf-profile-listings-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 1rem;
+	margin-bottom: 1.5rem;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid #e5e7eb;
+}
+body.custom-frontend .cf-profile-listings-title {
+	margin: 0;
+	font-size: 1.25rem;
+	font-weight: 700;
+	color: #111827;
+}
+body.custom-frontend .cf-profile-cards {
+	margin-top: 0;
+}
+body.custom-frontend .cf-profile-card .cf-gd-card-body {
+	padding: 1.25rem 1.25rem 1.5rem;
+}
+body.custom-frontend .cf-profile-card-date {
+	margin: 0;
+	font-size: 0.8125rem;
+	color: #9ca3af;
+	line-height: 1.4;
+}
+body.custom-frontend .cf-profile-card-status {
+	position: absolute;
+	top: 0.5rem;
+	right: 0.5rem;
+	padding: 0.2rem 0.5rem;
+	font-size: 0.6875rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+	border-radius: 6px;
+	background: #fef3c7;
+	color: #92400e;
+}
+body.custom-frontend .cf-profile-card-status.cf-profile-card-status-pending {
+	background: #dbeafe;
+	color: #1e40af;
+}
+body.custom-frontend .cf-profile-empty {
+	background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+	border: 1px dashed #cbd5e1;
+	border-radius: 14px;
+	padding: 3rem 2rem;
+	text-align: center;
+}
+body.custom-frontend .cf-profile-empty-title {
+	margin: 0 0 0.5rem;
+	font-size: 1.125rem;
+	font-weight: 600;
+	color: #334155;
+}
+body.custom-frontend .cf-profile-empty-desc {
+	margin: 0 0 1.25rem;
+	font-size: 0.9375rem;
+	color: #64748b;
+	line-height: 1.5;
+}
+
 /* Pagination – after 9 cards */
 body.custom-frontend .cf-gd-pagination-nav {
 	margin-top: 2.5rem;
