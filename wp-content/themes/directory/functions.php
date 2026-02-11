@@ -102,6 +102,39 @@ function directory_ensure_upgrade_page_exists() {
 add_action( 'init', 'directory_ensure_upgrade_page_exists' );
 
 /**
+ * Ensure a "Profile" page exists for signed-in users (user details + my listings).
+ * Uses the User Profile page template.
+ */
+function directory_ensure_profile_page_exists() {
+	if ( ! current_user_can( 'manage_options' ) ) {
+		return;
+	}
+
+	$profile_page = get_page_by_path( 'profile' );
+	if ( $profile_page instanceof WP_Post ) {
+		return;
+	}
+
+	$page_id = wp_insert_post(
+		array(
+			'post_title'   => __( 'Profile', 'directory' ),
+			'post_name'    => 'profile',
+			'post_status'  => 'publish',
+			'post_type'    => 'page',
+			'post_content' => '',
+		),
+		true
+	);
+
+	if ( is_wp_error( $page_id ) ) {
+		return;
+	}
+
+	update_post_meta( $page_id, '_wp_page_template', 'page-profile.php' );
+}
+add_action( 'init', 'directory_ensure_profile_page_exists' );
+
+/**
  * Remove the block-based post author panel from single posts rendered
  * inside our custom layouts (we already show compact meta).
  */
