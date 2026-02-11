@@ -297,52 +297,7 @@ $fp_rel         = function_exists( 'directory_relative_url' ) ? 'directory_relat
 		}
 		?>
 
-		<!-- 7. Customer feedback (dynamic from Testimonials CPT) -->
-		<?php
-		$fp_testimonials = get_posts( array(
-			'post_type'      => 'dir_testimonial',
-			'posts_per_page' => 10,
-			'orderby'        => 'menu_order title',
-			'order'          => 'ASC',
-			'post_status'    => 'publish',
-		) );
-		?>
-		<?php if ( ! empty( $fp_testimonials ) ) : ?>
-		<section class="fp__section fp__testimonials">
-			<div class="fp__wrap">
-				<h2 class="fp__section-title"><?php esc_html_e( 'Customer feedback', 'directory' ); ?></h2>
-				<div class="fp__testimonials-grid">
-					<?php foreach ( $fp_testimonials as $fp_test ) :
-						$fp_quote  = $fp_test->post_content;
-						$fp_author = $fp_test->post_title;
-						$fp_role   = get_post_meta( $fp_test->ID, '_testimonial_role', true );
-						$fp_avatar = get_the_post_thumbnail_url( $fp_test->ID, 'thumbnail' );
-						?>
-						<blockquote class="fp__testimonial">
-							<?php if ( $fp_quote ) : ?>
-								<div class="fp__testimonial-text"><?php echo wp_kses_post( wpautop( $fp_quote ) ); ?></div>
-							<?php endif; ?>
-							<footer class="fp__testimonial-footer">
-								<?php if ( $fp_avatar ) : ?>
-									<img src="<?php echo esc_url( $fp_avatar ); ?>" alt="" class="fp__testimonial-avatar" width="48" height="48" />
-								<?php else : ?>
-									<span class="fp__testimonial-avatar"></span>
-								<?php endif; ?>
-								<?php if ( $fp_author ) : ?>
-									<cite class="fp__testimonial-author"><?php echo esc_html( $fp_author ); ?></cite>
-								<?php endif; ?>
-								<?php if ( $fp_role ) : ?>
-									<span class="fp__testimonial-role"><?php echo esc_html( $fp_role ); ?></span>
-								<?php endif; ?>
-							</footer>
-						</blockquote>
-					<?php endforeach; ?>
-				</div>
-			</div>
-		</section>
-		<?php endif; ?>
-
-		<!-- 8. Bottom CTA -->
+		<!-- 7. Bottom CTA -->
 		<section class="fp__section fp__cta">
 			<div class="fp__wrap fp__cta-in">
 				<div class="fp__cta-text">
