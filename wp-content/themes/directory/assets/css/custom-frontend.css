@@ -343,6 +343,14 @@ body.custom-frontend .cf-actions {
 	margin-left: auto;
 }
 
+body.custom-frontend .cf-profile-desktop {
+	display: block;
+}
+
+body.custom-frontend .cf-profile-mobile {
+	display: none;
+}
+
 body.custom-frontend .cf-link-sign {
 	display: inline-flex;
 	align-items: center;
