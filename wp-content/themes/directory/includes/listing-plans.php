@@ -15,10 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /** User meta key for plan. */
 define( 'DIRECTORY_LISTING_PLAN_META', 'directory_listing_plan' );
 
-/** Free plan: max images per listing (premium = unlimited).
- *  Note: the images field is hidden for free users, but we keep this
- *  limit in case it's ever re-enabled.
- */
+/** Free plan: max images per listing (premium = unlimited). */
 define( 'DIRECTORY_FREE_MAX_IMAGES_PER_LISTING', 1 );
 
 /**
@@ -34,8 +31,9 @@ function directory_get_free_allowed_fields() {
 	 * - post_category  (Business category)
 	 * - address        (single address line shown on the card – advanced
 	 *                   address/map bits are visually hidden via CSS)
+	 * - post_images    (1 image max; premium unlocks gallery/multiple images)
 	 *
-	 * No description (post_content), no images field and no separate country / region / city / zip / map /
+	 * No description (post_content) and no separate country / region / city / zip / map /
 	 * latitude / longitude inputs on the form – those are effectively
 	 * PREMIUM-only.
 	 */
@@ -43,6 +41,7 @@ function directory_get_free_allowed_fields() {
 		'post_title',
 		'post_category',
 		'address',
+		'post_images',
 	);
 	return apply_filters( 'directory_free_allowed_fields', $default );
 }
@@ -317,7 +316,7 @@ function directory_listing_plan_table_shortcode() {
 				<ul class="directory-plan-card-list">
 					<li><?php esc_html_e( 'Place title & category', 'directory' ); ?></li>
 					<li><?php esc_html_e( 'Single address line', 'directory' ); ?></li>
-					<li><?php esc_html_e( 'No description, map or gallery', 'directory' ); ?></li>
+					<li><?php esc_html_e( '1 photo (upgrade for gallery)', 'directory' ); ?></li>
 				</ul>
 			</article>
 
