@@ -228,7 +228,10 @@ $fp_rel         = function_exists( 'directory_relative_url' ) ? 'directory_relat
 					<div class="fp__explore-map-wrap">
 						<?php if ( function_exists( 'do_shortcode' ) ) : ?>
 							<div class="fp__map-inner">
-								<?php echo do_shortcode( '[gd_map map_type="directory" height="590" width="100%" search_filter="true"]' ); ?>
+								<?php
+								// Custom Explore map: slightly zoomed out and disable scrollwheel zoom for better UX.
+								echo do_shortcode( '[gd_map map_type="directory" height="590" width="100%" search_filter="true" zoom="6" scrollwheel="false"]' );
+								?>
 							</div>
 						<?php endif; ?>
 					</div>

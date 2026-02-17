@@ -233,10 +233,20 @@ function directory_render_home_destinations() {
 					if ( $name === '' ) {
 						continue;
 					}
+
+					// Build a GeoDirectory search URL similar to the main "set location" search.
+					// Example target: ?geodir_search=1&stype=gd_place&s=+&snear=&sgeo_lat=&sgeo_lon=&city=auckland-1
+					$city_slug = isset( $dest['slug'] ) && $dest['slug'] !== '' ? $dest['slug'] : sanitize_title( $name );
+
 					$search_url = add_query_arg(
 						array(
-							's'    => '',
-							'near' => $name,
+							'geodir_search' => '1',
+							'stype'         => 'gd_place',
+							's'             => '+',
+							'snear'         => '',
+							'sgeo_lat'      => '',
+							'sgeo_lon'      => '',
+							'city'          => $city_slug,
 						),
 						$base_url
 					);
