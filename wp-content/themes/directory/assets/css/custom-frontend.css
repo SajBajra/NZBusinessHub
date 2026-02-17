@@ -1011,17 +1011,18 @@ body.custom-frontend .cf-blog-single-shell {
 }
 
 body.custom-frontend .cf-blog-single-card {
-	background: #f9fafb;
-	border-radius: 32px;
-	padding: 2.25rem 2.25rem 2.6rem;
-	box-shadow: 0 24px 80px rgba(15, 23, 42, 0.18);
-	border: 1px solid rgba(209, 213, 219, 0.9);
+	/* New flat layout: no card container, no shadow */
+	background: transparent;
+	border-radius: 0;
+	padding: 0 0 3rem;
+	box-shadow: none;
+	border: 0;
 }
 
 @media (max-width: 640px) {
 	body.custom-frontend .cf-blog-single-card {
-		padding: 2rem 1.6rem 2.25rem;
-		border-radius: 24px;
+		padding: 0 0 2.5rem;
+		border-radius: 0;
 	}
 }
 
