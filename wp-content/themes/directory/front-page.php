@@ -151,16 +151,24 @@ $fp_rel         = function_exists( 'directory_relative_url' ) ? 'directory_relat
 					if ( $fp_featured->have_posts() ) :
 						while ( $fp_featured->have_posts() ) :
 							$fp_featured->the_post();
-							$pid   = get_the_ID();
-							$thumb = get_the_post_thumbnail_url( $pid, 'medium' );
-							$link  = $fp_rel( get_the_permalink() );
-							$rating = function_exists( 'geodir_get_post_rating' ) ? geodir_get_post_rating( $pid ) : '';
+							$pid         = get_the_ID();
+							$thumb       = get_the_post_thumbnail_url( $pid, 'medium' );
+							$link        = $fp_rel( get_the_permalink() );
+							$rating_html = '';
+							if ( function_exists( 'geodir_get_rating_stars' ) && function_exists( 'geodir_get_post_rating' ) ) {
+								$post_rating = geodir_get_post_rating( $pid );
+								if ( $post_rating !== '' && $post_rating !== null ) {
+									$rating_html = geodir_get_rating_stars( $post_rating, $pid );
+								}
+							}
 							?>
 							<a class="fp__listing-card" href="<?php echo esc_url( $link ); ?>">
 								<span class="fp__listing-img"<?php if ( $thumb ) : ?> style="background-image:url('<?php echo esc_url( $thumb ); ?>');"<?php endif; ?>></span>
 								<span class="fp__listing-title"><?php the_title(); ?></span>
-								<?php if ( $rating !== '' ) : ?>
-									<span class="fp__listing-rating"><?php echo esc_html( $rating ); ?> ★</span>
+								<?php if ( $rating_html ) : ?>
+									<span class="fp__listing-rating fp__listing-rating-stars">
+										<?php echo $rating_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+									</span>
 								<?php endif; ?>
 							</a>
 							<?php
@@ -212,15 +220,23 @@ $fp_rel         = function_exists( 'directory_relative_url' ) ? 'directory_relat
 						<?php
 						$fp_slice = array_slice( $fp_explore_posts, 0, 3 );
 						foreach ( $fp_slice as $fp_pid ) :
-							$thumb  = get_the_post_thumbnail_url( $fp_pid, 'thumbnail' );
-							$link   = $fp_rel( get_permalink( $fp_pid ) );
-							$rating = function_exists( 'geodir_get_post_rating' ) ? geodir_get_post_rating( $fp_pid ) : '';
+							$thumb       = get_the_post_thumbnail_url( $fp_pid, 'thumbnail' );
+							$link        = $fp_rel( get_permalink( $fp_pid ) );
+							$rating_html = '';
+							if ( function_exists( 'geodir_get_rating_stars' ) && function_exists( 'geodir_get_post_rating' ) ) {
+								$post_rating = geodir_get_post_rating( $fp_pid );
+								if ( $post_rating !== '' && $post_rating !== null ) {
+									$rating_html = geodir_get_rating_stars( $post_rating, $fp_pid );
+								}
+							}
 							?>
 							<a class="fp__listing-card fp__listing-card-sm" href="<?php echo esc_url( $link ); ?>">
 								<span class="fp__listing-img"<?php if ( $thumb ) : ?> style="background-image:url('<?php echo esc_url( $thumb ); ?>');"<?php endif; ?>></span>
 								<span class="fp__listing-title"><?php echo esc_html( get_the_title( $fp_pid ) ); ?></span>
-								<?php if ( $rating !== '' ) : ?>
-									<span class="fp__listing-rating"><?php echo esc_html( $rating ); ?> ★</span>
+								<?php if ( $rating_html ) : ?>
+									<span class="fp__listing-rating fp__listing-rating-stars">
+										<?php echo $rating_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+									</span>
 								<?php endif; ?>
 							</a>
 						<?php endforeach; ?>
@@ -239,15 +255,23 @@ $fp_rel         = function_exists( 'directory_relative_url' ) ? 'directory_relat
 						<?php
 						$fp_slice = array_slice( $fp_explore_posts, 3, 3 );
 						foreach ( $fp_slice as $fp_pid ) :
-							$thumb  = get_the_post_thumbnail_url( $fp_pid, 'thumbnail' );
-							$link   = $fp_rel( get_permalink( $fp_pid ) );
-							$rating = function_exists( 'geodir_get_post_rating' ) ? geodir_get_post_rating( $fp_pid ) : '';
+							$thumb       = get_the_post_thumbnail_url( $fp_pid, 'thumbnail' );
+							$link        = $fp_rel( get_permalink( $fp_pid ) );
+							$rating_html = '';
+							if ( function_exists( 'geodir_get_rating_stars' ) && function_exists( 'geodir_get_post_rating' ) ) {
+								$post_rating = geodir_get_post_rating( $fp_pid );
+								if ( $post_rating !== '' && $post_rating !== null ) {
+									$rating_html = geodir_get_rating_stars( $post_rating, $fp_pid );
+								}
+							}
 							?>
 							<a class="fp__listing-card fp__listing-card-sm" href="<?php echo esc_url( $link ); ?>">
 								<span class="fp__listing-img"<?php if ( $thumb ) : ?> style="background-image:url('<?php echo esc_url( $thumb ); ?>');"<?php endif; ?>></span>
 								<span class="fp__listing-title"><?php echo esc_html( get_the_title( $fp_pid ) ); ?></span>
-								<?php if ( $rating !== '' ) : ?>
-									<span class="fp__listing-rating"><?php echo esc_html( $rating ); ?> ★</span>
+								<?php if ( $rating_html ) : ?>
+									<span class="fp__listing-rating fp__listing-rating-stars">
+										<?php echo $rating_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+									</span>
 								<?php endif; ?>
 							</a>
 						<?php endforeach; ?>
