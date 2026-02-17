@@ -35,6 +35,28 @@ while ( have_posts() ) :
 			$cat_name = $terms[0]->name;
 		}
 	}
+
+	// Core business meta used across the layout (address, contact, etc).
+	$street  = function_exists( 'geodir_get_post_meta' ) ? geodir_get_post_meta( $pid, 'street', true ) : '';
+	$city    = function_exists( 'geodir_get_post_meta' ) ? geodir_get_post_meta( $pid, 'city', true ) : '';
+	$region  = function_exists( 'geodir_get_post_meta' ) ? geodir_get_post_meta( $pid, 'region', true ) : '';
+	$country = function_exists( 'geodir_get_post_meta' ) ? geodir_get_post_meta( $pid, 'country', true ) : '';
+	$zip     = function_exists( 'geodir_get_post_meta' ) ? geodir_get_post_meta( $pid, 'zip', true ) : '';
+	$phone   = function_exists( 'geodir_get_post_meta' ) ? geodir_get_post_meta( $pid, 'phone', true ) : '';
+	$email   = function_exists( 'geodir_get_post_meta' ) ? geodir_get_post_meta( $pid, 'email', true ) : '';
+	$website = function_exists( 'geodir_get_post_meta' ) ? geodir_get_post_meta( $pid, 'website', true ) : '';
+
+	$address_parts = array_filter(
+		array(
+			$street,
+			$city,
+			$region,
+			$zip,
+			$country,
+		)
+	);
+	$address_line   = implode( ', ', $address_parts );
+	$directions_url = $address_line !== '' ? 'https://www.google.com/maps/dir/?api=1&destination=' . rawurlencode( $address_line ) : '';
 	?>
 <main class="custom-frontend-main cf-single-place" id="main">
 	<div class="cf-single-place-inner">
@@ -87,6 +109,41 @@ while ( have_posts() ) :
 						<?php endif; ?>
 					</div>
 				<?php endif; ?>
+
+				<?php if ( $address_line || $phone || $website ) : ?>
+					<div class="cf-single-place-header-meta">
+						<?php if ( $address_line ) : ?>
+							<p class="cf-single-place-header-subline">
+								<?php echo esc_html( $address_line ); ?>
+							</p>
+						<?php endif; ?>
+						<div class="cf-single-place-header-actions">
+							<?php if ( $website && filter_var( $website, FILTER_VALIDATE_URL ) ) : ?>
+								<a class="cf-btn cf-btn-primary" href="<?php echo esc_url( $website ); ?>" target="_blank" rel="noopener noreferrer">
+									<?php esc_html_e( 'Visit website', 'directory' ); ?>
+								</a>
+							<?php endif; ?>
+
+							<?php if ( $phone ) : ?>
+								<a class="cf-btn cf-btn-outline" href="tel:<?php echo esc_attr( preg_replace( '/\s+/', '', $phone ) ); ?>">
+									<?php esc_html_e( 'Call', 'directory' ); ?>
+								</a>
+							<?php endif; ?>
+
+							<?php if ( $directions_url ) : ?>
+								<a class="cf-btn cf-btn-outline" href="<?php echo esc_url( $directions_url ); ?>" target="_blank" rel="noopener noreferrer">
+									<?php esc_html_e( 'Get directions', 'directory' ); ?>
+								</a>
+							<?php endif; ?>
+
+							<?php if ( function_exists( 'geodir_favourite_html' ) ) : ?>
+								<div class="cf-single-place-favourite">
+									<?php echo geodir_favourite_html( '', $pid ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+								</div>
+							<?php endif; ?>
+						</div>
+					</div>
+				<?php endif; ?>
 			</div>
 			<div class="cf-single-place-gallery">
 				<?php if ( function_exists( 'do_shortcode' ) ) : ?>
@@ -105,140 +162,57 @@ while ( have_posts() ) :
 		<div class="cf-single-place-layout">
 			<div class="cf-single-place-main">
 				<?php
-				// Initialize reviews content variable for sidebar
-				$reviews_content = '';
-				
-				// Get all GeoDirectory tabs and output their content sequentially
-				if ( class_exists( 'GeoDir_Widget_Single_Tabs' ) && function_exists( 'get_post_type' ) ) {
-					$post_type = get_post_type( $pid );
-					$tabs_widget = new GeoDir_Widget_Single_Tabs();
-					$tabs = $tabs_widget->get_tab_settings( $post_type );
-					
-					// Track which tabs we've already output to avoid duplicates
-					$outputted_tabs = array();
-					
-					foreach ( $tabs as $tab ) {
-						// Skip child tabs (they'll be included with parent)
-						if ( ! empty( $tab->tab_parent ) ) {
-							continue;
-						}
-						
-						// Skip if already outputted
-						if ( in_array( $tab->tab_key, $outputted_tabs, true ) ) {
-							continue;
-						}
-						
-						$tab_key = $tab->tab_key;
-						
-						// Skip reviews tab - we'll add it to sidebar instead
-						if ( $tab_key === 'reviews' ) {
-							$reviews_content = $tabs_widget->tab_content( $tab );
-							continue;
-						}
-						
-						$tab_name    = ! empty( $tab->tab_name ) ? $tab->tab_name : ucfirst( str_replace( '_', ' ', $tab_key ) );
-						$tab_content = $tabs_widget->tab_content( $tab );
+				// Build a product-style overview section using the main content.
+				$raw_content    = get_the_content();
+				$has_overview   = ! empty( trim( wp_strip_all_tags( $raw_content ) ) );
+				$overview_block = $has_overview ? apply_filters( 'the_content', $raw_content ) : '';
+				?>
 
-						// Allow the Overview/Description tab to show even if empty (so free listings still see a product-style section).
-						$is_overview_tab = ( $tab_key === 'post_content' );
-
-						// For all other tabs, skip if there is no content.
-						if ( ! $is_overview_tab && empty( trim( $tab_content ) ) ) {
-							continue;
-						}
-						
-						$outputted_tabs[] = $tab_key;
-						
-						// Generate section ID and class
-						$section_id = 'cf-' . sanitize_html_class( $tab_key ) . '-heading';
-						$section_class = 'cf-single-place-section cf-single-place-' . sanitize_html_class( $tab_key );
-						
-						// Special handling for different tab types
-						if ( $tab_key === 'post_content' ) {
-							$tab_name = __( 'Overview', 'directory' );
-							$section_class .= ' cf-single-place-overview';
-						} elseif ( $tab_key === 'post_images' ) {
-							$tab_name = __( 'Photos', 'directory' );
-							$section_class .= ' cf-single-place-photos';
-						} elseif ( $tab_key === 'post_map' ) {
-							$tab_name = __( 'Map', 'directory' );
-							$section_class .= ' cf-single-place-map';
+				<section class="cf-single-place-section cf-single-place-overview" aria-labelledby="cf-overview-heading">
+					<h2 id="cf-overview-heading" class="cf-single-place-section-title"><?php esc_html_e( 'Overview', 'directory' ); ?></h2>
+					<div class="cf-single-place-content entry-content">
+						<?php
+						if ( $has_overview ) {
+							// Full description for all plans (including free).
+							echo $overview_block; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+						} else {
+							// Fallback description when nothing has been entered yet.
+							echo '<p>' . esc_html__( 'No description has been added for this business yet. Check back soon for more details.', 'directory' ) . '</p>';
 						}
 						?>
-						<section class="<?php echo esc_attr( $section_class ); ?>" aria-labelledby="<?php echo esc_attr( $section_id ); ?>">
-							<h2 id="<?php echo esc_attr( $section_id ); ?>" class="cf-single-place-section-title"><?php echo esc_html( $tab_name ); ?></h2>
-							<?php if ( $tab_key === 'post_images' ) : ?>
-								<div class="cf-single-place-photos-grid">
-									<?php echo $tab_content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-								</div>
-							<?php elseif ( $tab_key === 'post_map' ) : ?>
-								<div class="cf-single-place-map-container">
-									<?php echo $tab_content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-								</div>
-							<?php elseif ( $tab_key === 'post_content' ) : ?>
-								<div class="cf-single-place-content entry-content">
-									<?php
-									if ( ! empty( trim( $tab_content ) ) ) {
-										// Normal description content coming from the listing editor.
-										echo $tab_content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-									} else {
-										// Fallback description for listings (including free plan) with no content saved yet.
-										echo '<p>' . esc_html__( 'No description has been added for this business yet. Check back soon for more details.', 'directory' ) . '</p>';
-									}
-									?>
-								</div>
-							<?php else : ?>
-								<div class="cf-single-place-tab-content">
-									<?php echo $tab_content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-								</div>
-							<?php endif; ?>
-						</section>
+					</div>
+				</section>
+
+				<?php if ( function_exists( 'do_shortcode' ) ) : ?>
+					<section class="cf-single-place-section cf-single-place-map" aria-labelledby="cf-map-heading">
+						<h2 id="cf-map-heading" class="cf-single-place-section-title"><?php esc_html_e( 'Location', 'directory' ); ?></h2>
+						<div class="cf-single-place-map-container">
+							<?php
+							// Focused, single-listing map similar to a product location section.
+							echo do_shortcode( '[gd_map width="100%" height="400px" maptype="ROADMAP" zoom="15" map_type="post" map_directions="1"]' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+							?>
+						</div>
+					</section>
+				<?php endif; ?>
+
+				<section class="cf-single-place-section cf-single-place-reviews" aria-labelledby="cf-review-heading-main">
+					<h2 id="cf-review-heading-main" class="cf-single-place-section-title"><?php esc_html_e( 'Reviews & ratings', 'directory' ); ?></h2>
+					<div class="cf-single-place-review-form">
 						<?php
-					}
-					
-					// Store reviews content in a variable for sidebar
-					if ( empty( $reviews_content ) && function_exists( 'do_shortcode' ) ) {
-						$reviews_content = do_shortcode( '[gd_single_reviews title="" template="clean"]' );
-					}
-				} else {
-					// Fallback: output sections manually if tabs system not available
-					?>
-					<section class="cf-single-place-section cf-single-place-overview" aria-labelledby="cf-overview-heading">
-						<h2 id="cf-overview-heading" class="cf-single-place-section-title"><?php esc_html_e( 'Overview', 'directory' ); ?></h2>
-						<div class="cf-single-place-content entry-content">
-							<?php the_content(); ?>
-						</div>
-					</section>
+						$reviews_output = '';
 
-					<section class="cf-single-place-section cf-single-place-photos" aria-labelledby="cf-photos-heading">
-						<h2 id="cf-photos-heading" class="cf-single-place-section-title"><?php esc_html_e( 'Photos', 'directory' ); ?></h2>
-						<div class="cf-single-place-photos-grid">
-							<?php if ( function_exists( 'do_shortcode' ) ) : ?>
-								<?php echo do_shortcode( '[gd_post_images type="image" ajax_load="true" link_to="lightbox" types="logo,post_images" limit="" image_size="medium_large" css_class="cf-single-place-photos-inner"]' ); ?>
-							<?php endif; ?>
-						</div>
-					</section>
+						if ( function_exists( 'do_shortcode' ) ) {
+							$reviews_output = do_shortcode( '[gd_single_reviews title="" template="clean"]' );
+						}
 
-					<?php if ( function_exists( 'do_shortcode' ) ) : ?>
-						<section class="cf-single-place-section cf-single-place-map" aria-labelledby="cf-map-heading">
-							<h2 id="cf-map-heading" class="cf-single-place-section-title"><?php esc_html_e( 'Map', 'directory' ); ?></h2>
-							<div class="cf-single-place-map-container">
-								<?php echo do_shortcode( '[gd_map width="100%" height="400px" maptype="ROADMAP" zoom="0" map_type="post" map_directions="1"]' ); ?>
-							</div>
-						</section>
-					<?php endif; ?>
-
-					<?php
-					// Store reviews content for sidebar
-					if ( function_exists( 'do_shortcode' ) ) {
-						$reviews_content = do_shortcode( '[gd_single_reviews title="" template="clean"]' );
-					} else {
-						$reviews_content = '';
-					}
-					?>
-					<?php
-				}
-				?>
+						if ( ! empty( trim( $reviews_output ) ) ) {
+							echo $reviews_output; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+						} elseif ( function_exists( 'comments_template' ) ) {
+							comments_template();
+						}
+						?>
+					</div>
+				</section>
 			</div>
 
 			<aside class="cf-single-place-sidebar">
@@ -277,27 +251,6 @@ while ( have_posts() ) :
 								<?php echo do_shortcode( '[gd_post_meta key="address" show="value"]' ); ?>
 							</div>
 						<?php endif; ?>
-					</div>
-				</section>
-
-				<section class="cf-single-place-reviews" aria-labelledby="cf-review-heading">
-					<h2 id="cf-review-heading" class="cf-single-place-sidebar-title"><?php esc_html_e( 'Reviews & ratings', 'directory' ); ?></h2>
-					<div class="cf-single-place-review-form">
-						<?php
-						// Keep things simple and always try the GeoDirectory Single Reviews block/shortcode first.
-						$reviews_output = '';
-
-						if ( function_exists( 'do_shortcode' ) ) {
-							$reviews_output = do_shortcode( '[gd_single_reviews title="" template="clean"]' );
-						}
-
-						if ( ! empty( trim( $reviews_output ) ) ) {
-							echo $reviews_output; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-						} elseif ( function_exists( 'comments_template' ) ) {
-							// Fallback to the standard comments template so there is always a way to leave feedback.
-							comments_template();
-						}
-						?>
 					</div>
 				</section>
 			</aside>
