@@ -129,18 +129,6 @@ while ( have_posts() ) :
 									<?php esc_html_e( 'Call', 'directory' ); ?>
 								</a>
 							<?php endif; ?>
-
-							<?php if ( $directions_url ) : ?>
-								<a class="cf-btn cf-btn-outline" href="<?php echo esc_url( $directions_url ); ?>" target="_blank" rel="noopener noreferrer">
-									<?php esc_html_e( 'Get directions', 'directory' ); ?>
-								</a>
-							<?php endif; ?>
-
-							<?php if ( function_exists( 'geodir_favourite_html' ) ) : ?>
-								<div class="cf-single-place-favourite">
-									<?php echo geodir_favourite_html( '', $pid ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-								</div>
-							<?php endif; ?>
 						</div>
 					</div>
 				<?php endif; ?>
