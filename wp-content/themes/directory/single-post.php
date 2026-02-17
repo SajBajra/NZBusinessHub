@@ -30,6 +30,17 @@ if ( ! $blog_page ) {
 			$thumb = get_the_post_thumbnail_url( $pid, 'large' );
 			$cats  = get_the_category( $pid );
 
+			// Calculate an estimated reading time (in minutes) for this post.
+			$content_plain   = wp_strip_all_tags( get_the_content() );
+			$word_count      = $content_plain ? str_word_count( $content_plain ) : 0;
+			$reading_minutes = $word_count > 0 ? max( 1, ceil( $word_count / 200 ) ) : 1;
+
+			// Short intro/excerpt for the hero card.
+			$raw_excerpt = get_the_excerpt();
+			if ( ! $raw_excerpt ) {
+				$raw_excerpt = wp_trim_words( $content_plain, 36 );
+			}
+
 			// Similar posts (same categories if possible) for grid section.
 			$similar_args = array(
 				'post_type'           => 'post',
@@ -45,6 +56,17 @@ if ( ! $blog_page ) {
 				}
 			}
 			$recent = new WP_Query( $similar_args );
+
+			// Share URLs.
+			$permalink   = get_permalink( $pid );
+			$title_attr  = get_the_title( $pid );
+			$encoded_url = rawurlencode( $permalink );
+			$encoded_ttl = rawurlencode( $title_attr );
+			$share_links = array(
+				'facebook' => 'https://www.facebook.com/sharer/sharer.php?u=' . $encoded_url,
+				'twitter'  => 'https://twitter.com/intent/tweet?url=' . $encoded_url . '&text=' . $encoded_ttl,
+				'linkedin' => 'https://www.linkedin.com/sharing/share-offsite/?url=' . $encoded_url,
+			);
 			?>
 
 			<nav class="cf-blog-single-breadcrumb" aria-label="<?php esc_attr_e( 'Breadcrumb', 'directory' ); ?>">
@@ -56,39 +78,67 @@ if ( ! $blog_page ) {
 			</nav>
 
 			<article id="post-<?php echo esc_attr( $pid ); ?>" <?php post_class( 'cf-blog-single-card' ); ?>>
-				<?php if ( ! empty( $cats ) && ! is_wp_error( $cats ) ) : ?>
-					<div class="cf-blog-single-cats cf-blog-single-cats--main">
-						<?php
-						foreach ( $cats as $cat ) {
-							printf(
-								'<span class="cf-blog-single-cat">%s</span>',
-								esc_html( $cat->name )
-							);
-						}
-						?>
-					</div>
-				<?php endif; ?>
-
-				<div class="cf-blog-single-meta cf-blog-single-meta--top">
-					<span class="cf-blog-single-meta-item">
-						<?php echo esc_html( get_the_date( '', $pid ) ); ?>
-					</span>
-					<span class="cf-blog-single-meta-sep">•</span>
-					<span class="cf-blog-single-meta-item">
-						<?php
-						/* translators: %s: author name */
-						printf( esc_html__( 'By %s', 'directory' ), esc_html( get_the_author() ) );
-						?>
-					</span>
-				</div>
-
-				<h1 class="cf-blog-single-main-title"><?php the_title(); ?></h1>
-
-				<?php if ( $thumb ) : ?>
+				<div class="cf-blog-single-main-card">
 					<div class="cf-blog-single-main-image-wrap">
-						<img src="<?php echo esc_url( $thumb ); ?>" alt="" class="cf-blog-single-main-image" />
+						<?php if ( $thumb ) : ?>
+							<img src="<?php echo esc_url( $thumb ); ?>" alt="" class="cf-blog-single-main-image" />
+						<?php else : ?>
+							<div class="cf-blog-single-main-image-placeholder" aria-hidden="true"></div>
+						<?php endif; ?>
 					</div>
-				<?php endif; ?>
+
+					<div class="cf-blog-single-main-text">
+						<?php if ( ! empty( $cats ) && ! is_wp_error( $cats ) ) : ?>
+							<div class="cf-blog-single-cats cf-blog-single-cats--main">
+								<?php
+								foreach ( $cats as $cat ) {
+									printf(
+										'<span class="cf-blog-single-cat">%s</span>',
+										esc_html( $cat->name )
+									);
+								}
+								?>
+							</div>
+						<?php endif; ?>
+
+						<h1 class="cf-blog-single-main-title"><?php the_title(); ?></h1>
+
+						<div class="cf-blog-single-meta cf-blog-single-meta--top">
+							<span class="cf-blog-single-meta-item">
+								<?php echo esc_html( get_the_date( '', $pid ) ); ?>
+							</span>
+							<span class="cf-blog-single-meta-sep">•</span>
+							<span class="cf-blog-single-meta-item">
+								<?php
+								/* translators: %s: author name */
+								printf( esc_html__( 'By %s', 'directory' ), esc_html( get_the_author() ) );
+								?>
+							</span>
+							<span class="cf-blog-single-meta-sep">•</span>
+							<span class="cf-blog-single-meta-item">
+								<?php
+								/* translators: %s: reading time */
+								printf( esc_html__( '%s min read', 'directory' ), esc_html( $reading_minutes ) );
+								?>
+							</span>
+						</div>
+
+						<?php if ( $raw_excerpt ) : ?>
+							<p class="cf-blog-single-excerpt">
+								<?php echo esc_html( $raw_excerpt ); ?>
+							</p>
+						<?php endif; ?>
+
+						<div class="cf-blog-single-share">
+							<span class="cf-blog-single-share-label"><?php esc_html_e( 'Share', 'directory' ); ?></span>
+							<ul class="cf-blog-single-share-list" aria-label="<?php esc_attr_e( 'Share this article', 'directory' ); ?>">
+								<li><a href="<?php echo esc_url( $share_links['facebook'] ); ?>" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Facebook', 'directory' ); ?></a></li>
+								<li><a href="<?php echo esc_url( $share_links['twitter'] ); ?>" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Twitter', 'directory' ); ?></a></li>
+								<li><a href="<?php echo esc_url( $share_links['linkedin'] ); ?>" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'LinkedIn', 'directory' ); ?></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
 
 				<div class="cf-blog-single-content entry-content">
 					<?php the_content(); ?>
