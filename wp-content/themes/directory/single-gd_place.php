@@ -136,11 +136,14 @@ while ( have_posts() ) :
 							continue;
 						}
 						
-						$tab_name = ! empty( $tab->tab_name ) ? $tab->tab_name : ucfirst( str_replace( '_', ' ', $tab_key ) );
+						$tab_name    = ! empty( $tab->tab_name ) ? $tab->tab_name : ucfirst( str_replace( '_', ' ', $tab_key ) );
 						$tab_content = $tabs_widget->tab_content( $tab );
-						
-						// Skip empty content
-						if ( empty( trim( $tab_content ) ) ) {
+
+						// Allow the Overview/Description tab to show even if empty (so free listings still see a product-style section).
+						$is_overview_tab = ( $tab_key === 'post_content' );
+
+						// For all other tabs, skip if there is no content.
+						if ( ! $is_overview_tab && empty( trim( $tab_content ) ) ) {
 							continue;
 						}
 						
@@ -174,7 +177,15 @@ while ( have_posts() ) :
 								</div>
 							<?php elseif ( $tab_key === 'post_content' ) : ?>
 								<div class="cf-single-place-content entry-content">
-									<?php echo $tab_content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+									<?php
+									if ( ! empty( trim( $tab_content ) ) ) {
+										// Normal description content coming from the listing editor.
+										echo $tab_content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+									} else {
+										// Fallback description for listings (including free plan) with no content saved yet.
+										echo '<p>' . esc_html__( 'No description has been added for this business yet. Check back soon for more details.', 'directory' ) . '</p>';
+									}
+									?>
 								</div>
 							<?php else : ?>
 								<div class="cf-single-place-tab-content">
@@ -270,35 +281,20 @@ while ( have_posts() ) :
 				</section>
 
 				<section class="cf-single-place-reviews" aria-labelledby="cf-review-heading">
-					<h2 id="cf-review-heading" class="cf-single-place-sidebar-title"><?php esc_html_e( 'Review', 'directory' ); ?></h2>
+					<h2 id="cf-review-heading" class="cf-single-place-sidebar-title"><?php esc_html_e( 'Reviews & ratings', 'directory' ); ?></h2>
 					<div class="cf-single-place-review-form">
 						<?php
-						// Set the review template to 'clean' for styling (used by GeoDirectory)
-						global $gd_review_template;
-						$gd_review_template = 'clean';
-						
-						$review_output = '';
-						
-						// Use the GeoDirectory reviews widget/shortcode to output the review form
-						// This ensures all hooks and filters are properly applied
-						if ( class_exists( 'GeoDir_Widget_Single_Reviews' ) ) {
-							$reviews_widget = new GeoDir_Widget_Single_Reviews();
-							$review_output = $reviews_widget->output( array( 'template' => 'clean' ) );
-							if ( ! empty( trim( $review_output ) ) ) {
-								echo $review_output; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-							}
+						// Keep things simple and always try the GeoDirectory Single Reviews block/shortcode first.
+						$reviews_output = '';
+
+						if ( function_exists( 'do_shortcode' ) ) {
+							$reviews_output = do_shortcode( '[gd_single_reviews title="" template="clean"]' );
 						}
-						
-						// Fallback: use shortcode if widget class doesn't work or output was empty
-						if ( empty( trim( $review_output ) ) && function_exists( 'do_shortcode' ) ) {
-							$shortcode_output = do_shortcode( '[gd_single_reviews title="" template="clean"]' );
-							if ( ! empty( trim( $shortcode_output ) ) ) {
-								echo $shortcode_output; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-							}
-						}
-						
-						// Final fallback: call comments_template directly
-						if ( empty( trim( $review_output ) ) && empty( trim( $shortcode_output ?? '' ) ) && function_exists( 'comments_template' ) ) {
+
+						if ( ! empty( trim( $reviews_output ) ) ) {
+							echo $reviews_output; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+						} elseif ( function_exists( 'comments_template' ) ) {
+							// Fallback to the standard comments template so there is always a way to leave feedback.
 							comments_template();
 						}
 						?>
@@ -312,24 +308,46 @@ while ( have_posts() ) :
 			<div class="cf-single-place-similar-inner">
 						<?php
 						$similar_term_ids = array();
-						$current_terms = get_the_terms( $pid, 'gd_placecategory' );
+						$current_terms    = get_the_terms( $pid, 'gd_placecategory' );
 						if ( $current_terms && ! is_wp_error( $current_terms ) ) {
 							$similar_term_ids = wp_list_pluck( $current_terms, 'term_id' );
 						}
-						$similar_query = new WP_Query( array(
+
+						// First try: truly similar listings from the same category.
+						$similar_query_args = array(
 							'post_type'      => 'gd_place',
 							'post_status'    => 'publish',
 							'posts_per_page' => 3,
 							'post__not_in'   => array( $pid ),
-							'tax_query'      => ! empty( $similar_term_ids ) ? array(
+							'orderby'        => 'rand',
+						);
+
+						if ( ! empty( $similar_term_ids ) ) {
+							$similar_query_args['tax_query'] = array(
 								array(
 									'taxonomy' => 'gd_placecategory',
 									'field'    => 'term_id',
 									'terms'    => $similar_term_ids,
 								),
-							) : array(),
-							'orderby'        => 'rand',
-						) );
+							);
+						}
+
+						$similar_query = new WP_Query( $similar_query_args );
+
+						// Fallback: if there are no category matches, show other random listings instead of an empty section.
+						if ( ! $similar_query->have_posts() ) {
+							wp_reset_postdata();
+							$similar_query = new WP_Query(
+								array(
+									'post_type'      => 'gd_place',
+									'post_status'    => 'publish',
+									'posts_per_page' => 3,
+									'post__not_in'   => array( $pid ),
+									'orderby'        => 'rand',
+								)
+							);
+						}
+
 						if ( $similar_query->have_posts() ) :
 							while ( $similar_query->have_posts() ) :
 								$similar_query->the_post();
