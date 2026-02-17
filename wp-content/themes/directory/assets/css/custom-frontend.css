@@ -944,7 +944,8 @@ body.custom-frontend .cf-blog-pagination-nav .next {
 
 /* ----- Single blog post – custom layout ----- */
 body.custom-frontend .cf-blog-single-main {
-	background: #e5e7eb;
+	/* Remove grey page background behind single blog posts */
+	background: #ffffff;
 }
 
 body.custom-frontend .cf-blog-single-breadcrumb {
@@ -1008,6 +1009,7 @@ body.custom-frontend .cf-blog-single-shell {
 	margin: 0 auto 4.5rem;
 	padding: 0 1.5rem 4rem;
 	box-sizing: border-box;
+	border-radius: 0;
 }
 
 body.custom-frontend .cf-blog-single-card {
