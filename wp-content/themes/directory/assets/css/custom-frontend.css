@@ -2900,7 +2900,8 @@ body.custom-frontend .cf-single-place-rating {
 	font-size: 1rem;
 }
 
-body.custom-frontend .cf-single-place-rating .fa-star {
+/* Only color the active (foreground) stars, so 0-rating listings don't look 5-star */
+body.custom-frontend .cf-single-place-rating .gd-rating-foreground .fa-star {
 	color: #f59e0b;
 }
 
