@@ -188,8 +188,8 @@ while ( have_posts() ) :
 						<h2 id="cf-map-heading" class="cf-single-place-section-title"><?php esc_html_e( 'Location', 'directory' ); ?></h2>
 						<div class="cf-single-place-map-container">
 							<?php
-							// Single-listing map, slightly more zoomed out for better context.
-							echo do_shortcode( '[gd_map width="100%" height="400px" maptype="ROADMAP" zoom="13" map_type="post" map_directions="1"]' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+							// Single-listing map, further zoomed out for wider area context.
+							echo do_shortcode( '[gd_map width="100%" height="400px" maptype="ROADMAP" zoom="11" map_type="post" map_directions="1"]' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 							?>
 						</div>
 					</section>
