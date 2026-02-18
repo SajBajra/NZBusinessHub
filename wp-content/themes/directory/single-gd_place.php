@@ -155,10 +155,17 @@ while ( have_posts() ) :
 		<div class="cf-single-place-layout">
 			<div class="cf-single-place-main">
 				<?php
-				// Build a product-style overview section using the main content.
-				$raw_content    = get_the_content();
+				// Overview should reflect what was written in the listing editor (post content),
+				// without pulling in extra template/plugin output (like image galleries).
+				$raw_content = (string) get_post_field( 'post_content', $pid );
+				$raw_content = trim( $raw_content );
+
+				// Remove any images/figures if they exist in the editor content.
+				$raw_content = preg_replace( '#<figure[^>]*>.*?</figure>#is', '', $raw_content );
+				$raw_content = preg_replace( '#<img[^>]*>#i', '', $raw_content );
+
 				$has_overview   = ! empty( trim( wp_strip_all_tags( $raw_content ) ) );
-				$overview_block = $has_overview ? apply_filters( 'the_content', $raw_content ) : '';
+				$overview_block = $has_overview ? wpautop( wp_kses_post( $raw_content ) ) : '';
 				?>
 
 				<section class="cf-single-place-section cf-single-place-overview" aria-labelledby="cf-overview-heading">
@@ -218,7 +225,18 @@ while ( have_posts() ) :
 							if ( ! function_exists( 'geodir_get_post_meta' ) ) {
 								break;
 							}
-							$val = geodir_get_post_meta( $pid, $key, true );
+							if ( $key === 'business_hours_today' ) {
+								$val = '';
+								$bh  = geodir_get_post_meta( $pid, 'business_hours', true );
+								if ( $bh && function_exists( 'geodir_get_business_hours' ) ) {
+									$bh_data = geodir_get_business_hours( stripslashes_deep( $bh ), (string) $country );
+									if ( ! empty( $bh_data['extra']['today_range'] ) ) {
+										$val = (string) $bh_data['extra']['today_range'];
+									}
+								}
+							} else {
+								$val = geodir_get_post_meta( $pid, $key, true );
+							}
 							if ( $val === '' || $val === null ) {
 								continue;
 							}

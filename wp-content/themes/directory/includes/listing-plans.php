@@ -150,7 +150,7 @@ add_filter( 'geodir_custom_field_file_limit', 'directory_listing_plan_file_limit
  */
 function directory_listing_plan_hide_premium_fields( $is_hidden, $val, $package_id, $default ) {
 	// Temporarily disabled: show all fields for all users.
-	return $is_hidden;
+	return false;
 }
 add_filter( 'geodir_add_listing_custom_field_is_hidden', 'directory_listing_plan_hide_premium_fields', 10, 4 );
 
