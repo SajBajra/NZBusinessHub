@@ -123,9 +123,24 @@ if ( ! $blog_page ) {
 								</p>
 							<?php endif; ?>
 							<ul class="cf-blog-single-share-list" aria-label="<?php esc_attr_e( 'Share this article', 'directory' ); ?>">
-								<li><a href="<?php echo esc_url( $share_links['facebook'] ); ?>" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Facebook', 'directory' ); ?></a></li>
-								<li><a href="<?php echo esc_url( $share_links['twitter'] ); ?>" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Twitter', 'directory' ); ?></a></li>
-								<li><a href="<?php echo esc_url( $share_links['linkedin'] ); ?>" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'LinkedIn', 'directory' ); ?></a></li>
+								<li>
+									<a class="cf-blog-single-share-btn cf-blog-single-share-btn--facebook" href="<?php echo esc_url( $share_links['facebook'] ); ?>" target="_blank" rel="noopener noreferrer">
+										<span class="cf-blog-single-share-icon" aria-hidden="true"><i class="fab fa-facebook-f"></i></span>
+										<span class="cf-blog-single-share-text"><?php esc_html_e( 'Facebook', 'directory' ); ?></span>
+									</a>
+								</li>
+								<li>
+									<a class="cf-blog-single-share-btn cf-blog-single-share-btn--twitter" href="<?php echo esc_url( $share_links['twitter'] ); ?>" target="_blank" rel="noopener noreferrer">
+										<span class="cf-blog-single-share-icon" aria-hidden="true"><i class="fab fa-twitter"></i></span>
+										<span class="cf-blog-single-share-text"><?php esc_html_e( 'Twitter', 'directory' ); ?></span>
+									</a>
+								</li>
+								<li>
+									<a class="cf-blog-single-share-btn cf-blog-single-share-btn--linkedin" href="<?php echo esc_url( $share_links['linkedin'] ); ?>" target="_blank" rel="noopener noreferrer">
+										<span class="cf-blog-single-share-icon" aria-hidden="true"><i class="fab fa-linkedin-in"></i></span>
+										<span class="cf-blog-single-share-text"><?php esc_html_e( 'LinkedIn', 'directory' ); ?></span>
+									</a>
+								</li>
 							</ul>
 						</div>
 					</aside>
