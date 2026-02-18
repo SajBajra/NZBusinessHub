@@ -137,6 +137,12 @@ if ( ! $blog_page ) {
 									</a>
 								</li>
 							</ul>
+
+							<?php if ( comments_open() || get_comments_number() ) : ?>
+								<section class="cf-blog-single-comments cf-blog-single-comments--sidebar" aria-label="<?php esc_attr_e( 'Comments', 'directory' ); ?>">
+									<?php comments_template(); ?>
+								</section>
+							<?php endif; ?>
 						</div>
 					</aside>
 
@@ -151,12 +157,6 @@ if ( ! $blog_page ) {
 							)
 						);
 						?>
-
-						<?php if ( comments_open() || get_comments_number() ) : ?>
-							<section class="cf-blog-single-comments" aria-label="<?php esc_attr_e( 'Comments', 'directory' ); ?>">
-								<?php comments_template(); ?>
-							</section>
-						<?php endif; ?>
 
 						<footer class="cf-blog-single-footer">
 							<a href="<?php echo esc_url( $blog_page ); ?>" class="cf-single-back">← <?php esc_html_e( 'Back to Blog', 'directory' ); ?></a>
