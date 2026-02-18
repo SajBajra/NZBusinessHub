@@ -52,8 +52,8 @@ $search_url = add_query_arg(
 );
 ?>
 
-<main class="custom-frontend-main cf-destination-main" id="main">
-	<div class="cf-destination-inner">
+<main class="custom-frontend-main cf-single-place cf-destination-main" id="main">
+	<div class="cf-single-place-inner cf-destination-inner">
 		<nav class="cf-single-place-breadcrumb" aria-label="<?php esc_attr_e( 'Breadcrumb', 'directory' ); ?>">
 			<a href="<?php echo esc_url( $home_url ); ?>"><?php esc_html_e( 'Home', 'directory' ); ?></a>
 			<span class="cf-single-place-breadcrumb-sep" aria-hidden="true">›</span>
@@ -111,11 +111,6 @@ $search_url = add_query_arg(
 				// Restore original request.
 				$_GET = $original_get;
 				?>
-				<p class="cf-destination-view-all">
-					<a href="<?php echo esc_url( $search_url ); ?>">
-						<?php esc_html_e( 'View full search view for this destination', 'directory' ); ?>
-					</a>
-				</p>
 			</div>
 		</section>
 	</div>
