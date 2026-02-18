@@ -3670,13 +3670,7 @@ body.custom-frontend .geodir-add-listing input[type="submit"].btn {
 	transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
 }
 
-/* Free plan: hide map UI + extra address bits and images field on Add Listing */
-body.custom-frontend.directory-plan-free .geodir-add-listing #geodir_post_map_row,
-body.custom-frontend.directory-plan-free .geodir-add-listing #geodir_post_mapview_row,
-body.custom-frontend.directory-plan-free .geodir-add-listing #geodir_post_latitude_row,
-body.custom-frontend.directory-plan-free .geodir-add-listing #geodir_post_longitude_row {
-	display: none !important;
-}
+/* (Free plan restrictions temporarily disabled – map & address fields always visible) */
 
 /* Primary buttons (Submit, main actions, etc.) */
 body.custom-frontend .geodir-add-listing .btn-primary,

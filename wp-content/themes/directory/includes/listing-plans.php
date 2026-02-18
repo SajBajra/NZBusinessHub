@@ -51,27 +51,7 @@ function directory_get_free_allowed_fields() {
  * to the full Upgrade page (separate pricing layout).
  */
 function directory_listing_plan_add_listing_cta( $content ) {
-	// Only show this CTA for logged-in FREE users on the Add Listing page.
-	if ( ! is_user_logged_in() || directory_is_premium_listing_user() ) {
-		return $content;
-	}
-
-	if ( function_exists( 'geodir_add_listing_page_id' ) ) {
-		$add_page_id = geodir_add_listing_page_id( 'gd_place' );
-		if ( $add_page_id && is_page( $add_page_id ) && in_the_loop() && is_main_query() ) {
-			$upgrade_url = directory_get_upgrade_url();
-
-			$cta_html  = '<div class="directory-plan-inline-cta">';
-			$cta_html .= '<span class="directory-plan-inline-text">' . esc_html__( 'Need more fields for this listing?', 'directory' ) . '</span>';
-			$cta_html .= '<a class="directory-plan-cta-btn" href="' . esc_url( $upgrade_url ) . '">';
-			$cta_html .= esc_html__( 'Unlock more listing options', 'directory' );
-			$cta_html .= '</a>';
-			$cta_html .= '</div>';
-
-			$content .= $cta_html;
-		}
-	}
-
+	// Temporarily disabled: no upsell CTA, all users have full fields.
 	return $content;
 }
 add_filter( 'the_content', 'directory_listing_plan_add_listing_cta', 20 );
@@ -84,11 +64,8 @@ function directory_listing_plan_body_class( $classes ) {
 	if ( function_exists( 'geodir_add_listing_page_id' ) ) {
 		$add_page_id = geodir_add_listing_page_id( 'gd_place' );
 		if ( $add_page_id && is_page( $add_page_id ) ) {
-			if ( directory_is_premium_listing_user() ) {
-				$classes[] = 'directory-plan-premium';
-			} else {
-				$classes[] = 'directory-plan-free';
-			}
+			// Treat everyone as premium for now – no restricted Add Listing UI.
+			$classes[] = 'directory-plan-premium';
 		}
 	}
 	return $classes;
@@ -145,30 +122,7 @@ function directory_count_user_listings( $user_id ) {
  * For free users: clear premium-only field values on save so they cannot be set or retained.
  */
 function directory_listing_plan_save_post_data( $postarr, $gd_post, $post, $update ) {
-	$user_id = ! empty( $post->post_author ) ? (int) $post->post_author : get_current_user_id();
-	if ( ! $user_id || directory_is_premium_listing_user( $user_id ) ) {
-		return $postarr;
-	}
-	$allowed = directory_get_free_allowed_fields();
-	$post_type = isset( $post->post_type ) ? $post->post_type : 'gd_place';
-	if ( ! function_exists( 'geodir_post_custom_fields' ) ) {
-		if ( isset( $postarr['featured'] ) ) {
-			$postarr['featured'] = 0;
-		}
-		return $postarr;
-	}
-	$custom_fields = geodir_post_custom_fields( '', 'all', $post_type, 'none' );
-	foreach ( $custom_fields as $cf ) {
-		$htmlvar = isset( $cf['htmlvar_name'] ) ? $cf['htmlvar_name'] : '';
-		if ( $htmlvar === '' || in_array( $htmlvar, $allowed, true ) ) {
-			continue;
-		}
-		if ( ! array_key_exists( $htmlvar, $postarr ) ) {
-			continue;
-		}
-		$type = isset( $cf['type'] ) ? $cf['type'] : '';
-		$postarr[ $htmlvar ] = ( $type === 'number' || $htmlvar === 'featured' ) ? 0 : '';
-	}
+	// Temporarily disable field-level restrictions – keep all submitted data.
 	return $postarr;
 }
 add_filter( 'geodir_save_post_data', 'directory_listing_plan_save_post_data', 10, 4 );
@@ -177,27 +131,7 @@ add_filter( 'geodir_save_post_data', 'directory_listing_plan_save_post_data', 10
  * After post save: trim images to max for free plan (delete excess from GD attachment table).
  */
 function directory_listing_plan_after_post_save( $result, $postarr, $format, $gd_post, $post, $update ) {
-	if ( ! $result || ! isset( $post->ID ) || ! isset( $post->post_author ) ) {
-		return;
-	}
-	if ( directory_is_premium_listing_user( (int) $post->post_author ) ) {
-		return;
-	}
-	$post_id = (int) $post->ID;
-	if ( ! class_exists( 'GeoDir_Media' ) || ! method_exists( 'GeoDir_Media', 'get_attachments_by_type' ) || ! method_exists( 'GeoDir_Media', 'delete_attachment' ) ) {
-		return;
-	}
-	$attachments = GeoDir_Media::get_attachments_by_type( $post_id, 'post_images', 0 );
-	if ( empty( $attachments ) || count( $attachments ) <= DIRECTORY_FREE_MAX_IMAGES_PER_LISTING ) {
-		return;
-	}
-	$to_remove = array_slice( $attachments, DIRECTORY_FREE_MAX_IMAGES_PER_LISTING );
-	foreach ( $to_remove as $att ) {
-		$att_id = is_object( $att ) ? ( isset( $att->ID ) ? (int) $att->ID : (int) $att->id ) : (int) $att;
-		if ( $att_id ) {
-			GeoDir_Media::delete_attachment( $att_id, $post_id, $att );
-		}
-	}
+	// Temporarily disabled: do not trim images for free plan.
 }
 add_action( 'geodir_after_post_save', 'directory_listing_plan_after_post_save', 10, 6 );
 
@@ -205,14 +139,8 @@ add_action( 'geodir_after_post_save', 'directory_listing_plan_after_post_save', 
  * Limit file upload count for post_images for free users (add/edit listing form).
  */
 function directory_listing_plan_file_limit( $file_limit, $cf, $gd_post ) {
-	if ( ! isset( $cf['htmlvar_name'] ) || $cf['htmlvar_name'] !== 'post_images' ) {
-		return $file_limit;
-	}
-	$user_id = get_current_user_id();
-	if ( ! $user_id || directory_is_premium_listing_user( $user_id ) ) {
-		return $file_limit;
-	}
-	return DIRECTORY_FREE_MAX_IMAGES_PER_LISTING;
+	// Temporarily disabled: keep original upload limits (no free-plan cap).
+	return $file_limit;
 }
 add_filter( 'geodir_custom_field_file_limit', 'directory_listing_plan_file_limit', 10, 3 );
 
@@ -221,17 +149,7 @@ add_filter( 'geodir_custom_field_file_limit', 'directory_listing_plan_file_limit
  * Only fields in directory_get_free_allowed_fields() are shown.
  */
 function directory_listing_plan_hide_premium_fields( $is_hidden, $val, $package_id, $default ) {
-	if ( directory_is_premium_listing_user() ) {
-		return $is_hidden;
-	}
-	$html_var = isset( $val['htmlvar_name'] ) ? $val['htmlvar_name'] : '';
-	if ( $html_var === '' ) {
-		return $is_hidden;
-	}
-	$allowed = directory_get_free_allowed_fields();
-	if ( ! in_array( $html_var, $allowed, true ) ) {
-		return true;
-	}
+	// Temporarily disabled: show all fields for all users.
 	return $is_hidden;
 }
 add_filter( 'geodir_add_listing_custom_field_is_hidden', 'directory_listing_plan_hide_premium_fields', 10, 4 );
