@@ -1267,15 +1267,17 @@ body.custom-frontend .cf-blog-single-share-list {
 	margin: 0;
 	padding: 0;
 	display: flex;
-	flex-direction: column;
-	gap: 0.35rem;
+	flex-direction: row;
+	gap: 0.5rem;
 }
 
 body.custom-frontend .cf-blog-single-share-btn {
 	display: inline-flex;
 	align-items: center;
-	gap: 0.5rem;
-	padding: 0.45rem 0.85rem;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	padding: 0;
 	border-radius: 999px;
 	border: 1px solid #e5e7eb;
 	background: #ffffff;
@@ -1300,6 +1302,10 @@ body.custom-frontend .cf-blog-single-share-icon {
 	background: #e5e7eb;
 	color: #111827;
 	font-size: 0.75rem;
+}
+
+body.custom-frontend .cf-blog-single-share-text {
+	display: none;
 }
 
 body.custom-frontend .cf-blog-single-share-btn--facebook .cf-blog-single-share-icon {
