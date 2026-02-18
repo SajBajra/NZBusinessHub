@@ -135,7 +135,12 @@ while ( have_posts() ) :
 			</div>
 			<div class="cf-single-place-gallery">
 				<?php if ( function_exists( 'do_shortcode' ) ) : ?>
-					<?php echo do_shortcode( '[gd_post_images type="image" ajax_load="true" link_to="lightbox" types="logo,post_images" limit="3" limit_show="3" image_size="medium_large" css_class="cf-single-place-gallery-inner"]' ); ?>
+					<?php
+					// Product-style slider with thumbnail navigation.
+					echo do_shortcode(
+						'[gd_post_images type="slider" ajax_load="true" slideshow="true" controlnav="2" show_title="0" show_caption="0" link_to="lightbox" types="logo,post_images" image_size="large" css_class="cf-single-place-gallery-inner"]'
+					);
+					?>
 				<?php else : ?>
 					<?php $thumb = get_the_post_thumbnail_url( $pid, 'medium_large' ); ?>
 					<?php if ( $thumb ) : ?>

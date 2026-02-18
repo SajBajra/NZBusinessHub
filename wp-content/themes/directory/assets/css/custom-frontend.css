@@ -3071,10 +3071,6 @@ body.custom-frontend .cf-single-place-gallery {
 
 body.custom-frontend .cf-single-place-gallery-inner,
 body.custom-frontend .cf-single-place-gallery .geodir-post-images {
-	display: grid !important;
-	grid-template-columns: repeat(4, minmax(0, 1fr));
-	gap: 0.75rem;
-	align-items: start;
 	padding: 1rem;
 }
 
@@ -3087,34 +3083,10 @@ body.custom-frontend .cf-single-place-gallery .geodir-post-images img {
 	object-fit: cover;
 }
 
-/* Large main image on top spanning full width */
-body.custom-frontend .cf-single-place-gallery-inner > *:first-child,
-body.custom-frontend .cf-single-place-gallery .geodir-post-images > *:first-child {
-	grid-column: 1 / -1;
-}
-
-body.custom-frontend .cf-single-place-gallery-inner > *:first-child img,
-body.custom-frontend .cf-single-place-gallery .geodir-post-images > *:first-child img {
-	aspect-ratio: 4 / 3;
-	max-height: 380px;
-}
-
-/* Thumbnails in a row below */
-body.custom-frontend .cf-single-place-gallery-inner > *:not(:first-child) img,
-body.custom-frontend .cf-single-place-gallery .geodir-post-images > *:not(:first-child) img {
-	aspect-ratio: 4 / 3;
-	max-height: 110px;
-}
-
 @media (max-width: 900px) {
 	body.custom-frontend .cf-single-place-gallery-inner,
 	body.custom-frontend .cf-single-place-gallery .geodir-post-images {
-		grid-template-columns: repeat(2, minmax(0, 1fr));
 		padding: 0.75rem;
-	}
-	body.custom-frontend .cf-single-place-gallery-inner > *:first-child img,
-	body.custom-frontend .cf-single-place-gallery .geodir-post-images > *:first-child img {
-		max-height: 260px;
 	}
 }
 
