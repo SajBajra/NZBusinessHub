@@ -1327,9 +1327,6 @@ body.custom-frontend .cf-blog-single-content-wrap {
 		max-width: 100%;
 		flex: 1 1 auto;
 	}
-	body.custom-frontend .cf-blog-single-share-sticky {
-		position: static;
-	}
 }
 
 @media (max-width: 640px) {
