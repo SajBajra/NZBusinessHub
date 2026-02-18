@@ -149,10 +149,68 @@ add_filter( 'geodir_custom_field_file_limit', 'directory_listing_plan_file_limit
  * Only fields in directory_get_free_allowed_fields() are shown.
  */
 function directory_listing_plan_hide_premium_fields( $is_hidden, $val, $package_id, $default ) {
+	// Always show these essential fields: zip, phone, email, website.
+	$essential_fields = array( 'zip', 'phone', 'email', 'website' );
+	if ( isset( $val['htmlvar_name'] ) && in_array( $val['htmlvar_name'], $essential_fields, true ) ) {
+		return false; // Always visible.
+	}
 	// Temporarily disabled: show all fields for all users.
 	return false;
 }
 add_filter( 'geodir_add_listing_custom_field_is_hidden', 'directory_listing_plan_hide_premium_fields', 10, 4 );
+
+/**
+ * Ensure essential fields (zip, phone, email, website) are never skipped.
+ */
+function directory_never_skip_essential_fields( $skip, $field, $package_id, $default, $fields_location ) {
+	$essential_fields = array( 'zip', 'phone', 'email', 'website' );
+	if ( isset( $field->htmlvar_name ) && in_array( $field->htmlvar_name, $essential_fields, true ) ) {
+		return false; // Never skip these fields.
+	}
+	return $skip;
+}
+add_filter( 'geodir_post_custom_fields_skip_field', 'directory_never_skip_essential_fields', 10, 5 );
+
+/**
+ * Ensure essential fields are included even if filtered out.
+ */
+function directory_ensure_essential_fields_included( $custom_fields, $package_id, $post_type, $fields_location ) {
+	// Only for gd_place post type.
+	if ( $post_type !== 'gd_place' ) {
+		return $custom_fields;
+	}
+	
+	// Essential fields that should always be available.
+	$essential_fields = array( 'zip', 'phone', 'email', 'website' );
+	
+	if ( ! is_array( $custom_fields ) ) {
+		$custom_fields = array();
+	}
+	
+	// Check if we already have these fields.
+	$existing_htmlvars = array();
+	foreach ( $custom_fields as $key => $field ) {
+		if ( isset( $field['htmlvar_name'] ) ) {
+			$existing_htmlvars[] = $field['htmlvar_name'];
+		}
+	}
+	
+	// If any essential fields are missing, fetch them from the database.
+	$missing_fields = array_diff( $essential_fields, $existing_htmlvars );
+	if ( ! empty( $missing_fields ) && function_exists( 'geodir_get_field_infoby' ) ) {
+		foreach ( $missing_fields as $htmlvar_name ) {
+			$field_info = geodir_get_field_infoby( 'htmlvar_name', $htmlvar_name, $post_type );
+			if ( $field_info && is_array( $field_info ) ) {
+				// Force enable the field for display.
+				$field_info['is_active'] = 1;
+				$custom_fields[ $htmlvar_name ] = $field_info;
+			}
+		}
+	}
+	
+	return $custom_fields;
+}
+add_filter( 'geodir_filter_geodir_post_custom_fields', 'directory_ensure_essential_fields_included', 10, 4 );
 
 
 /**
