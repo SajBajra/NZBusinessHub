@@ -108,58 +108,8 @@ if ( ! $blog_page ) {
 		<div class="cf-blog-single-shell">
 			<article id="post-<?php echo esc_attr( $pid ); ?>" <?php post_class( 'cf-blog-single-layout' ); ?>>
 				<div class="cf-blog-single-body-two-col">
-					<aside class="cf-blog-single-share-sidebar" aria-label="<?php esc_attr_e( 'Post details and sharing', 'directory' ); ?>">
+					<aside class="cf-blog-single-share-sidebar" aria-label="<?php esc_attr_e( 'Share', 'directory' ); ?>">
 						<div class="cf-blog-single-share-sticky">
-							<h2 class="cf-blog-single-details-title">
-								<?php esc_html_e( 'Post details', 'directory' ); ?>
-							</h2>
-
-							<div class="cf-blog-single-details-list">
-								<div class="cf-blog-single-detail-item">
-									<span class="cf-blog-single-detail-label"><?php esc_html_e( 'Published', 'directory' ); ?></span>
-									<span class="cf-blog-single-detail-value"><?php echo esc_html( get_the_date( '', $pid ) ); ?></span>
-								</div>
-								<div class="cf-blog-single-detail-item">
-									<span class="cf-blog-single-detail-label"><?php esc_html_e( 'Author', 'directory' ); ?></span>
-									<span class="cf-blog-single-detail-value"><?php echo esc_html( get_the_author() ); ?></span>
-								</div>
-								<div class="cf-blog-single-detail-item">
-									<span class="cf-blog-single-detail-label"><?php esc_html_e( 'Reading time', 'directory' ); ?></span>
-									<span class="cf-blog-single-detail-value">
-										<?php
-										printf(
-											/* translators: %s: reading time in minutes */
-											esc_html__( '%s min read', 'directory' ),
-											esc_html( $reading_minutes )
-										);
-										?>
-									</span>
-								</div>
-								<?php
-								$categories_list = get_the_category_list( ', ' );
-								if ( $categories_list ) :
-									?>
-									<div class="cf-blog-single-detail-item">
-										<span class="cf-blog-single-detail-label"><?php esc_html_e( 'Categories', 'directory' ); ?></span>
-										<span class="cf-blog-single-detail-value"><?php echo wp_kses_post( $categories_list ); ?></span>
-									</div>
-								<?php endif; ?>
-								<div class="cf-blog-single-detail-item">
-									<span class="cf-blog-single-detail-label"><?php esc_html_e( 'Comments', 'directory' ); ?></span>
-									<span class="cf-blog-single-detail-value">
-										<?php
-										printf(
-											/* translators: %d: number of comments */
-											esc_html__( '%d comments', 'directory' ),
-											(int) $share_count
-										);
-										?>
-									</span>
-								</div>
-							</div>
-
-							<hr class="cf-blog-single-details-separator" />
-
 							<p class="cf-blog-single-share-label"><?php esc_html_e( 'Share this article', 'directory' ); ?></p>
 							<ul class="cf-blog-single-share-list" aria-label="<?php esc_attr_e( 'Share this article', 'directory' ); ?>">
 								<li>
@@ -169,15 +119,21 @@ if ( ! $blog_page ) {
 									</a>
 								</li>
 								<li>
-									<a class="cf-blog-single-share-btn cf-blog-single-share-btn--twitter" href="<?php echo esc_url( $share_links['twitter'] ); ?>" target="_blank" rel="noopener noreferrer">
-										<span class="cf-blog-single-share-icon" aria-hidden="true"><i class="fab fa-twitter"></i></span>
-										<span class="cf-blog-single-share-text"><?php esc_html_e( 'Twitter', 'directory' ); ?></span>
+									<a class="cf-blog-single-share-btn cf-blog-single-share-btn--instagram" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+										<span class="cf-blog-single-share-icon" aria-hidden="true"><i class="fab fa-instagram"></i></span>
+										<span class="cf-blog-single-share-text"><?php esc_html_e( 'Instagram', 'directory' ); ?></span>
 									</a>
 								</li>
 								<li>
-									<a class="cf-blog-single-share-btn cf-blog-single-share-btn--linkedin" href="<?php echo esc_url( $share_links['linkedin'] ); ?>" target="_blank" rel="noopener noreferrer">
-										<span class="cf-blog-single-share-icon" aria-hidden="true"><i class="fab fa-linkedin-in"></i></span>
-										<span class="cf-blog-single-share-text"><?php esc_html_e( 'LinkedIn', 'directory' ); ?></span>
+									<a class="cf-blog-single-share-btn cf-blog-single-share-btn--tiktok" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">
+										<span class="cf-blog-single-share-icon" aria-hidden="true"><i class="fab fa-tiktok"></i></span>
+										<span class="cf-blog-single-share-text"><?php esc_html_e( 'TikTok', 'directory' ); ?></span>
+									</a>
+								</li>
+								<li>
+									<a class="cf-blog-single-share-btn cf-blog-single-share-btn--twitter" href="<?php echo esc_url( $share_links['twitter'] ); ?>" target="_blank" rel="noopener noreferrer">
+										<span class="cf-blog-single-share-icon" aria-hidden="true"><i class="fab fa-twitter"></i></span>
+										<span class="cf-blog-single-share-text"><?php esc_html_e( 'Twitter', 'directory' ); ?></span>
 									</a>
 								</li>
 							</ul>

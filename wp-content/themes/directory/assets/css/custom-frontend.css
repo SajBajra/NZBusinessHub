@@ -1260,50 +1260,7 @@ body.custom-frontend .cf-blog-single-share-count {
 	color: #6b7280;
 }
 
-body.custom-frontend .cf-blog-single-details-title {
-	margin: 0 0 0.75rem;
-	font-size: 0.9375rem;
-	font-weight: 600;
-	color: #111827;
-}
-
-body.custom-frontend .cf-blog-single-details-list {
-	display: flex;
-	flex-direction: column;
-	margin: 0 0 0.75rem;
-	padding: 0;
-	gap: 0;
-}
-
-body.custom-frontend .cf-blog-single-detail-item {
-	padding: 0.5rem 0;
-	border-bottom: 1px solid #e5e7eb;
-}
-
-body.custom-frontend .cf-blog-single-detail-item:last-of-type {
-	border-bottom: none;
-}
-
-body.custom-frontend .cf-blog-single-detail-label {
-	display: block;
-	font-size: 0.6875rem;
-	font-weight: 600;
-	text-transform: uppercase;
-	letter-spacing: 0.05em;
-	color: #9ca3af;
-	margin-bottom: 0.15rem;
-}
-
-body.custom-frontend .cf-blog-single-detail-value {
-	font-size: 0.9rem;
-	color: #374151;
-}
-
-body.custom-frontend .cf-blog-single-details-separator {
-	border: 0;
-	border-top: 1px solid #e5e7eb;
-	margin: 0.75rem 0 0.75rem;
-}
+/* (Post details block removed – share only) */
 
 body.custom-frontend .cf-blog-single-share-list {
 	list-style: none;
@@ -1355,8 +1312,13 @@ body.custom-frontend .cf-blog-single-share-btn--twitter .cf-blog-single-share-ic
 	color: #ffffff;
 }
 
-body.custom-frontend .cf-blog-single-share-btn--linkedin .cf-blog-single-share-icon {
-	background: #0a66c2;
+body.custom-frontend .cf-blog-single-share-btn--instagram .cf-blog-single-share-icon {
+	background: linear-gradient(135deg, #ff7a18 0%, #af002d 35%, #319197 100%);
+	color: #ffffff;
+}
+
+body.custom-frontend .cf-blog-single-share-btn--tiktok .cf-blog-single-share-icon {
+	background: #111827;
 	color: #ffffff;
 }
 
