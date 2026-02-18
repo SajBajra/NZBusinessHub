@@ -108,10 +108,10 @@ if ( ! $blog_page ) {
 		<div class="cf-blog-single-shell">
 			<article id="post-<?php echo esc_attr( $pid ); ?>" <?php post_class( 'cf-blog-single-layout' ); ?>>
 				<div class="cf-blog-single-body-two-col">
-					<aside class="cf-blog-single-share-sidebar" aria-label="<?php esc_attr_e( 'Share', 'directory' ); ?>">
+					<aside class="cf-blog-single-share-sidebar" aria-label="<?php esc_attr_e( 'Share this blog', 'directory' ); ?>">
 						<div class="cf-blog-single-share-sticky">
-							<p class="cf-blog-single-share-label"><?php esc_html_e( 'Share this article', 'directory' ); ?></p>
-							<ul class="cf-blog-single-share-list" aria-label="<?php esc_attr_e( 'Share this article', 'directory' ); ?>">
+							<p class="cf-blog-single-share-label"><?php esc_html_e( 'Share this blog', 'directory' ); ?></p>
+							<ul class="cf-blog-single-share-list" aria-label="<?php esc_attr_e( 'Share this blog', 'directory' ); ?>">
 								<li>
 									<a class="cf-blog-single-share-btn cf-blog-single-share-btn--facebook" href="<?php echo esc_url( $share_links['facebook'] ); ?>" target="_blank" rel="noopener noreferrer">
 										<span class="cf-blog-single-share-icon" aria-hidden="true"><i class="fab fa-facebook-f"></i></span>
@@ -137,12 +137,6 @@ if ( ! $blog_page ) {
 									</a>
 								</li>
 							</ul>
-
-							<?php if ( comments_open() || get_comments_number() ) : ?>
-								<section class="cf-blog-single-comments cf-blog-single-comments--sidebar" aria-label="<?php esc_attr_e( 'Comments', 'directory' ); ?>">
-									<?php comments_template(); ?>
-								</section>
-							<?php endif; ?>
 						</div>
 					</aside>
 
