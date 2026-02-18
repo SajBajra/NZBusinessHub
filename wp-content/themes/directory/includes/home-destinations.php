@@ -25,51 +25,61 @@ function directory_get_home_destinations() {
 				'name'    => 'Auckland',
 				'image'   => 'https://images.pexels.com/photos/7846472/pexels-photo-7846472.jpeg',
 				'enabled' => 1,
+				'slug'    => 'auckland',
 			),
 			array(
 				'name'    => 'Wellington',
 				'image'   => 'https://images.pexels.com/photos/6127335/pexels-photo-6127335.jpeg',
 				'enabled' => 1,
+				'slug'    => 'wellington',
 			),
 			array(
 				'name'    => 'Christchurch',
 				'image'   => 'https://images.pexels.com/photos/2098079/pexels-photo-2098079.jpeg',
 				'enabled' => 1,
+				'slug'    => 'christchurch',
 			),
 			array(
 				'name'    => 'Queenstown',
 				'image'   => 'https://images.pexels.com/photos/730981/pexels-photo-730981.jpeg',
 				'enabled' => 1,
+				'slug'    => 'queenstown',
 			),
 			array(
 				'name'    => 'Rotorua',
 				'image'   => 'https://images.pexels.com/photos/459203/pexels-photo-459203.jpeg',
 				'enabled' => 1,
+				'slug'    => 'rotorua',
 			),
 			array(
 				'name'    => 'Taupō',
 				'image'   => 'https://images.pexels.com/photos/1624496/pexels-photo-1624496.jpeg',
 				'enabled' => 1,
+				'slug'    => 'taupo',
 			),
 			array(
 				'name'    => 'Dunedin',
 				'image'   => 'https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg',
 				'enabled' => 1,
+				'slug'    => 'dunedin',
 			),
 			array(
 				'name'    => 'Bay of Islands',
 				'image'   => 'https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg',
 				'enabled' => 1,
+				'slug'    => 'bay-of-islands',
 			),
 			array(
 				'name'    => 'Napier',
 				'image'   => 'https://images.pexels.com/photos/208738/pexels-photo-208738.jpeg',
 				'enabled' => 1,
+				'slug'    => 'napier',
 			),
 			array(
 				'name'    => 'Nelson',
 				'image'   => 'https://images.pexels.com/photos/460680/pexels-photo-460680.jpeg',
 				'enabled' => 1,
+				'slug'    => 'nelson',
 			),
 		),
 	);
@@ -87,6 +97,11 @@ function directory_get_home_destinations() {
 			$destinations[ $i ] = $default;
 		} else {
 			$destinations[ $i ] = array_merge( $default, $destinations[ $i ] );
+		}
+
+		// Ensure each destination has a slug – default to sanitized name.
+		if ( empty( $destinations[ $i ]['slug'] ) ) {
+			$destinations[ $i ]['slug'] = sanitize_title( $destinations[ $i ]['name'] );
 		}
 	}
 
@@ -121,10 +136,12 @@ function directory_home_destinations_sanitize( $input ) {
 			$name    = isset( $row['name'] ) ? sanitize_text_field( $row['name'] ) : '';
 			$image   = isset( $row['image'] ) ? esc_url_raw( $row['image'] ) : '';
 			$enabled = ! empty( $row['enabled'] ) ? 1 : 0;
+			$slug    = isset( $row['slug'] ) && $row['slug'] !== '' ? sanitize_title( $row['slug'] ) : sanitize_title( $name );
 			$out['destinations'][] = array(
 				'name'    => $name,
 				'image'   => $image,
 				'enabled' => $enabled,
+				'slug'    => $slug,
 			);
 		}
 	}
@@ -170,6 +187,7 @@ function directory_home_destinations_admin_page() {
 				<tr>
 					<th><?php esc_html_e( 'Show', 'directory' ); ?></th>
 					<th><?php esc_html_e( 'Destination name', 'directory' ); ?></th>
+					<th><?php esc_html_e( 'Slug / URL segment', 'directory' ); ?></th>
 					<th><?php esc_html_e( 'Image URL', 'directory' ); ?></th>
 				</tr>
 				</thead>
@@ -184,6 +202,13 @@ function directory_home_destinations_admin_page() {
 						</td>
 						<td style="vertical-align: top;">
 							<input type="text" class="regular-text" name="<?php echo esc_attr( DIRECTORY_HOME_DESTINATIONS_OPTION ); ?>[destinations][<?php echo (int) $i; ?>][name]" value="<?php echo esc_attr( $dest['name'] ); ?>" />
+						</td>
+						<td style="vertical-align: top;">
+							<?php
+							$slug = isset( $dest['slug'] ) && $dest['slug'] !== '' ? $dest['slug'] : sanitize_title( $dest['name'] );
+							?>
+							<input type="text" class="regular-text" name="<?php echo esc_attr( DIRECTORY_HOME_DESTINATIONS_OPTION ); ?>[destinations][<?php echo (int) $i; ?>][slug]" value="<?php echo esc_attr( $slug ); ?>" />
+							<br /><span class="description"><?php esc_html_e( 'Used for the destination URL, e.g. /auckland.', 'directory' ); ?></span>
 						</td>
 						<td style="vertical-align: top;">
 							<input type="url" class="regular-text" name="<?php echo esc_attr( DIRECTORY_HOME_DESTINATIONS_OPTION ); ?>[destinations][<?php echo (int) $i; ?>][image]" value="<?php echo esc_attr( $dest['image'] ); ?>" />
@@ -220,8 +245,6 @@ function directory_render_home_destinations() {
 
 	// Limit to 10 destinations visually, even if more are configured.
 	$active = array_slice( $active, 0, 10 );
-
-	$base_url = function_exists( 'directory_relative_url' ) ? directory_relative_url( home_url( '/' ) ) : home_url( '/' );
 	?>
 	<section class="fp__section fp__destinations">
 		<div class="fp__wrap">
@@ -234,24 +257,15 @@ function directory_render_home_destinations() {
 						continue;
 					}
 
-					// Build a GeoDirectory search URL similar to the main "set location" search.
-					// Example target: ?geodir_search=1&stype=gd_place&s=+&snear=&sgeo_lat=&sgeo_lon=&city=auckland-1
-					$city_slug = isset( $dest['slug'] ) && $dest['slug'] !== '' ? $dest['slug'] : sanitize_title( $name );
+					// Destination slug used for pretty URLs like /auckland.
+					$slug = isset( $dest['slug'] ) && $dest['slug'] !== '' ? $dest['slug'] : sanitize_title( $name );
 
-					$search_url = add_query_arg(
-						array(
-							'geodir_search' => '1',
-							'stype'         => 'gd_place',
-							's'             => '+',
-							'snear'         => '',
-							'sgeo_lat'      => '',
-							'sgeo_lon'      => '',
-							'city'          => $city_slug,
-						),
-						$base_url
-					);
+					$dest_url = home_url( '/' . $slug . '/' );
+					if ( function_exists( 'directory_relative_url' ) ) {
+						$dest_url = directory_relative_url( $dest_url );
+					}
 					?>
-					<a class="fp__destination-card" href="<?php echo esc_url( $search_url ); ?>">
+					<a class="fp__destination-card" href="<?php echo esc_url( $dest_url ); ?>">
 						<div class="fp__destination-img" <?php if ( ! empty( $dest['image'] ) ) : ?>style="background-image:url('<?php echo esc_url( $dest['image'] ); ?>');"<?php endif; ?>></div>
 						<div class="fp__destination-label">
 							<span class="fp__destination-name"><?php echo esc_html( $name ); ?></span>
@@ -265,4 +279,45 @@ function directory_render_home_destinations() {
 	</section>
 	<?php
 }
+
+/**
+ * Ensure each enabled destination has a corresponding WordPress page using the
+ * Destination template and register pretty permalinks for them.
+ */
+function directory_register_destination_rewrites() {
+	$data         = directory_get_home_destinations();
+	$destinations = $data['destinations'];
+
+	foreach ( $destinations as $dest ) {
+		if ( empty( $dest['enabled'] ) || empty( $dest['name'] ) ) {
+			continue;
+		}
+		$slug = isset( $dest['slug'] ) && $dest['slug'] !== '' ? $dest['slug'] : sanitize_title( $dest['name'] );
+
+		// Create page if it does not already exist.
+		$page = get_page_by_path( $slug );
+		if ( ! $page ) {
+			$page_id = wp_insert_post(
+				array(
+					'post_title'   => $dest['name'],
+					'post_name'    => $slug,
+					'post_status'  => 'publish',
+					'post_type'    => 'page',
+					'post_content' => '',
+				)
+			);
+			if ( $page_id && ! is_wp_error( $page_id ) ) {
+				update_post_meta( $page_id, '_wp_page_template', 'page-destination.php' );
+			}
+		}
+	}
+
+	// Flush rewrite rules once after this code runs the first time.
+	if ( get_option( 'directory_destination_rewrite_version' ) !== '1' ) {
+		flush_rewrite_rules( false );
+		update_option( 'directory_destination_rewrite_version', '1' );
+	}
+}
+add_action( 'init', 'directory_register_destination_rewrites' );
+
 
