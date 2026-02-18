@@ -1038,6 +1038,32 @@ body.custom-frontend .cf-blog-single-hero-title {
 	line-height: 1.15;
 }
 
+body.custom-frontend .cf-blog-single-meta--top {
+	margin-top: 0.9rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1.25rem;
+	flex-wrap: wrap;
+	color: #64748b;
+	font-size: 0.95rem;
+}
+
+body.custom-frontend .cf-blog-single-meta-item {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+body.custom-frontend .cf-blog-single-meta-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 1.25rem;
+	height: 1.25rem;
+	color: #94a3b8;
+}
+
 body.custom-frontend .cf-blog-single-excerpt {
 	margin: 0;
 	font-size: 1rem;

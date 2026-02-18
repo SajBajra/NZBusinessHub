@@ -29,11 +29,6 @@ if ( ! $blog_page ) {
 		$thumb = get_the_post_thumbnail_url( $pid, 'large' );
 		$cats  = get_the_category( $pid );
 
-		// Calculate an estimated reading time (in minutes) for this post.
-		$content_plain   = wp_strip_all_tags( get_the_content() );
-		$word_count      = $content_plain ? str_word_count( $content_plain ) : 0;
-		$reading_minutes = $word_count > 0 ? max( 1, ceil( $word_count / 200 ) ) : 1;
-
 		// Share URLs.
 		$permalink   = get_permalink( $pid );
 		$title_attr  = get_the_title( $pid );
@@ -78,21 +73,12 @@ if ( ! $blog_page ) {
 
 					<div class="cf-blog-single-meta cf-blog-single-meta--top">
 						<span class="cf-blog-single-meta-item">
-							<?php echo esc_html( get_the_date( '', $pid ) ); ?>
+							<span class="cf-blog-single-meta-icon" aria-hidden="true"><i class="fas fa-user-circle"></i></span>
+							<span class="cf-blog-single-meta-text"><?php echo esc_html( get_the_author() ); ?></span>
 						</span>
-						<span class="cf-blog-single-meta-sep">•</span>
 						<span class="cf-blog-single-meta-item">
-							<?php
-							/* translators: %s: author name */
-							printf( esc_html__( 'By %s', 'directory' ), esc_html( get_the_author() ) );
-							?>
-						</span>
-						<span class="cf-blog-single-meta-sep">•</span>
-						<span class="cf-blog-single-meta-item">
-							<?php
-							/* translators: %s: reading time */
-							printf( esc_html__( '%s min read', 'directory' ), esc_html( $reading_minutes ) );
-							?>
+							<span class="cf-blog-single-meta-icon" aria-hidden="true"><i class="fas fa-calendar-alt"></i></span>
+							<span class="cf-blog-single-meta-text"><?php echo esc_html( get_the_date( '', $pid ) ); ?></span>
 						</span>
 					</div>
 				</div>
