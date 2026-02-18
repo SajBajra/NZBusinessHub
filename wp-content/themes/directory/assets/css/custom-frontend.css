@@ -1014,7 +1014,6 @@ body.custom-frontend .cf-blog-single-shell {
 
 /* Hero section – tall title area */
 body.custom-frontend .cf-blog-single-hero {
-	min-height: 250px;
 	display: flex;
 	align-items: center;
 }
