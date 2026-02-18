@@ -1242,11 +1242,12 @@ body.custom-frontend .cf-blog-single-share-sidebar {
 	font-size: 0.9rem;
 	color: #4b5563;
 	overflow: visible;
+	position: sticky;
+	top: 120px;
+	align-self: flex-start;
 }
 
 body.custom-frontend .cf-blog-single-share-sticky {
-	position: sticky;
-	top: 120px;
 	padding: 1rem 1.25rem;
 	border-radius: 16px;
 	border: 1px solid #e5e7eb;
