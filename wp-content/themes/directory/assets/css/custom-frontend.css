@@ -1007,7 +1007,7 @@ body.custom-frontend .cf-blog-single-body {
 body.custom-frontend .cf-blog-single-shell {
 	max-width: 900px;
 	margin: 0 auto 4.5rem;
-	padding: 0 1.5rem 4rem;
+	padding: 0 0.5rem 0;
 	box-sizing: border-box;
 	border-radius: 0;
 }
