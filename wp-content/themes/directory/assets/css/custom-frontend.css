@@ -1241,6 +1241,7 @@ body.custom-frontend .cf-blog-single-share-sidebar {
 	max-width: 30%;
 	font-size: 0.9rem;
 	color: #4b5563;
+	overflow: visible;
 }
 
 body.custom-frontend .cf-blog-single-share-sticky {
