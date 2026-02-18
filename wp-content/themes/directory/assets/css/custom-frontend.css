@@ -1021,7 +1021,7 @@ body.custom-frontend .cf-blog-single-hero {
 body.custom-frontend .cf-blog-single-hero-inner {
 	max-width: 900px;
 	margin: 0 auto;
-	padding: 3rem 1.5rem 2rem;
+	padding: 3rem 1.5rem 0;
 	box-sizing: border-box;
 }
 
