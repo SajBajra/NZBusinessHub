@@ -108,20 +108,59 @@ if ( ! $blog_page ) {
 		<div class="cf-blog-single-shell">
 			<article id="post-<?php echo esc_attr( $pid ); ?>" <?php post_class( 'cf-blog-single-layout' ); ?>>
 				<div class="cf-blog-single-body-two-col">
-					<aside class="cf-blog-single-share-sidebar" aria-label="<?php esc_attr_e( 'Share and statistics', 'directory' ); ?>">
+					<aside class="cf-blog-single-share-sidebar" aria-label="<?php esc_attr_e( 'Post details and sharing', 'directory' ); ?>">
 						<div class="cf-blog-single-share-sticky">
-							<p class="cf-blog-single-share-label"><?php esc_html_e( 'Share this article', 'directory' ); ?></p>
-							<?php if ( $share_count !== null ) : ?>
-								<p class="cf-blog-single-share-count">
-									<?php
-									printf(
-										/* translators: %d: number of comments */
-										esc_html__( '%d comments', 'directory' ),
-										(int) $share_count
-									);
+							<h2 class="cf-blog-single-details-title">
+								<?php esc_html_e( 'Post details', 'directory' ); ?>
+							</h2>
+
+							<div class="cf-blog-single-details-list">
+								<div class="cf-blog-single-detail-item">
+									<span class="cf-blog-single-detail-label"><?php esc_html_e( 'Published', 'directory' ); ?></span>
+									<span class="cf-blog-single-detail-value"><?php echo esc_html( get_the_date( '', $pid ) ); ?></span>
+								</div>
+								<div class="cf-blog-single-detail-item">
+									<span class="cf-blog-single-detail-label"><?php esc_html_e( 'Author', 'directory' ); ?></span>
+									<span class="cf-blog-single-detail-value"><?php echo esc_html( get_the_author() ); ?></span>
+								</div>
+								<div class="cf-blog-single-detail-item">
+									<span class="cf-blog-single-detail-label"><?php esc_html_e( 'Reading time', 'directory' ); ?></span>
+									<span class="cf-blog-single-detail-value">
+										<?php
+										printf(
+											/* translators: %s: reading time in minutes */
+											esc_html__( '%s min read', 'directory' ),
+											esc_html( $reading_minutes )
+										);
+										?>
+									</span>
+								</div>
+								<?php
+								$categories_list = get_the_category_list( ', ' );
+								if ( $categories_list ) :
 									?>
-								</p>
-							<?php endif; ?>
+									<div class="cf-blog-single-detail-item">
+										<span class="cf-blog-single-detail-label"><?php esc_html_e( 'Categories', 'directory' ); ?></span>
+										<span class="cf-blog-single-detail-value"><?php echo wp_kses_post( $categories_list ); ?></span>
+									</div>
+								<?php endif; ?>
+								<div class="cf-blog-single-detail-item">
+									<span class="cf-blog-single-detail-label"><?php esc_html_e( 'Comments', 'directory' ); ?></span>
+									<span class="cf-blog-single-detail-value">
+										<?php
+										printf(
+											/* translators: %d: number of comments */
+											esc_html__( '%d comments', 'directory' ),
+											(int) $share_count
+										);
+										?>
+									</span>
+								</div>
+							</div>
+
+							<hr class="cf-blog-single-details-separator" />
+
+							<p class="cf-blog-single-share-label"><?php esc_html_e( 'Share this article', 'directory' ); ?></p>
 							<ul class="cf-blog-single-share-list" aria-label="<?php esc_attr_e( 'Share this article', 'directory' ); ?>">
 								<li>
 									<a class="cf-blog-single-share-btn cf-blog-single-share-btn--facebook" href="<?php echo esc_url( $share_links['facebook'] ); ?>" target="_blank" rel="noopener noreferrer">
