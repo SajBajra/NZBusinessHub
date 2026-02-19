@@ -51,7 +51,6 @@ while ( have_posts() ) :
 			$street,
 			$city,
 			$region,
-			$zip,
 			$country,
 		)
 	);
@@ -220,7 +219,7 @@ while ( have_posts() ) :
 					<h2 id="cf-details-heading" class="cf-single-place-sidebar-title"><?php esc_html_e( 'Details', 'directory' ); ?></h2>
 					<div class="cf-single-place-details-list">
 						<?php
-						$detail_keys = array( 'street', 'city', 'region', 'country', 'zip', 'phone', 'email', 'website', 'business_hours_today' );
+						$detail_keys = array( 'street', 'city', 'region', 'country', 'phone', 'email', 'website', 'business_hours_today' );
 						foreach ( $detail_keys as $key ) {
 							if ( ! function_exists( 'geodir_get_post_meta' ) ) {
 								break;
@@ -237,6 +236,12 @@ while ( have_posts() ) :
 							} else {
 								$val = geodir_get_post_meta( $pid, $key, true );
 							}
+
+							// Avoid duplicate city/region lines like "Auckland" + "Auckland".
+							if ( $key === 'region' && $region && $city && strtolower( $region ) === strtolower( $city ) ) {
+								continue;
+							}
+
 							if ( $val === '' || $val === null ) {
 								continue;
 							}
@@ -257,11 +262,6 @@ while ( have_posts() ) :
 								<?php endif; ?>
 							</div>
 						<?php } ?>
-						<?php if ( function_exists( 'do_shortcode' ) ) : ?>
-							<div class="cf-single-place-detail-meta">
-								<?php echo do_shortcode( '[gd_post_meta key="address" show="value"]' ); ?>
-							</div>
-						<?php endif; ?>
 					</div>
 				</section>
 			</aside>
