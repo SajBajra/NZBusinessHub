@@ -242,7 +242,8 @@ while ( have_posts() ) :
 								continue;
 							}
 
-							if ( $val === '' || $val === null ) {
+							// Hide empty or blank values (phone, email, website, etc.).
+							if ( $val === '' || $val === null || ( is_string( $val ) && trim( $val ) === '' ) ) {
 								continue;
 							}
 							$label = ucfirst( str_replace( '_', ' ', $key ) );
