@@ -2466,8 +2466,12 @@ body.custom-frontend .cf-gd-card-rating .geodir_post_meta {
 	color: #fff;
 	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
-body.custom-frontend .cf-gd-card-rating .fa-star {
+/* Only color the active (foreground) stars on cards */
+body.custom-frontend .cf-gd-card-rating .gd-rating-foreground .fa-star {
 	color: #fbbf24;
+}
+body.custom-frontend .cf-gd-card-rating .gd-rating-background .fa-star {
+	color: #e5e7eb;
 }
 
 body.custom-frontend .cf-gd-card-body {
