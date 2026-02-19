@@ -326,6 +326,26 @@ function directory_force_custom_gd_single_template( $template ) {
 add_filter( 'template_include', 'directory_force_custom_gd_single_template', 9999 );
 
 /**
+ * Force custom template for the GeoDirectory Add Listing page.
+ */
+function directory_force_add_listing_template( $template ) {
+	if ( ! function_exists( 'geodir_add_listing_page_id' ) ) {
+		return $template;
+	}
+
+	$add_page_id = geodir_add_listing_page_id( 'gd_place' );
+	if ( $add_page_id && is_page( $add_page_id ) ) {
+		$custom = get_stylesheet_directory() . '/page-add-listing.php';
+		if ( file_exists( $custom ) ) {
+			return $custom;
+		}
+	}
+
+	return $template;
+}
+add_filter( 'template_include', 'directory_force_add_listing_template', 9999 );
+
+/**
  * Enqueue custom frontend CSS for entire site (all pages using custom PHP templates).
  */
 function directory_enqueue_custom_frontend() {
