@@ -21,9 +21,6 @@ get_header( 'custom' );
 	<div class="cf-single-place-inner cf-add-listing-inner">
 		<?php if ( ! is_user_logged_in() ) : ?>
 			<section class="cf-add-listing-hero" aria-labelledby="cf-add-listing-title">
-				<div class="cf-add-listing-hero-media">
-					<img src="https://images.pexels.com/photos/1181395/pexels-photo-1181395.jpeg?auto=compress&cs=tinysrgb&w=800" alt="<?php esc_attr_e( 'People collaborating in an office', 'directory' ); ?>" class="cf-add-listing-hero-image" loading="lazy" />
-				</div>
 				<div class="cf-add-listing-hero-content">
 					<h1 id="cf-add-listing-title" class="cf-add-listing-title">
 						<?php esc_html_e( 'Add your business to NZ Business Hub', 'directory' ); ?>
@@ -31,11 +28,6 @@ get_header( 'custom' );
 					<p class="cf-add-listing-lead">
 						<?php esc_html_e( 'Create a free account or sign in to add and manage your business listings, keep details up to date, and help customers find you easily.', 'directory' ); ?>
 					</p>
-					<ul class="cf-add-listing-benefits">
-						<li><?php esc_html_e( 'Show up in local searches across New Zealand.', 'directory' ); ?></li>
-						<li><?php esc_html_e( 'Add photos, opening hours, contact details and more.', 'directory' ); ?></li>
-						<li><?php esc_html_e( 'Update your listing anytime from your dashboard.', 'directory' ); ?></li>
-					</ul>
 					<div class="cf-add-listing-actions">
 						<?php
 						$redirect = esc_url( home_url( add_query_arg( array(), $_SERVER['REQUEST_URI'] ) ) );
@@ -54,9 +46,6 @@ get_header( 'custom' );
 							</a>
 						<?php endif; ?>
 					</div>
-					<p class="cf-add-listing-note">
-						<?php esc_html_e( 'It only takes a moment to get started, and it\'s free.', 'directory' ); ?>
-					</p>
 				</div>
 			</section>
 		<?php else : ?>
