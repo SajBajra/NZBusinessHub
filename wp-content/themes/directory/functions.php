@@ -13,6 +13,7 @@ require_once 'includes/pattern-filters/content.php';
 require_once 'includes/geodir-parent-cats.php';
 require_once 'includes/geodir-category-cms.php';
 require_once 'includes/listing-plans.php';
+require_once 'includes/admin-listing-contact-fields.php';
 require_once 'includes/testimonials.php';
 require_once 'includes/home-featured-sections.php';
 require_once 'includes/home-destinations.php';
