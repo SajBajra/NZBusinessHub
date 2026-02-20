@@ -41,8 +41,13 @@ if ( empty( $cf_quick_links ) ) {
 	);
 }
 
-$cf_recent = get_posts( array( 'numberposts' => 1, 'post_status' => 'publish', 'post_type' => 'post' ) );
+$cf_recent      = get_posts( array( 'numberposts' => 1, 'post_status' => 'publish', 'post_type' => 'post' ) );
 $cf_footer_logo = directory_relative_url( content_url( 'uploads/2026/01/NZ-Directory-LOGO-3.png' ) );
+
+// Optional newsletter section for single blog posts, rendered above the footer.
+if ( function_exists( 'directory_render_newsletter_section' ) ) {
+	directory_render_newsletter_section( is_singular( 'post' ) ? get_permalink() : '' );
+}
 ?>
 <footer class="cf-footer">
 	<div class="cf-footer-top">

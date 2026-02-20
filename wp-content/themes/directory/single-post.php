@@ -161,13 +161,6 @@ if ( ! $blog_page ) {
 						<footer class="cf-blog-single-footer">
 							<a href="<?php echo esc_url( $blog_page ); ?>" class="cf-single-back">← <?php esc_html_e( 'Back to Blog', 'directory' ); ?></a>
 						</footer>
-
-						<?php
-						// Newsletter signup section after content + footer.
-						if ( function_exists( 'directory_render_newsletter_section' ) ) {
-							directory_render_newsletter_section( get_permalink( $pid ) );
-						}
-						?>
 					</div>
 				</div>
 			</article>
