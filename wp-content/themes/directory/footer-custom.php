@@ -202,8 +202,36 @@ $cf_footer_logo = directory_relative_url( content_url( 'uploads/2026/01/NZ-Direc
 							// UsersWP register form.
 							echo do_shortcode( '[uwp_register]' );
 						} else {
-							// Fallback message when UsersWP is not active.
-							echo '<div class="cf-auth-message"><p>' . esc_html__( 'Registration is currently disabled. Please contact the site administrator.', 'directory' ) . '</p></div>';
+							// Fallback to core WordPress registration form.
+							$registration_url = site_url( 'wp-login.php?action=register', 'login_post' );
+							$redirect_to      = get_permalink();
+							?>
+							<form name="registerform" id="cf-modal-register-form" action="<?php echo esc_url( $registration_url ); ?>" method="post" novalidate="novalidate">
+								<p class="cf-auth-label-wrap">
+									<label for="cf-register-user_login" class="cf-auth-label"><?php esc_html_e( 'Username', 'directory' ); ?></label>
+									<input type="text" name="user_login" id="cf-register-user_login" class="cf-auth-input" value="" size="20" autocapitalize="off" autocomplete="username" required />
+								</p>
+								<p class="cf-auth-label-wrap">
+									<label for="cf-register-user_email" class="cf-auth-label"><?php esc_html_e( 'Email', 'directory' ); ?></label>
+									<input type="email" name="user_email" id="cf-register-user_email" class="cf-auth-input" value="" size="25" autocomplete="email" required />
+								</p>
+								<?php
+								/**
+								 * Allow plugins to add extra fields to the registration form.
+								 */
+								do_action( 'register_form' );
+								?>
+								<p class="cf-auth-form-footer">
+									<?php esc_html_e( 'Registration confirmation will be emailed to you.', 'directory' ); ?>
+								</p>
+								<input type="hidden" name="redirect_to" value="<?php echo esc_attr( $redirect_to ); ?>" />
+								<p>
+									<button type="submit" name="wp-submit" id="cf-register-submit" class="cf-auth-submit-btn">
+										<?php esc_html_e( 'Register', 'directory' ); ?>
+									</button>
+								</p>
+							</form>
+							<?php
 						}
 						?>
 					</div>
