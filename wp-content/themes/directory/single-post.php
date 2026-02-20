@@ -91,6 +91,16 @@ if ( ! $blog_page ) {
 			</div>
 		<?php endif; ?>
 
+		<?php
+		// Build TOC + processed content once so we can use the TOC in the sidebar.
+		$toc_data = function_exists( 'directory_get_post_toc_and_content' )
+			? directory_get_post_toc_and_content( $pid )
+			: array(
+				'toc'     => '',
+				'content' => apply_filters( 'the_content', get_the_content() ),
+			);
+		?>
+
 		<div class="cf-blog-single-shell">
 			<article id="post-<?php echo esc_attr( $pid ); ?>" <?php post_class( 'cf-blog-single-layout' ); ?>>
 				<div class="cf-blog-single-body-two-col">
@@ -123,24 +133,19 @@ if ( ! $blog_page ) {
 									</a>
 								</li>
 							</ul>
+
+							<?php
+							// Sticky Table of contents directly under share section.
+							if ( ! empty( $toc_data['toc'] ) ) {
+								echo $toc_data['toc']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+							}
+							?>
 						</div>
 					</aside>
 
 					<div class="cf-blog-single-content-wrap entry-content">
 						<?php
-						$toc_data = function_exists( 'directory_get_post_toc_and_content' )
-							? directory_get_post_toc_and_content( $pid )
-							: array(
-								'toc'     => '',
-								'content' => apply_filters( 'the_content', get_the_content() ),
-							);
-
-						// Table of contents (built from H2 headings).
-						if ( ! empty( $toc_data['toc'] ) ) {
-							echo $toc_data['toc']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-						}
-
-						// Main post content with injected anchor IDs.
+						// Main post content with injected anchor IDs (TOC is in sidebar).
 						echo $toc_data['content']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 						?>
 

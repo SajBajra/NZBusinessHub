@@ -4026,7 +4026,8 @@ body.custom-frontend .cf-single-place .tab-pane {
 
 /* Blog single – table of contents */
 body.custom-frontend .cf-blog-single-toc {
-	margin-bottom: 2rem;
+	margin-top: 1.75rem;
+	margin-bottom: 0;
 	padding: 1.5rem 1.5rem 1.25rem;
 	border-radius: 16px;
 	border: 1px solid #e5e7eb;
