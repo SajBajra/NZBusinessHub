@@ -1,0 +1,671 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoDirectory Dynamic User Emails 2.0.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-13 18:07+0530\n"
+"PO-Revision-Date: 2025-03-13 18:07+0530\n"
+"Last-Translator: \n"
+"Language-Team: AyeCode Ltd <contact@ayecode.io>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;__ngettext:1,2;__ngettext_noop:1,2;_c;_e;_ex:1,2c;"
+"_n:1,2;_n_noop:1,2;_nc:4c,1,2;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;gettext;"
+"gettext_noop\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: includes/admin/class-geodir-dynamic-emails-admin-lists.php:72
+#: includes/admin/class-geodir-dynamic-emails-admin-log.php:72
+msgid "Action failed. Please refresh the page and retry."
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-admin-lists.php:76
+#: includes/admin/class-geodir-dynamic-emails-admin-log.php:76
+msgid "Sorry, you are not allowed to perform this action."
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-admin-lists.php:91
+#: includes/admin/class-geodir-dynamic-emails-admin-log.php:91
+msgid "Select at-least one item to delete."
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-admin-lists.php:109
+msgid "Select at-least one item to duplicate."
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-admin-lists.php:135
+#: includes/admin/class-geodir-dynamic-emails-admin-log.php:117
+#, php-format
+msgid "Item deleted successfully."
+msgid_plural "%d items deleted successfully."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/class-geodir-dynamic-emails-admin-lists.php:137
+#: includes/admin/class-geodir-dynamic-emails-admin-log.php:119
+msgid "No item deleted."
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-admin-lists.php:143
+#, php-format
+msgid "Item duplicated successfully."
+msgid_plural "%d items duplicated successfully."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/class-geodir-dynamic-emails-admin-lists.php:145
+msgid "No item duplicated."
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-admin-lists.php:156
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:43
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:344
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:350
+msgid "Email Lists"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-admin-lists.php:156
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:150
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:344
+msgid "Add New List"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-admin-lists.php:170
+msgid "Search Email List"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-admin-log.php:130
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:44
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:126
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:132
+msgid "Email Log"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-admin-log.php:144
+msgid "Search Email Log"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-admin-settings.php:70
+msgid "IF"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-admin-settings.php:75
+#: includes/admin/class-geodir-dynamic-emails-admin-settings.php:76
+msgid "FIELD"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-admin-settings.php:93
+#: includes/admin/class-geodir-dynamic-emails-admin-settings.php:94
+msgid "CONDITION"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-admin-settings.php:118
+#: includes/admin/class-geodir-dynamic-emails-admin-settings.php:120
+msgid "VALUE TO MATCH"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-admin-settings.php:128
+msgid "Remove"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-admin.php:79
+msgid "Dynamic User Emails"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-admin.php:80
+msgid ""
+"Tick to completely remove all of its data when Dynamic User Emails is "
+"deleted."
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-lists-list-table.php:43
+msgid "ID"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-lists-list-table.php:44
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:207
+msgid "Name"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-lists-list-table.php:45
+#: includes/admin/class-geodir-dynamic-emails-log-list-table.php:45
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:217
+msgid "Event"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-lists-list-table.php:46
+#: includes/admin/class-geodir-dynamic-emails-log-list-table.php:46
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:228
+msgid "Post Type"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-lists-list-table.php:47
+#: includes/admin/class-geodir-dynamic-emails-log-list-table.php:47
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:265
+msgid "User Roles"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-lists-list-table.php:48
+#: includes/admin/class-geodir-dynamic-emails-log-list-table.php:43
+msgid "Date"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-lists-list-table.php:49
+#: includes/admin/class-geodir-dynamic-emails-log-list-table.php:48
+msgid "Stats"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-lists-list-table.php:135
+#: includes/admin/class-geodir-dynamic-emails-log-list-table.php:133
+msgid "No items found."
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-lists-list-table.php:145
+#: includes/admin/class-geodir-dynamic-emails-lists-list-table.php:185
+msgid "Duplicate"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-lists-list-table.php:146
+#: includes/admin/class-geodir-dynamic-emails-lists-list-table.php:192
+#: includes/admin/class-geodir-dynamic-emails-log-list-table.php:143
+#: includes/admin/class-geodir-dynamic-emails-log-list-table.php:178
+msgid "Delete"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-lists-list-table.php:184
+msgid "Edit"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-lists-list-table.php:185
+msgid "Make copy of this email list"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-lists-list-table.php:188
+#: includes/admin/class-geodir-dynamic-emails-log-list-table.php:176
+msgid "Re-Send Emails"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-lists-list-table.php:188
+msgid "Send Emails"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-lists-list-table.php:189
+#: includes/admin/class-geodir-dynamic-emails-log-list-table.php:176
+msgid "Re-send emails to this email list"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-lists-list-table.php:189
+msgid "Send emails to this email list"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-lists-list-table.php:205
+#: includes/admin/class-geodir-dynamic-emails-log-list-table.php:191
+#, php-format
+msgid "Select %s"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-lists-list-table.php:257
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:317
+msgid "Pending Review"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-lists-list-table.php:259
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:318
+msgid "Published"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-lists-list-table.php:264
+#: includes/admin/class-geodir-dynamic-emails-lists-list-table.php:279
+#: includes/admin/class-geodir-dynamic-emails-log-list-table.php:250
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-lists-list-table.php:273
+#: includes/admin/class-geodir-dynamic-emails-log-list-table.php:241
+#, php-format
+msgid "Emails Sent: %s"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-lists-list-table.php:275
+#: includes/admin/class-geodir-dynamic-emails-log-list-table.php:243
+#, php-format
+msgid "In Queue: %s"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-lists-list-table.php:280
+#, php-format
+msgid "Last Sent: %s"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-lists-list-table.php:336
+#: includes/admin/class-geodir-dynamic-emails-log-list-table.php:306
+msgid "Filter"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-lists-list-table.php:350
+#: includes/admin/class-geodir-dynamic-emails-log-list-table.php:320
+msgid "Filter by Event"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-lists-list-table.php:351
+#: includes/admin/class-geodir-dynamic-emails-log-list-table.php:321
+msgid "All Event Actions"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-lists-list-table.php:367
+#: includes/admin/class-geodir-dynamic-emails-log-list-table.php:337
+msgid "Filter by Post Type"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-lists-list-table.php:368
+#: includes/admin/class-geodir-dynamic-emails-log-list-table.php:338
+msgid "All Post Types"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-log-list-table.php:44
+msgid "Email List"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-log-list-table.php:173
+msgid "Edit Email List"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-log-list-table.php:174
+#, php-format
+msgid "ID: %d"
+msgstr ""
+
+#: includes/admin/class-geodir-dynamic-emails-log-list-table.php:222
+#, php-format
+msgid "List ID: %d"
+msgstr ""
+
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:24
+msgid "Dynamic Emails"
+msgstr ""
+
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:45
+msgid "Settings"
+msgstr ""
+
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:106
+msgid "Notifications Settings"
+msgstr ""
+
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:112
+msgid "Enable Email"
+msgstr ""
+
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:113
+msgid ""
+"Untick to disable emails notifications sent within dynamic emails events."
+msgstr ""
+
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:143
+msgid "Add New Email List"
+msgstr ""
+
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:145
+msgid "Edit Email List:"
+msgstr ""
+
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:152
+msgid "Back to Email Lists"
+msgstr ""
+
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:165
+msgid "Default Subject"
+msgstr ""
+
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:178
+msgid "Default Template"
+msgstr ""
+
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:208
+msgid "Email list name."
+msgstr ""
+
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:218
+msgid "Select event to send emails."
+msgstr ""
+
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:229
+msgid "Select post type."
+msgstr ""
+
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:232
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:233
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:245
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:270
+#: includes/functions.php:138 includes/functions.php:162
+msgid "All"
+msgstr ""
+
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:240
+msgid "Category"
+msgstr ""
+
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:241
+msgid "Select the category."
+msgstr ""
+
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:253
+msgid "Fields"
+msgstr ""
+
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:254
+msgid "Filter by fields."
+msgstr ""
+
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:266
+msgid "Select user roles."
+msgstr ""
+
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:277
+msgid "Email To"
+msgstr ""
+
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:278
+msgid "Select the recipient email."
+msgstr ""
+
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:281
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:282
+msgid "Author Email"
+msgstr ""
+
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:281
+msgid "Listing Email (requires email field value is set)"
+msgstr ""
+
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:287
+msgid "Email Subject"
+msgstr ""
+
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:288
+msgid "The email subject."
+msgstr ""
+
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:300
+msgid "Email Template"
+msgstr ""
+
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:301
+msgid "The email body, this can be text or HTML."
+msgstr ""
+
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:304
+msgid "Available template tags:"
+msgstr ""
+
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:312
+msgid "Email List Status"
+msgstr ""
+
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:313
+msgid "Email list status."
+msgstr ""
+
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:438
+msgid ""
+"Date fields need the format: YYYY-MM-DD. You can also use strings such as "
+"\"-6 months\", \"+5 days\", \"-2 weeks\" or \"now\""
+msgstr ""
+
+#: includes/admin/settings/class-geodir-dynamic-emails-settings-page.php:442
+msgid "Add Field"
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-action.php:527
+msgid "Email list is not published or not allowed to send instantly."
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-ajax.php:51
+#: includes/class-geodir-dynamic-emails-ajax.php:81
+msgid "Invalid access!"
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-ajax.php:55
+#: includes/class-geodir-dynamic-emails-ajax.php:73
+msgid "You are not allowed to perform this action!"
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-ajax.php:65
+#: includes/class-geodir-dynamic-emails-ajax.php:90
+msgid "Something went wrong, please try again after some time."
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-ajax.php:94
+#, php-format
+msgid "%d emails are added in queue to send to the users."
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-ajax.php:96
+msgid "No matching results found to send emails."
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-email.php:34
+msgid "Instant"
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-email.php:36
+msgid "[[#site_name#]] Instant Email Subject"
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-email.php:37
+msgid ""
+"Hello [#to_name#],\n"
+"\n"
+"Instant email content.\n"
+"\n"
+"Thank You."
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-email.php:44
+msgid "User Registration"
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-email.php:46
+msgid "[[#site_name#]] User Registration Email Subject"
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-email.php:47
+msgid ""
+"Hello [#to_name#],\n"
+"\n"
+"User Registration email content.\n"
+"\n"
+"Thank You."
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-email.php:54
+msgid "New Listing"
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-email.php:56
+msgid "[[#site_name#]] New Listing Email Subject"
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-email.php:57
+msgid ""
+"Hello [#to_name#],\n"
+"\n"
+"New Listing email content.\n"
+"\n"
+"Thank You."
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-email.php:64
+msgid "Edit Listing"
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-email.php:66
+msgid "[[#site_name#]] Edit Listing Email Subject"
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-email.php:67
+msgid ""
+"Hello [#to_name#],\n"
+"\n"
+"Edit Listing email content.\n"
+"\n"
+"Thank You."
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-email.php:74
+msgid "New Comment/Review on Listing"
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-email.php:76
+msgid ""
+"[[#site_name#]] A new comment has been submitted on your listing "
+"[#listing_title#]"
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-email.php:77
+msgid ""
+"Hello [#to_name#],\n"
+"\n"
+"A new comment has been submitted on your listing [#listing_link#].\n"
+"\n"
+"Thank You."
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-email.php:84
+msgid "Response to Review Owner"
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-email.php:86
+msgid "[[#site_name#]] Thank You for your Review on [#listing_title#]"
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-email.php:87
+msgid ""
+"Hello [#to_name#],\n"
+"\n"
+"Thank you so much for your valuable feedback on [#listing_link#]! We really "
+"appreciate you taking the time to share your experience with us and we would "
+"love to see you again.\n"
+"\n"
+"Thank You."
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-email.php:110
+msgid "Immediately on Post Published / Updated"
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-email.php:114
+#, php-format
+msgid "Every %d Hours"
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-email.php:114
+#, php-format
+msgid "Every %d Hour"
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-email.php:180
+msgid "Post tags:"
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-email.php:181
+msgid "Comment tags:"
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-email.php:188
+msgid "[[#site_name#]] EMAIL SUBJECT HERE"
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-email.php:197
+msgid ""
+"Hello [#to_name#],\n"
+"\n"
+"EMAIL CONTENT HERE.\n"
+"\n"
+"Thank You."
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-list.php:106
+msgid "Email list name is required."
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-list.php:109
+msgid "Event action is required."
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-list.php:112
+msgid "Email subject is required."
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-list.php:115
+msgid "Email template is required."
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-list.php:164
+msgid "Email list has been updated."
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-list.php:166
+msgid "Email list has been saved."
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-list.php:203
+msgid "Invalid email list ID."
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-list.php:217
+msgid "Invalid email list event action."
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-list.php:225
+msgid "Invalid email subject."
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-list.php:233
+msgid "Invalid email template."
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-list.php:241
+msgid "Invalid email list name."
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-list.php:313
+msgid "Could not update email list in the database."
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-list.php:319
+msgid "Could not insert email list into the database."
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-log.php:45
+msgid "Could not save log data into the database."
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails-user.php:122
+msgid "Could not save user email log data into the database."
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails.php:175
+msgid ""
+"GeoDirectory plugin is required for the Dynamic User Emails plugin to work "
+"properly."
+msgstr ""
+
+#: includes/class-geodir-dynamic-emails.php:187
+msgid ""
+"Your version of PHP is below the minimum version of PHP required by "
+"GeoDirectory Dynamic User Emails. Please contact your host and request that "
+"your version be upgraded to 5.6 or later."
+msgstr ""
+
+#: includes/functions.php:116
+#, php-format
+msgid "Every %d Minutes"
+msgstr ""

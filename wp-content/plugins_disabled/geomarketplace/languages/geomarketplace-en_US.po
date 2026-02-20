@@ -1,0 +1,296 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoDirectory Marketplace 2.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-04 17:14+0530\n"
+"PO-Revision-Date: 2025-03-04 17:14+0530\n"
+"Last-Translator: \n"
+"Language-Team: AyeCode Ltd <contact@ayecode.io>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;__ngettext:1,2;__ngettext_noop:1,2;_c;_e;_ex:1,2c;"
+"_n:1,2;_n_noop:1,2;_nc:4c,1,2;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;gettext;"
+"gettext_noop\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: includes/admin/class-geodir-marketplace-admin-install.php:289
+#: includes/class-geodir-marketplace-woocommerce.php:112
+msgid "Shop"
+msgstr ""
+
+#: includes/admin/class-geodir-marketplace-admin.php:77
+#: includes/admin/settings/class-geodir-marketplace-settings-general.php:27
+msgid "Marketplace"
+msgstr ""
+
+#: includes/admin/class-geodir-marketplace-admin.php:78
+msgid ""
+"Check this box if you would like to completely remove all of its data when "
+"Marketplace is deleted."
+msgstr ""
+
+#: includes/admin/settings/class-geodir-marketplace-settings-general.php:47
+msgid "Settings"
+msgstr ""
+
+#: includes/admin/settings/class-geodir-marketplace-settings-general.php:92
+msgid "Marketplace Settings"
+msgstr ""
+
+#: includes/admin/settings/class-geodir-marketplace-settings-general.php:100
+msgid "Link Post Types"
+msgstr ""
+
+#: includes/admin/settings/class-geodir-marketplace-settings-general.php:101
+msgid "Select post types allowed to linking the listing with the product."
+msgstr ""
+
+#: includes/admin/settings/class-geodir-marketplace-settings-general.php:102
+msgid "Select Post Types..."
+msgstr ""
+
+#: includes/admin/settings/class-geodir-marketplace-settings-general.php:112
+msgid "Allow Vendors to Link Listing?"
+msgstr ""
+
+#: includes/admin/settings/class-geodir-marketplace-settings-general.php:113
+msgid ""
+"Allow vendors to link a product to their listings from frontend vendor "
+"dashboard."
+msgstr ""
+
+#: includes/admin/views/html-product-panel.php:24
+#: templates/marketplace/default.php:27 templates/marketplace/default.php:28
+#: templates/marketplace/dokan.php:34 templates/marketplace/mvx.php:28
+#: templates/marketplace/mvx.php:29 templates/marketplace/wcfm.php:32
+#: templates/marketplace/wcmp.php:28 templates/marketplace/wcmp.php:29
+#: templates/marketplace/wcv.php:32
+msgid "Vendor"
+msgstr ""
+
+#: includes/admin/views/html-product-panel.php:27
+#: templates/marketplace/default.php:29 templates/marketplace/mvx.php:30
+#: templates/marketplace/wcfm.php:32 templates/marketplace/wcmp.php:30
+#: templates/marketplace/wcv.php:33
+msgid "Choose the vendor to fetch the listings."
+msgstr ""
+
+#: includes/admin/views/html-product-panel.php:37
+#: templates/marketplace/default.php:41 templates/marketplace/default.php:42
+#: templates/marketplace/dokan.php:44 templates/marketplace/mvx.php:42
+#: templates/marketplace/mvx.php:43 templates/marketplace/wcfm.php:35
+#: templates/marketplace/wcmp.php:42 templates/marketplace/wcmp.php:43
+#: templates/marketplace/wcv.php:51
+msgid "Linked Listing"
+msgstr ""
+
+#: includes/admin/views/html-product-panel.php:40
+#: templates/marketplace/default.php:43 templates/marketplace/mvx.php:44
+#: templates/marketplace/wcfm.php:35 templates/marketplace/wcmp.php:44
+#: templates/marketplace/wcv.php:52
+msgid "Choose the listing to link this product."
+msgstr ""
+
+#: includes/class-geodir-marketplace-woocommerce.php:68
+msgid "Default sorting (custom ordering - name)"
+msgstr ""
+
+#: includes/class-geodir-marketplace-woocommerce.php:69
+msgid "Sort by popularity (sales)"
+msgstr ""
+
+#: includes/class-geodir-marketplace-woocommerce.php:70
+msgid "Sort by average rating"
+msgstr ""
+
+#: includes/class-geodir-marketplace-woocommerce.php:71
+msgid "Sort by latest"
+msgstr ""
+
+#: includes/class-geodir-marketplace-woocommerce.php:72
+msgid "Sort by price: low to high"
+msgstr ""
+
+#: includes/class-geodir-marketplace-woocommerce.php:73
+msgid "Sort by price: high to low"
+msgstr ""
+
+#: includes/class-geodir-marketplace-woocommerce.php:223
+#: templates/marketplace/dokan.php:25 templates/marketplace/wcfm.php:26
+msgid "GeoDirectory"
+msgstr ""
+
+#: includes/class-geodir-marketplace-woocommerce.php:380
+msgid "Select Listing..."
+msgstr ""
+
+#: includes/class-geodir-marketplace-woocommerce.php:386
+#, php-format
+msgid "%1$s (ID: %2$s)"
+msgstr ""
+
+#: includes/class-geodir-marketplace-woocommerce.php:441
+#, php-format
+msgid "View all products from %s"
+msgstr ""
+
+#: includes/class-geodir-marketplace-woocommerce.php:516
+msgid "Select Vendor..."
+msgstr ""
+
+#: includes/class-geodir-marketplace-woocommerce.php:531
+#: includes/class-geodir-marketplace-woocommerce.php:543
+#: includes/class-geodir-marketplace-woocommerce.php:556
+#: includes/class-geodir-marketplace-woocommerce.php:569
+#: includes/class-geodir-marketplace-woocommerce.php:579
+#, php-format
+msgid "%s ( ID: %d )"
+msgstr ""
+
+#: includes/class-geodir-marketplace.php:232
+#, php-format
+msgid "GeoDirectory Marketplace plugin requires %s plugin to be active."
+msgstr ""
+
+#: includes/class-geodir-marketplace.php:248
+#, php-format
+msgid ""
+"GeoDirectory Marketplace plugin requires multivendor marketplace plugin %s "
+"to be active."
+msgstr ""
+
+#: includes/class-geodir-marketplace.php:259
+#, php-format
+msgid ""
+"GeoDirectory Marketplace plugin requires any of multivendor marketplace "
+"plugin from %s to be active."
+msgstr ""
+
+#: includes/class-geodir-marketplace.php:290
+msgid ""
+"Your version of PHP is below the minimum version of PHP required by "
+"GeoDirectory Marketplace. Please contact your host and request that your "
+"version be upgraded to 5.6 or later."
+msgstr ""
+
+#: includes/widgets/class-geodir-marketplace-widget-shop.php:26
+msgid "GD > Marketplace"
+msgstr ""
+
+#: includes/widgets/class-geodir-marketplace-widget-shop.php:34
+msgid "Displays WooCommerce vendor products on single listing page."
+msgstr ""
+
+#: includes/widgets/class-geodir-marketplace-widget-shop.php:51
+msgid "Title:"
+msgstr ""
+
+#: includes/widgets/class-geodir-marketplace-widget-shop.php:52
+msgid "The widget title."
+msgstr ""
+
+#: includes/widgets/class-geodir-marketplace-widget-shop.php:59
+msgid "Filter by Product Categories:"
+msgstr ""
+
+#: includes/widgets/class-geodir-marketplace-widget-shop.php:60
+msgid "Filter products by product categories."
+msgstr ""
+
+#: includes/widgets/class-geodir-marketplace-widget-shop.php:69
+msgid "Categories Operator:"
+msgstr ""
+
+#: includes/widgets/class-geodir-marketplace-widget-shop.php:70
+msgid "Operator to compare categories. Possible values are IN, NOT IN, AND."
+msgstr ""
+
+#: includes/widgets/class-geodir-marketplace-widget-shop.php:79
+msgid "Shop Order:"
+msgstr ""
+
+#: includes/widgets/class-geodir-marketplace-widget-shop.php:80
+msgid "Shop order to show the results."
+msgstr ""
+
+#: includes/widgets/class-geodir-marketplace-widget-shop.php:88
+msgid "Show the results with pagination"
+msgstr ""
+
+#: includes/widgets/class-geodir-marketplace-widget-shop.php:95
+msgid "Products Per Page:"
+msgstr ""
+
+#: includes/widgets/class-geodir-marketplace-widget-shop.php:96
+msgid ""
+"Number of products to show per page. Leave blank or enter 0 to show all "
+"products."
+msgstr ""
+
+#: includes/widgets/class-geodir-marketplace-widget-shop.php:104
+msgid "Columns:"
+msgstr ""
+
+#: includes/widgets/class-geodir-marketplace-widget-shop.php:105
+msgid "Columns to show the results."
+msgstr ""
+
+#: includes/widgets/class-geodir-marketplace-widget-shop.php:107
+#, php-format
+msgid "Default (%d columns)"
+msgstr ""
+
+#: includes/widgets/class-geodir-marketplace-widget-shop.php:108
+msgid "One column"
+msgstr ""
+
+#: includes/widgets/class-geodir-marketplace-widget-shop.php:109
+msgid "Two columns"
+msgstr ""
+
+#: includes/widgets/class-geodir-marketplace-widget-shop.php:110
+msgid "Three columns"
+msgstr ""
+
+#: includes/widgets/class-geodir-marketplace-widget-shop.php:111
+msgid "Four columns"
+msgstr ""
+
+#: includes/widgets/class-geodir-marketplace-widget-shop.php:112
+msgid "Five columns"
+msgstr ""
+
+#: includes/widgets/class-geodir-marketplace-widget-shop.php:113
+msgid "Six columns"
+msgstr ""
+
+#: includes/widgets/class-geodir-marketplace-widget-shop.php:121
+msgid "Show results count (with pagination only)."
+msgstr ""
+
+#: includes/widgets/class-geodir-marketplace-widget-shop.php:129
+msgid "Show orderby selection (with pagination only)."
+msgstr ""
+
+#: includes/widgets/class-geodir-marketplace-widget-shop.php:137
+msgid "Show link to view all products from the vendor."
+msgstr ""
+
+#: includes/widgets/class-geodir-marketplace-widget-shop.php:307
+msgid "All"
+msgstr ""
+
+#: templates/marketplace/dokan.php:26
+msgid "Link your product with GeoDirectory listing."
+msgstr ""
+
+#: templates/marketplace/script.php:40
+msgid "Fetching Listings..."
+msgstr ""

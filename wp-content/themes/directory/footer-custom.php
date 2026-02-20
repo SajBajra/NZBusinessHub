@@ -237,29 +237,123 @@ $cf_footer_logo = directory_relative_url( content_url( 'uploads/2026/01/NZ-Direc
 		});
 	}
 
-	// Auth Modal - Update title on tab switch
+	// Auth Modal - behaviour and UX
 	var authModal = document.getElementById('cf-auth-modal');
 	if (authModal) {
 		var loginTab = document.getElementById('login-tab');
 		var registerTab = document.getElementById('register-tab');
 		var modalTitle = document.getElementById('cf-auth-modal-title');
-		
-		if (loginTab && registerTab && modalTitle) {
-			loginTab.addEventListener('shown.bs.tab', function() {
-				modalTitle.textContent = '<?php echo esc_js( __( 'Sign in', 'directory' ) ); ?>';
-			});
-			registerTab.addEventListener('shown.bs.tab', function() {
-				modalTitle.textContent = '<?php echo esc_js( __( 'Register', 'directory' ) ); ?>';
+
+		// Track which tab should be active when opening.
+		function setDesiredAuthTab(tab) {
+			authModal.setAttribute('data-auth-modal-tab', tab === 'register' ? 'register' : 'login');
+		}
+
+		// Default to login.
+		setDesiredAuthTab('login');
+
+		// Any trigger that opens the auth modal can specify the desired tab.
+		var authTriggers = document.querySelectorAll('[data-bs-target="#cf-auth-modal"]');
+		if (authTriggers.length) {
+			authTriggers.forEach(function (el) {
+				el.addEventListener('click', function () {
+					var tab = el.getAttribute('data-auth-modal-tab') || 'login';
+					setDesiredAuthTab(tab);
+				});
 			});
 		}
 
-		// Focus first input when modal opens
-		authModal.addEventListener('shown.bs.modal', function() {
+		// Helper to switch tabs manually (also works if Bootstrap JS isn't available).
+		function activateAuthTab(tab) {
+			var isRegister = tab === 'register';
+			var targetBtn = isRegister ? registerTab : loginTab;
+			var otherBtn = isRegister ? loginTab : registerTab;
+			var targetPane = document.getElementById(isRegister ? 'register-pane' : 'login-pane');
+			var otherPane = document.getElementById(isRegister ? 'login-pane' : 'register-pane');
+
+			if (!targetBtn || !targetPane) {
+				console.warn('Auth modal: Could not find tab elements for', tab);
+				return false;
+			}
+
+			// Buttons
+			targetBtn.classList.add('active');
+			targetBtn.setAttribute('aria-selected', 'true');
+			if (otherBtn) {
+				otherBtn.classList.remove('active');
+				otherBtn.setAttribute('aria-selected', 'false');
+			}
+
+			// Panes - ensure proper visibility
+			if (otherPane) {
+				otherPane.classList.remove('show', 'active');
+			}
+			targetPane.classList.add('show', 'active');
+
+			// Modal title
+			if (modalTitle) {
+				modalTitle.textContent = tab === 'register'
+					? '<?php echo esc_js( __( 'Register', 'directory' ) ); ?>'
+					: '<?php echo esc_js( __( 'Sign in', 'directory' ) ); ?>';
+			}
+
+			return true;
+		}
+
+		// Ensure tab buttons work - manual fallback if Bootstrap fails
+		if (loginTab && registerTab) {
+			loginTab.addEventListener('click', function(e) {
+				// Fallback: if Bootstrap didn't switch after 100ms, do it manually
+				setTimeout(function() {
+					var loginPane = document.getElementById('login-pane');
+					if (loginPane && !loginPane.classList.contains('active')) {
+						activateAuthTab('login');
+					}
+				}, 100);
+			});
+
+			registerTab.addEventListener('click', function(e) {
+				// Fallback: if Bootstrap didn't switch after 100ms, do it manually
+				setTimeout(function() {
+					var registerPane = document.getElementById('register-pane');
+					if (registerPane && !registerPane.classList.contains('active')) {
+						var switched = activateAuthTab('register');
+						if (switched) {
+							// Focus first input in register form
+							setTimeout(function() {
+								var firstInput = registerPane.querySelector('input[type="text"], input[type="email"], input[type="password"]');
+								if (firstInput) {
+									firstInput.focus();
+								}
+							}, 50);
+						}
+					}
+				}, 100);
+			});
+		}
+
+		if (loginTab && registerTab && modalTitle) {
+			// Bootstrap tab events - update title when tabs switch
+			loginTab.addEventListener('shown.bs.tab', function () {
+				modalTitle.textContent = '<?php echo esc_js( __( 'Sign in', 'directory' ) ); ?>';
+				setDesiredAuthTab('login');
+			});
+			registerTab.addEventListener('shown.bs.tab', function () {
+				modalTitle.textContent = '<?php echo esc_js( __( 'Register', 'directory' ) ); ?>';
+				setDesiredAuthTab('register');
+			});
+		}
+
+		// Ensure correct tab is active and focus first input when modal opens.
+		authModal.addEventListener('shown.bs.modal', function () {
+			var desired = authModal.getAttribute('data-auth-modal-tab') || 'login';
+			activateAuthTab(desired);
+
 			var activePane = authModal.querySelector('.tab-pane.active');
 			if (activePane) {
 				var firstInput = activePane.querySelector('input[type="text"], input[type="email"], input[type="password"]');
 				if (firstInput) {
-					setTimeout(function() {
+					setTimeout(function () {
 						firstInput.focus();
 					}, 100);
 				}

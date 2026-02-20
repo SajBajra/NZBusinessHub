@@ -1,0 +1,32 @@
+#custom_google_maps_accordion .menu-buttons {text-align: right;padding-bottom: 15px;border-bottom: 1px solid #CCC;margin-bottom: 20px;}
+.custom-google-map-preview{width: 100%; height: 360px;margin: 20px 0;}
+.custom-style-content .row-blog {width: 22%;display: inline-block;padding: 10px;vertical-align: bottom;border-bottom: 1px solid #CCC;}
+.custom-style-content .row-blog input[type="text"] {width: 30%;}
+.custom-style-content .row-blog.half-blog {width: 46%;}
+.custom-style-content .row-blog.full-blog {width: 96%;text-align: right;}
+.custom-style-content .row-container {background: #fff;border-radius: 5px;box-shadow: 0 0 10px #000;padding: 5px 10px;}
+.custom-style-content .row-blog label {width: 100%;display: block;margin-bottom: 5px;color: #828282;}
+.custom-style-content .row-blog  select {width: 50%;}
+#custom_google_maps_accordion h3.ui-accordion-header {padding: 16px 30px;background: #23292d;color: #FFF;}
+.custom-import-style-content .row-blog textarea {width: 100%;}
+.custom-import-style-content .row-blog  p.desc-tip {color: #6d6d6d;font-style: italic;font-size: 12px;}
+.custom-import-style-content .row-container {width: auto;display: block;background: #e8e6e6;padding: 10px 20px;box-shadow: 0 0 10px #000;border-radius: 5px;}
+.custom-style-content .row-blog.no-border {border: 0px;}
+.open-street-section,.custom-import-style-content{display: none;}
+body #custom_google_maps_accordion.ui-accordion h3.ui-accordion-header{width: 95%;}
+body #custom_google_maps_accordion.ui-accordion .ui-accordion-content {height: auto !important;min-height: 450px;width: 95%;margin: 0px;padding: 15px 30px;}
+.custom-style-content .custom-map-style-data {width: 100%;display: block;margin-top: 20px;}
+.custom-style-content .custom-map-style-data .custom-map-listing-blog {width: 98%;display: block;border: 1px solid #CCC;border-radius: 5px;margin: 10px 0;box-shadow: 0 0 10px #000;padding: 10px;position: relative;}
+.custom-style-content .custom-map-style-data .custom-map-listing-blog p {display: inline-block;margin: 7px 0;width: 23%;color: green;}
+.custom-style-content .custom-map-style-data .custom-map-listing-blog p.half-blog {width: 49%;}
+.custom-style-content .custom-map-style-data .custom-map-listing-blog .remove-btn-container {position: absolute;top: 5px;right: 10px;}
+.custom-style-content .custom-map-style-data .custom-map-listing-blog .remove-btn-container a.remove-btn {text-decoration: none;color: red;}
+.custom-style-content .custom-map-style-data .custom-map-listing-blog .remove-btn-container a.remove-btn span.dashicons.dashicons-dismiss {font-size: 25px;}
+.custom-style-content .custom-map-style-data .custom-map-listing-blog p b {color: #000;text-transform: capitalize;}
+.street-map-tab-content .gd-open-street-map {width: 100%;height: 450px;}
+.open-street-section .street-map-tab-content form.leaflet-control-layers-list {overflow: hidden;}
+.gd-open-street-map .leaflet-control-layers.leaflet-control-layers-expanded{height: 370px;overflow: scroll;overflow-x: hidden;}
+.street-map-tab-content .gd-osm-submit-events {margin-top: 20px;}
+body .gd-osm-submit-events input.gd-save-osm-btn.osm_disable_btn {background: #8a8585 !important;color: #FFF !important;border-color: #8a8584 !important;}
+
+

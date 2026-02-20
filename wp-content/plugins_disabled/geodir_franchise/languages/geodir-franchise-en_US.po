@@ -1,0 +1,384 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoDirectory Franchise Manager 2.3.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-10 19:41+0530\n"
+"PO-Revision-Date: 2025-04-10 19:41+0530\n"
+"Last-Translator: \n"
+"Language-Team: AyeCode Ltd <contact@ayecode.io>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;__ngettext:1,2;__ngettext_noop:1,2;_c;_e;_ex:1,2c;"
+"_n:1,2;_n_noop:1,2;_nc:4c,1,2;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;gettext;"
+"gettext_noop\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: includes/admin/admin-functions.php:33
+#: includes/admin/settings/class-geodir-franchise-settings-franchise.php:26
+msgid "Franchise Manager"
+msgstr ""
+
+#: includes/admin/admin-functions.php:34
+msgid ""
+"Check this box if you would like to completely remove all of its data when "
+"Franchise Manager is deleted."
+msgstr ""
+
+#: includes/admin/admin-functions.php:62 includes/template-functions.php:73
+msgid "Franchises"
+msgstr ""
+
+#: includes/admin/admin-functions.php:80
+msgid "Franchise Type"
+msgstr ""
+
+#: includes/admin/admin-functions.php:81
+msgid "Franchise Of"
+msgstr ""
+
+#: includes/admin/admin-functions.php:99
+#: includes/class-geodir-franchise-fields.php:137
+#: includes/class-geodir-franchise-fields.php:139
+#: includes/class-geodir-franchise-fields.php:149
+msgid "Main Listing"
+msgstr ""
+
+#: includes/admin/admin-functions.php:115
+msgid "View"
+msgstr ""
+
+#: includes/admin/admin-functions.php:116
+msgid "ID:"
+msgstr ""
+
+#: includes/admin/admin-functions.php:116
+msgid "Edit"
+msgstr ""
+
+#: includes/admin/class-geodir-franchise-admin.php:116
+msgid "GeoDirectory"
+msgstr ""
+
+#: includes/admin/settings/class-geodir-franchise-settings-franchise.php:43
+msgid "Settings"
+msgstr ""
+
+#: includes/admin/settings/class-geodir-franchise-settings-franchise.php:80
+msgid "Franchise Manager Settings"
+msgstr ""
+
+#: includes/admin/settings/class-geodir-franchise-settings-franchise.php:88
+msgid "Show main listing?"
+msgstr ""
+
+#: includes/admin/settings/class-geodir-franchise-settings-franchise.php:89
+msgid "This will display the main listing in the list of its franchises."
+msgstr ""
+
+#: includes/admin/settings/class-geodir-franchise-settings-franchise.php:96
+msgid "Show viewing franchise?"
+msgstr ""
+
+#: includes/admin/settings/class-geodir-franchise-settings-franchise.php:97
+msgid "This will display current viewing franchise in list of franchises."
+msgstr ""
+
+#: includes/admin/settings/class-geodir-franchise-settings-franchise.php:106
+msgid "Map Filter"
+msgstr ""
+
+#: includes/admin/settings/class-geodir-franchise-settings-franchise.php:114
+msgid "Show main listing on map?"
+msgstr ""
+
+#: includes/admin/settings/class-geodir-franchise-settings-franchise.php:115
+msgid "Display the main listing with its franchises on the map."
+msgstr ""
+
+#: includes/admin/settings/class-geodir-franchise-settings-franchise.php:122
+msgid "Show viewing franchise on map?"
+msgstr ""
+
+#: includes/admin/settings/class-geodir-franchise-settings-franchise.php:123
+msgid "Display the current viewing franchise with its franchises on the map."
+msgstr ""
+
+#: includes/class-geodir-franchise-email.php:97
+#: includes/class-geodir-franchise-email.php:119
+msgid "Franchise listing approved"
+msgstr ""
+
+#: includes/class-geodir-franchise-email.php:98
+msgid ""
+"This will send a BCC email to the site admin on franchise listing approved."
+msgstr ""
+
+#: includes/class-geodir-franchise-email.php:125
+msgid "Enable email"
+msgstr ""
+
+#: includes/class-geodir-franchise-email.php:126
+msgid "Send an email to user on franchise listing approved."
+msgstr ""
+
+#: includes/class-geodir-franchise-email.php:132
+msgid "Subject"
+msgstr ""
+
+#: includes/class-geodir-franchise-email.php:133
+msgid "The email subject."
+msgstr ""
+
+#: includes/class-geodir-franchise-email.php:142
+msgid "Body"
+msgstr ""
+
+#: includes/class-geodir-franchise-email.php:143
+msgid "The email body, this can be text or HTML."
+msgstr ""
+
+#: includes/class-geodir-franchise-email.php:148
+msgid "Available template tags:"
+msgstr ""
+
+#: includes/class-geodir-franchise-email.php:255
+msgid "[[#site_name#]] Franchise listings has been Approved"
+msgstr ""
+
+#: includes/class-geodir-franchise-email.php:262
+msgid ""
+"Dear [#client_name#],\n"
+"\n"
+"Your franchise [#franchise_listing_link#] of the lisitng [#listing_link#] "
+"has been published.\n"
+"\n"
+"Thank You."
+msgstr ""
+
+#: includes/class-geodir-franchise-fields.php:95
+#: includes/class-geodir-franchise-fields.php:97
+#: includes/class-geodir-franchise-fields.php:107
+msgid "Has Franchise?"
+msgstr ""
+
+#: includes/class-geodir-franchise-fields.php:96
+msgid "Tick \"Yes\" if listing has franchises."
+msgstr ""
+
+#: includes/class-geodir-franchise-fields.php:102
+msgid "Yes"
+msgstr ""
+
+#: includes/class-geodir-franchise-fields.php:102
+msgid "No"
+msgstr ""
+
+#: includes/class-geodir-franchise-fields.php:116
+#: includes/class-geodir-franchise-fields.php:118
+#: includes/class-geodir-franchise-fields.php:128
+msgid "Lock franchise fields"
+msgstr ""
+
+#: includes/class-geodir-franchise-fields.php:117
+msgid "Select fields to lock from franchise edit."
+msgstr ""
+
+#: includes/class-geodir-franchise-fields.php:138
+msgid "Enter main listing ID."
+msgstr ""
+
+#: includes/class-geodir-franchise-fields.php:313
+#: includes/class-geodir-franchise-fields.php:325
+#, php-format
+msgid "Filter by %s:"
+msgstr ""
+
+#: includes/class-geodir-franchise-fields.php:314
+msgid ""
+"Filters franchise posts by related to post. Use \"auto\" or POST_ID(ex: 135) "
+"OR leave blank. auto: Filters the franchise posts by current viewing post. "
+"POST_ID(135): Filters the franchise posts by post id = 135. Leave blank to "
+"not use this filter."
+msgstr ""
+
+#: includes/class-geodir-franchise-fields.php:318
+msgid "auto OR POST_ID OR leave blank"
+msgstr ""
+
+#: includes/class-geodir-franchise-fields.php:320
+msgid "Filters"
+msgstr ""
+
+#: includes/class-geodir-franchise-fields.php:326
+msgid ""
+"Use current_post to show franchises of current viewing post. Use post id(ex: "
+"135) to show franchises of 135. Leave blank to skip this filter."
+msgstr ""
+
+#: includes/class-geodir-franchise-fields.php:330
+msgid "135 OR current_post OR leave blank"
+msgstr ""
+
+#: includes/class-geodir-franchise-fields.php:333
+msgid "Map Content"
+msgstr ""
+
+#: includes/class-geodir-franchise-fields.php:486
+#: includes/class-geodir-franchise-fields.php:491
+#: includes/class-geodir-franchise-fields.php:492
+msgid "Comments"
+msgstr ""
+
+#: includes/class-geodir-franchise-fields.php:488
+msgid "Select comments"
+msgstr ""
+
+#: includes/class-geodir-franchise-post-type.php:50
+msgid "Enable Franchise?"
+msgstr ""
+
+#: includes/class-geodir-franchise-post-type.php:51
+msgid ""
+"Tick to enable franchise feature for this post type. <span style=\"color:red;"
+"\">(WARNING: disabling franchise feature will lose all existing franchises "
+"data for this post type.)</span>"
+msgstr ""
+
+#: includes/class-geodir-franchise-pricing.php:72
+#, php-format
+msgid "Franchise Cost (%s)"
+msgstr ""
+
+#: includes/class-geodir-franchise-pricing.php:73
+msgid "Franchise price will be charged to each franchise. Ex: 5.00"
+msgstr ""
+
+#: includes/class-geodir-franchise-pricing.php:74
+msgid "Free"
+msgstr ""
+
+#: includes/class-geodir-franchise-pricing.php:83
+msgid "Franchises Limit"
+msgstr ""
+
+#: includes/class-geodir-franchise-pricing.php:84
+msgid ""
+"Limit the number of franchises that can be added under main listing for this "
+"price package. Leave blank or add 0 (zero) for unlimited."
+msgstr ""
+
+#: includes/class-geodir-franchise-pricing.php:85
+msgid "Unlimited"
+msgstr ""
+
+#: includes/class-geodir-franchise-pricing.php:248
+#: includes/template-functions.php:74 includes/template-functions.php:129
+msgid "Franchise"
+msgstr ""
+
+#: includes/class-geodir-franchise-pricing.php:274
+msgid "Franchise package."
+msgstr ""
+
+#: includes/class-geodir-franchise-pricing.php:590
+#, php-format
+msgid "%d franchise at %s"
+msgid_plural "%d franchises at %s/franchise"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-geodir-franchise-pricing.php:592
+#, php-format
+msgid "Unlimited franchises at %s/franchise"
+msgstr ""
+
+#: includes/class-geodir-franchise-pricing.php:596
+#, php-format
+msgid "%d franchise for free"
+msgid_plural "%d franchises for free"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-geodir-franchise-pricing.php:598
+msgid "Unlimited franchises for free"
+msgstr ""
+
+#: includes/class-geodir-franchise.php:183
+msgid ""
+"GeoDirectory plugin is required for the Franchise Manager plugin to work "
+"properly."
+msgstr ""
+
+#: includes/template-functions.php:75
+msgctxt "franchise"
+msgid "Add New"
+msgstr ""
+
+#: includes/template-functions.php:76
+msgid "Add New Franchise"
+msgstr ""
+
+#: includes/template-functions.php:77
+msgid "Edit Franchise"
+msgstr ""
+
+#: includes/template-functions.php:78
+msgid "New Franchise"
+msgstr ""
+
+#: includes/template-functions.php:79
+msgid "View Franchise"
+msgstr ""
+
+#: includes/template-functions.php:80
+msgid "View Franchises"
+msgstr ""
+
+#: includes/template-functions.php:81
+msgid "View All Franchises"
+msgstr ""
+
+#: includes/template-functions.php:82
+msgid "Search Franchises"
+msgstr ""
+
+#: includes/template-functions.php:83
+msgid "No franchises found."
+msgstr ""
+
+#: includes/template-functions.php:84
+msgid "All Franchises"
+msgstr ""
+
+#: includes/template-functions.php:85
+msgid "Franchises list"
+msgstr ""
+
+#: includes/template-functions.php:86
+msgid "Franchise published."
+msgstr ""
+
+#: includes/template-functions.php:87
+msgid "Franchise updated."
+msgstr ""
+
+#: includes/template-functions.php:88 includes/template-functions.php:90
+#, php-format
+msgid "Franchise: %s"
+msgstr ""
+
+#: includes/template-functions.php:89
+#, php-format
+msgid "%s Franchise"
+msgstr ""
+
+#: includes/template-functions.php:91
+msgid "Franchises Of"
+msgstr ""

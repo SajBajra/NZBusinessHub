@@ -1,0 +1,237 @@
+Custom frontend changes – summary
+================================
+
+1) Add Listing page: login/register + Free vs Premium
+-----------------------------------------------------
+
+- File: includes/listing-plans.php
+  - Added a simple "listing plan" system based on user meta `directory_listing_plan`:
+    - directory_get_listing_plan( $user_id ) → 'free' or 'premium'
+    - directory_is_premium_listing_user( $user_id ) → boolean
+  - Free plan configuration:
+    - DIRECTORY_FREE_MAX_IMAGES_PER_LISTING = 1
+    - directory_get_free_allowed_fields() now returns:
+      - post_title (Place title)
+      - post_category (Category)
+      - address (simple address line)
+    - All other GeoDirectory custom fields (description/content, map options, extra address parts, images, etc.) are treated as premium-only.
+  - Enforced free-plan limits:
+    - directory_listing_plan_hide_premium_fields():
+      - Hooked to geodir_add_listing_custom_field_is_hidden
+      - Hides any add-listing custom field whose htmlvar_name is NOT in the free whitelist
+      - Premium users bypass this and see all fields.
+    - directory_listing_plan_save_post_data():
+      - Hooked to geodir_save_post_data
+      - For free users, clears values for premium-only fields before save so they cannot store hidden data.
+    - directory_listing_plan_after_post_save():
+      - Hooked to geodir_after_post_save
+      - Trims post_images attachments down to DIRECTORY_FREE_MAX_IMAGES_PER_LISTING for free users.
+    - directory_listing_plan_file_limit():
+      - Hooked to geodir_custom_field_file_limit
+      - Limits file uploads for the post_images field for free users.
+  - Body class helper:
+    - directory_listing_plan_body_class() (hooked to body_class)
+      - On the gd_place add listing page, adds either:
+        - directory-plan-free
+        - directory-plan-premium
+      - Used by CSS to selectively hide/show UI for free users.
+
+- File: assets/css/custom-frontend.css
+  - Add Listing button styles:
+    - Base selector: body.custom-frontend .geodir-add-listing .btn / .geodir_button / a.btn / button.btn / submit.btn
+    - Solid blue "primary" buttons for submit/main actions:
+      - Rounded, pill shape, white text, subtle shadow, hover lift.
+    - "Secondary" buttons (Login / Register) styled to match primary (blue background, white text, no underline).
+  - Free-plan-specific hiding:
+    - For body.custom-frontend.directory-plan-free .geodir-add-listing:
+      - Hides map and advanced address bits on the form, e.g.:
+        - #geodir_post_map_row
+        - #geodir_post_mapview_row
+        - #geodir_post_latitude_row
+        - #geodir_post_longitude_row
+
+- Inline CTA on Add Listing:
+  - File: includes/listing-plans.php
+    - directory_listing_plan_add_listing_cta( $content ) (hooked to the_content at priority 20)
+      - Only runs when:
+        - User is logged in
+        - User is on the free plan
+        - Current page is the gd_place Add Listing page
+      - Appends a small inline CTA:
+        - Markup:
+          - <div class="directory-plan-inline-cta">
+              <span class="directory-plan-inline-text">Need more fields for this listing?</span>
+              <a class="directory-plan-cta-btn" href="{upgrade_url}">Unlock more listing options</a>
+            </div>
+        - {upgrade_url} is directory_get_upgrade_url().
+  - File: assets/css/custom-frontend.css
+    - .directory-plan-inline-cta
+      - Inline pill-style container with soft blue background, border, and horizontal layout for label + button.
+    - .directory-plan-cta-btn
+      - Blue pill button with white text, no underline, shadow and hover state.
+
+
+2) Upgrade / plans page
+-----------------------
+
+- Upgrade URL helper:
+  - File: includes/listing-plans.php
+    - directory_get_upgrade_url():
+      - Looks up a published page with slug 'upgrade' using get_page_by_path( 'upgrade' ).
+      - If found, returns that permalink.
+      - Otherwise returns home_url( '/upgrade/' ).
+
+- Automatic Upgrade page creation:
+  - File: functions.php
+    - directory_ensure_upgrade_page_exists() (hooked to init)
+      - For admin users only (manage_options):
+        - If no page with slug 'upgrade' exists, inserts a new Page:
+          - Title: Upgrade
+          - Slug: upgrade
+          - Content: [directory_listing_plan_table]
+
+- Plans layout shortcode (dedicated pricing layout):
+  - File: includes/listing-plans.php
+    - directory_listing_plan_table_shortcode()
+      - Shortcode: [directory_listing_plan_table]
+      - Outputs a two-card Free vs Premium plans layout:
+        - Wrapper: <section class="directory-plan-cta">
+        - Header:
+          - Eyebrow: "Choose your plan for listing" (.directory-plan-cta-eyebrow)
+          - Title: "Start free. Upgrade when you need more." (.directory-plan-cta-title)
+        - Grid: .directory-plan-cta-grid with two articles:
+          1) Free listing (.directory-plan-card directory-plan-card--free)
+             - "Place title & category"
+             - "Single address line"
+             - "No description, map or gallery"
+          2) Premium listing (.directory-plan-card directory-plan-card--premium)
+             - "Full address + interactive map"
+             - "Rich description & extra fields"
+             - "Multiple images in a gallery"
+             - "Higher impact, more engagement"
+             - CTA button:
+               - <a class="directory-plan-cta-btn" href="{upgrade_url}">Unlock more listing options</a>
+
+- Upgrade template:
+  - File: page-upgrade.php
+    - Uses custom frontend header and footer (header-custom.php, footer-custom.php).
+    - Main markup:
+      - <main class="custom-frontend-main" id="main">
+          <div class="cf-plans-shell">
+            echo do_shortcode( '[directory_listing_plan_table]' );
+          </div>
+        </main>
+
+- Plans styling:
+  - File: assets/css/custom-frontend.css
+    - .cf-plans-shell
+      - Centers content to max-width ~1200px, with responsive side padding.
+    - .directory-plan-cta + children
+      - Modern pricing-card look:
+        - Gradient/light background, rounded corners, border and shadow.
+        - Header text centered, two-column grid for plan cards.
+        - Premium card highlighted with stronger shadow and "Recommended" pill label.
+    - .directory-plan-cta-btn
+      - Primary green/blue style pill button with hover state, white text, no underline.
+
+
+3) Single blog page – new layout and behavior
+---------------------------------------------
+
+- Template:
+  - File: single-post.php
+  - Structure inside <main class="custom-frontend-main cf-blog-single-main">
+    - Outer shell: <div class="cf-blog-single-shell">
+    - For each post:
+      1) Breadcrumb nav (.cf-blog-single-breadcrumb)
+         - Home › Blog › Post title
+      2) Article card (.cf-blog-single-card, applied via post_class)
+         - Category chips (if any) using .cf-blog-single-cat
+         - Meta row: date and author ("By {Author}")
+         - H1 title: .cf-blog-single-main-title
+         - Featured image (if present)
+         - Content: <div class="cf-blog-single-content entry-content"><?php the_content(); ?></div>
+         - Multi-page links via wp_link_pages()
+         - Comments section:
+           - If comments_open() || get_comments_number():
+             - <section class="cf-blog-single-comments">comments_template()</section>
+         - Footer with "Back to Blog" link.
+      3) Similar posts section (.cf-blog-single-next)
+         - Title: "Similar posts"
+         - Grid of up to 3 related posts:
+           - Query:
+             - post_type = post
+             - status = publish
+             - posts_per_page = 3
+             - post__not_in = current ID
+             - ignore_sticky_posts = true
+             - If current post has categories:
+               - category__in = those term IDs (so "similar" by category)
+           - For each result:
+             - Uses archive card structure (cf-blog-card):
+               - Image or placeholder
+               - Date (styled as "author" line in card)
+               - Title
+               - Short excerpt
+
+- Styling:
+  - File: assets/css/custom-frontend.css
+  - Key classes:
+    - .cf-blog-single-main
+      - Light-grey background behind the centered card.
+    - .cf-blog-single-breadcrumb
+      - Compact breadcrumb, subdued grey text, centered within 890px width at top.
+    - .cf-blog-single-shell + .cf-blog-single-card
+      - Shell sets max-width + padding.
+      - Card uses large radius, soft border, bright background and shadow to mimic a SaaS-style content card.
+    - .cf-blog-single-cats / .cf-blog-single-cat
+      - Category pill design: green-on-light-green badges at top of the card.
+    - .cf-blog-single-main-image-wrap / .cf-blog-single-main-image
+      - Large responsive image area, rounded corners, grey placeholder if no featured image.
+    - .cf-blog-single-main-title, meta, and excerpt
+      - Typography + spacing tuned to resemble a modern article page (larger title, lighter secondary text, narrower excerpt).
+    - .cf-blog-single-content
+      - Paragraph, heading, list, and link styling:
+        - Links: blue text, no underline, 1px border-bottom that darkens on hover.
+    - .cf-blog-single-comments
+      - Lightly separated comments block under the article (title, list of comments, and comment form all restyled).
+    - .cf-blog-single-next
+      - Heading "Similar posts" and 3-column grid of cf-blog-card elements that reuse the blog archive card visual language.
+
+- Removal of Gutenberg Post Author panel:
+  - File: functions.php
+    - directory_strip_post_author_block() hooked to render_block:
+      - Strips any block with blockName == 'core/post-author'.
+      - Also strips a 'core/group' if its only inner block is 'core/post-author'.
+  - File: assets/css/custom-frontend.css
+    - Defensive rule: .wp-block-post-author { display: none !important; }
+    - Ensures no "Author: X" profile box appears inside custom frontend layouts.
+
+
+4) Miscellaneous UI tweaks
+--------------------------
+
+- Navbar "Sign in" button:
+  - File: header-custom.php
+    - The Sign in link uses classes: cf-link-sign uwp-login-link
+      - uwp-login-link enables UsersWP login modal/lightbox when plugin is configured that way.
+  - File: assets/css/custom-frontend.css
+    - cf-link-sign colors updated:
+      - Default: same dark grey as other nav items.
+      - Hover: blue, no underline.
+
+- Link styles inside blog content:
+  - File: assets/css/custom-frontend.css
+    - body.custom-frontend .cf-blog-single-content a:
+      - color: #3993d5;
+      - text-decoration: none !important;
+      - border-bottom: 1px solid rgba(57, 147, 213, 0.3) !important;
+    - Hover: border-bottom-color darkens to rgba(57, 147, 213, 0.7).
+
+
+This text file is a high-level reference to the major theme changes:
+- Where they live (files and key functions/classes)
+- What they do (behavior and UI)
+- How to adjust them later (e.g. plan rules, upgrade layout, single-post design).
+
+

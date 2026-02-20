@@ -1,0 +1,18 @@
+.geodir-booking-hide {
+    display: none !important
+}
+
+.geodir-booking-price-breakdown .geodir-booking-price-breakdown-expand>.geodir-booking-inner-icon,
+.geodir-booking-price-breakdown .geodir-booking-price-breakdown-expand>.geodir-booking-inner-icon {
+    font-family: sans-serif;
+    font-size: 1em;
+    margin-right: .75em;
+    border: 1px solid currentColor;
+    width: 1em;
+    height: 1em;
+    line-height: 1em;
+    display: inline-block;
+    text-align: center;
+    box-sizing: content-box;
+    pointer-events: none
+}

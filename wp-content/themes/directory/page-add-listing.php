@@ -32,21 +32,25 @@ get_header( 'custom' );
 						<?php esc_html_e( 'Create a free account or sign in to add and manage your business listings, keep details up to date, and help customers find you easily.', 'directory' ); ?>
 					</p>
 					<div class="cf-add-listing-actions">
-						<?php
-						$redirect = esc_url( home_url( add_query_arg( array(), $_SERVER['REQUEST_URI'] ) ) );
-						if ( function_exists( 'geodir_curPageURL' ) ) {
-							$redirect = esc_url( geodir_curPageURL() );
-						}
-						$login_url    = wp_login_url( $redirect );
-						$register_url = get_option( 'users_can_register' ) ? wp_registration_url() : '';
-						?>
-						<a class="cf-add-listing-btn cf-add-listing-btn--login" href="<?php echo esc_url( $login_url ); ?>">
+						<button
+							type="button"
+							class="cf-add-listing-btn cf-add-listing-btn--login"
+							data-bs-toggle="modal"
+							data-bs-target="#cf-auth-modal"
+							data-auth-modal-tab="login"
+						>
 							<?php esc_html_e( 'Login', 'directory' ); ?>
-						</a>
-						<?php if ( $register_url ) : ?>
-							<a class="cf-add-listing-btn cf-add-listing-btn--register" href="<?php echo esc_url( $register_url ); ?>">
+						</button>
+						<?php if ( get_option( 'users_can_register' ) ) : ?>
+							<button
+								type="button"
+								class="cf-add-listing-btn cf-add-listing-btn--register"
+								data-bs-toggle="modal"
+								data-bs-target="#cf-auth-modal"
+								data-auth-modal-tab="register"
+							>
 								<?php esc_html_e( 'Register', 'directory' ); ?>
-							</a>
+							</button>
 						<?php endif; ?>
 					</div>
 				</div>

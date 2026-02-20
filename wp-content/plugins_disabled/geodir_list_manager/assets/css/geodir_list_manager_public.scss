@@ -1,0 +1,119 @@
+// add to list button
+.gd-lists-save-button{
+  cursor: pointer;
+  div,a{
+    cursor: pointer;
+  }
+
+  &.gd-lists-is-in-user-lists{
+    .gd-badge{
+      //color: #ff7fc8 !important;
+    }
+  }
+}
+
+.lity-content {
+  .lity-show{
+    &.gd-list-popup{
+      max-width: 400px;
+    }
+  }
+}
+
+
+
+
+// add to list popup
+.gd-add-to-list-popup{
+  //min-width: 300px;
+  //width: 50vw;
+  .gd-list-select-container-list{
+    max-height: 60vh;
+    overflow-y: scroll;
+    border: 1px #dedede solid;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li{
+
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+
+      .gd-list-wrap{
+        height: 70px;
+        margin: 5px;
+        border-bottom: 1px #dedede solid;
+
+        // common
+        .gd-list-image,.gd-list-info,.gd-list-actions{
+          float: left;
+          padding: 0 5px;
+        }
+
+        .gd-list-image{
+          img{
+            max-width: 60px;
+            border-radius: 5px;
+          }
+          i,svg{
+            font-size: 60px;
+            color: #ccc;
+          }
+        }
+
+        .gd-list-actions{
+          float: right;
+
+          .gd-list-save-action-link {
+            display: block;
+            margin-top: 15px;
+            &.gd-list-action-add{
+              background: #0073aa;
+              padding: 7px 15px;
+              text-decoration: none;
+              border-radius: 5px;
+              color: #fff;
+              font-size: 14px;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+
+      &:last-child{
+        .gd-list-wrap {
+          border-bottom: none;
+        }
+      }
+    }
+
+
+  }
+}
+
+
+.geodir-list-loop-actions-container{
+
+
+  .gd-lists-loop-author-actions{
+    border: 1px solid #ebebeb;
+    border-right: none;
+    border-left: none;
+    padding: 5px;
+    margin: 0;
+
+    text-align: right;
+    &>span{
+      padding: 0 5px;
+    }
+  }
+}
+
+.gd-list-item-wrap-ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

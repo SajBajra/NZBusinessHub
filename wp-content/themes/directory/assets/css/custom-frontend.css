@@ -454,6 +454,17 @@ body.custom-frontend .cf-auth-modal-close svg {
 body.custom-frontend .cf-auth-modal-body {
 	padding: 2rem 1.5rem;
 }
+/* Ensure Bootstrap tab panes work correctly */
+body.custom-frontend .cf-auth-modal-body .tab-content {
+	position: relative;
+}
+body.custom-frontend .cf-auth-modal-body .tab-pane {
+	display: none;
+}
+body.custom-frontend .cf-auth-modal-body .tab-pane.show,
+body.custom-frontend .cf-auth-modal-body .tab-pane.active {
+	display: block;
+}
 body.custom-frontend .cf-auth-modal-body .form-group,
 body.custom-frontend .cf-auth-modal-body .mb-3 {
 	margin-bottom: 1.25rem;

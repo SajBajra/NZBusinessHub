@@ -1,0 +1,415 @@
+<?php
+/**
+ * GeoDirectory places archive (Businesses) – full revamp.
+ *
+ * @package Directory
+ */
+
+require_once get_stylesheet_directory() . '/includes/custom-frontend-doc-start.php';
+get_header( 'custom' );
+
+$gd_archive_home    = function_exists( 'directory_relative_url' ) ? directory_relative_url( home_url( '/' ) ) : home_url( '/' );
+$gd_businesses_url  = function_exists( 'get_post_type_archive_link' ) ? get_post_type_archive_link( 'gd_place' ) : $gd_archive_home;
+if ( $gd_businesses_url && function_exists( 'directory_relative_url' ) ) {
+	$gd_businesses_url = directory_relative_url( $gd_businesses_url );
+}
+$gd_queried        = get_queried_object();
+$gd_is_category    = $gd_queried instanceof WP_Term && isset( $gd_queried->taxonomy ) && $gd_queried->taxonomy === 'gd_placecategory';
+$gd_archive_title  = get_the_archive_title();
+$gd_archive_clean  = wp_strip_all_tags( $gd_archive_title );
+if ( $gd_is_category && ! empty( $gd_queried->name ) ) {
+	$gd_archive_clean = $gd_queried->name;
+} elseif ( empty( $gd_archive_clean ) ) {
+	$gd_archive_clean = __( 'Businesses', 'directory' );
+}
+// Icon for parent category only (not for child categories).
+$gd_cat_icon = '';
+if ( $gd_is_category && ( empty( $gd_queried->parent ) || (int) $gd_queried->parent === 0 ) ) {
+	$gd_cat_icon = get_term_meta( $gd_queried->term_id, 'ct_cat_font_icon', true );
+	if ( empty( $gd_cat_icon ) ) {
+		$gd_cat_icon = 'fas fa-globe';
+	}
+}
+
+global $wp_query;
+
+// Use a dedicated query for gd_place so listings always show (main query may be the archive page).
+$gd_query_vars = array(
+	'post_type'               => 'gd_place',
+	'post_status'             => 'publish',
+	'posts_per_page'          => 9,
+	'paged'                   => max( 1, (int) get_query_var( 'paged' ) ),
+	'update_post_meta_cache'  => false,
+);
+// Preserve main query vars for search/filters (GD uses query vars).
+if ( ! empty( $wp_query->query_vars ) ) {
+	foreach ( array( 's', 'gd_location', 'gd_placecategory', 'sort_by', 'near' ) as $var ) {
+		if ( isset( $wp_query->query_vars[ $var ] ) && $wp_query->query_vars[ $var ] !== '' ) {
+			$gd_query_vars[ $var ] = $wp_query->query_vars[ $var ];
+		}
+	}
+}
+$gd_query = new WP_Query( $gd_query_vars );
+$gd_total = (int) $gd_query->found_posts;
+?>
+<main class="custom-frontend-main cf-gd-archive cf-gd-archive-v2" id="main">
+	<header class="cf-gd-hero">
+		<div class="cf-gd-hero-inner">
+			<nav class="cf-gd-breadcrumb" aria-label="<?php esc_attr_e( 'Breadcrumb', 'directory' ); ?>">
+				<a href="<?php echo esc_url( $gd_archive_home ); ?>"><?php esc_html_e( 'Home', 'directory' ); ?></a>
+				<span class="cf-gd-breadcrumb-sep" aria-hidden="true">›</span>
+				<?php if ( $gd_is_category && $gd_businesses_url ) : ?>
+					<a href="<?php echo esc_url( $gd_businesses_url ); ?>"><?php esc_html_e( 'Businesses', 'directory' ); ?></a>
+					<span class="cf-gd-breadcrumb-sep" aria-hidden="true">›</span>
+					<span class="cf-gd-breadcrumb-current"><?php echo esc_html( $gd_archive_clean ); ?></span>
+				<?php else : ?>
+					<span class="cf-gd-breadcrumb-current"><?php echo esc_html( $gd_archive_clean ); ?></span>
+				<?php endif; ?>
+			</nav>
+			<h1 class="cf-gd-hero-title">
+				<?php if ( $gd_cat_icon ) : ?>
+					<span class="cf-gd-hero-cat-icon <?php echo esc_attr( $gd_cat_icon ); ?>" aria-hidden="true"></span>
+				<?php endif; ?>
+				<?php echo esc_html( $gd_archive_clean ); ?>
+			</h1>
+			<p class="cf-gd-hero-desc"><?php esc_html_e( 'Discover and explore local businesses.', 'directory' ); ?></p>
+		</div>
+	</header>
+
+	<div class="cf-gd-archive-inner">
+		<section class="cf-gd-search-section cf-gd-search-overlap" aria-label="<?php esc_attr_e( 'Search', 'directory' ); ?>">
+			<div class="cf-gd-search-bar" role="search">
+				<?php if ( function_exists( 'do_shortcode' ) ) : ?>
+					<?php echo do_shortcode( '[gd_search hide_search_input="false" hide_near_input="false" input_size="md" bar_flex_wrap="flex-wrap"]' ); ?>
+				<?php endif; ?>
+			</div>
+		</section>
+
+		<div class="cf-gd-layout">
+			<div class="cf-gd-list-col">
+				<header class="cf-gd-list-header">
+					<p class="cf-gd-results-count">
+						<?php
+						if ( $gd_total === 0 ) {
+							esc_html_e( 'No businesses found.', 'directory' );
+						} else {
+							?>
+							<span class="cf-gd-results-badge" aria-hidden="true"><?php echo (int) $gd_total; ?></span>
+							<?php echo esc_html( _n( 'business', 'businesses', $gd_total, 'directory' ) ); ?>
+							<?php
+						}
+						?>
+					</p>
+				</header>
+
+				<?php if ( $gd_query->have_posts() ) : ?>
+					<div class="cf-gd-cards cf-gd-cards-grid">
+						<?php
+						$gd_card_index = 0;
+						while ( $gd_query->have_posts() ) :
+							$gd_query->the_post();
+							$pid   = get_the_ID();
+							$thumb = get_the_post_thumbnail_url( $pid, 'medium_large' );
+							$link  = get_the_permalink();
+							$link  = function_exists( 'directory_relative_url' ) ? directory_relative_url( $link ) : $link;
+
+							$cat_name = '';
+							if ( function_exists( 'geodir_get_post_top_parent_terms' ) ) {
+								$top = geodir_get_post_top_parent_terms( $pid, 'gd_placecategory' );
+								if ( ! empty( $top[0] ) && is_object( $top[0] ) ) {
+									$cat_name = $top[0]->name;
+								}
+							}
+							if ( $cat_name === '' ) {
+								$terms = get_the_terms( $pid, 'gd_placecategory' );
+								if ( $terms && ! is_wp_error( $terms ) && ! empty( $terms ) ) {
+									$cat_name = $terms[0]->name;
+								}
+							}
+
+							$address_parts = array();
+							if ( function_exists( 'geodir_get_post_meta' ) ) {
+								$street = geodir_get_post_meta( $pid, 'street', true );
+								$city   = geodir_get_post_meta( $pid, 'city', true );
+								if ( ! empty( $street ) ) {
+									$address_parts[] = $street;
+								}
+								if ( ! empty( $city ) ) {
+									$address_parts[] = $city;
+								}
+							}
+							$address_line = implode( ', ', $address_parts );
+
+							$rating_html = '';
+							if ( function_exists( 'geodir_get_rating_stars' ) && function_exists( 'geodir_get_post_rating' ) ) {
+								$post_rating = geodir_get_post_rating( $pid );
+								if ( $post_rating !== '' && $post_rating !== null ) {
+									$rating_html = geodir_get_rating_stars( $post_rating, $pid );
+								}
+							}
+							$gd_first_image = $gd_card_index === 0;
+							$gd_card_index++;
+							?>
+							<article id="post-<?php echo esc_attr( $pid ); ?>" <?php post_class( 'cf-gd-card' ); ?>>
+								<a class="cf-gd-card-link" href="<?php echo esc_url( $link ); ?>">
+									<div class="cf-gd-card-image-wrap">
+										<?php if ( $thumb ) : ?>
+											<img src="<?php echo esc_url( $thumb ); ?>" alt="" class="cf-gd-card-image" loading="<?php echo $gd_first_image ? 'eager' : 'lazy'; ?>" decoding="async"<?php echo $gd_first_image ? ' fetchpriority="high"' : ''; ?> />
+										<?php else : ?>
+											<div class="cf-gd-card-image-placeholder"></div>
+										<?php endif; ?>
+										<?php if ( $rating_html ) : ?>
+											<div class="cf-gd-card-rating"><?php echo $rating_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
+										<?php endif; ?>
+									</div>
+									<div class="cf-gd-card-body">
+										<?php if ( $cat_name ) : ?>
+											<p class="cf-gd-card-cat"><?php echo esc_html( $cat_name ); ?></p>
+										<?php endif; ?>
+										<h2 class="cf-gd-card-title"><?php the_title(); ?></h2>
+										<?php if ( $address_line ) : ?>
+											<p class="cf-gd-card-address"><?php echo esc_html( $address_line ); ?></p>
+										<?php endif; ?>
+										<p class="cf-gd-card-excerpt"><?php echo esc_html( wp_trim_words( get_the_excerpt(), 14 ) ); ?></p>
+										<span class="cf-gd-card-cta"><?php esc_html_e( 'View listing', 'directory' ); ?> &rarr;</span>
+									</div>
+								</a>
+							</article>
+						<?php endwhile; ?>
+					</div>
+
+					<?php
+					$gd_temp_query = $wp_query;
+					$wp_query      = $gd_query; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+					$pag           = get_the_posts_pagination( array(
+						'mid_size'  => 1,
+						'prev_text' => '&larr; ' . __( 'Previous', 'directory' ),
+						'next_text' => __( 'Next', 'directory' ) . ' &rarr;',
+						'class'     => 'cf-gd-pagination',
+					) );
+					$wp_query = $gd_temp_query; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+					if ( $pag ) {
+						echo '<nav class="cf-gd-pagination-nav" aria-label="' . esc_attr__( 'Listings navigation', 'directory' ) . '">' . $pag . '</nav>';
+					}
+					wp_reset_postdata();
+					?>
+				<?php else : ?>
+					<div class="cf-gd-empty-wrap">
+						<span class="cf-gd-empty-icon" aria-hidden="true"></span>
+						<p class="cf-gd-empty-title"><?php esc_html_e( 'No results yet', 'directory' ); ?></p>
+						<p class="cf-gd-empty"><?php esc_html_e( 'Try adjusting your search or filters to explore businesses.', 'directory' ); ?></p>
+					</div>
+				<?php endif; ?>
+
+				<?php
+				// Category CMS content + FAQs (from term meta) – shown under business cards or empty state.
+				if ( $gd_is_category && ! empty( $gd_queried->term_id ) ) {
+					$term_id  = (int) $gd_queried->term_id;
+					$content_key  = function_exists( 'directory_gd_cat_meta_key_content' ) ? directory_gd_cat_meta_key_content() : '_directory_cat_content';
+					$content2_key = function_exists( 'directory_gd_cat_meta_key_content_2' ) ? directory_gd_cat_meta_key_content_2() : '_directory_cat_content_2';
+					$heading2_key = function_exists( 'directory_gd_cat_meta_key_heading_2' ) ? directory_gd_cat_meta_key_heading_2() : '_directory_cat_heading_2';
+					$image1_key   = function_exists( 'directory_gd_cat_meta_key_image1' ) ? directory_gd_cat_meta_key_image1() : '_directory_cat_image_1_id';
+					$image2_key   = function_exists( 'directory_gd_cat_meta_key_image2' ) ? directory_gd_cat_meta_key_image2() : '_directory_cat_image_2_id';
+					$faq_key      = function_exists( 'directory_gd_cat_meta_key_faq' ) ? directory_gd_cat_meta_key_faq() : '_directory_cat_faq';
+
+					$content  = get_term_meta( $term_id, $content_key, true );
+					$content2 = get_term_meta( $term_id, $content2_key, true );
+					$heading2 = get_term_meta( $term_id, $heading2_key, true );
+					$image1id = get_term_meta( $term_id, $image1_key, true );
+					$image2id = get_term_meta( $term_id, $image2_key, true );
+					$faq      = get_term_meta( $term_id, $faq_key, true );
+
+					if ( ! is_array( $faq ) ) {
+						$faq = array();
+					}
+
+					$has_content = is_string( $content ) && trim( $content ) !== '';
+					$has_content2 = is_string( $content2 ) && trim( $content2 ) !== '';
+					$has_images_raw  = (bool) ( $image1id || $image2id );
+					$has_faq     = false;
+					foreach ( $faq as $item ) {
+						$q = isset( $item['q'] ) ? (string) $item['q'] : '';
+						$a = isset( $item['a'] ) ? (string) $item['a'] : '';
+						if ( trim( $q ) !== '' || trim( $a ) !== '' ) {
+							$has_faq = true;
+							break;
+						}
+					}
+
+					// If this is a child category with no own CMS data, fall back to the nearest ancestor that has data.
+					if ( ! $has_content && ! $has_images_raw && ! $has_faq && ! empty( $gd_queried->parent ) ) {
+						$parent_id = (int) $gd_queried->parent;
+						while ( $parent_id ) {
+							$parent_term = get_term( $parent_id, 'gd_placecategory' );
+							if ( ! $parent_term || is_wp_error( $parent_term ) ) {
+								break;
+							}
+
+							$p_content  = get_term_meta( $parent_term->term_id, $content_key, true );
+							$p_content2 = get_term_meta( $parent_term->term_id, $content2_key, true );
+							$p_heading2 = get_term_meta( $parent_term->term_id, $heading2_key, true );
+							$p_image1id = get_term_meta( $parent_term->term_id, $image1_key, true );
+							$p_image2id = get_term_meta( $parent_term->term_id, $image2_key, true );
+							$p_faq      = get_term_meta( $parent_term->term_id, $faq_key, true );
+							if ( ! is_array( $p_faq ) ) {
+								$p_faq = array();
+							}
+
+							$p_has_content = is_string( $p_content ) && trim( $p_content ) !== '';
+							$p_has_content2 = is_string( $p_content2 ) && trim( $p_content2 ) !== '';
+							$p_has_images  = (bool) ( $p_image1id || $p_image2id );
+							$p_has_faq     = false;
+							foreach ( $p_faq as $p_item ) {
+								$p_q = isset( $p_item['q'] ) ? (string) $p_item['q'] : '';
+								$p_a = isset( $p_item['a'] ) ? (string) $p_item['a'] : '';
+								if ( trim( $p_q ) !== '' || trim( $p_a ) !== '' ) {
+									$p_has_faq = true;
+									break;
+								}
+							}
+
+							if ( $p_has_content || $p_has_content2 || $p_has_images || $p_has_faq ) {
+								// Use parent data but keep the child category name as the title.
+								$content  = $p_content;
+								$content2 = $p_content2;
+								$heading2 = $p_heading2;
+								$image1id = $p_image1id;
+								$image2id = $p_image2id;
+								$faq      = $p_faq;
+								$has_content = $p_has_content;
+								$has_content2 = $p_has_content2;
+								$has_images_raw = $p_has_images;
+								$has_faq = $p_has_faq;
+								break;
+							}
+
+							$parent_id = (int) $parent_term->parent;
+						}
+					}
+
+					$image1 = $image1id ? wp_get_attachment_image_url( (int) $image1id, 'large' ) : '';
+					$image2 = $image2id ? wp_get_attachment_image_url( (int) $image2id, 'large' ) : '';
+					$has_section1 = $has_content || (bool) $image1;
+					$has_section2 = $has_content2 || (bool) $image2;
+
+					// If there is no custom CMS data at all, show friendly dummy copy + placeholder images/FAQs.
+					if ( ! $has_section1 && ! $has_section2 && ! $has_faq ) {
+						$dummy_title = $gd_archive_clean;
+
+						$dummy_intro  = '<p><strong>' . sprintf( esc_html__( 'About %s', 'directory' ), esc_html( $dummy_title ) ) . '</strong></p>';
+						$dummy_intro .= '<p>' . esc_html__( 'This category groups together businesses that offer similar services or products. Use it to quickly discover options that are relevant to what you are looking for.', 'directory' ) . '</p>';
+
+						$dummy_more  = '<p>' . esc_html__( 'Listings in this category may include a mix of local specialists, national brands, and trusted providers. Check individual listings for opening hours, reviews, and contact details.', 'directory' ) . '</p>';
+
+						$content   = $dummy_intro;
+						$content2  = $dummy_more;
+						$heading2  = sprintf( esc_html__( '%s highlights', 'directory' ), esc_html( $dummy_title ) );
+						$has_content  = true;
+						$has_content2 = true;
+
+						// Simple static placeholders from theme assets.
+						$placeholder1 = get_stylesheet_directory_uri() . '/assets/images/home-bg.jpg';
+						$placeholder2 = get_stylesheet_directory_uri() . '/assets/images/testimonials.jpg';
+						$image1 = $placeholder1;
+						$image2 = $placeholder2;
+
+						$faq = array(
+							array(
+								'q' => sprintf( esc_html__( 'What types of businesses are listed under %s?', 'directory' ), $dummy_title ),
+								'a' => esc_html__( 'You will typically find a range of businesses that share a similar focus, making it easier to compare options side by side.', 'directory' ),
+							),
+							array(
+								'q' => esc_html__( 'How do I add my business to this category?', 'directory' ),
+								'a' => esc_html__( 'Create a free account, click the “Add listing” button in the header, and choose this category when you submit your business.', 'directory' ),
+							),
+						);
+						$has_faq      = true;
+						$has_section1 = true;
+						$has_section2 = true;
+					}
+
+					if ( $has_section1 || $has_section2 || $has_faq ) :
+						?>
+						<section class="cf-gd-cat-cms" aria-label="<?php esc_attr_e( 'Category information', 'directory' ); ?>">
+							<div class="cf-gd-cat-cms-inner">
+								<?php if ( $has_section1 || $has_section2 ) : ?>
+									<div class="cf-gd-cat-cms-rows">
+										<?php if ( $has_section1 ) : ?>
+											<div class="cf-gd-cat-cms-row cf-gd-cat-cms-row--1">
+												<div class="cf-gd-cat-cms-col cf-gd-cat-cms-col--text">
+													<h2 class="cf-gd-cat-cms-title"><?php echo esc_html( $gd_archive_clean ); ?></h2>
+													<?php if ( $has_content ) : ?>
+														<div class="cf-gd-cat-cms-text"><?php echo wp_kses_post( $content ); ?></div>
+													<?php else : ?>
+														<p class="cf-gd-cat-cms-empty"><?php esc_html_e( 'More details coming soon.', 'directory' ); ?></p>
+													<?php endif; ?>
+												</div>
+												<?php if ( $image1 ) : ?>
+													<div class="cf-gd-cat-cms-col cf-gd-cat-cms-col--image">
+														<div class="cf-gd-cat-cms-img" style="background-image:url('<?php echo esc_url( $image1 ); ?>');"></div>
+													</div>
+												<?php endif; ?>
+											</div>
+										<?php endif; ?>
+
+										<?php if ( $has_section2 ) : ?>
+											<div class="cf-gd-cat-cms-row cf-gd-cat-cms-row--2">
+												<?php if ( $image2 ) : ?>
+													<div class="cf-gd-cat-cms-col cf-gd-cat-cms-col--image">
+														<div class="cf-gd-cat-cms-img" style="background-image:url('<?php echo esc_url( $image2 ); ?>');"></div>
+													</div>
+												<?php endif; ?>
+												<div class="cf-gd-cat-cms-col cf-gd-cat-cms-col--text">
+													<h3 class="cf-gd-cat-cms-subtitle">
+														<?php
+														if ( is_string( $heading2 ) && trim( $heading2 ) !== '' ) {
+															echo esc_html( $heading2 );
+														} else {
+															echo esc_html( $gd_archive_clean );
+														}
+														?>
+													</h3>
+													<?php if ( $has_content2 ) : ?>
+														<div class="cf-gd-cat-cms-text"><?php echo wp_kses_post( $content2 ); ?></div>
+													<?php else : ?>
+														<p class="cf-gd-cat-cms-empty"><?php esc_html_e( 'More details coming soon.', 'directory' ); ?></p>
+													<?php endif; ?>
+												</div>
+											</div>
+										<?php endif; ?>
+									</div>
+								<?php endif; ?>
+
+								<?php if ( $has_faq ) : ?>
+									<div class="cf-gd-cat-faq">
+										<h2 class="cf-gd-cat-faq-title"><?php esc_html_e( 'Frequently asked questions', 'directory' ); ?></h2>
+										<div class="cf-gd-cat-faq-list">
+											<?php foreach ( $faq as $item ) :
+												$q = isset( $item['q'] ) ? trim( (string) $item['q'] ) : '';
+												$a = isset( $item['a'] ) ? trim( (string) $item['a'] ) : '';
+												if ( $q === '' && $a === '' ) {
+													continue;
+												}
+												?>
+												<details class="cf-gd-cat-faq-item">
+													<summary class="cf-gd-cat-faq-q"><?php echo esc_html( $q ?: __( 'Question', 'directory' ) ); ?></summary>
+													<div class="cf-gd-cat-faq-a"><?php echo wp_kses_post( $a ); ?></div>
+												</details>
+											<?php endforeach; ?>
+										</div>
+									</div>
+								<?php endif; ?>
+							</div>
+						</section>
+						<?php
+					endif;
+				}
+				?>
+			</div>
+		</div>
+	</div>
+</main>
+<?php
+wp_reset_postdata();
+get_footer( 'custom' );
+require_once get_stylesheet_directory() . '/includes/custom-frontend-doc-end.php';

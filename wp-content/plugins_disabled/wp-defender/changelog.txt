@@ -1,0 +1,87 @@
+Plugin Name: WP Defender
+Author: WPMU DEV
+Tested up to: 6.9
+
+Change Log:
+
+= 5.8.0 ( 2025-12-24 ) =
+
+- New: Detect suspicious code in JavaScript files during Malware Scanning
+- Enhance: Prevent false lockouts when requests contain mixed Facebook/Twitterbot user agents
+- Enhance: Update Axios and form-data package versions
+- Enhance: Update malware signatures
+- Enhance: Split Bulk checkboxes between tabs on Malware Scanning page
+- Enhance: Display Disconnect Site button on Defender’s general settings screen
+- Enhance: Improve plugin code style using PHPStan
+- Enhance: Improve UI for background Malware Scanning
+- Enhance: Restore reCAPTCHA class alias for backward compatibility
+- Enhance: Add new audit logging events
+- Enhance: Migrate notification events to the centralized Cron Manager
+- Enhance: Migrate common plugin events to the centralized Cron Manager
+- Fix: Update .htaccess rules for LiteSpeed servers
+- Fix: Duplicate user agent records in robots.txt
+- Fix: Extra space and hidden Google reCAPTCHA field shown on multisite registration page
+- Fix: Duplicates of Ignored Scan issues
+- Fix: Deprecation warnings from the thecodingmachine/safe package in PHP 8.4
+- Fix: Quarantine activation link does not work in the free version
+- Fix: Incorrect "Configure" button flow in the Firewall widget on the Dashboard
+- Fix: UI improvements
+
+= 5.7.2 ( 2025-12-15 ) =
+
+- Enhance: Miscellaneous improvements
+
+= 5.7.1 ( 2025-11-24 ) =
+
+- Fix: Improve 404 detection flow
+
+= 5.7.0 ( 2025-11-18 ) =
+
+- New: Cloudflare Turnstile integration
+- Enhance: Compatibility with WordPress 6.9
+- Enhance: Redesigned CAPTCHA menu
+- Enhance: Optimize database performance on multisite
+- Enhance: Add additional widget IDs on Defender’s Dashboard page
+- Enhance: Add new hooks to simplify Audit testing and Firewall logs deletion
+- Enhance: Update minimum supported PHP version to 8.0
+- Enhance: Disable New Scan button until the background scan is complete
+- Enhance: Migrate Security Recommendations multisite events to the centralized Cron Manager system
+- Enhance: Migrate Malware Scanning multisite events to the centralized Cron Manager system
+- Enhance: Tracking improvements
+- Fix: Masking URL displays a notice when using a slug already assigned to another page
+- Fix: Defender not detecting some outdated plugins
+- Fix: Recommended PHP version appears as NULL on WP Engine hosting
+- Fix: Default Security Config name and description not saving properly
+- Fix: UI improvements
+
+= 5.6.2 ( 2025-11-20 ) =
+
+- Enhance: Miscellaneous improvements
+
+= 5.6.1 ( 2025-10-21 ) =
+
+- Fix: Malicious Bot Detector blocking Facebook Sharing Debugger bot
+
+= 5.6.0 ( 2025-10-07 ) =
+
+- New: Malicious Bot Detector
+- New: WooCommerce integration with Defender > Strong Password
+- Enhance: Migrate Audit multisite events to the centralized Cron Manager system
+- Enhance: Migrate Firewall multisite events to the centralized Cron Manager system
+- Enhance: Improve plugin detection logic to exclude plugins not from wp.org
+- Enhance: Remove AntiBot IP list after site disconnection
+- Enhance: Add rel="nofollow" to Bot Trap URL
+- Enhance: Hide Blocklist Checker and AntiBot Stats button when Whitelabel is enabled
+- Enhance: Sync with the Custom IP Block/Allow list across different hosting memberships
+- Enhance: Add parameter to WP-CLI Scan command for outdated and closed plugins
+- Enhance: Add audit logging event to detect Hub SSO login
+- Enhance: Improve plugin code style using PHPStan and ESLint rules
+- Fix: Web Authentication improvements
+- Fix: Security Recommendations > Security key value not saved
+- Fix: Defender not adding noindex tag to secret link of Bot Trap
+- Fix: Notification hints not displaying properly
+- Fix: Issue on Firewall Logs page when logging in with an expired session using the default WordPress login modal
+- Fix: Defender country blocklist not working for EU region and UK
+
+
+491559-1768948668-ai

@@ -1,0 +1,27 @@
+{
+  "name": "ayecode/gpa",
+  "type": "project",
+  "description": "Advertising system management",
+  "keywords": ["advertising", "wordpress"],
+  "homepage": "https://wpgeodirectory.com/downloads/advertising/",
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "AyeCode Ltd",
+      "email": "contact@ayecode.io",
+      "homepage": "https://ayecode.io/",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.0",
+    "ayecode/wp-super-duper": "^1.0",
+    "ayecode/wp-ayecode-ui": "^0"
+  },
+  "minimum-stability": "stable",
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true
+    }
+  }
+}

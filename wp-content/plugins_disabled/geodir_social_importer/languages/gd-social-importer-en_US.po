@@ -1,0 +1,752 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: GeoDirectory Social Importer 2.3.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-10 18:18+0530\n"
+"PO-Revision-Date: 2025-07-10 18:18+0530\n"
+"Last-Translator: \n"
+"Language-Team: AyeCode Ltd <contact@ayecode.io>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;__ngettext:1,2;__ngettext_noop:1,2;_c;_e;_ex:1,2c;"
+"_n:1,2;_n_noop:1,2;_nc:4c,1,2;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;gettext;"
+"gettext_noop\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: geodir_social_importer.php:48
+#, php-format
+msgid ""
+"%s requires to install the %sGeoDirectory%s plugin to be installed and "
+"active."
+msgstr ""
+
+#: geodir_social_importer.php:59
+#, php-format
+msgid ""
+"The plugin %sWP Easy Updates%s is required to check for and update some "
+"installed plugins, please install it now."
+msgstr ""
+
+#: geodir_social_importer.php:76
+#, php-format
+msgid ""
+"Due to Facebook restrictions, we have now moved to %sa 3rd party solution%s "
+"and the first 50 imports are free."
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:98
+#: includes/admin/class-geodir-social-importer-admin.php:1472
+msgid "Social Importer"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:138
+msgid "PHP XML"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:139
+msgid ""
+"GeoDirectory Social Importer check PHP XML is installed on server or not."
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:180
+msgid "Facebook"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:181
+msgid "Yelp"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:182
+msgid "Tripadvisor"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:183
+msgid "Google My Business"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:271
+msgid "Yelp API V3(fusion) settings."
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:277
+msgid "API Key"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:278
+msgid "Enter your Yelp API Key."
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:278
+msgid "Find API details "
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:278
+msgid "here"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:284
+msgid "Trip advisor Settings"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:291
+#: includes/admin/class-geodir-social-importer-admin.php:522
+msgid "Enable Direct URL Parse"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:292
+msgid ""
+"This method bypasses the tripadvisor api and instead directly parses the url "
+"return data, a lot like when you enter a url in Tripadvisor it grabs the "
+"title and image. ( Content may be copyrighted and/or subject to other T&Cs, "
+"this option is used at your own risk )"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:299
+msgid "GMB App Connect"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:306
+#: includes/public/class-geodir-social-importer-public.php:304
+#: includes/public/class-geodir-social-importer-public.php:364
+#: includes/public/class-geodir-social-importer-public.php:413
+#: includes/public/class-geodir-social-importer-public.php:423
+msgid "Connect"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:307
+msgid "Connect with Google My Business account to get auth code."
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:339
+#: includes/public/class-geodir-social-importer-public.php:378
+#: includes/public/class-geodir-social-importer-public.php:427
+msgid "Business Account"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:340
+msgid "Select the business account."
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:344
+#: includes/public/class-geodir-social-importer-public.php:1408
+#: includes/public/class-geodir-social-importer-public.php:1418
+msgid "Select Account"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:355
+#: includes/public/class-geodir-social-importer-public.php:392
+#: includes/public/class-geodir-social-importer-public.php:431
+msgid "Business Location"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:356
+msgid "Select the business location."
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:360
+#: includes/public/class-geodir-social-importer-public.php:1498
+#: includes/public/class-geodir-social-importer-public.php:1503
+#: includes/public/class-geodir-social-importer-public.php:1530
+msgid "Select Location"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:371
+#: includes/public/class-geodir-social-importer-public.php:333
+#: includes/public/class-geodir-social-importer-public.php:418
+msgid "Auth Code"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:372
+#: includes/public/class-geodir-social-importer-public.php:319
+#: includes/public/class-geodir-social-importer-public.php:419
+msgid "Authorize"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:372
+#: includes/public/class-geodir-social-importer-public.php:339
+#: includes/public/class-geodir-social-importer-public.php:420
+msgid "You must save changes after entering auth code here."
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:373
+msgid "ENTER AUTH CODE HERE"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:384
+msgid "Import GMB Location"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:392
+msgid "CPTs to Import From GMB"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:393
+msgid ""
+"Select post types allowed frontend users to import their Google My Business "
+"location."
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:397
+#: includes/admin/class-geodir-social-importer-admin.php:423
+msgid "Select Post Types"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:407
+msgid "Post to GMB Location"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:418
+msgid "CPTs to Post To GMB"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:419
+msgid ""
+"Select post types to allow for post to GMB location when a item published. "
+"It post to Google My Business location selected in GMB App Connect section"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:430
+msgid "Auto Post To GMB"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:431
+msgid ""
+"Allow auto post to Google My Business location on item published. If "
+"disabled you still able to post by using \"Post to GMB\" button from backend "
+"edit page."
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:437
+msgid "Post Text"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:438
+msgid ""
+"The text content that should be post to GMB location. Google search results "
+"shows 80 characters. Allowed upto 1500 max characters."
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:438
+msgid "Available template tags:"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:447
+msgid "Facebook App Details"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:454
+#, php-format
+msgid "%sscraping-bot.io%s username"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:458
+msgid "Enter your scraping-bot.io username"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:465
+msgid "scraping-bot.io API Key"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:466
+msgid "Enter your scraping-bot.io API Key"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:483
+msgid "Post to Facebook settings"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:491
+msgid "Disable Post To Facebook?"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:492
+msgid "Tick to disable post to Facebook feature for all post types."
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:503
+msgid "Enable post type for Post To Facebook"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:504
+msgid ""
+"Select post type to enable post to Facebook when listing published. Leave "
+"blank to enable post to Facebook for all allowed post types."
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:508
+msgid "Select post types"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:515
+msgid "Disable auto Post To Facebook?"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:516
+msgid ""
+"Tick to disable auto post to Facebook when listing published. If disabled "
+"you still able to post by using \"Post to Facebook\" button from edit page."
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:523
+msgid ""
+"This method bypasses the facebook api and instead directly parses the url "
+"return data, a lot like when you enter a url in facebook it grabs the title "
+"and image. ( Content may be copyrighted and/or subject to other T&Cs, this "
+"option is used at your own risk )"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:530
+msgid "Facebook App ID"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:531
+msgid "Enter your facebook app ID"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:538
+msgid "Facebook App Secret"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:539
+msgid "Enter your facebook app secret"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:546
+msgid "OAuth redirect URI"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:547
+msgid ""
+"This setting needs to be added to your app settings Products>Facebook "
+"Login>OAuth redirect URI"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:558
+msgid "Facebook Connect App"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:573
+msgid "Post to FB page"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:574
+msgid "Select a Facebook page to post the new listings."
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:579
+#: includes/admin/class-geodir-social-importer-admin.php:612
+msgid "Select page - DISABLED"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:678
+msgid "Connect Your App"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:684
+msgid "Refresh Access Token"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:689
+#, php-format
+msgid "Facebook Access Token Expires On: %1$s at %2$s"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:691
+msgid "Facebook Access Token Expires On: Never"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:731
+#: includes/class-gd-social-importer-facebook.php:738
+msgid "Something went wrong"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:850
+#: includes/admin/class-geodir-social-importer-admin.php:893
+msgid "Repost to Facebook"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:853
+msgid "Post to Facebook"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:867
+msgid "Currently posting, please wait!"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:890
+msgid "Please publish this post first or you might break the internet!"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:894
+msgid "Post posted to facebook!"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:896
+msgid "Something went wrong while posting to facebook!"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:924
+#: includes/admin/class-geodir-social-importer-admin.php:937
+msgid "Repost to GMB"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:928
+#, php-format
+msgid "Last posted on %s"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:932
+msgid "Post to GMB"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:1079
+msgid "Invalid post found."
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:1085
+msgid "Post to GMB is allowed for the post type."
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:1089
+msgid "Publish post first to allow for Post to GMB."
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:1099
+msgid "Item posted to GMB location."
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:1101
+#: includes/gmb-functions.php:544 includes/gmb-functions.php:548
+msgid "Something went wrong while posting to GMB."
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:1309
+#: includes/public/class-geodir-social-importer-public.php:352
+#: includes/public/class-geodir-social-importer-public.php:424
+msgid "Revoke"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:1310
+#: includes/public/class-geodir-social-importer-public.php:345
+#: includes/public/class-geodir-social-importer-public.php:424
+msgid "Authorized"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:1315
+#, php-format
+msgid "Expires On: %1$s at %2$s"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:1318
+#, php-format
+msgid "Last Authorized On: %1$s at %2$s"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:1321
+#, php-format
+msgid "Last Updated On: %1$s at %2$s"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:1334
+#: includes/public/class-geodir-social-importer-public.php:295
+#: includes/public/class-geodir-social-importer-public.php:414
+msgid "Connect to Google My Business"
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:1368
+#: includes/public/class-geodir-social-importer-public.php:1331
+msgid "Invalid request."
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:1372
+#: includes/gmb-functions.php:70 includes/gmb-functions.php:115
+#: includes/gmb-functions.php:162
+msgid "Something went wrong."
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:1394
+#: includes/gmb-functions.php:84
+#: includes/public/class-geodir-social-importer-public.php:1345
+msgid "Access token not found."
+msgstr ""
+
+#: includes/admin/class-geodir-social-importer-admin.php:1473
+msgid ""
+"Check this box if you would like to completely remove all of its data when "
+"Social Importer is deleted."
+msgstr ""
+
+#: includes/class-gd-social-importer-facebook.php:49
+msgid "Sorry, this content isn't available right now"
+msgstr ""
+
+#: includes/class-gd-social-importer-facebook.php:143
+#, php-format
+msgid "%s at %s"
+msgstr ""
+
+#: includes/class-gd-social-importer-facebook.php:373
+msgid "Missing API key or username."
+msgstr ""
+
+#: includes/class-gd-social-importer-facebook.php:425
+msgid "Missing response ID."
+msgstr ""
+
+#: includes/class-gd-social-importer-facebook.php:478
+msgid "Invalid response. Please try again."
+msgstr ""
+
+#: includes/class-gd-social-importer-facebook.php:730
+msgid "Something went wrong[111]"
+msgstr ""
+
+#: includes/class-gd-social-importer-facebook.php:734
+msgid "Something went wrong[100], this page/event may not be public"
+msgstr ""
+
+#: includes/class-gd-social-importer-facebook.php:736
+msgid ""
+"Something went wrong[104], the admin must authorize this app in the backend"
+msgstr ""
+
+#: includes/class-gd-social-importer-function.php:487
+msgid "New {pt_singular_name}: {post_title} - {post_content}"
+msgstr ""
+
+#: includes/class-gd-social-importer-yelp.php:50
+#: includes/public/class-geodir-social-importer-public.php:1272
+msgid "Invalid Yelp API Key."
+msgstr ""
+
+#: includes/class-gd-social-importer-yelp.php:66
+msgid ""
+"Something went wrong[300], this page/event may not be public or does not "
+"exist!"
+msgstr ""
+
+#: includes/class-gd-social-importer-yelp.php:72
+#, php-format
+msgid "[%s] %s"
+msgstr ""
+
+#: includes/class-geodir-social-importer-rest.php:77
+msgid "Please provide a valid token."
+msgstr ""
+
+#: includes/class-geodir-social-importer-rest.php:90
+msgid "User not found."
+msgstr ""
+
+#: includes/gmb-functions.php:126
+msgid "No accounts found."
+msgstr ""
+
+#: includes/gmb-functions.php:152
+msgid "No accounts selected."
+msgstr ""
+
+#: includes/gmb-functions.php:173
+msgid "No locations found."
+msgstr ""
+
+#: includes/gmb-functions.php:210
+msgid "Something went wrong while retrieving the location."
+msgstr ""
+
+#: includes/gmb-functions.php:219 includes/gmb-functions.php:234
+#: includes/gmb-functions.php:307 includes/gmb-functions.php:322
+msgid "Invalid location."
+msgstr ""
+
+#: includes/gmb-functions.php:298
+msgid "Something went wrong while retrieving the media."
+msgstr ""
+
+#: includes/gmb-functions.php:333
+msgid "No business account selected."
+msgstr ""
+
+#: includes/gmb-functions.php:337
+msgid "No business location selected."
+msgstr ""
+
+#: includes/gmb-functions.php:347
+msgid "Posts"
+msgstr ""
+
+#: includes/gmb-functions.php:348
+msgid "Post"
+msgstr ""
+
+#: includes/gmb-functions.php:518
+msgid "Error in create post to Google My Business."
+msgstr ""
+
+#: includes/gmb-functions.php:532
+msgid "for"
+msgstr ""
+
+#: includes/public/class-geodir-social-importer-public.php:100
+msgid "Install Extension"
+msgstr ""
+
+#: includes/public/class-geodir-social-importer-public.php:108
+msgid "Copy Token"
+msgstr ""
+
+#: includes/public/class-geodir-social-importer-public.php:111
+msgid "Token Copied!"
+msgstr ""
+
+#: includes/public/class-geodir-social-importer-public.php:122
+msgid "GeoDirectory Chrome Extension"
+msgstr ""
+
+#: includes/public/class-geodir-social-importer-public.php:124
+msgid ""
+"Install the GeoDirectory Chrome extension to effortlessly import listings "
+"while browsing, and then paste your web token below to link it with your "
+"account."
+msgstr ""
+
+#: includes/public/class-geodir-social-importer-public.php:179
+msgid "facebook page"
+msgstr ""
+
+#: includes/public/class-geodir-social-importer-public.php:182
+msgid "Yelp page"
+msgstr ""
+
+#: includes/public/class-geodir-social-importer-public.php:185
+msgid "TripAdvisor"
+msgstr ""
+
+#: includes/public/class-geodir-social-importer-public.php:188
+#, php-format
+msgid "Enter %s url"
+msgstr ""
+
+#: includes/public/class-geodir-social-importer-public.php:200
+msgid "Import Details from Social URLs"
+msgstr ""
+
+#: includes/public/class-geodir-social-importer-public.php:214
+#: includes/public/class-geodir-social-importer-public.php:251
+msgid "Import Details"
+msgstr ""
+
+#: includes/public/class-geodir-social-importer-public.php:239
+msgid "Things are taking a little longer but are still working"
+msgstr ""
+
+#: includes/public/class-geodir-social-importer-public.php:249
+msgid "Import Details from Social"
+msgstr ""
+
+#: includes/public/class-geodir-social-importer-public.php:283
+#: includes/public/class-geodir-social-importer-public.php:411
+msgid "Import from Google My Business"
+msgstr ""
+
+#: includes/public/class-geodir-social-importer-public.php:310
+#: includes/public/class-geodir-social-importer-public.php:415
+msgid "Connect to your Google My Business account and get auth code."
+msgstr ""
+
+#: includes/public/class-geodir-social-importer-public.php:336
+msgid "GMB Auth Code"
+msgstr ""
+
+#: includes/public/class-geodir-social-importer-public.php:337
+#: includes/public/class-geodir-social-importer-public.php:419
+msgid "ENTER GMB AUTH CODE HERE"
+msgstr ""
+
+#: includes/public/class-geodir-social-importer-public.php:382
+#: includes/public/class-geodir-social-importer-public.php:428
+#: includes/public/class-geodir-social-importer-public.php:1301
+msgid "Searching for the business accounts..."
+msgstr ""
+
+#: includes/public/class-geodir-social-importer-public.php:396
+#: includes/public/class-geodir-social-importer-public.php:432
+#: includes/public/class-geodir-social-importer-public.php:1302
+msgid "Searching for the business locations..."
+msgstr ""
+
+#: includes/public/class-geodir-social-importer-public.php:666
+#: includes/public/class-geodir-social-importer-public.php:839
+msgid "Imported"
+msgstr ""
+
+#: includes/public/class-geodir-social-importer-public.php:741
+msgid "An error occured. Please refresh the page then try again."
+msgstr ""
+
+#: includes/public/class-geodir-social-importer-public.php:752
+msgid "Please enter a value"
+msgstr ""
+
+#: includes/public/class-geodir-social-importer-public.php:1181
+msgid "Action failed. Please refresh the page and retry."
+msgstr ""
+
+#: includes/public/class-geodir-social-importer-public.php:1290
+msgid ""
+"Please enter a correct facebook page/event url, Yelp url or Tripadvisor Url "
+"& try again"
+msgstr ""
+
+#: includes/public/class-geodir-social-importer-public.php:1335
+msgid "Something went wrong while authorization."
+msgstr ""
+
+#: includes/public/class-geodir-social-importer-public.php:1399
+msgid "Something went wrong while retrieving the business accounts."
+msgstr ""
+
+#: includes/public/class-geodir-social-importer-public.php:1412
+msgid "Select the business account to retrieve locations."
+msgstr ""
+
+#: includes/public/class-geodir-social-importer-public.php:1439
+msgid "No business accounts found."
+msgstr ""
+
+#: includes/public/class-geodir-social-importer-public.php:1471
+#: includes/public/class-geodir-social-importer-public.php:1569
+msgid "Select business account to get locations."
+msgstr ""
+
+#: includes/public/class-geodir-social-importer-public.php:1480
+msgid "Something went wrong while retrieving the business account locations."
+msgstr ""
+
+#: includes/public/class-geodir-social-importer-public.php:1491
+msgid "Select the business location to import."
+msgstr ""
+
+#: includes/public/class-geodir-social-importer-public.php:1517
+#: includes/public/class-geodir-social-importer-public.php:1534
+msgid "Import"
+msgstr ""
+
+#: includes/public/class-geodir-social-importer-public.php:1538
+msgid "No business locations found."
+msgstr ""
+
+#: includes/yelp-oauth.php:179
+msgid "Error: Invalid response from Yelp API"
+msgstr ""
+
+#: includes/yelp-oauth.php:190
+msgid "Error: Could not parse response from Yelp API"
+msgstr ""

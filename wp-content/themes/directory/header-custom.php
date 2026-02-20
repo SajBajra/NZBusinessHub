@@ -109,7 +109,14 @@ if ( $custom_logo_id ) {
 						</a>
 					</div>
 				<?php else : ?>
-					<button type="button" class="cf-link-sign" data-bs-toggle="modal" data-bs-target="#cf-auth-modal" aria-label="<?php esc_attr_e( 'Sign in', 'directory' ); ?>">
+					<button
+						type="button"
+						class="cf-link-sign"
+						data-bs-toggle="modal"
+						data-bs-target="#cf-auth-modal"
+						data-auth-modal-tab="login"
+						aria-label="<?php esc_attr_e( 'Sign in', 'directory' ); ?>"
+					>
 						<span class="cf-icon-user" aria-hidden="true">
 							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
 						</span>
