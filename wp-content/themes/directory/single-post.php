@@ -133,14 +133,14 @@ if ( ! $blog_page ) {
 									</a>
 								</li>
 							</ul>
-
-							<?php
-							// Sticky Table of contents directly under share section.
-							if ( ! empty( $toc_data['toc'] ) ) {
-								echo $toc_data['toc']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-							}
-							?>
 						</div>
+
+						<?php
+						// Separate TOC card stacked under the share box.
+						if ( ! empty( $toc_data['toc'] ) ) {
+							echo $toc_data['toc']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+						}
+						?>
 					</aside>
 
 					<div class="cf-blog-single-content-wrap entry-content">
