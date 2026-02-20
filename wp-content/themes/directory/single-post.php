@@ -127,7 +127,22 @@ if ( ! $blog_page ) {
 					</aside>
 
 					<div class="cf-blog-single-content-wrap entry-content">
-						<?php the_content(); ?>
+						<?php
+						$toc_data = function_exists( 'directory_get_post_toc_and_content' )
+							? directory_get_post_toc_and_content( $pid )
+							: array(
+								'toc'     => '',
+								'content' => apply_filters( 'the_content', get_the_content() ),
+							);
+
+						// Table of contents (built from H2 headings).
+						if ( ! empty( $toc_data['toc'] ) ) {
+							echo $toc_data['toc']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+						}
+
+						// Main post content with injected anchor IDs.
+						echo $toc_data['content']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+						?>
 
 						<?php
 						wp_link_pages(
@@ -141,6 +156,13 @@ if ( ! $blog_page ) {
 						<footer class="cf-blog-single-footer">
 							<a href="<?php echo esc_url( $blog_page ); ?>" class="cf-single-back">← <?php esc_html_e( 'Back to Blog', 'directory' ); ?></a>
 						</footer>
+
+						<?php
+						// Newsletter signup section after content + footer.
+						if ( function_exists( 'directory_render_newsletter_section' ) ) {
+							directory_render_newsletter_section( get_permalink( $pid ) );
+						}
+						?>
 					</div>
 				</div>
 			</article>

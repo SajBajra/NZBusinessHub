@@ -449,3 +449,272 @@ function directory_override_geodirectory_login_text( $translated, $text, $domain
 	return $translated;
 }
 add_filter( 'gettext', 'directory_override_geodirectory_login_text', 10, 3 );
+
+/**
+ * Build a table of contents for a post from its H2 headings and return both
+ * the TOC markup and updated content with anchor IDs injected.
+ *
+ * @param int|WP_Post|null $post Post ID or object (defaults to current post).
+ * @return array{toc:string,content:string}
+ */
+function directory_get_post_toc_and_content( $post = null ) {
+	$post = get_post( $post );
+	if ( ! $post instanceof WP_Post ) {
+		return array(
+			'toc'     => '',
+			'content' => '',
+		);
+	}
+
+	$content = apply_filters( 'the_content', $post->post_content );
+
+	$pattern    = '/(<h2\b[^>]*>)(.*?)(<\/h2>)/i';
+	$toc_items  = array();
+	$used_ids   = array();
+	$updated    = preg_replace_callback(
+		$pattern,
+		function ( $matches ) use ( &$toc_items, &$used_ids ) {
+			$open_tag  = $matches[1];
+			$heading   = $matches[2];
+			$close_tag = $matches[3];
+
+			$text = wp_strip_all_tags( $heading );
+			if ( $text === '' ) {
+				return $matches[0];
+			}
+
+			$base_id = sanitize_title( $text );
+			if ( $base_id === '' ) {
+				$base_id = 'section';
+			}
+			$id    = $base_id;
+			$count = 2;
+			while ( in_array( $id, $used_ids, true ) ) {
+				$id = $base_id . '-' . $count;
+				$count++;
+			}
+			$used_ids[] = $id;
+
+			$toc_items[] = array(
+				'id'    => $id,
+				'title' => $text,
+			);
+
+			if ( strpos( $open_tag, 'id=' ) === false ) {
+				$open_tag = rtrim( substr( $open_tag, 0, -1 ) ) . ' id="' . esc_attr( $id ) . '">';
+			}
+
+			return $open_tag . $heading . $close_tag;
+		},
+		$content
+	);
+
+	if ( empty( $toc_items ) ) {
+		return array(
+			'toc'     => '',
+			'content' => $content,
+		);
+	}
+
+	ob_start();
+	?>
+	<nav class="cf-blog-single-toc" aria-label="<?php esc_attr_e( 'Table of contents', 'directory' ); ?>">
+		<h2 class="cf-blog-single-toc-title"><?php esc_html_e( 'Table of contents', 'directory' ); ?></h2>
+		<ol class="cf-blog-single-toc-list">
+			<?php foreach ( $toc_items as $item ) : ?>
+				<li class="cf-blog-single-toc-item">
+					<a href="#<?php echo esc_attr( $item['id'] ); ?>" class="cf-blog-single-toc-link">
+						<?php echo esc_html( $item['title'] ); ?>
+					</a>
+				</li>
+			<?php endforeach; ?>
+		</ol>
+	</nav>
+	<?php
+	$toc_html = ob_get_clean();
+
+	return array(
+		'toc'     => $toc_html,
+		'content' => $updated,
+	);
+}
+
+/**
+ * Handle newsletter subscription form submissions from the frontend.
+ * Stores subscribers in a single option as an associative array keyed by email.
+ */
+function directory_handle_newsletter_subscribe() {
+	if ( ! isset( $_POST['directory_newsletter_nonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['directory_newsletter_nonce'] ) ), 'directory_newsletter_subscribe' ) ) {
+		wp_die( esc_html__( 'Security check failed.', 'directory' ) );
+	}
+
+	$email_raw = isset( $_POST['directory_newsletter_email'] ) ? wp_unslash( $_POST['directory_newsletter_email'] ) : '';
+	$email     = sanitize_email( $email_raw );
+
+	$redirect = isset( $_POST['directory_newsletter_redirect'] ) ? esc_url_raw( wp_unslash( $_POST['directory_newsletter_redirect'] ) ) : home_url( '/' );
+
+	if ( ! is_email( $email ) ) {
+		$redirect = add_query_arg( 'newsletter_status', 'invalid_email', $redirect );
+		wp_safe_redirect( $redirect );
+		exit;
+	}
+
+	$subscribers = get_option( 'directory_newsletter_subscribers', array() );
+	if ( ! is_array( $subscribers ) ) {
+		$subscribers = array();
+	}
+
+	$key   = strtolower( $email );
+	$time  = current_time( 'mysql' );
+	$status = 'subscribed';
+
+	if ( isset( $subscribers[ $key ] ) ) {
+		$status = 'already';
+	} else {
+		$subscribers[ $key ] = array(
+			'email'         => $email,
+			'subscribed_at' => $time,
+		);
+		update_option( 'directory_newsletter_subscribers', $subscribers );
+	}
+
+	$redirect = add_query_arg( 'newsletter_status', $status, $redirect );
+	wp_safe_redirect( $redirect );
+	exit;
+}
+add_action( 'admin_post_nopriv_directory_newsletter_subscribe', 'directory_handle_newsletter_subscribe' );
+add_action( 'admin_post_directory_newsletter_subscribe', 'directory_handle_newsletter_subscribe' );
+
+/**
+ * Render the newsletter signup section for single blog posts.
+ *
+ * @param string $redirect_url URL to redirect back to after submission.
+ */
+function directory_render_newsletter_section( $redirect_url = '' ) {
+	if ( ! is_singular( 'post' ) ) {
+		return;
+	}
+
+	if ( ! $redirect_url ) {
+		$redirect_url = get_permalink();
+	}
+
+	$status  = isset( $_GET['newsletter_status'] ) ? sanitize_key( wp_unslash( $_GET['newsletter_status'] ) ) : '';
+	$message = '';
+	$type    = '';
+
+	if ( $status === 'subscribed' ) {
+		$message = __( 'Thanks for subscribing! Please check your inbox.', 'directory' );
+		$type    = 'success';
+	} elseif ( $status === 'already' ) {
+		$message = __( 'You are already subscribed with this email address.', 'directory' );
+		$type    = 'info';
+	} elseif ( $status === 'invalid_email' ) {
+		$message = __( 'Please enter a valid email address.', 'directory' );
+		$type    = 'error';
+	}
+
+	?>
+	<section class="cf-blog-single-newsletter" aria-labelledby="cf-blog-newsletter-title">
+		<div class="cf-blog-single-newsletter-inner">
+			<div class="cf-blog-single-newsletter-copy">
+				<h2 id="cf-blog-newsletter-title" class="cf-blog-single-newsletter-title">
+					<?php esc_html_e( 'Stay in the loop', 'directory' ); ?>
+				</h2>
+				<p class="cf-blog-single-newsletter-text">
+					<?php esc_html_e( 'Get the latest guides, stories, and tips from NZ Business Hub straight to your inbox.', 'directory' ); ?>
+				</p>
+			</div>
+			<div class="cf-blog-single-newsletter-form-wrap">
+				<?php if ( $message ) : ?>
+					<div class="cf-blog-single-newsletter-message cf-blog-single-newsletter-message--<?php echo esc_attr( $type ); ?>">
+						<?php echo esc_html( $message ); ?>
+					</div>
+				<?php endif; ?>
+				<form class="cf-blog-single-newsletter-form" method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>">
+					<label for="directory-newsletter-email" class="cf-blog-single-newsletter-label">
+						<?php esc_html_e( 'Email address', 'directory' ); ?>
+					</label>
+					<div class="cf-blog-single-newsletter-fields">
+						<input
+							type="email"
+							name="directory_newsletter_email"
+							id="directory-newsletter-email"
+							class="cf-blog-single-newsletter-input"
+							required
+							autocomplete="email"
+							placeholder="<?php esc_attr_e( 'you@example.com', 'directory' ); ?>"
+						/>
+						<button type="submit" class="cf-blog-single-newsletter-submit">
+							<?php esc_html_e( 'Subscribe', 'directory' ); ?>
+						</button>
+					</div>
+					<input type="hidden" name="action" value="directory_newsletter_subscribe" />
+					<input type="hidden" name="directory_newsletter_redirect" value="<?php echo esc_attr( $redirect_url ); ?>" />
+					<?php wp_nonce_field( 'directory_newsletter_subscribe', 'directory_newsletter_nonce' ); ?>
+					<p class="cf-blog-single-newsletter-footnote">
+						<?php esc_html_e( 'We respect your privacy. Unsubscribe anytime.', 'directory' ); ?>
+					</p>
+				</form>
+			</div>
+		</div>
+	</section>
+	<?php
+}
+
+/**
+ * Register a simple admin page to list newsletter subscribers.
+ */
+function directory_register_newsletter_admin_page() {
+	add_menu_page(
+		__( 'Newsletter signups', 'directory' ),
+		__( 'Newsletter signups', 'directory' ),
+		'manage_options',
+		'directory-newsletter',
+		'directory_render_newsletter_admin_page',
+		'dashicons-email-alt2',
+		60
+	);
+}
+add_action( 'admin_menu', 'directory_register_newsletter_admin_page' );
+
+/**
+ * Render the admin page table of newsletter subscribers stored in options.
+ */
+function directory_render_newsletter_admin_page() {
+	if ( ! current_user_can( 'manage_options' ) ) {
+		return;
+	}
+
+	$subscribers = get_option( 'directory_newsletter_subscribers', array() );
+	if ( ! is_array( $subscribers ) ) {
+		$subscribers = array();
+	}
+
+	?>
+	<div class="wrap">
+		<h1><?php esc_html_e( 'Newsletter signups', 'directory' ); ?></h1>
+		<p><?php esc_html_e( 'These email addresses have subscribed via the single blog page newsletter form.', 'directory' ); ?></p>
+		<?php if ( empty( $subscribers ) ) : ?>
+			<p><?php esc_html_e( 'No subscribers yet.', 'directory' ); ?></p>
+		<?php else : ?>
+			<table class="widefat striped">
+				<thead>
+					<tr>
+						<th scope="col"><?php esc_html_e( 'Email', 'directory' ); ?></th>
+						<th scope="col"><?php esc_html_e( 'Subscribed at', 'directory' ); ?></th>
+					</tr>
+				</thead>
+				<tbody>
+					<?php foreach ( $subscribers as $row ) : ?>
+						<tr>
+							<td><?php echo isset( $row['email'] ) ? esc_html( $row['email'] ) : ''; ?></td>
+							<td><?php echo isset( $row['subscribed_at'] ) ? esc_html( $row['subscribed_at'] ) : ''; ?></td>
+						</tr>
+					<?php endforeach; ?>
+				</tbody>
+			</table>
+		<?php endif; ?>
+	</div>
+	<?php
+}

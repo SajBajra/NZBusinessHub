@@ -4016,12 +4016,168 @@ body.custom-frontend .cf-single-place .nav-tabs[role="tablist"] {
 	display: none !important;
 }
 
-/* Show all tab content panels */
+/* Show all tab content panels on single business pages */
 body.custom-frontend .cf-single-place .tab-content,
 body.custom-frontend .cf-single-place .tab-pane {
 	display: block !important;
 	opacity: 1 !important;
 	visibility: visible !important;
+}
+
+/* Blog single – table of contents */
+body.custom-frontend .cf-blog-single-toc {
+	margin-bottom: 2rem;
+	padding: 1.5rem 1.5rem 1.25rem;
+	border-radius: 16px;
+	border: 1px solid #e5e7eb;
+	background: #f9fafb;
+}
+body.custom-frontend .cf-blog-single-toc-title {
+	margin: 0 0 0.85rem;
+	font-size: 1.1rem;
+	font-weight: 600;
+	color: #111827;
+}
+body.custom-frontend .cf-blog-single-toc-list {
+	margin: 0;
+	padding-left: 1.25rem;
+	font-size: 0.95rem;
+	color: #374151;
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+}
+body.custom-frontend .cf-blog-single-toc-item {
+	margin: 0;
+}
+body.custom-frontend .cf-blog-single-toc-link {
+	color: #2563eb;
+	text-decoration: none;
+}
+body.custom-frontend .cf-blog-single-toc-link:hover {
+	color: #1d4ed8;
+	text-decoration: underline;
+}
+
+/* Blog single – newsletter section */
+body.custom-frontend .cf-blog-single-newsletter {
+	margin-top: 2.5rem;
+	padding: 1.75rem 1.5rem;
+	border-radius: 16px;
+	border: 1px solid #e5e7eb;
+	background: linear-gradient(135deg, #e0f2fe 0%, #eff6ff 45%, #f9fafb 100%);
+}
+body.custom-frontend .cf-blog-single-newsletter-inner {
+	max-width: 720px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 1.5rem;
+}
+body.custom-frontend .cf-blog-single-newsletter-copy {
+	flex: 1 1 220px;
+}
+body.custom-frontend .cf-blog-single-newsletter-title {
+	margin: 0 0 0.5rem;
+	font-size: 1.25rem;
+	font-weight: 700;
+	color: #0f172a;
+}
+body.custom-frontend .cf-blog-single-newsletter-text {
+	margin: 0;
+	font-size: 0.98rem;
+	color: #4b5563;
+}
+body.custom-frontend .cf-blog-single-newsletter-form-wrap {
+	flex: 1 1 260px;
+}
+body.custom-frontend .cf-blog-single-newsletter-message {
+	margin-bottom: 0.9rem;
+	border-radius: 10px;
+	padding: 0.75rem 0.9rem;
+	font-size: 0.93rem;
+}
+body.custom-frontend .cf-blog-single-newsletter-message--success {
+	background: #dcfce7;
+	color: #166534;
+	border: 1px solid #86efac;
+}
+body.custom-frontend .cf-blog-single-newsletter-message--info {
+	background: #dbeafe;
+	color: #1d4ed8;
+	border: 1px solid #93c5fd;
+}
+body.custom-frontend .cf-blog-single-newsletter-message--error {
+	background: #fee2e2;
+	color: #b91c1c;
+	border: 1px solid #fecaca;
+}
+body.custom-frontend .cf-blog-single-newsletter-form {
+	margin: 0;
+}
+body.custom-frontend .cf-blog-single-newsletter-label {
+	display: block;
+	margin-bottom: 0.35rem;
+	font-size: 0.9rem;
+	font-weight: 500;
+	color: #374151;
+}
+body.custom-frontend .cf-blog-single-newsletter-fields {
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 0.5rem;
+}
+body.custom-frontend .cf-blog-single-newsletter-input {
+	flex: 1 1 auto;
+	min-width: 0;
+	padding: 0.7rem 0.9rem;
+	border-radius: 999px;
+	border: 1px solid #d1d5db;
+	font-size: 0.95rem;
+	color: #111827;
+	background: #fff;
+	transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+body.custom-frontend .cf-blog-single-newsletter-input:focus {
+	outline: none;
+	border-color: #2563eb;
+	box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+body.custom-frontend .cf-blog-single-newsletter-submit {
+	flex: 0 0 auto;
+	padding: 0.7rem 1.3rem;
+	border-radius: 999px;
+	border: none;
+	background: #2563eb;
+	color: #fff;
+	font-size: 0.95rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.1s ease;
+	white-space: nowrap;
+}
+body.custom-frontend .cf-blog-single-newsletter-submit:hover {
+	background: #1d4ed8;
+	box-shadow: 0 4px 10px rgba(37, 99, 235, 0.35);
+	transform: translateY(-1px);
+}
+body.custom-frontend .cf-blog-single-newsletter-footnote {
+	margin: 0.5rem 0 0;
+	font-size: 0.8rem;
+	color: #6b7280;
+}
+@media (max-width: 640px) {
+	body.custom-frontend .cf-blog-single-newsletter-inner {
+		align-items: flex-start;
+	}
+	body.custom-frontend .cf-blog-single-newsletter-fields {
+		flex-direction: column;
+	}
+	body.custom-frontend .cf-blog-single-newsletter-submit {
+		width: 100%;
+		text-align: center;
+	}
 }
 
 /* ----- Single post (blog) ----- */
