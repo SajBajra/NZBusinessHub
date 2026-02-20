@@ -126,6 +126,71 @@ $cf_footer_logo = directory_relative_url( content_url( 'uploads/2026/01/NZ-Direc
 		</div>
 	</div>
 </footer>
+
+<!-- Auth Modal (Sign in / Register) -->
+<div class="modal fade" id="cf-auth-modal" tabindex="-1" aria-labelledby="cf-auth-modal-title" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered cf-auth-modal-dialog">
+		<div class="modal-content cf-auth-modal-content">
+			<div class="modal-header cf-auth-modal-header">
+				<h5 class="modal-title cf-auth-modal-title" id="cf-auth-modal-title"><?php esc_html_e( 'Sign in', 'directory' ); ?></h5>
+				<div class="cf-auth-modal-tabs">
+					<button class="cf-auth-tab-btn active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login-pane" type="button" role="tab" aria-controls="login-pane" aria-selected="true">
+						<?php esc_html_e( 'Sign in', 'directory' ); ?>
+					</button>
+					<button class="cf-auth-tab-btn" id="register-tab" data-bs-toggle="tab" data-bs-target="#register-pane" type="button" role="tab" aria-controls="register-pane" aria-selected="false">
+						<?php esc_html_e( 'Register', 'directory' ); ?>
+					</button>
+				</div>
+				<button type="button" class="cf-auth-modal-close" data-bs-dismiss="modal" aria-label="<?php esc_attr_e( 'Close', 'directory' ); ?>">
+					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+						<line x1="18" y1="6" x2="6" y2="18"></line>
+						<line x1="6" y1="6" x2="18" y2="18"></line>
+					</svg>
+				</button>
+			</div>
+			<div class="modal-body cf-auth-modal-body">
+				<div class="tab-content">
+					<div class="tab-pane fade show active" id="login-pane" role="tabpanel" aria-labelledby="login-tab">
+						<?php
+						if ( function_exists( 'uwp_get_template' ) ) {
+							// UsersWP login form.
+							echo do_shortcode( '[uwp_login]' );
+						} elseif ( function_exists( 'wp_login_form' ) ) {
+							// Fallback to WordPress login form.
+							wp_login_form(
+								array(
+									'redirect'       => get_permalink(),
+									'form_id'        => 'cf-login-form',
+									'label_username' => __( 'Username or Email', 'directory' ),
+									'label_password' => __( 'Password', 'directory' ),
+									'label_remember' => __( 'Remember me', 'directory' ),
+									'id_username'    => 'cf-login-username',
+									'id_password'    => 'cf-login-password',
+									'id_remember'    => 'cf-login-remember',
+									'id_submit'      => 'cf-login-submit',
+									'value_remember' => true,
+								)
+							);
+						}
+						?>
+					</div>
+					<div class="tab-pane fade" id="register-pane" role="tabpanel" aria-labelledby="register-tab">
+						<?php
+						if ( function_exists( 'uwp_get_template' ) ) {
+							// UsersWP register form.
+							echo do_shortcode( '[uwp_register]' );
+						} else {
+							// Fallback message when UsersWP is not active.
+							echo '<div class="cf-auth-message"><p>' . esc_html__( 'Registration is currently disabled. Please contact the site administrator.', 'directory' ) . '</p></div>';
+						}
+						?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 <script>
 (function() {
 	var modal = document.getElementById('cf-location-modal');
@@ -169,6 +234,36 @@ $cf_footer_logo = directory_relative_url( content_url( 'uploads/2026/01/NZ-Direc
 		navToggle.addEventListener('click', function() {
 			var isOpen = header.classList.toggle('cf-header--nav-open');
 			navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+		});
+	}
+
+	// Auth Modal - Update title on tab switch
+	var authModal = document.getElementById('cf-auth-modal');
+	if (authModal) {
+		var loginTab = document.getElementById('login-tab');
+		var registerTab = document.getElementById('register-tab');
+		var modalTitle = document.getElementById('cf-auth-modal-title');
+		
+		if (loginTab && registerTab && modalTitle) {
+			loginTab.addEventListener('shown.bs.tab', function() {
+				modalTitle.textContent = '<?php echo esc_js( __( 'Sign in', 'directory' ) ); ?>';
+			});
+			registerTab.addEventListener('shown.bs.tab', function() {
+				modalTitle.textContent = '<?php echo esc_js( __( 'Register', 'directory' ) ); ?>';
+			});
+		}
+
+		// Focus first input when modal opens
+		authModal.addEventListener('shown.bs.modal', function() {
+			var activePane = authModal.querySelector('.tab-pane.active');
+			if (activePane) {
+				var firstInput = activePane.querySelector('input[type="text"], input[type="email"], input[type="password"]');
+				if (firstInput) {
+					setTimeout(function() {
+						firstInput.focus();
+					}, 100);
+				}
+			}
 		});
 	}
 })();

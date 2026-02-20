@@ -359,6 +359,10 @@ body.custom-frontend .cf-link-sign {
 	text-decoration: none;
 	font-weight: 500;
 	font-size: 1rem;
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 0;
 }
 
 body.custom-frontend .cf-link-sign:hover {
@@ -369,6 +373,347 @@ body.custom-frontend .cf-link-sign:hover {
 body.custom-frontend .cf-icon-user {
 	display: inline-flex;
 	color: #6b7280;
+}
+
+/* Auth Modal Styling */
+body.custom-frontend .cf-auth-modal-dialog {
+	max-width: 440px;
+}
+body.custom-frontend .cf-auth-modal-content {
+	border-radius: 16px;
+	border: none;
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+}
+body.custom-frontend .cf-auth-modal-header {
+	border-bottom: 1px solid #e5e7eb;
+	padding: 1.5rem 1.5rem 0;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+body.custom-frontend .cf-auth-modal-title {
+	margin: 0 0 1rem 0;
+	font-size: 1.35rem;
+	font-weight: 600;
+	color: #374151;
+	padding-right: 2.5rem;
+}
+body.custom-frontend .cf-auth-modal-tabs {
+	display: flex;
+	width: 100%;
+	border-bottom: 2px solid #e5e7eb;
+	margin-top: 0;
+}
+body.custom-frontend .cf-auth-tab-btn {
+	flex: 1;
+	padding: 1rem 1.5rem;
+	background: none;
+	border: none;
+	border-bottom: 2px solid transparent;
+	font-size: 1rem;
+	font-weight: 500;
+	color: #6b7280;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	margin-bottom: -2px;
+	position: relative;
+}
+body.custom-frontend .cf-auth-tab-btn:hover {
+	color: #3993d5;
+	background: rgba(57, 147, 213, 0.05);
+}
+body.custom-frontend .cf-auth-tab-btn.active {
+	color: #3993d5;
+	border-bottom-color: #3993d5;
+	font-weight: 600;
+}
+body.custom-frontend .cf-auth-modal-close {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	background: none;
+	border: none;
+	padding: 0.5rem;
+	cursor: pointer;
+	color: #6b7280;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 8px;
+	transition: all 0.2s ease;
+	z-index: 10;
+}
+body.custom-frontend .cf-auth-modal-close:hover {
+	color: #111827;
+	background: rgba(0, 0, 0, 0.05);
+}
+body.custom-frontend .cf-auth-modal-close svg {
+	display: block;
+}
+body.custom-frontend .cf-auth-modal-body {
+	padding: 2rem 1.5rem;
+}
+body.custom-frontend .cf-auth-modal-body .form-group,
+body.custom-frontend .cf-auth-modal-body .mb-3 {
+	margin-bottom: 1.25rem;
+}
+body.custom-frontend .cf-auth-modal-body label {
+	display: block;
+	margin-bottom: 0.5rem;
+	font-size: 0.9375rem;
+	font-weight: 500;
+	color: #374151;
+}
+body.custom-frontend .cf-auth-modal-body input[type="text"],
+body.custom-frontend .cf-auth-modal-body input[type="email"],
+body.custom-frontend .cf-auth-modal-body input[type="password"],
+body.custom-frontend .cf-auth-modal-body input[type="url"],
+body.custom-frontend .cf-auth-modal-body .form-control {
+	width: 100%;
+	padding: 0.75rem 1rem;
+	font-size: 1rem;
+	border: 1px solid #e2e8f0;
+	border-radius: 8px;
+	background: #fff;
+	color: #1f2937;
+	transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+body.custom-frontend .cf-auth-modal-body input[type="text"]:focus,
+body.custom-frontend .cf-auth-modal-body input[type="email"]:focus,
+body.custom-frontend .cf-auth-modal-body input[type="password"]:focus,
+body.custom-frontend .cf-auth-modal-body input[type="url"]:focus,
+body.custom-frontend .cf-auth-modal-body .form-control:focus {
+	outline: none;
+	border-color: #3993d5;
+	box-shadow: 0 0 0 3px rgba(57, 147, 213, 0.2);
+}
+body.custom-frontend .cf-auth-modal-body .btn-primary,
+body.custom-frontend .cf-auth-modal-body input[type="submit"],
+body.custom-frontend .cf-auth-modal-body button[type="submit"] {
+	width: 100%;
+	padding: 0.875rem 1.5rem;
+	font-size: 1rem;
+	font-weight: 600;
+	color: #fff;
+	background: #3993d5;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+	margin-top: 0.5rem;
+}
+body.custom-frontend .cf-auth-modal-body .btn-primary:hover,
+body.custom-frontend .cf-auth-modal-body input[type="submit"]:hover,
+body.custom-frontend .cf-auth-modal-body button[type="submit"]:hover {
+	background: #2d7bb8;
+}
+body.custom-frontend .cf-auth-modal-body .form-check,
+body.custom-frontend .cf-auth-modal-body .custom-control {
+	margin-top: 0.75rem;
+	margin-bottom: 1rem;
+}
+body.custom-frontend .cf-auth-modal-body .form-check-label,
+body.custom-frontend .cf-auth-modal-body .custom-control-label {
+	font-weight: 400;
+	font-size: 0.9375rem;
+	color: #374151;
+	cursor: pointer;
+}
+body.custom-frontend .cf-auth-modal-body a {
+	color: #3993d5;
+	text-decoration: none;
+	font-size: 0.9375rem;
+	transition: color 0.2s ease;
+}
+body.custom-frontend .cf-auth-modal-body a:hover {
+	color: #2d7bb8;
+	text-decoration: underline;
+}
+body.custom-frontend .cf-auth-message {
+	padding: 1rem;
+	background: #f3f4f6;
+	border-radius: 8px;
+	color: #6b7280;
+}
+body.custom-frontend .cf-auth-message p {
+	margin: 0;
+	font-size: 0.9375rem;
+}
+/* UsersWP form styling within modal */
+body.custom-frontend .cf-auth-modal-body .uwp-form,
+body.custom-frontend .cf-auth-modal-body .uwp-login-form,
+body.custom-frontend .cf-auth-modal-body .uwp-register-form {
+	margin: 0;
+}
+body.custom-frontend .cf-auth-modal-body .uwp-form input[type="text"],
+body.custom-frontend .cf-auth-modal-body .uwp-form input[type="email"],
+body.custom-frontend .cf-auth-modal-body .uwp-form input[type="password"],
+body.custom-frontend .cf-auth-modal-body .uwp-form input[type="url"],
+body.custom-frontend .cf-auth-modal-body .uwp-form select,
+body.custom-frontend .cf-auth-modal-body .uwp-form textarea {
+	width: 100%;
+	padding: 0.75rem 1rem;
+	font-size: 1rem;
+	border: 1px solid #e2e8f0;
+	border-radius: 8px;
+	background: #fff;
+	color: #1f2937;
+	transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+body.custom-frontend .cf-auth-modal-body .uwp-form input:focus,
+body.custom-frontend .cf-auth-modal-body .uwp-form select:focus,
+body.custom-frontend .cf-auth-modal-body .uwp-form textarea:focus {
+	outline: none;
+	border-color: #3993d5;
+	box-shadow: 0 0 0 3px rgba(57, 147, 213, 0.2);
+}
+body.custom-frontend .cf-auth-modal-body .uwp-form .uwp-form-group {
+	margin-bottom: 1.25rem;
+}
+body.custom-frontend .cf-auth-modal-body .uwp-form label {
+	display: block;
+	margin-bottom: 0.5rem;
+	font-size: 0.9375rem;
+	font-weight: 500;
+	color: #374151;
+}
+body.custom-frontend .cf-auth-modal-body .uwp-form .uwp-remember-me,
+body.custom-frontend .cf-auth-modal-body .uwp-form .uwp-forgot-password {
+	margin-top: 0.75rem;
+	margin-bottom: 1rem;
+}
+body.custom-frontend .cf-auth-modal-body .uwp-form .uwp-forgot-password {
+	text-align: right;
+	margin-top: 0.5rem;
+}
+body.custom-frontend .cf-auth-modal-body .uwp-form .uwp-submit {
+	width: 100%;
+	padding: 0.875rem 1.5rem;
+	font-size: 1rem;
+	font-weight: 600;
+	color: #fff;
+	background: #3993d5;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+	margin-top: 0.5rem;
+}
+body.custom-frontend .cf-auth-modal-body .uwp-form .uwp-submit:hover {
+	background: #2d7bb8;
+}
+body.custom-frontend .cf-auth-modal-body .uwp-form .uwp-alert {
+	padding: 0.875rem 1rem;
+	border-radius: 8px;
+	margin-bottom: 1.25rem;
+	font-size: 0.9375rem;
+}
+body.custom-frontend .cf-auth-modal-body .uwp-form .uwp-alert-success {
+	background: #d1fae5;
+	color: #065f46;
+	border: 1px solid #6ee7b7;
+}
+body.custom-frontend .cf-auth-modal-body .uwp-form .uwp-alert-danger,
+body.custom-frontend .cf-auth-modal-body .uwp-form .uwp-alert-error {
+	background: #fee2e2;
+	color: #991b1b;
+	border: 1px solid #fca5a5;
+}
+body.custom-frontend .cf-auth-modal-body .uwp-form .uwp-alert-info {
+	background: #dbeafe;
+	color: #1e40af;
+	border: 1px solid #93c5fd;
+}
+
+/* WordPress login form styling */
+body.custom-frontend .cf-auth-modal-body #cf-login-form {
+	margin: 0;
+}
+body.custom-frontend .cf-auth-modal-body #cf-login-form p {
+	margin-bottom: 1.25rem;
+}
+body.custom-frontend .cf-auth-modal-body #cf-login-form label {
+	display: block;
+	margin-bottom: 0.5rem;
+	font-size: 0.9375rem;
+	font-weight: 500;
+	color: #374151;
+}
+body.custom-frontend .cf-auth-modal-body #cf-login-form input[type="text"],
+body.custom-frontend .cf-auth-modal-body #cf-login-form input[type="password"] {
+	width: 100%;
+	padding: 0.75rem 1rem;
+	font-size: 1rem;
+	border: 1px solid #e2e8f0;
+	border-radius: 8px;
+	background: #fff;
+	color: #1f2937;
+	transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+body.custom-frontend .cf-auth-modal-body #cf-login-form input:focus {
+	outline: none;
+	border-color: #3993d5;
+	box-shadow: 0 0 0 3px rgba(57, 147, 213, 0.2);
+}
+body.custom-frontend .cf-auth-modal-body #cf-login-form .forgetmenot {
+	margin-top: 0.75rem;
+	margin-bottom: 1rem;
+}
+body.custom-frontend .cf-auth-modal-body #cf-login-form .forgetmenot label {
+	font-weight: 400;
+	font-size: 0.9375rem;
+	color: #374151;
+	cursor: pointer;
+}
+body.custom-frontend .cf-auth-modal-body #cf-login-form #cf-login-submit {
+	width: 100%;
+	padding: 0.875rem 1.5rem;
+	font-size: 1rem;
+	font-weight: 600;
+	color: #fff;
+	background: #3993d5;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+	margin-top: 0.5rem;
+}
+body.custom-frontend .cf-auth-modal-body #cf-login-form #cf-login-submit:hover {
+	background: #2d7bb8;
+}
+body.custom-frontend .cf-auth-modal-body #cf-login-form .login-lost-password {
+	margin-top: 1rem;
+	text-align: center;
+}
+body.custom-frontend .cf-auth-modal-body #cf-login-form .login-lost-password a {
+	color: #3993d5;
+	text-decoration: none;
+	font-size: 0.9375rem;
+	transition: color 0.2s ease;
+}
+body.custom-frontend .cf-auth-modal-body #cf-login-form .login-lost-password a:hover {
+	color: #2d7bb8;
+	text-decoration: underline;
+}
+
+@media (max-width: 576px) {
+	body.custom-frontend .cf-auth-modal-dialog {
+		margin: 0.5rem;
+		max-width: calc(100% - 1rem);
+	}
+	body.custom-frontend .cf-auth-modal-body {
+		padding: 1.5rem 1rem;
+	}
+	body.custom-frontend .cf-auth-tab-btn {
+		padding: 0.875rem 1rem;
+		font-size: 0.9375rem;
+	}
+	body.custom-frontend .cf-auth-modal-close {
+		top: 0.75rem;
+		right: 0.75rem;
+		padding: 0.375rem;
+	}
 }
 
 /* Profile dropdown (icon → Profile, Sign out) */
