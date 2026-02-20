@@ -43,11 +43,6 @@ if ( empty( $cf_quick_links ) ) {
 
 $cf_recent      = get_posts( array( 'numberposts' => 1, 'post_status' => 'publish', 'post_type' => 'post' ) );
 $cf_footer_logo = directory_relative_url( content_url( 'uploads/2026/01/NZ-Directory-LOGO-3.png' ) );
-
-// Optional newsletter section for single blog posts, rendered above the footer.
-if ( function_exists( 'directory_render_newsletter_section' ) ) {
-	directory_render_newsletter_section( is_singular( 'post' ) ? get_permalink() : '' );
-}
 ?>
 <footer class="cf-footer">
 	<div class="cf-footer-top">
@@ -110,6 +105,28 @@ if ( function_exists( 'directory_render_newsletter_section' ) ) {
 				else : ?>
 					<p class="cf-footer-no-posts"><?php esc_html_e( 'No posts yet.', 'directory' ); ?></p>
 				<?php endif; ?>
+
+				<div class="cf-footer-newsletter">
+					<h3 class="cf-footer-heading"><?php esc_html_e( 'Subscribe', 'directory' ); ?></h3>
+					<form class="cf-footer-newsletter-form" method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>">
+						<div class="cf-footer-newsletter-fields">
+							<input
+								type="email"
+								name="directory_newsletter_email"
+								class="cf-footer-newsletter-input"
+								placeholder="<?php esc_attr_e( 'you@example.com', 'directory' ); ?>"
+								required
+								autocomplete="email"
+							/>
+							<button type="submit" class="cf-footer-newsletter-submit">
+								<?php esc_html_e( 'Subscribe', 'directory' ); ?>
+							</button>
+						</div>
+						<input type="hidden" name="action" value="directory_newsletter_subscribe" />
+						<input type="hidden" name="directory_newsletter_redirect" value="<?php echo esc_attr( home_url( add_query_arg( array(), wp_unslash( $_SERVER['REQUEST_URI'] ) ) ) ); ?>" />
+						<?php wp_nonce_field( 'directory_newsletter_subscribe', 'directory_newsletter_nonce' ); ?>
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>
