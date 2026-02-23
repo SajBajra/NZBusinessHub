@@ -141,6 +141,17 @@ if ( ! $blog_page ) {
 							echo $toc_data['toc']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 						}
 						?>
+
+						<div class="cf-blog-single-newsletter" aria-label="<?php esc_attr_e( 'Subscribe to newsletter', 'directory' ); ?>">
+							<h2 class="cf-blog-single-newsletter-title"><?php esc_html_e( 'Subscribe', 'directory' ); ?></h2>
+							<form class="cf-blog-single-newsletter-form" action="#" method="post" novalidate>
+								<div class="cf-blog-single-newsletter-fields">
+									<label for="cf-blog-newsletter-email-<?php echo esc_attr( (string) $pid ); ?>" class="screen-reader-text"><?php esc_html_e( 'Email address', 'directory' ); ?></label>
+									<input type="email" id="cf-blog-newsletter-email-<?php echo esc_attr( (string) $pid ); ?>" name="newsletter_email" class="cf-blog-single-newsletter-input" placeholder="<?php esc_attr_e( 'you@example.com', 'directory' ); ?>" required autocomplete="email" />
+									<button type="submit" class="cf-blog-single-newsletter-submit"><?php esc_html_e( 'Subscribe', 'directory' ); ?></button>
+								</div>
+							</form>
+						</div>
 					</aside>
 
 					<div class="cf-blog-single-content-wrap entry-content">
