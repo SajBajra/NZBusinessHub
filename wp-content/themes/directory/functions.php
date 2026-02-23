@@ -586,6 +586,143 @@ add_action( 'admin_post_nopriv_directory_newsletter_subscribe', 'directory_handl
 add_action( 'admin_post_directory_newsletter_subscribe', 'directory_handle_newsletter_subscribe' );
 
 /**
+ * Register header & footer settings in the Customizer.
+ *
+ * - Header logo already uses WordPress "Site Identity" → Logo (custom_logo).
+ * - Here we wire up footer logo, contact email, copyright name, bottom links and social URLs.
+ *
+ * @param WP_Customize_Manager $wp_customize Customizer manager instance.
+ */
+function directory_register_header_footer_customizer( $wp_customize ) {
+	$section_id = 'directory_header_footer';
+
+	$wp_customize->add_section(
+		$section_id,
+		array(
+			'title'       => __( 'Header & Footer', 'directory' ),
+			'description' => __( 'Configure footer contact details, copyright text, links, and social icons. Header logo is controlled via Site Identity → Logo.', 'directory' ),
+			'priority'    => 160,
+		)
+	);
+
+	// Footer logo image.
+	$wp_customize->add_setting(
+		'directory_footer_logo',
+		array(
+			'default'           => '',
+			'sanitize_callback' => 'esc_url_raw',
+		)
+	);
+	if ( class_exists( 'WP_Customize_Image_Control' ) ) {
+		$wp_customize->add_control(
+			new WP_Customize_Image_Control(
+				$wp_customize,
+				'directory_footer_logo',
+				array(
+					'label'   => __( 'Footer logo', 'directory' ),
+					'section' => $section_id,
+				)
+			)
+		);
+	}
+
+	// Footer contact email.
+	$wp_customize->add_setting(
+		'directory_footer_email',
+		array(
+			'default'           => 'info@nzbusinesshub.co.nz',
+			'sanitize_callback' => 'sanitize_email',
+		)
+	);
+	$wp_customize->add_control(
+		'directory_footer_email',
+		array(
+			'label'       => __( 'Footer contact email', 'directory' ),
+			'section'     => $section_id,
+			'type'        => 'text',
+			'description' => __( 'Shown in the footer contact area and used for the mailto link.', 'directory' ),
+		)
+	);
+
+	// Footer copyright name appended after year.
+	$wp_customize->add_setting(
+		'directory_footer_copyright_name',
+		array(
+			'default'           => 'NZ Business Hub',
+			'sanitize_callback' => 'sanitize_text_field',
+		)
+	);
+	$wp_customize->add_control(
+		'directory_footer_copyright_name',
+		array(
+			'label'       => __( 'Footer copyright name', 'directory' ),
+			'section'     => $section_id,
+			'type'        => 'text',
+			'description' => __( 'Appears after the year in the footer copyright line.', 'directory' ),
+		)
+	);
+
+	// Footer bottom links – About, Blog, Support, Contacts.
+	$links = array(
+		'about'    => __( 'About link URL', 'directory' ),
+		'blog'     => __( 'Blog link URL', 'directory' ),
+		'support'  => __( 'Support link URL', 'directory' ),
+		'contacts' => __( 'Contacts link URL', 'directory' ),
+	);
+
+	foreach ( $links as $key => $label ) {
+		$setting_id = "directory_footer_link_{$key}_url";
+
+		$wp_customize->add_setting(
+			$setting_id,
+			array(
+				'default'           => '',
+				'sanitize_callback' => 'esc_url_raw',
+			)
+		);
+
+		$wp_customize->add_control(
+			$setting_id,
+			array(
+				'label'   => $label,
+				'section' => $section_id,
+				'type'    => 'url',
+			)
+		);
+	}
+
+	// Footer social icon URLs.
+	$social = array(
+		'facebook' => __( 'Facebook URL', 'directory' ),
+		'twitter'  => __( 'X / Twitter URL', 'directory' ),
+		'telegram' => __( 'Telegram URL', 'directory' ),
+		'chat'     => __( 'Chat / contact URL', 'directory' ),
+	);
+
+	foreach ( $social as $key => $label ) {
+		$setting_id = "directory_footer_social_{$key}";
+
+		$wp_customize->add_setting(
+			$setting_id,
+			array(
+				'default'           => '',
+				'sanitize_callback' => 'esc_url_raw',
+			)
+		);
+
+		$wp_customize->add_control(
+			$setting_id,
+			array(
+				'label'   => $label,
+				'section' => $section_id,
+				'type'    => 'url',
+			)
+		);
+	}
+}
+add_action( 'customize_register', 'directory_register_header_footer_customizer' );
+
+/**
  * Render the newsletter signup section for single blog posts.
  *
  * @param string $redirect_url URL to redirect back to after submission.

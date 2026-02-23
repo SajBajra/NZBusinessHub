@@ -16,7 +16,32 @@ $cf_footer_add     = directory_relative_url( $cf_footer_add );
 $cf_footer_account = function_exists( 'geodir_get_account_page_url' ) ? geodir_get_account_page_url() : home_url( '/' );
 $cf_footer_account = directory_relative_url( $cf_footer_account );
 $cf_footer_listings = $cf_footer_account;
-$cf_email          = 'info@nzbusinesshub.co.nz';
+
+// Footer logo and contact email from Customizer (with sensible defaults).
+$cf_footer_logo = get_theme_mod( 'directory_footer_logo', '' );
+if ( ! $cf_footer_logo ) {
+	$cf_footer_logo = content_url( 'uploads/2026/01/NZ-Directory-LOGO-3.png' );
+}
+if ( function_exists( 'directory_relative_url' ) ) {
+	$cf_footer_logo = directory_relative_url( $cf_footer_logo );
+}
+
+$cf_email = get_theme_mod( 'directory_footer_email', 'info@nzbusinesshub.co.nz' );
+
+// Footer copyright name (after year).
+$cf_footer_copyright_name = get_theme_mod( 'directory_footer_copyright_name', 'NZ Business Hub' );
+
+// Bottom links – allow overriding URLs via Customizer, fallback to theme defaults.
+$cf_footer_link_about_url    = get_theme_mod( 'directory_footer_link_about_url', $cf_footer_home );
+$cf_footer_link_blog_url     = get_theme_mod( 'directory_footer_link_blog_url', $cf_footer_blog );
+$cf_footer_link_support_url  = get_theme_mod( 'directory_footer_link_support_url', $cf_footer_home );
+$cf_footer_link_contacts_url = get_theme_mod( 'directory_footer_link_contacts_url', $cf_footer_home );
+
+// Social URLs (optional; fall back to #).
+$cf_footer_social_facebook = get_theme_mod( 'directory_footer_social_facebook', '#' );
+$cf_footer_social_twitter  = get_theme_mod( 'directory_footer_social_twitter', '#' );
+$cf_footer_social_telegram = get_theme_mod( 'directory_footer_social_telegram', '#' );
+$cf_footer_social_chat     = get_theme_mod( 'directory_footer_social_chat', '#' );
 
 // Quick links: top GeoDirectory categories or static list.
 $cf_quick_links = array();
@@ -41,7 +66,6 @@ if ( empty( $cf_quick_links ) ) {
 }
 
 $cf_recent      = get_posts( array( 'numberposts' => 1, 'post_status' => 'publish', 'post_type' => 'post' ) );
-$cf_footer_logo = directory_relative_url( content_url( 'uploads/2026/01/NZ-Directory-LOGO-3.png' ) );
 ?>
 <footer class="cf-footer">
 	<div class="cf-footer-top">
@@ -127,17 +151,26 @@ $cf_footer_logo = directory_relative_url( content_url( 'uploads/2026/01/NZ-Direc
 	</div>
 	<div class="cf-footer-bottom">
 		<div class="cf-footer-bottom-inner">
-			<span class="cf-footer-copy"><?php printf( esc_html__( 'Copyright © %s', 'directory' ), esc_html( gmdate( 'Y' ) ) ); ?></span>
+			<span class="cf-footer-copy">
+				<?php
+				printf(
+					/* translators: 1: year, 2: site or brand name */
+					esc_html__( 'Copyright © %1$s %2$s', 'directory' ),
+					esc_html( gmdate( 'Y' ) ),
+					esc_html( $cf_footer_copyright_name )
+				);
+				?>
+			</span>
 			<div class="cf-footer-bottom-links">
-				<a href="<?php echo esc_url( $cf_footer_home ); ?>"><?php esc_html_e( 'About', 'directory' ); ?></a>
-				<a href="<?php echo esc_url( $cf_footer_blog ); ?>"><?php esc_html_e( 'Blog', 'directory' ); ?></a>
-				<a href="<?php echo esc_url( $cf_footer_home ); ?>"><?php esc_html_e( 'Support', 'directory' ); ?></a>
-				<a href="<?php echo esc_url( $cf_footer_home ); ?>"><?php esc_html_e( 'Contacts', 'directory' ); ?></a>
+				<a href="<?php echo esc_url( $cf_footer_link_about_url ); ?>"><?php esc_html_e( 'About', 'directory' ); ?></a>
+				<a href="<?php echo esc_url( $cf_footer_link_blog_url ); ?>"><?php esc_html_e( 'Blog', 'directory' ); ?></a>
+				<a href="<?php echo esc_url( $cf_footer_link_support_url ); ?>"><?php esc_html_e( 'Support', 'directory' ); ?></a>
+				<a href="<?php echo esc_url( $cf_footer_link_contacts_url ); ?>"><?php esc_html_e( 'Contacts', 'directory' ); ?></a>
 				<span class="cf-footer-social">
-					<a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-					<a href="#" aria-label="Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-					<a href="#" aria-label="Telegram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a>
-					<a href="#" aria-label="Chat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></a>
+					<a href="<?php echo esc_url( $cf_footer_social_facebook ); ?>" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+					<a href="<?php echo esc_url( $cf_footer_social_twitter ); ?>" aria-label="Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+					<a href="<?php echo esc_url( $cf_footer_social_telegram ); ?>" aria-label="Telegram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a>
+					<a href="<?php echo esc_url( $cf_footer_social_chat ); ?>" aria-label="Chat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></a>
 				</span>
 			</div>
 		</div>
