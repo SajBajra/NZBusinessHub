@@ -16,8 +16,7 @@ $cf_footer_add     = directory_relative_url( $cf_footer_add );
 $cf_footer_account = function_exists( 'geodir_get_account_page_url' ) ? geodir_get_account_page_url() : home_url( '/' );
 $cf_footer_account = directory_relative_url( $cf_footer_account );
 $cf_footer_listings = $cf_footer_account;
-$cf_email          = get_bloginfo( 'admin_email' );
-$cf_phone          = get_theme_mod( 'cf_footer_phone', '+44 1010101010' );
+$cf_email          = 'info@nzbusinesshub.co.nz';
 
 // Quick links: top GeoDirectory categories or static list.
 $cf_quick_links = array();
