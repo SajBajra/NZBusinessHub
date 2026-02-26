@@ -14,6 +14,7 @@ require_once 'includes/geodir-parent-cats.php';
 require_once 'includes/geodir-category-cms.php';
 require_once 'includes/listing-plans.php';
 require_once 'includes/admin-listing-contact-fields.php';
+require_once 'includes/admin-listing-thumbnail.php';
 require_once 'includes/testimonials.php';
 require_once 'includes/home-featured-sections.php';
 require_once 'includes/home-destinations.php';
@@ -65,9 +66,43 @@ function directory_theme_setup()
 		// Theme admin stuff
 		require_once 'includes/class-blockstrap-admin-child.php';
 	}
+
+	// Custom image size for business card thumbnails (4:3 ratio, hard crop).
+	if ( function_exists( 'add_image_size' ) ) {
+		add_image_size( 'directory-card-thumb', 960, 720, true );
+	}
 }
 
 add_action('after_setup_theme', 'directory_theme_setup');
+
+/**
+ * Get the best thumbnail URL for a listing card.
+ *
+ * Priority:
+ * 1. Dedicated card thumbnail (Listing card thumbnail meta box).
+ * 2. Regular featured image (in the requested size).
+ *
+ * @param int    $post_id Listing/post ID.
+ * @param string $fallback_size Image size for the fallback featured image.
+ * @return string Thumbnail URL or empty string.
+ */
+function directory_get_listing_card_thumb_url( $post_id, $fallback_size = 'medium_large' ) {
+	$post_id = (int) $post_id;
+	if ( $post_id <= 0 ) {
+		return '';
+	}
+
+	$card_id = (int) get_post_meta( $post_id, '_directory_card_thumbnail_id', true );
+
+	if ( $card_id ) {
+		$url = wp_get_attachment_image_url( $card_id, 'directory-card-thumb' );
+		if ( $url ) {
+			return $url;
+		}
+	}
+
+	return get_the_post_thumbnail_url( $post_id, $fallback_size );
+}
 
 /**
  * Ensure an "Upgrade" page exists for listing plans.

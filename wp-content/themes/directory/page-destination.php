@@ -156,7 +156,7 @@ $search_url = add_query_arg(
 						while ( $gd_dest_query->have_posts() ) :
 							$gd_dest_query->the_post();
 							$pid   = get_the_ID();
-							$thumb = get_the_post_thumbnail_url( $pid, 'medium_large' );
+							$thumb = function_exists( 'directory_get_listing_card_thumb_url' ) ? directory_get_listing_card_thumb_url( $pid, 'medium_large' ) : get_the_post_thumbnail_url( $pid, 'medium_large' );
 							$link  = get_the_permalink();
 							$link  = function_exists( 'directory_relative_url' ) ? directory_relative_url( $link ) : $link;
 
