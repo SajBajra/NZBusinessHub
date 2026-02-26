@@ -600,10 +600,32 @@ function directory_register_header_footer_customizer( $wp_customize ) {
 		$section_id,
 		array(
 			'title'       => __( 'Header & Footer', 'directory' ),
-			'description' => __( 'Configure footer contact details, copyright text, links, and social icons. Header logo is controlled via Site Identity → Logo.', 'directory' ),
+			'description' => __( 'Configure header navbar logo and footer contact details, copyright text, links, and social icons.', 'directory' ),
 			'priority'    => 160,
 		)
 	);
+
+	// Header logo image (navbar). Falls back to Site Identity → Logo if empty.
+	$wp_customize->add_setting(
+		'directory_header_logo',
+		array(
+			'default'           => '',
+			'sanitize_callback' => 'esc_url_raw',
+		)
+	);
+	if ( class_exists( 'WP_Customize_Image_Control' ) ) {
+		$wp_customize->add_control(
+			new WP_Customize_Image_Control(
+				$wp_customize,
+				'directory_header_logo',
+				array(
+					'label'       => __( 'Header logo (navbar)', 'directory' ),
+					'section'     => $section_id,
+					'description' => __( 'Optional – if empty, the Site Identity logo is used.', 'directory' ),
+				)
+			)
+		);
+	}
 
 	// Footer logo image.
 	$wp_customize->add_setting(

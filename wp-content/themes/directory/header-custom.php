@@ -23,15 +23,24 @@ $custom_blog_url     = $custom_blog_page_id ? get_permalink( $custom_blog_page_i
 $custom_blog_url     = directory_relative_url( $custom_blog_url );
 $custom_add_listing_url = function_exists( 'geodir_add_listing_page_url' ) ? geodir_add_listing_page_url() : home_url( '/' );
 $custom_add_listing_url = directory_relative_url( $custom_add_listing_url );
-$custom_site_name    = function_exists( 'directory_display_site_name' ) ? directory_display_site_name() : get_bloginfo( 'name' );
-$custom_logout_url   = directory_relative_url( wp_logout_url( get_permalink() ) );
-$custom_login_url    = directory_relative_url( wp_login_url( get_permalink() ) );
-$custom_profile_page = get_page_by_path( 'profile' ) ?: get_page_by_path( 'my-profile' );
-$custom_profile_url  = $custom_profile_page ? directory_relative_url( get_permalink( $custom_profile_page ) ) : '';
-$custom_logo_id      = get_theme_mod( 'custom_logo' );
-$custom_default_logo = directory_relative_url( content_url( 'uploads/2026/01/nz-Business-Hub-1.png' ) );
-$custom_logo_src    = '';
-if ( $custom_logo_id ) {
+$custom_site_name     = function_exists( 'directory_display_site_name' ) ? directory_display_site_name() : get_bloginfo( 'name' );
+$custom_logout_url    = directory_relative_url( wp_logout_url( get_permalink() ) );
+$custom_login_url     = directory_relative_url( wp_login_url( get_permalink() ) );
+$custom_profile_page  = get_page_by_path( 'profile' ) ?: get_page_by_path( 'my-profile' );
+$custom_profile_url   = $custom_profile_page ? directory_relative_url( get_permalink( $custom_profile_page ) ) : '';
+
+// Header logo priority: 1) Header & Footer → Header logo, 2) Site Identity → Logo, 3) default image.
+$custom_header_logo   = get_theme_mod( 'directory_header_logo', '' );
+$custom_logo_id       = get_theme_mod( 'custom_logo' );
+$custom_default_logo  = directory_relative_url( content_url( 'uploads/2026/01/nz-Business-Hub-1.png' ) );
+$custom_logo_src      = '';
+
+if ( $custom_header_logo ) {
+	$custom_logo_src = $custom_header_logo;
+	if ( function_exists( 'directory_relative_url' ) ) {
+		$custom_logo_src = directory_relative_url( $custom_logo_src );
+	}
+} elseif ( $custom_logo_id ) {
 	$custom_logo_src = wp_get_attachment_image_url( $custom_logo_id, 'medium' );
 	if ( $custom_logo_src && function_exists( 'directory_relative_url' ) ) {
 		$custom_logo_src = directory_relative_url( $custom_logo_src );
