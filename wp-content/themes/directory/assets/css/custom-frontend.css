@@ -2122,7 +2122,7 @@ body.custom-frontend .fp__listing-img {
 	width: 100%;
 	aspect-ratio: 4/3;
 	background: #e5e7eb;
-	background-size: contain;
+	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 }
