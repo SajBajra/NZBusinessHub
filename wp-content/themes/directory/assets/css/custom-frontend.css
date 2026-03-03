@@ -2318,6 +2318,7 @@ body.custom-frontend .fp__explore-cards .fp__listing-card-sm {
 	flex-direction: column;
 }
 body.custom-frontend .fp__explore-cards .fp__listing-card-sm .fp__listing-img {
+	aspect-ratio: 1;
 	flex: 1;
 	min-height: 0;
 }
