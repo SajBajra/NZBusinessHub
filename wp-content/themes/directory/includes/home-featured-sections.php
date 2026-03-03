@@ -263,7 +263,7 @@ function directory_render_home_featured_sections() {
 								$loop->the_post();
 								$pid   = get_the_ID();
 								$thumb = function_exists( 'directory_get_listing_card_thumb_url' )
-									? directory_get_listing_card_thumb_url( $pid, 'large' )
+									? directory_get_listing_card_thumb_url( $pid, 'directory-card-thumb', 'featured_slider' )
 									: get_the_post_thumbnail_url( $pid, 'large' );
 								$link  = $rel_fn( get_the_permalink() );
 								$rating_html = '';

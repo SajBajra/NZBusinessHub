@@ -95,7 +95,7 @@ if ( $upgrade_url && function_exists( 'directory_relative_url' ) ) {
 					while ( $profile_listings->have_posts() ) :
 						$profile_listings->the_post();
 						$pid   = get_the_ID();
-						$thumb = function_exists( 'directory_get_listing_card_thumb_url' ) ? directory_get_listing_card_thumb_url( $pid, 'medium_large' ) : get_the_post_thumbnail_url( $pid, 'medium_large' );
+						$thumb = function_exists( 'directory_get_listing_card_thumb_url' ) ? directory_get_listing_card_thumb_url( $pid, 'medium_large', 'card' ) : get_the_post_thumbnail_url( $pid, 'medium_large' );
 						$link  = get_the_permalink();
 						if ( $link && function_exists( 'directory_relative_url' ) ) {
 							$link = directory_relative_url( $link );

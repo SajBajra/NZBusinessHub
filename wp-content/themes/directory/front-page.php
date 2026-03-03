@@ -153,7 +153,7 @@ $fp_rel         = function_exists( 'directory_relative_url' ) ? 'directory_relat
 							$fp_featured->the_post();
 							$pid         = get_the_ID();
 							$thumb       = function_exists( 'directory_get_listing_card_thumb_url' )
-								? directory_get_listing_card_thumb_url( $pid, 'directory-card-thumb' )
+								? directory_get_listing_card_thumb_url( $pid, 'directory-card-thumb', 'card' )
 								: get_the_post_thumbnail_url( $pid, 'medium' );
 							$link        = $fp_rel( get_the_permalink() );
 							$rating_html = '';
@@ -220,11 +220,11 @@ $fp_rel         = function_exists( 'directory_relative_url' ) ? 'directory_relat
 				<div class="fp__explore-inner">
 					<div class="fp__explore-cards fp__explore-cards-left">
 						<?php
-							$fp_slice = array_slice( $fp_explore_posts, 0, 3 );
-							foreach ( $fp_slice as $fp_pid ) :
-								$thumb       = function_exists( 'directory_get_listing_card_thumb_url' )
-									? directory_get_listing_card_thumb_url( $fp_pid, 'directory-card-thumb' )
-									: get_the_post_thumbnail_url( $fp_pid, 'thumbnail' );
+						$fp_slice = array_slice( $fp_explore_posts, 0, 3 );
+						foreach ( $fp_slice as $fp_pid ) :
+							$thumb       = function_exists( 'directory_get_listing_card_thumb_url' )
+								? directory_get_listing_card_thumb_url( $fp_pid, 'directory-card-thumb', 'explore' )
+								: get_the_post_thumbnail_url( $fp_pid, 'thumbnail' );
 							$link        = $fp_rel( get_permalink( $fp_pid ) );
 							$rating_html = '';
 							if ( function_exists( 'geodir_get_rating_stars' ) && function_exists( 'geodir_get_post_rating' ) ) {
@@ -260,7 +260,7 @@ $fp_rel         = function_exists( 'directory_relative_url' ) ? 'directory_relat
 						$fp_slice = array_slice( $fp_explore_posts, 3, 3 );
 						foreach ( $fp_slice as $fp_pid ) :
 							$thumb       = function_exists( 'directory_get_listing_card_thumb_url' )
-								? directory_get_listing_card_thumb_url( $fp_pid, 'directory-card-thumb' )
+								? directory_get_listing_card_thumb_url( $fp_pid, 'directory-card-thumb', 'explore' )
 								: get_the_post_thumbnail_url( $fp_pid, 'thumbnail' );
 							$link        = $fp_rel( get_permalink( $fp_pid ) );
 							$rating_html = '';

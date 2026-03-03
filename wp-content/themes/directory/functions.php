@@ -76,23 +76,43 @@ function directory_theme_setup()
 add_action('after_setup_theme', 'directory_theme_setup');
 
 /**
- * Get the best thumbnail URL for a listing card.
+ * Get the best thumbnail URL for a listing card in a given context.
  *
- * Priority:
- * 1. Dedicated card thumbnail (Listing card thumbnail meta box).
- * 2. Regular featured image (in the requested size).
+ * Contexts:
+ * - card           – generic listing cards (archive, profile, destinations, featured grid).
+ * - explore        – Explore side boxes on the home page.
+ * - featured_slider – Top Restaurants / Top Experiences hero slider.
  *
- * @param int    $post_id Listing/post ID.
+ * Priority per context:
+ * 1. Context-specific thumbnail meta (if set in the Listing images meta box).
+ * 2. Generic card thumbnail meta.
+ * 3. Regular featured image (in the requested size).
+ *
+ * @param int    $post_id      Listing/post ID.
  * @param string $fallback_size Image size for the fallback featured image.
+ * @param string $context      One of 'card', 'explore', 'featured_slider'.
  * @return string Thumbnail URL or empty string.
  */
-function directory_get_listing_card_thumb_url( $post_id, $fallback_size = 'medium_large' ) {
+function directory_get_listing_card_thumb_url( $post_id, $fallback_size = 'medium_large', $context = 'card' ) {
 	$post_id = (int) $post_id;
 	if ( $post_id <= 0 ) {
 		return '';
 	}
 
-	$card_id = (int) get_post_meta( $post_id, '_directory_card_thumbnail_id', true );
+	// Resolve primary meta key for this context.
+	$meta_key = '_directory_card_thumbnail_id';
+	if ( $context === 'explore' ) {
+		$meta_key = '_directory_explore_thumbnail_id';
+	} elseif ( $context === 'featured_slider' ) {
+		$meta_key = '_directory_featured_slider_thumbnail_id';
+	}
+
+	$card_id = (int) get_post_meta( $post_id, $meta_key, true );
+
+	// Fall back to generic card thumbnail if context-specific image not set.
+	if ( ! $card_id && $meta_key !== '_directory_card_thumbnail_id' ) {
+		$card_id = (int) get_post_meta( $post_id, '_directory_card_thumbnail_id', true );
+	}
 
 	if ( $card_id ) {
 		$url = wp_get_attachment_image_url( $card_id, 'directory-card-thumb' );
