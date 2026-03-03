@@ -244,6 +244,35 @@ function directory_force_gd_place_claim_allowed( $allow, $post_type ) {
 add_filter( 'geodir_claim_post_type_claim_allowed', 'directory_force_gd_place_claim_allowed', 10, 2 );
 
 /**
+ * Hide GeoDirectory Business Attachments featured image + regenerate controls
+ * on gd_place edit screens (we handle thumbnails separately).
+ */
+function directory_hide_gd_business_attachments_bits() {
+	if ( ! function_exists( 'get_current_screen' ) ) {
+		return;
+	}
+	$screen = get_current_screen();
+	if ( ! $screen || $screen->post_type !== 'gd_place' ) {
+		return;
+	}
+	?>
+	<style>
+		/* Hide "Featured Image" label + image in the Business Attachments box */
+		#geodir_post_images .inside > h4:first-of-type,
+		#geodir_post_images .inside > h4:first-of-type + img {
+			display: none !important;
+		}
+		/* Hide Regenerate Thumbnails button + help text */
+		#geodir_post_images .geodir-regenerate-thumbnails {
+			display: none !important;
+		}
+	</style>
+	<?php
+}
+add_action( 'admin_head-post.php', 'directory_hide_gd_business_attachments_bits' );
+add_action( 'admin_head-post-new.php', 'directory_hide_gd_business_attachments_bits' );
+
+/**
  * Enqueue child-theme assets.
  */
 function directory_theme_enqueue_assets() {
