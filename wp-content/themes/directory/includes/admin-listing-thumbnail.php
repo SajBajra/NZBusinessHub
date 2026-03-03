@@ -54,7 +54,7 @@ function directory_listing_thumbnail_meta_box_cb( $post ) {
 	wp_nonce_field( 'directory_listing_thumbnail', 'directory_listing_thumbnail_nonce' );
 	?>
 	<p class="description">
-		<?php esc_html_e( 'Optional image used for business cards. Recommended size: 4:3 ratio, around 960×720px (for example 1200×900px).', 'directory' ); ?>
+		<?php esc_html_e( 'Optional image used for business cards, Explore boxes and the Top Restaurants/Top Experiences sliders. Recommended size: 4:3 ratio, around 960×720px (for example 1200×900px).', 'directory' ); ?>
 	</p>
 	<div class="directory-listing-thumbnail-field">
 		<div class="directory-listing-thumbnail-preview" style="width: 240px; height: 180px; background: #f3f4f6; border: 1px solid #e5e7eb; border-radius: 8px; display: flex; align-items: center; justify-content: center; overflow: hidden;">

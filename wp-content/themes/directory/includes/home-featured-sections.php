@@ -262,7 +262,9 @@ function directory_render_home_featured_sections() {
 							while ( $loop->have_posts() ) :
 								$loop->the_post();
 								$pid   = get_the_ID();
-								$thumb = get_the_post_thumbnail_url( $pid, 'large' );
+								$thumb = function_exists( 'directory_get_listing_card_thumb_url' )
+									? directory_get_listing_card_thumb_url( $pid, 'large' )
+									: get_the_post_thumbnail_url( $pid, 'large' );
 								$link  = $rel_fn( get_the_permalink() );
 								$rating_html = '';
 								if ( function_exists( 'geodir_get_rating_stars' ) && function_exists( 'geodir_get_post_rating' ) ) {
