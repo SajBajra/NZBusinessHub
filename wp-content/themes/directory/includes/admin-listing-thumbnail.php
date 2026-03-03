@@ -56,10 +56,10 @@ function directory_listing_thumbnail_meta_box_cb( $post ) {
 	wp_nonce_field( 'directory_listing_thumbnail', 'directory_listing_thumbnail_nonce' );
 	?>
 	<p class="description">
-		<?php esc_html_e( 'Exact sizes (all 4:3 ratio):', 'directory' ); ?><br />
-		<?php esc_html_e( '• Card thumbnail: 800×600px.', 'directory' ); ?><br />
-		<?php esc_html_e( '• Explore thumbnail: 600×450px.', 'directory' ); ?><br />
-		<?php esc_html_e( '• Featured slider thumbnail: 1200×900px.', 'directory' ); ?>
+		<?php esc_html_e( 'Exact sizes:', 'directory' ); ?><br />
+		<?php esc_html_e( '• Card thumbnail: 800×800px (square, fills card).', 'directory' ); ?><br />
+		<?php esc_html_e( '• Explore thumbnail: 600×600px (square, fills Explore box).', 'directory' ); ?><br />
+		<?php esc_html_e( '• Featured slider thumbnail: 1200×900px (4:3 hero image).', 'directory' ); ?>
 	</p>
 	<div class="directory-listing-thumbnail-field">
 		<?php

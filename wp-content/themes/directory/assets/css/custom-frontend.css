@@ -2120,7 +2120,7 @@ body.custom-frontend .fp__listing-card {
 body.custom-frontend .fp__listing-img {
 	display: block;
 	width: 100%;
-	aspect-ratio: 4/3;
+	aspect-ratio: 1;
 	background: #ffffff;
 	background-size: contain;
 	background-position: center;
