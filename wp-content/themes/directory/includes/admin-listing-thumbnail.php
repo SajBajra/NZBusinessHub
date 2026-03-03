@@ -56,7 +56,10 @@ function directory_listing_thumbnail_meta_box_cb( $post ) {
 	wp_nonce_field( 'directory_listing_thumbnail', 'directory_listing_thumbnail_nonce' );
 	?>
 	<p class="description">
-		<?php esc_html_e( 'Upload dedicated images for business cards, Explore boxes and the Top Restaurants/Top Experiences sliders. Recommended size for all: 4:3 ratio, around 960×720px (for example 1200×900px).', 'directory' ); ?>
+		<?php esc_html_e( 'Recommended sizes (all 4:3 ratio):', 'directory' ); ?><br />
+		<?php esc_html_e( '• Card thumbnail: about 800×600px (minimum 600×450px).', 'directory' ); ?><br />
+		<?php esc_html_e( '• Explore thumbnail: about 600×450px.', 'directory' ); ?><br />
+		<?php esc_html_e( '• Featured slider thumbnail: about 1200×900px (minimum 960×720px).', 'directory' ); ?>
 	</p>
 	<div class="directory-listing-thumbnail-field">
 		<?php
@@ -202,12 +205,29 @@ function directory_save_listing_thumbnail( $postarr, $gd_post, $post, $update ) 
 		return $postarr;
 	}
 
-	$attachment_id = isset( $_POST['directory_card_thumbnail_id'] ) ? (int) $_POST['directory_card_thumbnail_id'] : 0;
+	$card_id     = isset( $_POST['directory_card_thumbnail_id'] ) ? (int) $_POST['directory_card_thumbnail_id'] : 0;
+	$explore_id  = isset( $_POST['directory_explore_thumbnail_id'] ) ? (int) $_POST['directory_explore_thumbnail_id'] : 0;
+	$featured_id = isset( $_POST['directory_featured_slider_thumbnail_id'] ) ? (int) $_POST['directory_featured_slider_thumbnail_id'] : 0;
 
-	if ( $attachment_id > 0 ) {
-		update_post_meta( $post->ID, '_directory_card_thumbnail_id', $attachment_id );
+	// Card thumbnail.
+	if ( $card_id > 0 ) {
+		update_post_meta( $post->ID, '_directory_card_thumbnail_id', $card_id );
 	} else {
 		delete_post_meta( $post->ID, '_directory_card_thumbnail_id' );
+	}
+
+	// Explore thumbnail.
+	if ( $explore_id > 0 ) {
+		update_post_meta( $post->ID, '_directory_explore_thumbnail_id', $explore_id );
+	} else {
+		delete_post_meta( $post->ID, '_directory_explore_thumbnail_id' );
+	}
+
+	// Featured slider thumbnail.
+	if ( $featured_id > 0 ) {
+		update_post_meta( $post->ID, '_directory_featured_slider_thumbnail_id', $featured_id );
+	} else {
+		delete_post_meta( $post->ID, '_directory_featured_slider_thumbnail_id' );
 	}
 
 	return $postarr;
