@@ -2323,6 +2323,12 @@ body.custom-frontend .fp__explore-cards .fp__listing-card-sm .fp__listing-rating
 	flex-shrink: 0;
 }
 
+@media (max-width: 900px) {
+	body.custom-frontend .fp__explore-cards .fp__listing-card-sm .fp__listing-img {
+		background-size: cover;
+	}
+}
+
 /* Blog */
 body.custom-frontend .fp__blog {
 	background: #fafafa;
